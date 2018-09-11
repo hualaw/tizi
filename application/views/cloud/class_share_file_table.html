@@ -1,0 +1,12 @@
+  <table>
+    <tr><th width="30"></th><th class="alignLeft" width="170">文件名</th><th width="80">文件类型</th><th>大小</th></tr>
+    {if $files}
+  {foreach $files as $key=>$val}
+    <tr>
+    	<td><input type="checkbox" name="doc" id="{$val.id}" file_size="{trans_filesize($val.file_size)}" file_name="{$val.file_name}"/></td>
+    	<td class="alignLeft"><label for="{$val.id}">{$val.file_name}</label></td>
+    	<td>{Constant::cloud_filetype($val.file_type)}</td>
+    	<td>{trans_filesize($val.file_size)}</td>
+    </tr>
+    {/foreach}{/if}
+  </table>

@@ -1,0 +1,1 @@
+define("module/common/ajax/unlogin/classInvite",[],function(){return $("#accept").click(),!1});

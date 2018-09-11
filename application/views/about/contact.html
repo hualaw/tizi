@@ -1,0 +1,62 @@
+{extends file='about/about_base.html'}
+
+{block name=keywords}梯子联系方式,梯子网联系方式,梯子合作联系方式{/block}
+{block name=description}梯子网教育产品合作，梯子网应聘，建议等问题请给我们发邮件，也可直接拨打我们的客服热线，400-680-1818。{/block}
+{block name=title}梯子网合作,应聘,建议联系方式{/block}
+
+{block name=stylesheet}{/block}
+
+{block name=container}
+<!--内容start-->
+<div class="mainContainer contact" pagename="contact">
+    <div class="content">
+        <div class="innerText cf">
+            <div class="hd">
+                <h2>联系我们</h2>
+            </div>
+            <div class="links fl">
+                <h3></h3>
+                <p>我要应聘：<a href="mailto:zhaopin@tizi.com">zhaopin@tizi.com</a></p>
+
+                <p>教育产品合作：<a href="mailto:hezuo@tizi.com">product@tizi.com</a>
+                <span>线上、线下各种教育产品和笔、纸等中小学生工具类合作通道</span></p>
+
+                <p>渠道合作：<a href="mailto:hezuo@tizi.com">qudao@tizi.com</a>
+                <span>中小学渠道资源合作通道</span></p>
+
+                <p>媒体报道：<a href="mailto:pr@tizi.com">pr@tizi.com</a></p>
+                <p>市场合作：<a href="mailto:market@tizi.com">market@tizi.com</a></p>
+                <p>其他合作：<a href="mailto:info@tizi.com">info@tizi.com</a></p>
+                <p>学校集体账号申请：<a href="mailto:school@tizi.com">school@tizi.com</a></p>
+
+                <p>我要建议：<a href="mailto:yijian@tizi.com">yijian@tizi.com</a></p>
+                <p>联系电话：<a href="javascript:void(0);">400-680-1818</a>，<a href="javascript:void(0);">010-53209188</a></p>
+           </div>
+           <div class="qq_tip_about fr">
+                <div id="qq1" class="qq_contact_about"></div>
+                <div class="dot_line"></div>
+                <span id="qq_tip_span" class="qq_tip_span">QQ客服在线时间<br />周一至周六 9:00-18:00</span>
+           </div>
+       </div>
+    </div>
+</div>
+<!--内容end-->
+{/block}
+
+{block name=script}
+<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php{$version}"></script>
+<script type="text/javascript">
+if(window.BizQQWPA!=undefined){
+    BizQQWPA.add({ 
+        aty: '0', //接入到指定工号 
+        type: '10', //使用按钮类型WPA
+        fsty:'1',
+        fposX:'2',
+        fposY:'2',
+        ws: 'www.tizi.com',
+        nameAccount: '800068391', //营销QQ号码 
+        parent: 'qq1' //将WPA放置在ID为testAdd的元素里 
+    });
+}
+</script>
+{/block}

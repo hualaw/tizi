@@ -1,0 +1,138 @@
+
+<p class="all_people"><a href="{$site_url}teacher/class/{$alpha_class_id}/paper" title="">{$classes["classname"]}试卷</a> / <span>{date('Y-m-d H:i',$hw_info.start_time)}</span>至<span>{date('Y-m-d H:i',$hw_info.deadline)}</span></p>
+<input type="hidden" value="{$hw_info.id}" class="assignment_id">
+<div class="homeworkPreCon">
+    <!-- 错题排行 开始 -->
+    <div class="homeworkCont">
+        <h3>错题排行（选择题）</h3>
+        <!-- 超过20个选择题 -->
+            {for $lp = 1  to $while   }  
+            <table class="myallClass_student choose_wrong_sub">
+            <tbody>
+                <tr>
+                    <td width="">题号</td>
+                    {if $wrong_q}
+                    {foreach $wrong_q as $key=>$val}
+                    {if $val@iteration>20*($lp-1) and $val@iteration<20*$lp+1}
+                    <td width="44" qid={$val.qid}><a qid={$val.qid} class="subjectDetial" href="javascript:;">第{$val.order_in_paper}题</a></td>
+                    {/if}
+                    {/foreach}
+                    {/if}
+                    
+                    <!-- 理论上，wrong_q和wrong_not_int_oq是互斥的 -->
+                    {if $wrong_not_in_oq}
+                    {foreach $wrong_not_in_oq as $key=>$val}
+                    {if $val@iteration>20*($lp-1) and $val@iteration<20*$lp+1}
+                    <td width="44" >
+                    <a qid={$key} class="subjectDetial" href="javascript:;">第{$val.order}题</a>
+                    </td>
+                    {/if}
+                    {/foreach}
+                    {/if}
+
+                    <!-- 用空格填充到20列 -->
+                    {if $lp == $while}
+                    {if $need_blank>0}
+                    {for $i=1 to $need_blank } <td width="44">  </td> {/for}
+                    {/if} {/if}
+                    <!-- 用空格填充到20列 over-->
+                </tr>
+                <tr>
+                    <td>答错人数</td>
+                    {foreach $wrong_q as $key=>$val}
+                    {if $val@iteration>20*($lp-1) and $val@iteration<20*$lp+1}
+                    <td {$val.qid}>{$val.wrong_total}</td>
+                    {/if}
+                    {/foreach}
+                    <!-- 填充到20列 -->
+                    {include file='teacher/class/online_q_blank_over20.html'}
+                </tr>
+                {section name=foo loop=$options }
+                    <tr>
+                    {include file="teacher/class/details_check_assignment_abcd_options.html" op=$options[foo]} 
+                    </tr>
+                {/section}
+            </tbody>
+            </table>
+            <br>
+            {/for}
+ </div>
+    <!-- 错题排行 结束 -->
+    <!-- 学生答题统计 开始 -->
+    <div class="homeworkCont">
+        {if $student_infos }
+        <h3>学生答题统计</h3>
+        <table class="myallClass_student choose_wrong_sub">
+            <thead>
+                <tr>
+                    <th width="90">姓名</th>
+                    <th class="txtAlignLeft">选择题对错</th>
+                    <th width="130">选择题正确率</th>
+                    <th width="130">耗时</th>
+                    <!-- <th width="90">评语</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                {foreach $student_infos as $key=>$val}
+                <tr>
+                    <td title="{$val.name}">{sub_str($val.name,0,12)}</td>
+                    <td class="txtAlignLeft">
+                        {if isset($val.process_ans) and $val.process_ans}
+                        {foreach $val.process_ans as  $q=>$a}
+                        <a class="{if $a.color=='green'}colorGreen{elseif $a.color=='red'}colorRed{else}colorGray{/if} personWrongQ" href="javascript:;" qid={$a.qid}>{$a.order}</a>
+                        {/foreach}
+                        {else}
+                        --
+                        {/if}
+                    </td>
+                    <td>{if isset($val.process_ans) and $val.process_ans}{sprintf('%.0f',round($val.correct_num/count($val.process_ans)*100))}%{else}--{/if}</td>
+                    <td>
+                        {if $val.expend_time}{convertToMinsSecs($val.expend_time)}{else} -- {/if}
+                    </td>
+                    <!-- <td> if $val.has_cmt 已评论  else  <a class="writeComment" href="javascript:;" stu=" $val.user_id ">写评语1111</a> /if </td> -->
+                </tr>
+                {/foreach}
+            </tbody>
+        </table>
+        {else}
+        <!-- <div class="homeworkPreNull">
+            <p>还没有学生进行作答，暂无数据</p>
+            <p>学生答题统计记录了每个学生选择题的对错情况，您可以给每个学生的作业写评语</p>
+        </div> -->
+        {/if}
+    </div>
+    <!-- 学生答题统计 结束 -->
+ </div>
+<!-- 题目详情弹出框 开始 -->
+<div id="subjectDetialPop" class="pop_box">
+    <div class="teacherClass">
+        <div class="pop_main">
+            <dl class="click_q">
+                <dt>【题文】下列各句中，没有语病的一项是（2分）</dt><dt>
+                </dt>
+                <dd class="answer undis"><br>答案：D</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+{if $hw_q}
+{foreach $hw_q as $key=>$val}
+    <div id="subjectDetialPop{$val.qid}" class="pop_box" >
+    <div class="teacherClass">
+        <div class="pop_main"  >
+            <dl class="click_qs">
+                <dt>{if false!==strpos($val.body,'题文')}{$val.body}{else}【题文】{$val.body}{/if}</dt><dt>
+                </dt>
+                <dd class="answer">
+				{if false!==strpos($val.answer_text,'答案')}{$val.answer_text}{else}【答案】{$val.answer_text}{/if}
+				</dd>
+                <dd class="answer">
+                {if false!==strpos($val.analysis_text,'解析')}{$val.analysis_text}{else}【解析】{$val.analysis_text}{/if}
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+{/foreach}
+{/if}
+<!-- 题目详情弹出框 结束 -->                        

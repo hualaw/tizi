@@ -1,0 +1,68 @@
+.studentPractice{}
+/*首页列表页面样式开始*/
+.studentPractice .studentSpecial_index{clear: both; overflow: hidden;line-height: 18px;font-size: 16px;padding-bottom:50px;}
+.studentPractice .side_box{width:90px;margin-right:10px;border:1px solid #dadada;}
+.studentPractice .side_box li a{display:block;width: 90px;height:35px;font-size: 14px;line-height:35px; text-align: center;color:#333333; background:#f6f6f6;border-bottom:1px solid #dadada;}
+.studentPractice .side_box li.active a,.studentPractice .side_box li a:hover{background:#49b764;color:#fff;}
+.studentPractice .side_box li.last a{border-bottom:0px;}
+.studentPractice .content_box{width:600px;border:1px solid #dadada;background:#fff;padding:10px;}
+.studentPractice .content_box .md_hd{height:40px;padding:10px;}
+.studentPractice .content_box .md_hd a{display:inline-block;width:60px;font-size:16px; color:#333;text-align:center;line-height:30px;}
+.studentPractice .content_box .md_hd a:hover,.studentPractice .content_box .md_hd a.active{color:#fff;background-color:#ff9900;border-radius:20px;}
+.studentPractice .content_box .md_bd{clear: both; overflow: hidden;}
+.studentPractice .content_box .md_bd li{float: left;width:188px;height:240px;margin-left:10px;background:#f6f6f6;margin-bottom:10px;text-align: center;_margin-left:5px;}
+.studentPractice .content_box .md_bd li h3{margin-top:15px; margin-bottom:15px;}
+.studentPractice .content_box .md_bd li h3 a{font-weight: normal;font-size:14px; color:#009b4a;}
+.studentPractice .content_box .md_bd li h3 a:hover{color:#f90;}
+.studentPractice .content_box .md_bd li img{display:block;width:100px; height:100px;margin:0 auto;margin-bottom:15px;}
+.studentPractice .content_box .md_bd li a.go_let{margin-bottom:10px;font-size:12px;width:52px;}
+.studentPractice .content_box .md_bd li p{color:#999999;font-size:12px;}
+.studentPractice .hot_box{width:243px;border:1px solid #dadada;}
+.studentPractice .hot_box h2{font-size:16px; color:#333;height:30px;line-height:35px;padding:5px 15px;font-weight: normal;}
+.studentPractice .hot_box li{clear: both;overflow: hidden;height:80px;}
+.studentPractice .hot_box li.odd{background-color:#f6f6f6;}
+.studentPractice .hot_box li.hot .image{position: relative;*margin-top:10px;}
+.studentPractice .hot_box li.hot .image em{display: block; background:url("../../image/studentSpecial/icon_hot.gif");width:30px;height:19px;position:absolute;left:15px; top:15px;*top:0px;}
+.studentPractice .hot_box li img{width:50px; height:50px;margin-right:10px;margin-left:15px;margin-top:15px;}
+.studentPractice .hot_box li .text{width:165px;margin-top:15px;}
+.studentPractice .hot_box li .text .hot_title{color:#009b4a;font-size:14px;}
+.studentPractice .hot_box li .text .hot_title:hover{color:#f90;}
+.studentPractice .hot_box li .text p{color:#999999;font-size:12px;margin-top: 5px;}
+/*首页列表页面样式结束*/
+/*游戏排行页面开始*/
+.studentPractice .topline_nav{height:35px;line-height:30px;}
+.studentPractice .topline_nav .goback{color:#009b4a;font-size:14px;}
+.studentPractice .topline_nav .goback:hover{color:#f90;}
+.studentPractice .studentSpecial_game{margin-bottom:20px;}
+.studentPractice .start_game{width:700px;margin-right:10px;height:700px;}
+.studentPractice .start_game image{width:700px;height:500px}
+.studentPractice .special_rank{width:240px;border:2px solid #49b764;padding:10px;border-radius:5px;text-align: center;}
+.studentPractice .special_rank h1{font-size: 18px; color:#333333;line-height:25px;}
+.studentPractice .special_rank h2{font-size: 12px; color:#333333;line-height:35px;font-weight: normal;}
+.studentPractice .special_rank .rank_hd{font-size:12px;color:#fff;background-color:#49b764;height:60px;border-radius:5px;margin-bottom:5px;}
+.studentPractice .special_rank .rank_hd div{width:100px;margin-left:10px;margin-top:5px;}
+.studentPractice .special_rank .rank_hd h4{font-size:24px; color:#fff;font-weight: normal;}
+.studentPractice .special_rank .rank_login{font-size:12px;color:#fff;background-color:#49b764;height:30px;border-radius:5px;width:150px;line-height:30px;margin:5px auto;}
+.studentPractice .special_rank .rank_login h4 a{font-size:12px; color:#fff;font-weight: normal;}
+.studentPractice .special_rank .rank_login h4 a:hover{color:#f90;}
+.studentPractice .special_rank h3{font-size:14px; line-height:25px;color:#333;font-weight: normal;margin-bottom:10px;}
+.studentPractice .special_rank .rank_bd li{height:30px;line-height:30px;font-size:12px;color:#333;text-align:center;}
+.studentPractice .special_rank .rank_bd li.hd{background-color:#dddddd;}
+.studentPractice .special_rank .rank_bd li.odd{background-color:#f1f1f1;}
+.studentPractice .special_rank .rank_bd li span{display: inline-block;width:56px;}
+/*游戏排行页面结束*/
+/*答题互动开始*/
+.studentPractice .start_action{width:650px;margin-right:10px;background-color:#fff;border:1px solid #dfdfdf;padding:15px 25px;border-top:2px solid #dfdfdf;}
+.studentPractice .start_action .action_aq{border-bottom:1px solid #dfdfdf;}
+.studentPractice .start_action .action_aq p{font-size:14px; color:#333;line-height:30px;}
+.studentPractice .start_action .action_ft{margin:10px 0px;}
+.studentPractice .start_action .action_ft a.btn_aq{font-size:18px; color:#fff;font-weight:bold;line-height:40px;display:inline-block;width:120px;height:40px;text-align: center;background-color:#49b764;}
+.studentPractice .start_action .action_ft span{display:inline-block;font-size:14px; color:#333;font-weight: bold;margin-left:70px;}
+.studentPractice .replay_action{width:700px;height:255px;margin-right:10px;background-color:#f1f1f1; text-align: center;padding:130px 0px;}
+.studentPractice .replay_action h2{font-size:36px;line-height:36px; color:#333333;margin-bottom:35px;}
+.studentPractice .replay_action h3{text-align: center;margin-top:-30px;}
+.studentPractice .replay_action h3 img{display:inline-block;}
+.studentPractice .replay_action p{font-size:18px;line-height:36px; color:#333333;margin-bottom:35px;}
+.studentPractice .replay_action a.replay_go{font-size:24px; color:#fff;font-weight:bold;line-height:60px;display:inline-block;width:200px;height:62px;text-align: center;background-color:#49b764;}
+.studentPractice .replay_action a.replay_go:hover{color:#f90;}
+/*答题互动结束*/

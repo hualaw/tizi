@@ -1,0 +1,44 @@
+{if $exercise}
+<table class="myallClass_student myallClass_student_paper">
+  <thead>
+      <tr>
+          <th class="p_l_10" align="left" width="460">时间</th>
+          <th width="100">学科</th>
+          <th width="100">题目数</th>
+          <th width="100">作答人数</th>
+          <th>操作</th>
+      </tr>
+  </thead>
+  <tbody>
+    {foreach $exercise as $key=>$val}
+      <tr {$val.id}>
+          <td class="p_l_10" align="left"><a href="{$site_url}teacher/class/{$alpha_class_id}/checkhomework/{$val.id}" title="">{date('Y/m/d H:i',$val.start_time)}</a></td>
+          <td>{$val.sname}</td>
+          <td>{$val.count}</td>
+          <td>{if $val.online==1}{$val.has_completed_num}{else}--{/if}</td>
+          <td class="cf">
+              <a class="fl check_paper" href="{$site_url}teacher/class/{$alpha_class_id}/checkhomework/{$val.id}" title="">检查结果</a>
+              <!-- <a class="downloadHomework fl teacherdownhw" href="javascript:;" ass-id= $val.id  assid= $val.id ></a> -->
+              <!-- <a class="deleteDownHomework fl" href="javascript:;" ass-id= $val.id ></a> -->
+          </td>
+      </tr>
+      {/foreach}
+  </tbody>
+</table>
+{else}
+<!-- 没有作业内容开始 -->
+<div class="emptyNotice">
+  <img src="{$static_url}{$static_version}/image/teacherClass/tizi_tree_bg.png" alt="">
+  <ul>
+    <li>在线选题组卷并布置给学生作答，自动生成答题报告，您也将获得<span class="colorGreen">积分奖励</span>！</li>
+    <li><li><a class="cBtnNormal shareFile" href="{$site_url}teacher/paper/new" >选题中心</a></li></li>
+  </ul>
+</div>
+<!-- 没有作业内容结束 -->
+{/if}
+<!-- 分页开始 -->
+<input type="hidden" id="current_page" value="{$current_page}"/>
+<div class="page">
+    {$pages}
+</div>
+<!-- 分页结束 -->

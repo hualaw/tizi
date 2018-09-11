@@ -1,0 +1,40 @@
+.studentTeacherShare .shareBox{padding-top:10px;}
+.studentTeacherShare .shareBox .icon{overflow:hidden;margin-right:10px;width:75px;height:75px;background:url(../../image/studentHome/icon.png) no-repeat 0px -1px ;}
+.studentTeacherShare .shareBox div.xlsx{background-position: -80px -1px ;}
+.studentTeacherShare .shareBox div.doc{background-position: -160px -1px ;}
+.studentTeacherShare .shareBox div.ppt{background-position: -240px -1px;}
+.studentTeacherShare .shareBox div.7z{background-position: -315px -1px;}
+.studentTeacherShare .shareBox div.rar{background-position: -390px -1px ;}
+.studentTeacherShare .shareBox div.zip{background-position: -465px -1px  ;}
+.studentTeacherShare .shareBox div.js{background-position: -545px -1px  ;}
+.studentTeacherShare .shareBox div.css{background-position: -625px -1px ;}
+.studentTeacherShare .shareBox div.pdf{background-position: 705px 0px ;}
+.studentTeacherShare .shareBox div.psd{background-position: -785px 0px ;}
+.studentTeacherShare .shareBox div.ai{background-position: -860px 0px;}
+.studentTeacherShare .shareBox div.flv{background-position: -945px 0px;}
+.studentTeacherShare .shareBox div.swf{background-position: -1025px 0px;}
+.studentTeacherShare .shareBox div.txt{background-position: -1100px 0px ;}
+.studentTeacherShare .shareBox div.rmvb{background-position: 0px -84px;}
+.studentTeacherShare .shareBox div.mpeg{background-position: -80px -84px;}
+.studentTeacherShare .shareBox div.mp4{background-position: -160px -84px;}
+.studentTeacherShare .shareBox div.avi{background-position: -240px -84px;}
+.studentTeacherShare .shareBox div.mp3{background-position: -315px -84px;}
+.studentTeacherShare .shareBox div.jpg{background-position: -395px -84px;}
+.studentTeacherShare .shareBox div.gif{background-position: -475px -84px;}
+.studentTeacherShare .shareBox div.png{background-position: -555px -84px;}
+.studentTeacherShare .shareBox div.bmp{background-position: -635px -84px;}
+.studentTeacherShare .shareBox div.tif{background-position: -715px -84px;}
+.studentTeacherShare .shareBox div.emf{background-position: -795px -84px;}
+.studentTeacherShare .shareBox div.wmf{background-position: -875px -84px;}
+.studentTeacherShare .shareBox div.ico{background-position: 0px -169px;}
+.studentTeacherShare .shareBox div.raw{background-position: -80px -169px;}
+.studentTeacherShare .shareBox div.cdr{background-position: -160px -169px;}
+.studentTeacherShare .shareBox .detailsBox h4 a{font-weight:normal;font-size:16px;color:#333;line-height:24px;}
+.studentTeacherShare .shareBox .detailsBox a:hover{color:#f90;}
+.studentTeacherShare .shareBox .detailsBox{padding:5px 0;}
+.studentTeacherShare .shareBox .detailsBox p{color:#999;line-height:22px;}
+.studentTeacherShare .shareBox .detailsBox p a{color:#09aa83;line-height:24px;margin-right:20px;}
+/*分享文档样式结束*/
+/*分享图片样式开始*/
+.studentTeacherShare .shareBox .imgBox{margin-right:10px;width:100px;height:100px;}
+.studentTeacherShare .shareBox .imgBox img{width:100px;height:100px;}

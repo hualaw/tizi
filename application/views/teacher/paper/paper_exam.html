@@ -1,0 +1,74 @@
+{extends file='teacher/paper/paper_base.html'}
+
+{block name=title}试卷选题{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="mainContainer" pagename="paper_exam">
+    <div class="paperHall question-list current-type" data-sid="{$data.subject_id}">
+        <div class="filterBox">
+            <div class="optionVal undis" data-subject="{$data.stype}" data-grade="{$data.gtype}" data-type="{$data.etype}" data-province="{$data.atype}" id="optionVal"></div>
+            <!--
+            <div class="optionList cf" data-title="subject" data-count="stype">
+                <span class="fl">科目:</span>
+                <div class="ulBox fl">
+                    <ul class="cf">
+                        {foreach $data.subject_type as $stype}
+                        <li><a href="javascript:void(0)"{if $stype->id eq $data.stype} class="active"{/if} stype="{$stype->id}">{$stype->name}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            -->
+            <div class="optionList cf" data-title="grade" data-count="gtype">
+                <span class="fl">年级:</span>
+                <div class="ulBox fl">
+                    <ul class="cf">
+                        {foreach $data.grade as $i=>$g}
+                        <li><a href="javascript:void(0)"{if $i eq $data.gtype} class="active"{/if} gtype="{$i}">{$data.grade[$i]}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            <div class="optionList cf" data-title="type" data-count="etype">
+                <span class="fl">类型:</span>
+                <div class="ulBox fl">
+                    <ul class="cf">
+                        {foreach $data.exam_type as $etype}
+                        <li><a href="javascript:void(0)"{if $etype->id eq $data.etype} class="active"{/if} etype="{$etype->id}">{$etype->name}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>
+            <div class="optionList cf" data-title="province" data-count="atype">
+                <span class="fl">省份:</span>
+                <div class="ulBox fl">
+                    <ul class="cf">
+                        {foreach $data.area as $area}
+                        <li><a href="javascript:void(0)"{if $area->id eq $data.atype} class="active"{/if} atype="{$area->id}">{$area->name}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </div>           
+        </div>
+        <div class="exam_list"></div>
+    </div>
+</div>
+{/block}
+
+{block name=script}
+<script type="text/javascript" src="{$static_url}js/teacher/paper_exam.js{$version}"></script>
+{literal}
+<script type="text/javascript">
+$('.tempSubject').hide();
+//智能选题点击dt的chechBox选择dd的checkBox
+function exam_page(page){
+    Teacher.paper.paperExam.page(page);
+}
+var exam_id = {/literal}{$data.exam_id}{literal};
+Teacher.paper.paperExam.init(exam_id);
+</script>
+{/literal}
+{/block}

@@ -1,0 +1,138 @@
+a {text-decoration:none;color:#333;}
+a:hover {text-decoration:none;color:#f90;}
+.layout:after,.hd:after,.bd:after,.ft:after,.cf:after,.header:after,.wrap:after,.footer:after,.fn-clear:after{content:"";display:table;clear:both}
+.layout,.hd,.bd,.ft,.cf,.header,.wrap,.footer,.fn-clear{*zoom:1}
+.bold{font-weight:bold;}
+.org{color:#f60;}
+.undis{display: none}
+.dis{display:block;}
+.undisIm{display:none!important;}
+.disIm{display:block!important;}
+.fl{ float:left; display:inline;}
+.fr{ float:right; display:inline;}
+.yh{ font-family:"Microsoft Yahei"; font-weight:normal;}
+.posr{ position:relative; *zoom:1;}
+.bgf{ background:#fff;}
+.mt20{ margin-top:20px}
+.border1{border:1px solid lightgrey;}
+.border1 input{border:0px!important;}
+input::-ms-clear{display:none;}
+.aGreen{color:#09AA83;}
+.colorGreen{color:#2A8D6A}
+.colorRed{color: #ff3d3d;}
+.bgGreen{background:#298D6A;}
+.orange{color:#fc0;}
+.l50{ line-height:50px;}
+.cInput{border:1px solid #999;height:38px;line-height:38px;padding:0px 6px;color:#666;font-size: 14px;}
+.csInput{border:1px solid #999;height:26px;line-height: 26px;padding:0 6px;font-size:14px;color: #666;}
+/*回到顶部*/
+.cReturnTop{position:fixed; _position:absolute;bottom:100px; right:50px;display:none;width:40px; height:50px; text-align:center; padding: 3px 5px 0px 5px; color:#fff; border-radius:5px; background:#ff9903; font-size:14px;line-height:22px;cursor:pointer; display:none;}
+.cReturnTop:hover{background:#666;}
+em.fixIe6{height:40px;line-height: 40px;font-size:14px;}
+.ml20{margin-left:20px;}
+.headerBgGif{background:url(../../image/common/header_bg.gif) repeat-x top;}
+.imgCaptcha{cursor: pointer!important;}
+.cTextLoading{ background:url(../../image/common/commonTextLoading.gif) no-repeat; width:200px; height:84px; overflow:hidden; margin:20px 0px 20px 20px;}
+.floatLoadingCover{width:100%; background:#000; opacity:0.3; filter:alpha(opacity=30); position:absolute; top:0px; left:0px;z-index:88; display:none;}
+/*浮动loading层*/
+.cFloatLoadingGif{ position:absolute; top:50%; left:50%; z-index:99999; text-align:center; width:300px; height:160px; margin-left:-153px;display:none; margin-top:-83px; background:#fff;border:6px solid #2B8D6A}
+.cFloatLoadingGif p.text{ padding:30px 0px 10px 0px;}
+.cFloatLoadingGif span{background:url(../../image/common/commonTextLoading.gif) no-repeat; width:200px; margin-top:30px; height:84px;display:inline-block;}
+.cFloatLoadingGif p.return{padding-top:20px;}
+.cFloatLoadingGif p.return a{color:#2A8D6A}
+/*loading样式结束*/
+/*全站分页代码样式开始*/
+.page {margin:10px 0px; line-height:30px;}
+.pagination a {padding:1px 8px;color:#333;border:1px solid #d7d7d7;background:#f6f6f6;margin-left:6px;font-size:14px;}
+.pagination a:hover{color:#fff;background:#09aa83;border-color:#0f9271;}
+.pagination a.active,.pagination a.on{color:#fff;background:#09aa83;border-color:#0f9271;}
+.pagination a.disabled{ display:none}
+/*学生端分页附加样式*/
+.stuPage{margin-top:10px;margin-right:10px;}
+/*验证码背景图片*/
+.cBtnCaptcha{ display:inline-block;color:#333; font-size:14px; text-align:center;background:url(../../image/common/common_btn_captcha.gif) no-repeat; width:119px;height:36px; line-height:36px;}
+
+/*上传头像编辑器样式开始*/
+.atareditor{padding:10px 0px;}
+.atareditor #flash1{width:630px;margin:0 auto;}
+.atareditor #editorPanelButtons{padding-top:20px;width:630px;margin:0 auto;}
+.atareditor #webcamPanelButton{padding-left:220px;z-index:1;position: relative}
+.atareditor a.button_upload,
+.atareditor a.button_cancel,
+.atareditor a.button_shutter{float:left;width:40px;
+	height:28px;
+	line-height:28px;
+	padding-left:36px;
+	border:1px solid #d8d8d8;
+	color:#666;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	margin-right:18px;
+}
+.atareditor a.button_upload{background:#f8f8f8 url(../../image/atareditor/button_upload.png) 10px 50% no-repeat}
+.atareditor a.button_cancel{background:#f8f8f8 url(../../image/atareditor/button_cancel.png) 10px 50% no-repeat}
+.atareditor a.button_shutter{background:#f8f8f8 url(../../image/atareditor/button_shutter.png) 10px 50% no-repeat;position: absolute;top: -18px}
+.atareditor a.button_upload:hover,
+.atareditor a.button_cancel:hover,
+.atareditor a.button_shutter:hover
+{
+	border:1px solid #57bcff;
+	-moz-box-shadow:0 0 3px #a4caed;
+	-webkit-box-shadow:0 0 3px #a4caed;
+	box-shadow:0 0 3px #a4caed;
+}
+.atareditor .atareditor a.button_upload.Disabled{background-image:url(../../image/atareditor/button_upload_disabled.png)}
+.atareditor a.button_shutter.Disabled{background-image:url(../../image/atareditor/button_shutter_disabled.png)}
+.atareditor a.button_upload.Disabled,
+.atareditor a.button_upload.Disabled:hover,
+.atareditor a.button_shutter.Disabled,
+.atareditor a.button_shutter.Disabled:hover{
+	background-color:#f8f8f8;
+	border:1px solid #ddd;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	color:#bbb;
+}
+.atareditor dt{margin-right:18px;color:#888;float:left;width:100px;height:30px;line-height:30px;background:#f8f8f8;border:1px solid #ddd;border-bottom:none;-moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;-webkit-border-bottom-right-radius:0px;-webkit-border-bottom-left-radius:0px;-moz-border-radius-bottomright:0px;-moz-border-radius-bottomleft:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;text-align:center;cursor:pointer;}
+.atareditor dt.ml10{margin-left:115px;}
+.atareditor dt.current{background:#ddd;color:#333;text-shadow:1px 1px 1px #fff;cursor:default;}
+.atareditor dd{border-top:1px solid #ddd;padding:20px 0;clear:both;}
+/*上传头像编辑器样式结束*/
+/*弹出学生和家长注册样式开始*/
+.openRegDiv label{display: inline-block;width:80px;}
+.openRegDiv .ValidformInfo{left:80px;}
+.openRegDiv .gradeSelect{width:250px;}
+.openRegDiv ul li{position: relative;*zoom:1;padding-bottom:20px;}
+.openRegDiv ul li input{width:240px;}
+.openRegDiv ul li.rememberLi input{margin-right:5px;margin-top:2px;*margin-top:-1px;width:auto;}
+.openRegDiv ul li.ft{line-height:0px;overflow: hidden;}
+.openRegDiv ul li.ft a{margin-left:20px;font-size:14px;}
+.openRegDiv ul li.ft a:hover{color:#179C7E;}
+.openRegDiv .switchRegCaptap input{width: 120px;}
+.openRegDiv .switchRegCaptap a{margin-left: 227px;color: #298D6A;}
+.openRegDiv .switchRegCaptap a:hover{color:#f60;}
+/*弹出学生和家长注册样式结束*/
+/*弹出绑定手机样式开始*/
+.openModifyMyPhone .aSendCaptap{background:url(../../image/common/aSendCaptap_small.gif) no-repeat;cursor: pointer;width:126px;height:28px;line-height:28px;text-align:center;font-size:14px;color:#333; border:0 none;margin-right:5px;}
+.openModifyMyPhone .aSendCaptapOk{background-position: 0 -40px;color:#999;}
+.openModifyMyPhone .captapTip,.openModifyMyPhone .modifyMyPhone .aSendEmailTip{margin-left:15px;}
+.openModifyMyPhone .error,.openModifyMyPhone .modifyMyPhone .error{color:#F00;}
+.openModifyMyPhone li{padding-bottom:10px;line-height:28px; position: relative;*zoom:1;}
+.openModifyMyPhone .csInput{width:240px;}
+.openModifyMyPhone .sendTelCaptap .Validform_checktip{margin-left:5px;}
+.openModifyMyPhone li.cf .csInput{width:109px;}
+.openModifyMyPhone li .undis{display: none}
+/*弹出绑定手机样式结束*/
+/*邀请加入班级样式开始*/
+.commonInviteJoinTizi{width:978px;height:378px;margin:0 auto;background:url(../../image/common/welcomPageBg.gif) no-repeat center center;border:1px solid #b9d8d6;}
+.commonInviteJoinTizi .welcome{padding:40px 0 0 60px;}
+.commonInviteJoinTizi .welcome p{font-size:14px;color:#333333;line-height:30px;}
+.commonInviteJoinTizi .welcome p.userInfo em{color:#ff9900;font-style:normal;}
+.commonInviteJoinTizi .welcome .join{display:block;width:230px;height:35px;line-height:35px;text-align:center;font-size:18px;color:#fff;margin:20px 0;}
+.commonInviteJoinTizi .welcome .superiority{font-size:12px;}
+.commonInviteJoinTizi .welcome .goHomePage{font-size:12px;color:#1d9b79;text-decoration:none;}
+.commonInviteJoinTizi .welcome .goHomePage:hover{color:#f90;}
+
+/*邀请加入班级样式结束*/

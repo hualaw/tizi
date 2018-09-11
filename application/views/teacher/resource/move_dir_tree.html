@@ -1,0 +1,46 @@
+<!-- 移动文件夹时用的tree，没有同步/知识点目录 start  -->
+<div class="pop_main">
+    <div class="moveFile" id="moveDirTree">
+        <form action="{$site_url}cloud/cloud/move" method="post" class="moveDirTreeForm">
+            <input type="hidden" value="0" name="is_file"/>
+            <input type="hidden" value="" name="resource_id" class="resource_id"/>
+            <!--文件夹开始-->
+            <div class="fl textFolder">
+                <h2>文件夹</h2>
+                <div class="textView" id="moveFolderList">
+                    <a href="javascript:;" data-cat_id='cloud'>网盘</a>
+                </div>
+                <input type="hidden" value="" name="dir_id" class="dir_id"/>
+                <input type="hidden" value="" name="cat_id" class="cat_id"/>
+            </div>
+            <!--文件夹结束-->
+            <!--目录开始-->
+            <div class="fl textFolder">
+                <h2>目录</h2>
+                <div class="textView tree-list" id="moveCatalogueList">
+                    {if $cloud}
+                    <div class='dis' data-catelog='cloud'>
+                    {foreach $cloud as $cs=>$dir}
+                    <a href="javascript:;" data-dir_id="xx" data-to_dir_id="{$dir.dir_id}" class="depth_{$dir['depth']+1}">{$dir.dir_name}</a>
+                    {/foreach}
+                    </div>
+                    {/if}
+                </div>
+                <input type="hidden" value="" name="to_dir_id" class="to_dir_id"/>
+            </div>
+            <!--目录结束-->
+            <!--分类开始-->
+            <div class="fl textFolder">
+                <h2>分类</h2>
+                <div class="textView" id="moveClassList">
+                    <div class="dis" data-type='cloud'>
+                        <a href="javascript:void(0);" data-type="xx"></a>
+                    </div>
+                </div>
+                <input type="hidden" value="xx" name="type" class="to_type"/>
+            </div>
+            <!--分类结束-->
+        </form>
+    </div>
+</div>
+<!-- 移动文件夹时用的tree   end  -->

@@ -1,0 +1,370 @@
+/*公共开始*/
+.button{display:block; background:url(../../image/teacher/main_bg.png) repeat-x;border-radius:3px; text-align:center; cursor:pointer;}
+.greenText{color:#2a8d6a;}
+.bold{ font-weight:bold}
+.width990{width: 990px;margin: 0 auto;}
+.green{color: #409676;}
+strong{font-weight: normal;}
+.d_line{border-bottom:1px solid #ccc;}
+/*html{overflow-x:hidden; }
+body{overflow-x:hidden; }*/
+.fn-hide{ display:none;}
+.pd15{padding:15px;}
+/*老师端table新样式开始*/
+.tableStyle{line-height:28px;}
+.tableStyle .tdf1 td{background:#f1f1f1;}
+.tableStyle table{width:100%;*width:98%;}
+.tableStyle th{ background:#eee; text-align:left; padding:0px 6px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+.tableStyle td{ padding:0 6px;border-bottom:1px solid #ccc;}
+.tableStyle table a{ color:#298d6a;}
+.tableStyle table a:hover{color:#333;}
+/*老师端table新样式结束*/
+/*老师端演示动画样式开始*/
+.aui_outer{border:0px;}
+.demoAnimation{padding: 6px 0px;line-height: 21px;height:21px;overflow:hidden;}
+.demoAnimation span{background:url(../../image/teacher/ico_demoAnimation.gif) no-repeat left top;padding-left:28px; display: block;color: #179c7e; cursor: pointer;margin-left:20px;}
+/*老师端演示动画样式结束*/
+.paperArchive{margin:0px 15px;padding:5px 0;}
+/*公共结束*/
+/*头部开始*/
+.header{ background:#179c7e; height:50px;line-height:50px;z-index:9; position: relative;*zoom:1;}
+.header p.fr{color:#fff;margin-right:10px;height:50px;overflow:hidden;}
+/*.header p.fr a{color:#fff;margin:0 10px;}*/
+.header h1 a{ background:url(../../image/common/small_logo.gif) no-repeat; width:120px; height:50px; text-indent:-999em; overflow:hidden; display:block;margin-left:10px;}
+.header ul.fl{margin-left:30px;}
+.header ul.fl li{ float:left;_display:inline;}
+.header ul.fl li a{ display:block;line-height:50px; color:#fff;font-size:14px;cursor: pointer;padding:0 15px; font-weight:bold;}
+.header ul.fl li a:hover,
+.header ul.fl li.on a,
+/*老师端5个base根据body的class设置的on的样式开始*/
+.headerQuestion ul.fl li.question a,
+.headerPrepare ul.fl li.prepare a,
+.headerExercise ul.fl li.exercise a,
+.headerManage ul.fl li.manage a,
+.headerMember ul.fl li.member a,
+.headerCloud ul.fl li.cloud a,
+.headerSubscibe ul.fl li.subscibe a,
+.headerTeacherAqNav ul.fl li.teacherAqNav a
+{ background:#158c71; color:#fff; text-decoration:none;}
+.header .sLink{ margin-top:13px;}
+.header .sLink a{color:#fff;background:url(../../image/student/sLink_a_bg.gif) no-repeat; display:block; text-align:center; width:89px;height:25px; line-height:25px;}
+.header .sLink a:hover{ text-decoration:none;}
+.header .nav .posr{ _display:inline;}
+/*头部视频帮助*/
+.header .vedio_help{width:103px; height:29px; background:url(../../image/common/vedio_help.gif) no-repeat top center; color:#fff; margin-top:10px;}
+.header .vedio_help a{ display:block; width:103px; height:29px;}
+/*头部右侧下拉菜单开始*/
+.header .nav{ padding-right:20px;}
+.header .nav span{padding-right:20px;height:50px; line-height:50px; color:#fff; text-align:right; cursor:pointer;background:url(../../image/teacher/header_narrow_up.gif) no-repeat right center; padding-right:20px;}
+.header .nav span.down{background:url(../../image/teacher/header_narrow_down.gif) no-repeat right center}
+.header .nav p{position:absolute; top:50px; right:0px; border:1px solid #DEDEDE;width:98px; background:#fff;z-index:999}
+/*.header .nav ul span.up{ background:url(../../image/common/ico_headerNav.png) no-repeat top center; position:absolute; top:-6px; left:0px; width:98px; height:6px; overflow:hidden;z-index:3}*/
+.header .nav p a{ display:block;color:#009D6B; height:31px; line-height:31px; padding-left:15px;width:83px;}
+.header .nav p a:hover{ background:#2B8D6A; color:#fff; text-decoration:none;}
+.header .nav .dot{ background:url(../../image/common/ico_dot.gif) no-repeat; position:absolute; top:11px; right:5px; display:block; width:12px;height:11px;}
+.header .nav .num1{ position:absolute; top:7px; right:10px; background:url(../../image/common/ico_common.png) no-repeat;_background:url(../../image/common/ico_common.gif) no-repeat; display:block; width:15px; height:15px; line-height:16px; color:#fff; text-align: center;}
+.header .notification{background-color:#ff6c6c;-moz-border-radius:10px;-webkit-border-radius: 10px;border-radius: 10px; border:1px solid #179c7e;-webkit-box-shadow:0px 2px 0px #158c71;-moz-box-shadow:0px 2px 0px #158c71;box-shadow:0px 2px 0px #158c71; cursor:pointer;display:inline-block;height:25px;line-height: 25px;text-align:center;padding:0px 10px;margin-top:20px;}
+.header p.fr{text-align: right;height:50px;overflow:hidden;}
+.header .notification b{font-weight: normal}
+.header .notification i{background:url(../../image/student/common/notice.gif) no-repeat; width:16px;height:10px;display: inline-block;margin-right:5px;float:left;margin-top:8px;}
+.header .notification:hover{background-color:#f54c4c;}
+/*头部右侧下拉菜单结束*/
+.header .undis{ display:none}
+.header .dis{ display:block}
+.header .new{background:url(../../image/common/new.png) no-repeat;_background:url(../../image/common/new_8.png) no-repeat;width:27px;height:16px;display: block; position: absolute;top:7px;right:-7px;}
+/*头部结束*/
+
+/*主体结构样式开始*/
+.leftBar{margin-left:-100%;position: relative;background:#eee;}
+.mainMenu{ width:204px; background:#eee;overflow:auto;position: relative;overflow-x: hidden;}
+.mainContent{ width:100%; background:#fff;}
+.mainContent .mainWrap{ margin-left:204px;}
+.mainContainer{ width:100%;position:relative}
+.hiddenArrow{ width:1px;background:#ccc; font-size:0; height:200px;}
+.hiddenArrow a{ display:block; width:6px; height:10px; background:url(../../image/teacher/main_icon.png) no-repeat;_background:url(../../image/teacher/main_icon.gif) no-repeat; cursor:pointer;}
+.hiddenArrow .hideMenu{ background-position:-8px -508px;}
+.hiddenArrow .showMenu{ background-position:-23px -508px;}
+.mainContent .fullWidth{ margin-left:6px;}
+.hiddenArrow .hide-menu{ background-position:-8px -508px;}
+.hiddenArrow .show-menu{ background-position:-23px -508px;}
+.mainContent .full-width{ margin-left:6px;}
+/*主体样式结构结束*/
+/*左侧开始*/
+.wrap .leftBar h2.title{ background:url(../../image/teacher/memberCenter_h2_bg.gif) repeat-x; height:40px; line-height:40px; padding-left:10px; font-size:20px; color:#707070;}
+.wrap .memberCenter ul{margin-top:10px;}
+.wrap .memberCenter li a{padding-left:20px; font-size:14px; color:#333; height:30px; line-height:30px; display:block;}
+.wrap .memberCenter li a:hover{ background:#ddd;}
+.wrap .memberCenter a.active{ background:#969d9f; color:#fff; text-decoration:none;}
+.wrap .memberCenter a.active:hover{ background:#969d9f; color:#fff; text-decoration:none;}
+/*老师已选试题左侧结束*/
+/*左边*/
+/*.leftBar li{ background:#fff;}
+.class_nav_left ul li{ height:39px; border-bottom:1px solid #cccccc; line-height:39px; }
+.class_nav_left ul li.hwcr{ background:url(../../image/teacher/hwcr_black.png) no-repeat 10px 5px;  _background:url(../../image/teacher/hwcr_black.gif) no-repeat 10px 5px;}i
+.class_nav_left ul li.hwcr_ac{ background:#333333 url(../../image/hwcr_white.png) no-repeat 10px 5px;  _background:#333333 url(../../image/hwcr_white.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.hwcr_ac a{ color:#ffffff;}
+.class_nav_left ul li.test{ background:url(../../image/teacher/test_black.png) no-repeat 10px 5px; _background:url(../../image/teacher/test_black.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.test_ac{ background:#333333 url(../../image/teacher/test_white.png) no-repeat 10px 5px;  _background:#333333 url(../../image/teacher/test_white.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.test_ac a{ color:#ffffff;}
+.class_nav_left ul li.kl{ background:url(../../image/teacher/kl_black.png) no-repeat 10px 5px; _background:url(../../image/teacher/kl_black.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.kl_ac{ background:#333333 url(../../image/teacher/kl_white.png) no-repeat 10px 5px; _background:#333333 url(../../image/teacher/kl_white.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.kl_ac a{ color:#ffffff;}
+.class_nav_left ul li.hw_save{ background:url(../../image/teacher/hw_save_black.png) no-repeat 10px 5px; _background:url(../../image/teacher/hw_save_black.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.hw_save_ac{ background:#333333 url(../../image/teacher/hw_save_white.png) no-repeat 10px 5px; _background:#333333 url(../../image/teacher/hw_save_white.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.hw_save_ac a{ color:#ffffff;}
+.class_nav_left ul li a{ font-size:14px; color:#333333; padding-left:50px;}
+.class_nav_left h1{ display:block; height:40px; line-height:40px; font-size:24px; font-family:"黑体";}
+.class_nav_left h1 span{ padding-left:10px; color:#707070;}
+
+.class_nav_left ul li.home{ background:url(../../image/home_black.png) no-repeat 10px 5px;  _background:url(../../image/home_black.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.home_ac{ background:#333333 url(../../image/home_white.png) no-repeat 10px 5px;  _background:#333333 url(../../image/home_white.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.home_ac a{ color:#ffffff;}
+
+.class_nav_left ul li.person{ background:url(../../image/person_black.png) no-repeat 10px 5px; _background:url(../../image/person_black.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.person_ac{ background:#333333 url(../../image/person_white.png) no-repeat 10px 5px;  _background:#333333 url(../../image/person_white.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.person_ac a{ color:#ffffff;}
+
+.class_nav_left ul li.add{ background:url(../../image/add_black.png) no-repeat 10px 5px; _background:url(../../image/add_black.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.add_ac{ background:#333333 url(../../image/add_white.png) no-repeat 10px 5px; _background:#333333 url(../../image/add_white.gif) no-repeat 10px 5px;}
+.class_nav_left ul li.add_ac a{ color:#ffffff;}
+*/
+/*老师已选试题左侧结束*/
+/*左侧结束*/
+/*公共下拉菜单样式开始*/
+.barinSelectUl li{ position:relative;*zoom:1}
+.paperType a{ color:#333; display:block; padding-left:10px;}
+.paperType a:hover{ background:#2a8d6a; text-decoration:none;color:#fff;}
+.paperType ul{ display:none; position:absolute;top:23px; left:0px; border:1px solid #ccc;background:#fff; width:96px; line-height:24px;z-index:99}
+.paperType ul li{ height:24px; overflow:hidden; float:none; width:auto}
+.paperType input{ width:98px; outline:0; cursor:pointer; text-align:left; background:url(../../image/teacher/ico_narrow.gif) no-repeat 81px 9px #fff; border:1px solid #ccc; height:24px; line-height:22px; padding-left:10px;}
+/*公共下拉菜单样式结束*/
+/*分页开始*/
+/*.page{ margin:10px 0;}
+.page p.fr{ text-align:right;}
+.page a{ display:inline-block; margin-left:5px;color:#009d6b; font-size:14px; font-family:"黑体"}
+.page a.on,.page a.active,.page a:hover{ color:#333}
+*//*分页结束*/
+/*原文件名是base_page.css开始*/
+.left-menu{ float:left; margin-left:-100%;}
+.main-menu{ width:204px; float:left; background:#eee;overflow:auto;position: relative;overflow-x: hidden;}
+/*.main-menu .data-table td{font-size:90%;}*/
+.main-menu .subject-box{ position:relative; z-index:2;}
+.main-menu .subject-box .subject-chose{font-size:24px; background:url(../../image/main_bg.png) repeat-x 0 -155px;}
+.main-menu .subject-box .subject-active{ background-position:0 -202px;}
+.main-menu .subject-box .subject-chose a{display:block; color:#333; line-height:40px; background:url(../../image/main_icon.png) no-repeat 168px -441px;_background:url(../../image/main_icon_ie6.png) no-repeat 168px -441px; padding-left:10px;}
+.subject-chose-homewrok{font-size: 24px;font-family: "黑体";font-weight: normal; color:#333; line-height:40px; padding-left:10px;
+filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fefefe, endcolorstr=#c8c8c8, gradientType=0);
+background: -moz-linear-gradient(top, #fefefe, #c8c8c8);
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fefefe), to(#c8c8c8));}
+.main-menu .subject-box .subject-list{ position:absolute; width:194px; background:#fff; padding:10px; padding-right:0; display:none;}
+.main-menu .subject-box .subject-list dl{ float:left; width:90px; padding-right:5px;_padding-right:0px;}
+.main-menu .subject-box .subject-list dl dt{ width:100px;_width:90px; line-height:24px;}
+.main-menu .subject-box .subject-list dl dd{ padding-right:5px; padding-bottom:5px; width:40px; line-height:24px; float:left;}
+.main-menu .subject-box .subject-list dl dd a{ display:block; border:1px solid #eee; background:#eee; text-align:center; color:#2a8d6a;}
+.main-menu .subject-box .subject-list dl dd a:hover{ border:1px solid #333;}
+.main-menu .subject-box .subject-list dl dd a.active{ background:#333; color:#fff;}
+.main-menu .menu{ background:#fff; line-height:40px; font-size:14px;}
+.main-menu .menu li{ border-bottom:1px solid #ccc;}
+.main-menu .menu li a{ background:url(../../image/main_icon.png) no-repeat;_background:url(../../image/main_icon_ie6.png) no-repeat; display:block; color:#000; padding-left:50px;height: 39px;}
+.main-menu .menu li a.active,
+.main-menu .menu li a:hover{ background-color:#333; color:#fff;text-decoration: none;}
+.main-menu .menu li.point-icon a{ background-position:10px 4px;}
+.main-menu .menu li.point-icon a.active,
+.main-menu .menu li.point-icon a:hover{ background-position:10px -164px;text-decoration: none;}
+.main-menu .menu li.paper-icon a{ background-position:10px -35px;}
+.main-menu .menu li.paper-icon a.active,
+.main-menu .menu li.paper-icon a:hover{ background-position:10px -203px;text-decoration: none;}
+.main-menu .menu li.search-icon a{ background-position:10px -75px;}
+.main-menu .menu li.search-icon a.active,
+.main-menu .menu li.search-icon a:hover{ background-position:10px -242px;text-decoration: none;}
+.main-menu .menu li.smart-icon a{ background-position:10px -115px;}
+.main-menu .menu li.smart-icon a.active,
+.main-menu .menu li.smart-icon a:hover{ background-position:10px -284px;}
+.main-menu .menu li.homework-icon a{ background-position:15px -1955px}
+.main-menu .menu li.homework-icon a.active,
+.main-menu .menu li.homework-icon a:hover{ background-position:15px -1891px;}
+.main-menu .menu li.paper-save-icon a{ background-position:17px -2063px;}
+.main-menu .menu li.paper-save-icon a.active,
+.main-menu .menu li.paper-save-icon a:hover{ background-position:17px -2005px;}
+
+.main-menu h4{ padding-left:10px; line-height:30px; font-weight:normal;position: relative;z-index:10;*zoom:1;}
+.main-menu h4 a{float: right;position: absolute;right: 10px;top: 0px;}
+.main-menu h4 a:hover{color:#f60;}
+.main-menu .question-table{ padding:0 10px;}
+.main-menu .question-table td{height:23px; line-height:23px; overflow:hidden;}
+.main-menu .question-table td.first-col{ text-align:left; text-indent:5px;}
+.main-menu .question-table td.second-col{ width:20px;}
+.main-menu .question-table td.third-col{ width:50px;overflow: hidden;}
+.main-menu .question-table td.third-col .percent-line{ position:relative; height:23px; width:20px; background:#bbebd3;float: left;}
+.main-menu .question-table td.third-col .percent-line .percent-text{ position:absolute; width:50px;left: 0px;}
+.main-menu .question-table td.forth-col{ width:20px; padding-left:3px;}
+.main-menu .question-table td.forth-col a.del-btn{ display:block; text-indent:-20000px; background:url(../../image/teacher/x.gif) no-repeat;width:16px; height:16px;}
+.main-menu .preview-btn{ padding:10px;}
+/*2013年10月24日注释*/
+/*.main-menu .preview-btn a{color:#fff; line-height:30px; height:30px; font-size:14px; box-shadow:0px 3px 0px #ccc;_width: 162px;}
+.main-menu .preview-btn a:hover{ background-position:0 -40px;}*/
+.hidden-arrow{ width:1px; float:left;overflow: hidden; background:#ccc; font-size:0; height:200px;}
+.hidden-arrow a{ display:block; cursor:pointer; width:6px; height:10px; background:url(../../image/main_icon.png) no-repeat;_background:url(../../image/main_icon_ie6.png) no-repeat;}
+.hidden-arrow a.hide-menu{ background-position:-8px -508px;}
+.hidden-arrow a.show-menu{ background-position:-23px -508px;}
+.main-content{ width:100%; background:#fff; float:left;}
+.main-content .main-wrap{ margin-left:220px;}
+.main-content .full-width{ margin-left:6px;}
+/*原文件名是base_page.css结束*/
+/*原文件名是common.css开始*/
+table.data-table{ border:1px solid #ccc;border-collapse:separate; border-left:0px; border-top:0px;width:184px;}
+table.data-table th,
+table.data-table td{ border-left:1px solid #ccc; border-top:1px solid #ccc; text-align:center;}
+.button{display:block; background:url(../../image/homework/main_bg.png) repeat-x; border-radius:3px; text-align:center; cursor:pointer;}
+.green-btn{ background-position:0 0;}
+.grey-btn{ background-position:0 -78px;}
+.light-grey-btn{ background-position:0 -159px;}
+.green-text{ color:#2a8d6a;}
+.pages{}
+.pages a{ margin:0 2px; color:#2a8d6a;}
+.pages a.current-page{ cursor:default; font-weight:bold; color:#333;}
+
+
+
+/* open window */
+.fn-openwin{ position:absolute; width:100%; top:0; left:0; display:none;}
+.fn-openwin .openwin-mask{ width:100%; background:#000; opacity:0.3; filter:alpha(opacity=30);}
+.fn-openwin .openwin-box{ position:absolute; width:530px; background:#fff; border:5px solid #2b8d6a;}
+.fn-openwin .openwin-title{ background:#eee; border-bottom:1px solid #ddd; line-height:30px; position:relative; font-size:14px; padding-left:10px;}
+.fn-openwin .openwin-title a{ position:absolute; right:10px; color:#333; text-decoration:none; top:0;}
+.fn-openwin .openwin-content{ padding:10px;}i
+.fn-openwin .alert-box{ text-align:center;}
+.fn-openwin .openwin-btnline{ text-align:center; line-height:20px; padding:20px; margin:auto;}
+.fn-openwin input[type="text"]{width:240px;}
+.fn-openwin table{ width:auto; margin:auto;}
+.fn-openwin .openwin-btnline .button{ display:inline-block; width:50px; margin:auto 4px; border:1px solid #ccc;}
+.fn-openwin .openwin-btnline .fn-hide{ display:none;}
+/*原文件名是common.css结束*/
+/*原文件名是homework.css开始*/
+
+/* 留作业 作业中心 */
+.homework_center{padding:10px;}
+.homework_center h2.title{font-size: 12px;font-weight: normal;color: #333;}
+.homework_center h2.title a{color: #298d6a;}
+.class_grade {overflow: hidden;margin: 13px 0;}
+.class_grade ul{overflow: hidden;float: left;}
+.class_grade ul li{float: left;width: 73px;height: 28px;background: #eee;border:1px solid #999;color: #298d6a;line-height: 28px;text-align: center;margin-right: 10px;cursor: pointer;}
+.class_grade ul li.active{background: #333;color: #fff;border:1px solid #333;}
+.class_grade .add{color: #298d6a;float: left;margin-top: 4px;cursor: pointer;}
+.class_grade .add em{font-weight: bolder;font-size: 16px;}
+.homework_state{/*width: 1112px;*/background: #fbfbfb;/*border:1px solid #ccc;*/;}
+.homework_state h2{ margin-bottom: 10px; font-weight: normal;}
+/*.homework_state .add_new{width: 96px;height: 30px;line-height: 28px;text-align: center;display:block;box-shadow: 0px 3px 0px #ccc;font-size: 14px;color: #fff;margin: 9px 0px 13px 0px;}*/
+
+.table_box ul{overflow: hidden;}
+.table_box ul li{border-top: 1px solid #ccc;border-left: 1px solid #ccc;float: left;height: 32px;line-height: 32px;text-align: center;}
+.table_box ul li.list1{width:88px;border-left: none; }
+.table_box ul li.list2{width: 68px;}
+.table_box ul li.list3{width: 253px;}
+.table_box ul li.list4{width: 98px;}
+.table_box ul li.list5{width: 56px;}
+.table_box ul li.list6{width: 57px;}
+.table_box ul li.list7{width: 103px;}
+.table_box ul li.list8{width: 205px;}
+.table_box ul li.list9{width: 68px;}
+.table_box ul li.list0{width: 87px;}
+
+
+.table_box ul.details li.list3{color: #298d6a;}
+.table_box ul li.list8 span,
+.table_box ul li.list0 a{color: #298d6a;cursor: pointer;}
+.table_box ul li.list8 span{margin-left: 14px;}
+.table_box ul.head{background: #f1f1f1;}
+.table_box ul.no_end{background: #fff;}
+.table_box ul.no_check{background: #f5f5f5;}
+.table_box ul.checked{background: #dbdbdb;}
+
+.homework_num{overflow: hidden;margin-top: 10px;}
+.homework_num .count{float: left;margin-left: 10px;}
+.homework_num .work_page{float: right;margin-right: 10px;color: #298d6a;}
+
+/* 
+ *
+ * 	作业详情 
+ *
+ */
+.homework_report{padding: 13px;border: 1px solid #ccc;margin-top: 10px;font-size: 14px;width: 862px;margin-bottom: 15px;}
+.homework_report h4{font-weight: normal;margin: 15px 0px 6px;}
+.homework_report p.end_time{margin: 10px 0px 20px 5px;}
+.border_box{width: 770px;height: 18px;border-bottom: 1px solid #eee;}
+ul.time_tree{overflow: hidden;}
+ul.time_tree li{float: left;padding: 0px 20px;height: 34px;line-height: 34px;background: #f1f1f1;cursor: pointer;} 
+ul.time_tree li.active{background: #298d6a;color: #fff;}
+ul.time_tree li.active span.green{color: #fff;}
+
+ul.wrong_tree{overflow: hidden;}
+ul.wrong_tree li{float: left;margin-right:15px;padding-right:5px;height: 34px;line-height: 34px;background: #f1f1f1;cursor: pointer;} 
+ul.wrong_tree li span{background: #298d6a;color: #fff;width: 24px;height: 24px;line-height: 24px;text-align:center;margin-left: 5px;display: inline-block; }
+
+.detials_table{border-bottom: 1px solid #ccc;width: 890px;}
+.detials_table ul{overflow: hidden;}
+.detials_table ul li{border-top: 1px solid #ccc;border-left: 1px solid #ccc;float: left;height: 32px;line-height: 32px;text-align: center;}
+.detials_table ul li.list_1{width:116px;}
+.detials_table ul li.list2{width: 78px;}
+.detials_table ul li.list3{width: 186px;}
+.detials_table ul li.list4{width: 105px;}
+.detials_table ul li.list5{width: 120px;}
+.detials_table ul li.list6{width: 142px;}
+.detials_table ul li.list7{width: 135px;border-right: 1px solid #ccc;}
+.detials_table ul li.list7 span{color: #298d6a;cursor: pointer;}
+
+ul.info_noend{overflow: hidden;margin: 20px 0px 10px;}
+ul.info_noend li{float: left;padding-right: 55px;}
+
+/* 错题弹出框 */
+.sub_wrong_win{/*width: 570px;*/width: 840px;background: #2a8d6a;padding: 5px 7px;position: absolute;left: 50%;top: 25%;margin-left: -300px;margin-top: -100px;}
+
+.sub_wrong_win h5.h{font-size: 14px;background: #eee;height: 36px;line-height: 36px;font-weight: normal;text-indent: 25px;}
+.sub_wrong_win h5.h span{width: 14px;height: 13px;background: url(../../image/homework/cancle_bg.png) no-repeat;display: inline-block;position: absolute;right: 18px;top: 17px;cursor: pointer;}
+.sub_wrong_win .question{background: #fff;padding: 15px 20px;}
+
+/* 个人作业详情 */
+.mywork_title1{ font-size:12px; color:#2a8d6a; line-height:50px;}
+.mywork_title1 span{ color:#000;}
+
+.mywork_title2{ height:33px; background:#eeeeee; line-height:33px; font-size:16px; padding-left:10px; font-family:"黑体"; margin-bottom:10px;}
+
+.time_results{ border:1px solid #999999;}
+.time_results ul{ list-style:none;}
+.time_results ul li{font-size:14px; height:50px; line-height:50px; padding-left:40px; margin-left:30px;}
+.time_results ul li.time{ background:url(../../image/homework/times.png) 0px 10px no-repeat;}
+.time_results ul li.result{background:url(../../image/homework/times.png) 0px -30px no-repeat;}
+
+.datika{ background:#eeeeee; border:1px solid #999999; border-top:1px solid #dddddd; padding-bottom:30px;}
+
+.datika ul{ list-style:none; margin-top:0px; margin-left:30px; }
+.datika ul li{ float:left; width:35px; height:35px; background:#ffffff; line-height:35px; text-align:center; font-size:14px;  font-family:"黑体"; margin:13px; margin-left:0px; margin-bottom:0px; color:#01b88b; cursor:pointer;}
+.datika ul li.active{ background:#009d6b; color:#ffffff;}
+.datika ul li.error{ background:#ff4646; color:#ffffff;}
+.datika ul li.undo{ background:#999999; color:#ffffff;}
+
+.report_title{ font-size:14px; margin-left:30px; line-height:30px;}
+
+.checkError{ width:89px; height:25px; background:url(../../image/homework/checkError.jpg) no-repeat; display:inline-block; margin-top:15px; margin-left:30px;}
+
+/* 没有班级，请先加入班级 */
+.no_class{width: 300px;height: 500px;background: url(../../image/homework/tree_bg.png) 50px 150px no-repeat;margin: 55px auto;}
+.no_class p.no_class_notice{font-size: 18px;color: #666;font-weight: bold;}
+.green2{color: #00b88b;}
+
+
+
+
+/*补充作业中心_表格*/
+.table_box{}
+.table_box table{ border-right: 1px solid #ccc; border-top: 1px solid #ccc;}
+.table_box table td{ padding: 0px 5px; height: 40px; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+.table_box table td.head{ background: #eee;}
+
+/*页码*/
+.classpage{ line-height:50px; font-size:14px;}
+.classpage a{ color:#2a8d6a; padding:0px 3px;} 
+.classpage a.active{ color:#333; font-weight:bold;}
+
+.ll_base_foot a{color:#999;}
+/*原文件名是homework.css结束*/

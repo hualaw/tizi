@@ -1,0 +1,137 @@
+.studentClass{}
+.stuFlashCenter{text-align: center}
+/*班级名称样式开始*/
+.studentClass .className{line-height: 18px;height: 18px;font-size: 16px;margin-bottom: 20px;}
+.studentClass .className span{font-weight: normal;}
+/*班级名称样式结束*/
+/*二级导航开始*/
+.studentClass .stuClassSubNav{background: #f6f6f6;margin-bottom: 20px;padding-right: 10px;}
+.studentClass .stuClassSubNav .classNum{line-height: 50px;font-size: 16px;padding-left:15px;}
+.studentClass .stuClassSubNav a{display: inline-block;line-height: 50px;font-size: 16px;margin: 0 10px;border-bottom: 2px solid #f6f6f6;height: 48px;}
+.studentClass .stuClassSubNav a.active,
+.studentClass .stuClassSubNav a:hover{border-bottom-color:  #f90;color: #333}
+/*二级导航结束*/
+/*内容表格样式开始*/
+.studentClass table{width: 100%}
+.studentClass td,
+.studentClass tr,
+.studentClass th{border: 1px solid #dddddd;text-align: center;}
+.studentClass th{line-height: 40px;background: #f6f6f6;font-weight:normal;}
+/*教师内容开始*/
+.studentClass .teacherTable .headerImg{width: 30%}
+.studentClass .teacherTable .joinTime{width: 30%}
+.studentClass .teacherTable .name{width:20%}
+.studentClass .teacherTable .sub{width:20%}
+.studentClass .teacherTable .img{display: block;width: 100px;overflow: hidden;margin: 10px auto;}
+.studentClass .teacherTable .img img{width: 100px;height: 100px;}
+/*教师内容结束*/
+/*同学内容开始*/
+.studentClass .stuTable .headerImg{width: 33%}
+.studentClass .stuTable .name{width: 34%}
+.studentClass .stuTable .joinTime{width: 33%}
+.studentClass .stuTable .img{display: block;width: 50px;overflow: hidden;margin: 10px auto;}
+.studentClass .stuTable .img img{width: 50px;height: 50px;}
+/*同学内容结束*/
+/*试卷样式开始*/
+.studentClass .paperTable .time{width: 33%;text-align: left;text-indent: 10px;}
+.studentClass .paperTable .sub,
+.studentClass .paperTable .teacherName,
+.studentClass .paperTable .num,
+.studentClass .paperTable .comment{width: 7%;}
+.studentClass .paperTable .endTime,
+.studentClass .paperTable .operation{width: 12%}
+.studentClass .paperTable .accuracy{width: 15%}
+.studentClass .paperTable td{line-height: 40px;}
+.studentClass .paperTable .teacherName a,
+.studentClass .comment a{color: #009a83}
+.studentClass .teacherName a:hover,
+.studentClass .comment a:hover{color: #f90}
+.studentClass .starBtn{display: inline-block;width: 70px;height: 30px;background: #49b764;border-radius: 3px;line-height: 30px;color:#fff;}
+.studentClass .lookBtn{display: inline-block;width: 70px;height: 30px;background: #f6f6f6;border-radius: 3px;line-height: 30px;color:#009b4a;}
+.studentClass .starBtn:hover{background: #44a35b;}
+.studentClass .lookBtn:hover{background: #e8e8e8;}
+/*试卷样式结束*/
+/*文件内容样式开始*/
+.studentClass .fillTable td{line-height: 40px;}
+.studentClass .fillTable .fillName{width: 50%;text-align: left;text-indent: 10px;}
+.studentClass .fillTable .size,
+.studentClass .fillTable .uploader,
+.studentClass .fillTable .uploadTime,
+.studentClass .fillTable .downoadAmount,
+.studentClass .fillTable .operation{width: 10%;}
+.studentClass .fillTable .downloadBtn{display:block;width: 30px;height: 30px;text-indent: -9999px;background: url(../../image/studentClass/downloadIcon.png) no-repeat center center;line-height: 30px;margin:0 auto;}
+.studentClass .nofill{padding: 120px 0;background:url(../../image/studentClass/nofillIcon.png) no-repeat center 20px; }
+.studentClass .nofill p{text-align: center;font-size: 14px;color: #999;}
+/*文件内容样式结束*/
+/*作业样式开始*/
+.studentClass .homeWorkTable .sub{width: 7%;}
+.studentClass .homeWorkTable .time{width: 25%;}
+.studentClass .homeWorkTable .bookName,
+.studentClass .homeWorkTable .unit{width: 20%;}
+.studentClass .homeWorkTable .state,
+.studentClass .homeWorkTable .comment,
+.studentClass .homeWorkTable .results{width: 6%;}
+.studentClass .homeWorkTable .operation{width: 10%;}
+.studentClass .homeWorkTable td{line-height: 40px}
+/*作业样式结束*/
+/*内容表格样式结束*/
+/*没有加入班级样式开始*/
+.studentClass .noJoinWrap{padding:0 20px;}
+.studentClass .noJoinWrap .infoBox{width: 550px;margin-bottom: 30px;}
+.studentClass .noJoinWrap .leftBox h2{font-size: 24px;font-weight: normal;line-height: 50px}
+.studentClass .noJoinWrap .leftBox .infoBox p{padding-left: 100px;padding-top: 10px;height: 70px;background: url(../../image/studentClass/noJoinIcon.png) no-repeat left top;margin-bottom:30px;}
+.studentClass .noJoinWrap .leftBox .infoBox p span{display: block;font-size: 18px;line-height: 26px;}
+.studentClass .noJoinWrap .leftBox .infoBox p em{display: block;font-size: 14px;line-height: 26px}
+.studentClass .noJoinWrap .leftBox .infoBox .onlineP{background-position: left bottom}
+.studentClass .noJoinWrap .leftBox .infoBox .addClassIcon{background: url(../../image/studentClass/adclass_list03.png) no-repeat;}
+.studentClass .noJoinWrap .news h3{font-size: 14px;margin-bottom: 10px;line-height: 16px;font-weight: normal;}
+.studentClass .noJoinWrap .news p{line-height: 24px;}
+.studentClass .noJoinWrap .news p a{color: #009b4a}
+.studentClass .noJoinWrap .news p a:hover{color: #f90}
+.studentClass .noJoinWrap .news p span{color: #999999}
+.studentClass .noJoinWrap .joinClass{width: 280px;padding: 5px 20px 20px 20px;border: 1px solid #cccccd;background: #f9f9f9}
+.studentClass .noJoinWrap .joinClass h3{line-height: 40px;border-bottom: 1px solid #ccc;font-weight: normal;font-size: 18px;margin-bottom:30px;}
+.studentClass .noJoinWrap .joinClass {line-height: 24px;}
+.studentClass .noJoinWrap form div{margin-bottom: 20px;}
+.studentClass .noJoinWrap .classNumInput{width: 140px;height: 28px;border: 1px solid #ccc;padding: 0 5px;margin-left: 20px;}
+.studentClass .noJoinWrap .submit{width: 70px;height: 30px;background: #49b764;border-radius: 3px;line-height: 30px;color:#fff;border:none;margin-left: 10px;}
+.studentClass .noJoinWrap .submit:hover{background: #44a35b;cursor: pointer}
+.studentClass .noJoinWrap .imgBox{width: 360px;height: 370px;overflow: hidden;text-align: left;}
+.studentClass .noJoinWrap .imgBox img {width: 370px;height: 240px;display: inline;}
+.studentClass .ValidformInfo{left: 20px;}
+/*没有加入班级样式结束*/
+/*试卷部分查看评语样式开始*/
+.lookReviews p{line-height: 22px;font-size: 14px;}
+/*试卷部分查看评语样式结束*/
+/*做作业弹窗样式开始*/
+.studentClass .stuHomeWork{display:none;width: 520px;_width:540px;position: absolute;background: #fff;border:1px solid #d7d7d7;z-index:400;left:-510px;_left:-540px;top:5px;padding: 10px 0 20px 0;}
+.studentClass .stuHomeWork h2{text-align: left;padding-left: 30px;font-size: 16px;font-weight: normal;line-height: 16px;margin-bottom: 10px;}
+.studentClass .stuHomeWork ul{display: block;text-align: center}
+.studentClass .stuHomeWork li{position: relative;display: inline-block; width: 100px;margin: 0 15px;text-align: center;}
+.studentClass .stuHomeWork li a.img{display: inline-block;width: 100px;float:left;*+float: none;}
+.studentClass .stuHomeWork li span.name{width: 100px;float:left;*+float: none;}
+.studentClass .stuHomeWork li a.img img{display: inline-block;width: 100px;height: 100px;}
+.studentClass .stuHomeWork li span{display:inline-block;line-height: 16px;margin-bottom: 14px;}
+.studentClass .stuHomeWork li .mask{display: block;width: 100px;height: 100px;background-color: #fff;position: absolute;left: 0;top:10px;opacity: 0.6;filter:alpha(opacity=60);}
+.studentClass .stuHomeWork li .wcIcon{position: absolute;top:6px;right:10px;text-indent:-9999px;display: block;width: 47px;height: 56px;background: url(../../image/studentClass/wcIcon.png) no-repeat center center;_background: url(../../image/studentClass/wcIcon-ie.png) no-repeat center center;}
+
+/*做作业弹窗样式结束*/
+
+
+/* 图片预览页面开始 */
+.studentClass .hd {padding: 16px 0 8px 0;text-align: center;line-height: 30px;}
+.studentClass .hd .inf span {margin: 0px 10px;}
+.studentClass .shareImgBox{width:980px;}
+.studentClass .shareImgBox img{display: block;margin: 0 auto;}
+/* 图片预览页面结束 */
+
+/* 作业下载弹窗验证开始 */
+.studentPraWrap .pop_main .paperCaptchaWord{}
+.studentPraWrap .pop_main .paperCaptchaWord .paperCodeBox{margin-top: 5px;}
+.studentPraWrap .pop_main .paperCaptchaWord .cInput {height: 32px;line-height: 32px;margin-right: 10px;}
+/* 作业下载弹窗验证开始 */
+
+/*预览音视频*/
+#container_wrapper {margin:0 auto;}
+#container {margin:0 auto;}
+

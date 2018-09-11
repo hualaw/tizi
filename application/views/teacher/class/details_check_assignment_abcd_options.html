@@ -1,0 +1,10 @@
+                <tr>
+                    <td>选{$op}人数</td>
+                     {foreach $wrong_q as $key=>$val}
+                     {if $val@iteration>20*($lp-1) and $val@iteration<20*$lp+1}
+                    <td {if $val.correct_answer=={$op}}class="BgGreen"{/if}>{$val.{$op}}</td>
+                    {/if}
+                    {/foreach}
+                    
+                    {include file='teacher/class/online_q_blank_over20.html'}
+                </tr>

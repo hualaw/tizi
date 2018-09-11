@@ -1,0 +1,107 @@
+{extends file='teacher/paper/paper_base.html'}
+
+{block name=title}搜索选题{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="mainContainer fl" pagename="paper_search">
+    <!--右侧内容开始-->
+    <div class="allPaper">
+        <!--当前位置开始-->
+        <!-- <div class="path">
+            <a href="javascript:void(0)">搜索选题</a>
+        </div> -->
+        <!--当前位置结束-->
+        <!--试卷内容开始-->
+        <div class="seachBox cf">
+            <ul class="fl">
+                <li>
+                    <div class="paperType cf">
+                        <span class="fl">题型：</span>
+                        <div class="posr fl" id="qtype">
+                            <input type="hidden" value="" data-id="{$data.question_type[0]->id}"/>
+                            <!-- <input type="button" value="{$data.question_type[0]->name}" data-id="{$data.question_type[0]->id}" />
+                            <ul>
+                                {foreach $data.question_type as $qtype}
+                                <li><a href="javascript:;" data-id="{$qtype->id}">{$qtype->name}</a></li>
+                                {/foreach}
+                            </ul> -->
+                            <select id="paperQues">
+                                {foreach $data.question_type as $qtype}
+                                <option value="{$qtype->id}" data-id="{$qtype->id}">{$qtype->name}</option>
+                                {/foreach}
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="paperType cf">
+                        <span class="fl">难度：</span>
+                        <div class="posr fl" id="qlevel">
+                            <input type="hidden" value="" data-id="{$data.question_level[0]->id}"/>
+                            <!-- <input type="button" value="{$data.question_level[0]->name}" data-id="{$data.question_level[0]->id}" />
+                            <ul>
+                                {foreach $data.question_level as $qlevel}
+                                <li><a href="javascript:;" data-id="{$qlevel->id}">{$qlevel->name}</a></li>
+                                {/foreach}
+                            </ul> -->
+                            <select id="paperDiff">
+                                {foreach $data.question_level as $qlevel}
+                                <option value="{$qlevel->id}" data-id="{$qlevel->id}">{$qlevel->name}</option>
+                                {/foreach}
+                            </select>
+                        </div>
+                    </div>
+                </li>                   
+                <li class="inputTextCon">
+                    <span class="fl">关键字：</span>
+                    <div class="fl" id="qkeyword">
+                        <input type="text" class="seachBoxInput" value="请输入关键字" />
+                    </div>
+                </li>
+            </ul>
+            <span class="cBtnNormal fl" id="search_submit">
+                <input type="submit" class="submit" value="" />
+                <i>搜索</i>
+            </span>
+        </div>
+        <!--试卷详细内容开始-->
+        <div class="question-list current-type" data-sid="{$data.subject_id}"></div>
+        <!--试卷详细内容结束-->
+        <!--试卷内容结束-->
+    </div>
+    <!--右侧内容开始-->
+</div>
+<!-- include file="feedback/feedback_question.html"-->
+{/block}
+
+{block name=script}
+<!--js引入开始-->
+<script type="text/javascript" src="{$static_url}js/teacher/paper_search.js{$version}"></script>
+<script type="text/javascript">
+$('.tempSubject').hide();
+//调用左侧高度
+Common.getLeftBar({
+	id:"#leftBar"	
+});
+//调用头部右侧下拉菜单
+Common.headerNav({
+	id:"#navSlidown",
+	ul:"ul",
+	dis:"dis"	
+});
+//调用输入框文字点击消失脚本
+Common.inputTips(".seachBoxInput");
+//调用左侧顶部选择学科
+TeacherCommon.leftSlidown({
+	id:'.leftSlidown',
+	active:'active',
+	con:'.leftSlidownCon',
+	dis:'dis'	
+});
+Teacher.paper.search.init();
+</script>
+<!--js引入结束-->
+{/block}

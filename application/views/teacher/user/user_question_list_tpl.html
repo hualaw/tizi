@@ -1,0 +1,57 @@
+<div class="myQuestionList">
+	<div class="routeBox">
+		<span class="questionAddress" data-gid="{$data.group_info->id}"><a href="{$site_url}teacher/user/myquestion">我的题库</a></span><span>/</span><span>{$data.group_info->name}</span>
+	</div>
+	<p class="questionNum">共计{$data.total}道题</p>
+	<div class="questionBox">
+	{foreach $data.question as $question}
+		<div class="listBox" data-qid="{$question.id}">                    
+			<div class="hd">
+				<h3>{$question.title}</h3>
+				<ul>
+					<li class="cf">
+						<span class="fl">上传日期：<em>{$question.date}</em></span>
+						<span class="fl">题型：<em>{$question.qtype_name}</em></span>
+						<span class="fl star-level star-{$question.level_id}"><em class="fl">难易度：</em><em class="icon fl"></em><em class="fl"> ({$data.easy_level[$question.level_id]})</em></span>
+					</li>
+					<li>
+						<span>知识点：<em>{$question.category_info}</em></span>
+					</li>
+					<li>
+						<span>
+							同步信息：
+							<em>{$question.course_info}</em>
+						</span>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="bd tplStyle">
+				<label>【题文】：</label>
+				{$question.body}
+			</div>
+			<div class="ansBox tplStyle">
+			<label>【答案】：</label>
+			{$question.answer}
+			</div>
+			<div class="ansBox tplStyle">
+			<label>【解析】：</label>
+			{$question.analysis}
+			</div>
+			<div class="operationBox">
+				 <a href="javascript:void(0);" class="group_ques" data-num="{$question.id}-{$question.group_id}">题目分组</a>
+				<a href="{$site_url}teacher/user/myquestion/edit/{$question.id}">编辑</a>
+				<a href="javascript:void(0)" class="del_ques" data-num="{$question.id}-{$question.group_id}">删除</a>
+			</div>
+		</div>
+	  {/foreach}
+		<!--分页开始-->
+		<div class="page cf">
+			<p class="fr"></p>
+			<div class="pagination fr">
+				{$pages}
+			</div>
+		</div>
+		<!--分页结束-->
+	</div>
+</div>

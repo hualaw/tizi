@@ -1,0 +1,165 @@
+<div id="down-paper-content" class="undis">
+    <div class="teacherPaper teacherHomework">
+        <div class="down-word-win downWin_tpl">
+            <dl>
+                <dt>Word版本</dt>
+                <dd class="fn-clear">
+                    <ul class="wordType cf">
+                        <li>
+                            <p class="first in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_version eq 'docx'}active{else if empty($data.download_default.paper)}active{/if}">
+                                <label>
+                                    <input name="paper_version" type="radio" value="docx" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_version eq 'docx'}checked="checked"{else if empty($data.download_default.paper)}checked="checked"{/if}/> <em class="b">Word 2007/2010，</em>文件扩展名为docx
+                                </label>
+                            </p> 
+                        </li>
+                        <li>
+                            <p class="in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_version eq 'doc'}active{/if}">
+                                <label>
+                                    <input name="paper_version" type="radio" value="doc" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_version eq 'doc'}checked="checked"{/if}/> <em class="b">Word 2000/2003，</em>文件扩展名为doc
+                                </label>
+                            </p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>纸张大小</dt>
+                <dd class="paperSize">
+                    <ul class="paperSizes cf">
+                        <li>
+                            <p class="a4 in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq 'A4'}active{else if empty($data.download_default.paper)}active{/if}">
+                                <label for="g1">
+                                    <input name="paper_size" type="radio" id="g1" value="A4" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq 'A4'}checked="checked"{else if empty($data.download_default.paper)}checked="checked"{/if}/>
+                                    <em class="b">A4</em>
+                                </label>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="a4h in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq 'A4H'}active{/if}">
+                                <label for="g2">
+                                    <input name="paper_size" type="radio" id="g2" value="A4H" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq 'A4H'}checked="checked"{/if}/>
+                                    <em class="b">A4横</em>(双栏)
+                                </label>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="a3 in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq 'A3'}active{/if}">
+                                <label for="g3">
+                                    <input name="paper_size" type="radio" id="g3" value="A3" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq 'A3'}checked="checked"{/if}/>
+                                    <em class="b">A3</em>
+                                </label>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="k16 in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq '16K'}active{/if}">
+                                <label for="g4">
+                                    <input name="paper_size" type="radio" id="g4" value="16K" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq '16K'}checked="checked"{/if}/>
+                                    <em class="b">16开</em>
+                                </label>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="kh8 in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq '8KH'}active{/if}">
+                                <label for="g5">
+                                    <input name="paper_size" type="radio" id="g5" value="8KH" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq '8KH'}checked="checked"{/if}/>
+                                    <em class="b">8开横</em>（双栏）
+                                </label>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="a3h in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq 'A3H'}active{/if}">
+                                <label for="g6">
+                                    <input name="paper_size" type="radio" id="g6" value="A3H" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq 'A3H'}checked="checked"{/if}/>
+                                    <em class="b">A3横</em>（双栏）
+                                </label>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="b4 in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq 'B4'}active{/if}">
+                                <label for="g7">
+                                    <input name="paper_size" type="radio" id="g7" value="B4" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_size eq 'B4'}checked="checked"{/if}/>
+                                    <em class="b">B4</em>
+                                </label>
+                            </p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt>用卷类型</dt>
+                <dd class="fn-clear">
+                    <ul class="roleType cf">
+                        <li>
+                            <p class="in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_type eq 'normal'}active{else if empty($data.download_default.paper)}active{/if}">
+                                <label>
+                                    <input name="paper_type" type="radio" value="normal" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_type eq 'normal'}checked="checked"{else if empty($data.download_default.paper)}checked="checked"{/if}/> <em class="b">普通用卷</em>（答案集中在卷尾）
+                                </label>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_type eq 'teacher'}active{/if}">
+                                <label><input name="paper_type" type="radio" value="teacher" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_type eq 'teacher'}checked="checked"{/if}/> <em class="b">教师用卷</em>（每题后面跟答案）</label>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_type eq 'student'}active{/if}">
+                                <label><input name="paper_type" type="radio" value="student" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_type eq 'student'}checked="checked"{/if}/> <em class="b">学生用卷</em>（无答案）</label>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="in {if !empty($data.download_default.paper) and $data.download_default.paper->paper_type eq 'answer'}active{/if}">
+                                <label><input name="paper_type" type="radio" value="answer" {if !empty($data.download_default.paper) and $data.download_default.paper->paper_type eq 'answer'}checked="checked"{/if}/> <em class="b">解析答案</em>（无题目）</label>
+                            </p>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="commonCaptcha cf paperCaptchaWord undis" >
+                <span class="fl">验证码：</span>
+                <input type="hidden" name="captcha_name" class="PaperDownBox_tpl" value="PaperDownBox_tpl" />
+                <input type="text" name="captcha_word" class="PaperDownBoxWord_tpl cInput fl" placeholder='请输入验证码' />
+                <img class="fl imgCaptcha changeCaptcha" />
+                <span class="changeCaptcha">换一张</span>
+            </div>
+            <div class="teacherTips teacherTipsNoBorder cf ">
+                温馨提示：下载后的文档不会带有任何水印，建议您使用微软Word软件打开文档。
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="down-card-content" class="undis">
+    <div class="teacherPaper">
+        <div class="down-card-win downWin_tpl">
+            <dl>
+                <dt>Word版本</dt>
+                <dd class="fn-clear">
+                    <span><label><input name="card_version" type="radio" value="docx" {if !empty($data.download_default.card) and $data.download_default.card->paper_version eq 'docx'}checked="checked"{else if empty($data.download_default.card)}checked="checked"{/if}/> Word 2007/2010，文件扩展名为docx</label></span>  
+                    <span><label><input name="card_version" type="radio" value="doc" {if !empty($data.download_default.card) and $data.download_default.card->paper_version eq 'doc'}checked="checked"{/if}/> Word 2000/2003，文件扩展名为doc</label></span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>答题卡样式</dt>
+                <dd>
+                    <table>
+                        <tr class="card-line">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input name="card_type" type="radio" value="common" id="t1" {if !empty($data.download_default.card) and $data.download_default.card->paper_type eq 'common'}checked="checked"{else if empty($data.download_default.card)}checked="checked"{/if}/></td>  
+                            <td><input name="card_type" type="radio" value="normal" id="t2" {if !empty($data.download_default.card) and $data.download_default.card->paper_type eq 'normal'}checked="checked"{/if}/></td>  
+                            <td><input name="card_type" type="radio" value="compress" id="t3" {if !empty($data.download_default.card) and $data.download_default.card->paper_type eq 'compress'}checked="checked"{/if}/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="t1">普通表格型</label></td>
+                            <td><label for="t2">标准题卡型</label></td>
+                            <td><label for="t3">选择密集型</label></td>
+                        </tr>
+                    </table>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>

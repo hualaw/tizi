@@ -1,0 +1,1 @@
+define("module/common/ajax/unlogin/classJoin",[],function(){return $(".inVislbleClassForm").Validform().resetStatus(),$(".inVislbleClassForm").submit(),!1});

@@ -1,0 +1,186 @@
+.studentPraWrap .titleActive{color:#f90;}
+.studentPraWrap .PraRight a:hover{ color:#f90}
+.studentPraWrap .flash_game{ text-align: center;margin-top:30px}
+.studentPraWrap .game_nav{ border-bottom: 1px solid #d9e2ec;}
+.studentPraWrap .stuOn {color: #09aa83;}
+/* 小学生自主练习开始 */
+.studentPraWrap {margin: 0 auto;font-size: 14px;color: #565656;}
+.studentPraWrap table {width: 100%;border: 1px solid #d9e2ec;border-right: none;border-top: none;}
+.studentPraWrap table th,
+.studentPraWrap table td {height: 32px;border: 1px solid #d9e2ec;border-left: none;border-bottom: none;font-weight: normal;}
+.studentPraWrap table thead {background: #f6f6f6;}
+.studentPraWrap .md_PraDetail .btn_train {margin: 0 auto 105px;}
+.studentPraWrap .btn_train {display: block;width: 170px;*width:200px;height: 58px;text-align: center;line-height: 58px;color: #fff;background: #09aa83;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;-webkit-box-shadow: 0 3px 3px #498f7e;-moz-box-shadow: 0 3px 3px #498f7e;box-shadow: 0 3px 3px #498f7e;}
+.studentPraWrap .btn_train:hover {color: #fff;}
+.studentPraWrap .btn_orange {background: #ff9600;-webkit-box-shadow: 0 3px 3px #cf8041;-moz-box-shadow: 0 3px 3px #cf8041;box-shadow: 0 3px 3px #cf8041;}
+.studentPraWrap .praNav {border: 2px solid #d9e2ec;height: 62px;line-height: 62px;}
+.studentPraWrap .praNav .PraLeft {padding: 0 10px;}
+.studentPraWrap .praNav .PraRight a {padding: 0 26px;}
+.studentPraWrap .head_nav {/*height: 52px;line-height: 52px;*/height: 35px;line-height: 25px;border-bottom: 1px solid #52cb8c;margin-top:15px;}
+.studentPraWrap .head_nav a{display: inline-block;font-size: 14px;color: #179c7e;
+background: url(../../image/studentCommon/icon_back.gif) no-repeat;height: 19px;padding-left: 25px;line-height: 20px;}
+.studentPraWrap .stuBox {border: 2px solid #d9e2ec;border-top: none;}
+.studentPraWrap .noborderbtm {border-bottom: none;}
+.studentPraWrap .md_PraDetail {width:926px;margin: 0 auto;padding: 50px 0 60px;}
+.studentPraWrap .md_PraDetail h1,
+.studentPraWrap .md_PraDetail h2 {font-weight: normal;text-align: center;font-size: 18px;}
+.studentPraWrap .md_PraDetail h1 {margin-bottom: 28px;}
+.studentPraWrap .md_bd h1,
+.studentPraWrap .md_bd h2,
+.studentPraWrap .md_bd h4,
+.studentPraWrap .md_bd th {font-weight: normal;font-size: 14px;}
+.studentPraWrap .md_bd h3 {font-size: 30px;margin: 10px 0 40px;}
+.studentPraWrap .md_bd .detailList {width: 450px;text-align: center;}
+.studentPraWrap .md_bd .PraListTable {margin-top: 16px;}
+.studentPraWrap .md_bd .PraListTable th {width: 25%;}
+/* 小学生自主练习结束 */
+/* 初高中学生自主练习开始 */
+.studentPraWrap .md_PraTrain .md_Train {width: 292px;margin: 50px 0;text-align: center;}
+.studentPraWrap .md_PraTrain div.fl {margin-left: 164px;}
+.studentPraWrap .md_PraTrain div.fr {margin-right: 164px;}
+.studentPraWrap .md_PraTrain .md_bd {overflow: hidden;text-align: center;}
+.studentPraWrap .md_PraTrain .md_bd h3 {margin: 0;font-size: 14px;}
+.studentPraWrap .md_PraTrain .md_bd div.fl {margin-left: 0;}
+.studentPraWrap .md_PraTrain .md_bd div.fr {margin-right: 0;}
+.studentPraWrap .md_PraTrain .md_bd p {font-weight: bold;font-size: 16px;}
+.studentPraWrap .md_PraTrain .btn_train {margin: 0 auto;}
+.studentPraWrap .md_PraTrain h3 {height: 52px;line-height: 52px;font-weight: normal;}
+.studentPraWrap .Knowstatistable,
+.studentPraWrap .titleRecord {padding: 0 25px 60px;}
+.studentPraWrap .Knowstatistable p,
+.studentPraWrap .titleRecord p {height: 42px;line-height: 42px;}
+.studentPraWrap .Knowstatistable table th,
+.studentPraWrap .titleRecord table th,
+.studentPraWrap .knowledgePoint table th,
+.studentPraWrap .Knowstatistable table td,
+.studentPraWrap .titleRecord table td,
+.studentPraWrap .knowledgePoint table td {text-align: left;height: 32px;padding-left: 14px;}
+.studentPraWrap .titleRecord {padding-top: 30px;}
+.studentPraWrap .inner .exercise_ul {padding: 50px 0;}
+.studentPraWrap .inner .exercise_ul li a {margin: 0 auto;}
+.studentPraWrap .inner .list1 {width: 25%;text-align: center;margin:0 auto;}
+.studentPraWrap .inner .list1 h3{margin-bottom: 20px;}
+.studentPraWrap .inner h3,
+.studentPraWrap .inner h2 {font-weight: normal;}
+.studentPraWrap .special_test_title {margin-left: 26px;}
+/* 初高中学生自主练习结束 */
+/*查看错题开始*/
+.studentPraWrap .headerBar,.studentPraWrap .homeHeaderBar{margin-top: 10px;height: 30px;line-height: 30px;border-bottom: 2px solid #d9e2ec;}
+.studentPraWrap #course_info_nav ul {font-size: 16px;}
+.studentPraWrap #course_info_nav ul li {height: 52px;line-height: 52px;}
+.studentPraWrap .course_info_item li {margin: 15px 0;}
+.studentPraWrap .resultsBox li{ margin: 0;}
+.studentPraWrap .course_info_item .resultsBox {background: #d9e2ec;-webkit-border-radius: 20px;-moz-border-radius: 20px;border-radius: 20px;padding: 10px;}
+.studentPraWrap .course_info_item .resultsBox .homeworkBlock {background: #fff;-webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius: 15px;padding: 20px 20px 0;}
+.studentPraWrap .course_info_item .Answerresults,
+.studentPraWrap .course_info_item .answerBox {padding: 0 20px;}
+.studentPraWrap .course_info_item .Panswer {margin: 18px 0 6px;}
+.studentPraWrap .course_info_item p.red {color: red;}
+.studentPraWrap .course_info_item p.green {color: #09aa83;}
+.studentPraWrap .course_info_item .Answerresults {margin-top: 15px;}
+.studentPraWrap .course_info_item p.btn_train {width: 90px;height: 30px;line-height: 30px;margin: 15px 0;}
+/*查看错题结束*/
+/*答案解析开始*/
+.knowledgePoint table td a.green {background: #17a557;}
+.knowledgePoint table td a.red {background: #fb4343;}
+.knowledgePoint table td a.gray {background: #ccc;}
+.knowledgePoint table td a {display: inline-block;color: #fff;width: 20px;height: 20px;text-align: center;}
+.studentPraWrap .anstimeTitle {height: 66px;line-height: 33px;padding: 12px 0;}
+.studentPraWrap .anstimeTitle div {font-size: 16px;}
+.studentPraWrap .knowledgePoint th,
+.studentPraWrap .knowledgePoint td {width: 50%;}
+/*答案解析结束*/
+/* 做作业页面开始 */
+.studentPraWrap .homeworkDone .headerBar{ border:none;}
+.studentPraWrap .homeworkDone{/*width: 900px;*/margin: 0px auto;background: #fff;}
+.studentPraWrap .headerBar{margin: 13px 0 8px;}
+.studentPraWrap .headerBar .backhome{float: left;font-size: 14px;}
+/*.controler{padding: 8px 0 12px;}*/
+.studentPraWrap .controler .time em{ margin:0 20px;}
+.studentPraWrap .controler .time{margin-left: 10px;padding-top: 5px;font-size: 14px;}
+.studentPraWrap .controler .p_t_0{padding-top: 0px;}
+.studentPraWrap .controler .right{margin-right: 10px;}
+.studentPraWrap .controler .right a{padding:0 20px;background: #52cb8c;color: #fff;height: 30px;line-height: 30px;margin-left: 10px;/*border: 1px solid #179c7e;box-shadow: 0px 4px 0px #e5e5e5;border-radius: 0.9em;*/display: inline-block;}
+.studentPraWrap .controler .right a:hover{background-color:#77dba2;-webkit-box-shadow:0px 4px 0px #fff;-moz-box-shadow:0px 4px 0px #fff;box-shadow:0px 4px 0px #fff;}
+.studentPraWrap .controler ul li{float: left;margin-right: 10px;}
+.studentPraWrap .controler ul li a{color: #333;padding: 0px 20px;background: #ddd;line-height: 30px;border-top-left-radius: 0.9em;border-top-right-radius: 0.9em;display: inline-block;font-size: 14px;}
+.studentPraWrap .controler ul li.active a{color: #fff;background: #52cb8c;}
+.studentPraWrap .homeworkBox{}
+.studentPraWrap .homeworkBox h3{padding: 50px 0px 10px 10px;font-size: 16px;font-weight: normal;}
+.studentPraWrap .homeworkBox .homeworkBlock{padding: 10px;background: #eee;border-radius: 1.5em;margin-bottom: 10px;}
+.studentPraWrap .homeworkBox .paperwork_item .homeworkBlock,
+.studentPraWrap .homeworkBox .course_info_item .homeworkBlock{margin-bottom: 30px;}
+.studentPraWrap .homeworkFinishBox .course_info_item .homeworkBlock{margin-bottom: 10px;}
+.studentPraWrap .homeworkBox .question{background: #fff;border-radius: 1.5em;padding: 15px;}
+.studentPraWrap .homeworkBox .question img{display: inline;}
+.studentPraWrap .homeworkBox .question table{width: 100%;}
+.studentPraWrap .homeworkBox .question table td{font-size: 16px;line-height: 30px;}
+.studentPraWrap .homeworkBox .changeResult{font-size: 14px;margin-top: 15px;}
+.studentPraWrap .homeworkBox .result li{float: left;padding: 0px 40px;line-height: 30px;background: #fff;font-weight: bold;border-radius: 0.3em;
+  *width:17px;*height:30px;margin-right: 10px;border: 1px solid #999;font-size: 22px;cursor: pointer;box-shadow: 0px 4px 0px #d9d9d9;}
+.studentPraWrap .homeworkBox .result li.active{box-shadow: none;background: #999;color: #fff;}
+.studentPraWrap .homeworkBox .notice{padding: 10px 0px;/*margin-left: 10px;*/}
+.studentPraWrap .homeworkBox .allDone{margin-left:10px;width:140px;text-align:center;background: #fff;border: 1px solid #999;line-height: 30px;color: #333;border-radius: 0.5em;box-shadow: 0px 4px 0px #d9d9d9;display: block;font-size: 14px;}
+.studentPraWrap .homeworkBox .clicked{margin-top: 10px;background: url(../../image/student/center/rightBg2-ie6.jpg) 10px 5px no-repeat;border: none;box-shadow: none;/*padding-left: 40px;*/text-align: left;color: #17a557;cursor: default;border: 1px solid #eee;}
+.studentPraWrap .homeworkFinishBox .result li{background: #eee;color: #ccc;border: 1px solid #ccc;}
+.studentPraWrap .homeworkFinishBox .result li.red{background: #fb4343;box-shadow: none;color: #fff;border: 1px solid #fb4343;}
+.studentPraWrap .homeworkFinishBox .result li.green{background: #17a557;box-shadow: none;color: #fff;border: 1px solid #17a557;}
+.studentPraWrap .nextDo{ color:#565656;}
+.studentPraWrap #course_info_nav {position:absolute;width: 980px;margin-bottom: 16px;}
+.studentPraWrap #course_info_nav li {cursor: pointer;display: inline;float: left;text-align: center;width: auto;height: 30px;line-height: 30px;font-size:14px;background: none}
+.studentPraWrap #course_info_nav li.current a{color:#fff;background: #52cb8c}
+.studentPraWrap #course_info_nav.tab_scoll {position: fixed;top:0;width:980px;z-index: 100;_position: absolute;}
+.studentPraWrap .pop_box{display: none;}
+.studentPraWrap .pop_main{color: #333;}
+.studentPraWrap .pop_main .csInput{height:30px;line-height:30px;}
+.studentPraWrap .pop_main p{font-size: 14px;line-height: 30px;}
+.studentPraWrap .pop_main p.m_t_10{margin-top: 10px;}
+.studentPraWrap .pop_main h4{font-weight: normal;font-size: 16px;}
+.studentPraWrap .pop_main input.in_vislble_class_text{width: 150px;height: 26px;line-height:26px;padding-left: 6px;border:1px solid #999;margin: 6px 0;}
+.studentPraWrap .pop_main .classNum .Validform_checktip{line-height:26px;margin-top:5px; display: inline-block;}
+.studentPraWrap .custom_question_content li{line-height:30px;font-size:16px;color:#333;}
+.studentPraWrap .homeworkBox .question h2{font-size: 22px;margin-bottom: 15px;font-weight: normal;}
+.studentPraWrap .homeworkBox .question h4{font-size:16px;color:#333;font-weight:normal;}
+.studentPraWrap .homeworkBox .question h4 *{font-size:16px;color:#333;font-weight:normal;}
+.studentPraWrap .graphJsCharts{width: 800px;height: 270px;background: url(../../image/student/practise.studentPraWrap /graphJsCharts.png) 0px 30px no-repeat;}
+.studentPraWrap .graphJsCharts p.notice{position: absolute;bottom: 20px;left: 40px;color: #f00;font-size: 14px;}
+.studentPraWrap .homeworkCenter .controlBtn span.homeworkSum{font-weight: bold;font-size: 18px;}
+.studentPraWrap .controlerLeftNav{ padding-left:15px;}
+.studentPraWrap .controlerLeftNav span{ font-size: 16px;}
+.studentPraWrap .controlerLeftNav p{ font-size: 12px;margin-top:6px;}
+.studentPraWrap .controlerTitle{height: 54px;line-height: 54px;border-bottom: 4px solid #52cb8c;background: #fff;}
+.studentPraWrap .controlerTitle a{ color:#fff;}
+.studentPraWrap .controlerTitle .cBtnNormal{margin-top: 14px;}
+.studentPraWrap .homeworkBlock table,.studentPraWrap .homeworkBlock table td{ border:none;}
+.studentPraWrap .result{ *height:48px;}
+/* 做作业页面结束 */
+/*做游戏 页面开始*/
+.studentPraWrap .count_report{ padding:0 50px;font-size: 12px;}
+.studentPraWrap .count .list1 strong {color: #333333;font-size: 26px;}
+.studentPraWrap .count .list1 strong span {font-size: 14px;font-weight: normal;}
+.studentPraWrap .count .list2 {float: left;height: 140px;text-align: center;width: 296px;}
+.studentPraWrap .count .list2 h3 {font-weight: normal;margin: 7px 0 5px;}
+.studentPraWrap .special_test_title{ margin:20px 26px;}
+.studentPraWrap .special_mycharts{ position: relative;}
+.studentPraWrap #graph{ top:0px!important;}
+.studentPraWrap .exercise_report { width:900px!important;margin: 20px auto;}
+.studentPraWrap .exercise_report td{ text-align: center;height: 28px;line-height: 28px;}
+.studentPraWrap .exercise_report td.subject { text-align: left;padding-left: 20px;}
+/*做游戏 页面结束*/
+
+/* 图片预览页面开始 */
+.studentPraWrap .hd {padding: 16px 0 8px 0;text-align: center;line-height: 30px;}
+.studentPraWrap .hd .inf span {margin: 0px 10px;}
+.studentPraWrap .shareImgBox{width:1000px;}
+.studentPraWrap .shareImgBox img{display: block;margin: 0 auto;}
+/* 图片预览页面结束 */
+
+/* 作业下载弹窗验证开始 */
+.studentPraWrap .pop_main .paperCaptchaWord{}
+.studentPraWrap .pop_main .paperCaptchaWord .paperCodeBox{margin-top: 5px;}
+.studentPraWrap .pop_main .paperCaptchaWord .cInput {height: 32px;line-height: 32px;margin-right: 10px;}
+/* 作业下载弹窗验证开始 */
+
+/*预览音视频*/
+#container_wrapper {margin:0 auto;}
+#container {margin:0 auto;}

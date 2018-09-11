@@ -1,0 +1,12 @@
+{if isset($game_import[$unit_id])}
+    {foreach $game_import[$unit_id] as $gis=>$gi}
+        {if $gi.prac_type=={$ptype} and $gi.important_type=={$itype}}
+            {if $itype==3}
+                <a>{$gi.content.0}</a>
+                <a>{$gi.content.1}</a>
+            {else}
+                <a>{$gi.content}</a>
+            {/if}
+        {/if}
+    {/foreach}
+{/if}

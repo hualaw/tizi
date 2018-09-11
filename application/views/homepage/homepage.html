@@ -1,0 +1,385 @@
+{extends file='homepage/homepage_base.html'}
+
+{block name=keywords}梯子网,中小学优质资源共享平台,备课,组卷,作业,题库,论坛{/block}
+{block name=description}梯子网：为老师助力，备课组卷留作业，海量资源全免费！为学生减负，测评答疑免费外教，孩子学习更高效！为家长分忧，实时了解孩子学情！小龙女龚海燕创办徐小平投资{/block}
+{block name=title}中小学优质资源共享平台{/block}
+
+{block name=container}
+	<!-- 主要区域开始 -->
+	<div class="mainWrap cf">
+		<!-- 左侧信息开始 -->
+		<div class="slide fl">
+			<div class="userWrap">
+			{include file="homepage/homepage_login.html"}
+			</div>
+			<!-- 关于我们开始 -->
+			<div class="about">
+				<div>
+					<h2 class="ltWrap">
+						<div class="active">
+							<span class="ltTitle">
+								关于我们
+								<span class="tArrow"></span>
+							</span>
+						</div>
+					</h2>
+				</div>
+				<ul class="ourList">
+					<li class="cf">
+						<a href="http://weibo.com/gonghaiyan" target="_blank" class="fl picWrap">
+							<img src="{$static_url}{$static_version}image/homePage/ghy.gif" alt="小龙女龚海燕" />
+						</a>
+						<div class="text fr">
+							<h3>
+								<a href="http://weibo.com/gonghaiyan" target="_blank" class="sv">
+									小龙女龚海燕
+								</a>
+							</h3>
+							<p class="cf bottom">
+								<a href="http://weibo.com/gonghaiyan" target="_blank" class="attention fl">
+									<span>
+										<em class="addicon">+</em>
+										关注
+									</span>
+								</a>
+								<a href="http://v.youku.com/v_show/id_XNjQxMzcyMTE2.html" class="dream fr" target="_blank">
+									<span>
+										追梦人
+									</span>
+								</a>
+							</p>
+						</div>
+					</li>
+					<li class="cf">
+						<a href="http://weibo.com/xuxiaoping" target="_blank" class="fl picWrap">
+							<img src="{$static_url}{$static_version}image/homePage/xxp.gif" alt="徐小平老师" />
+						</a>
+						<div class="text fr">
+							<h3>
+								<a href="http://weibo.com/xuxiaoping" target="_blank">
+									徐小平老师
+								</a>
+							</h3>
+							<p class="cf">
+								天使投资
+							</p>
+						</div>
+					</li>
+					<li class="cf">
+						<span class="fl picWrap">
+							<img src="{$static_url}{$static_version}image/homePage/bdjy.gif" alt="北京大学教育学院战略合作" />
+						</span>
+						<div class="text fr">
+							<h3>
+								<span>
+									北京大学教育学院<br/>战略合作
+								</span>
+							</h3>
+						</div>
+					</li>
+					<li class="cf">
+						<a href="http://weibo.com/tiziwang" target="_blank" class="fl picWrap">
+							<img src="{$static_url}{$static_version}image/homePage/tzw.gif" alt="梯子网2013" />
+						</a>
+						<div class="text fr">
+							<h3>
+								<a href="http://weibo.com/tiziwang" target="_blank" class="cv">
+									梯子网2013
+								</a>
+							</h3>
+							<p class="cf bottom">
+								<a href="http://weibo.com/tiziwang" target="_blank" class="attention">
+									<span>
+										<em class="addicon">+</em>
+										关注
+									</span>
+								</a>
+							</p>
+						</div>
+					</li>
+					<li class="cf">
+						<a href="javascript:void(0);"  class="fl picWrap weixinLink">
+							<img src="{$static_url}{$static_version}image/homePage/tzw.gif" alt="梯子网微信" />
+						</a>
+						<div class="text fr">
+							<h3>
+								<a href="javascript:void(0);"  class="weixinLink">
+									梯子网微信
+								</a>
+							</h3>
+							<div class="cf codeWrap">
+								<a href="javascript:void(0);" class="arrowWrap">
+									扫描二维码关注<span class="codeArrow"></span>
+								</a>
+								<div class="weixinCode">
+									<img src="{$static_url}{$static_version}image/homePage/ewm.gif" alt="梯子网微信"/>
+								</div>
+							</div>
+
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 关于我们结束 -->
+			<!-- 致谢开始 -->
+			<div class="thanksWrap">
+				<ul class="tabLink ltWrap cf">
+					<li class="fl active">
+						<a class="ltTitle" href="javascript:void(0)" data-toggle="tab" url="#userWord">
+							姐妹网站
+							<span class="tArrow"></span>
+						</a>
+					</li>
+					<li class="fl">
+						<a class="ltTitle" href="javascript:void(0)" data-toggle="tab" url="#noticeList">
+							梯子公告
+							<span class="tArrow"></span>
+						</a>
+					</li>
+				</ul>
+				<div class="tabContent">
+					<ul class="item thanksList active" id="userWord">
+						<li class="cf">
+							<a href="http://www.nahao.com/" target="_blank" class="fl picWrap">
+								<img src="{$static_url}{$static_version}image/homePage/logo_nahao.gif" alt="那好网" />
+							</a>
+							<div class="text fl">
+								<h3>
+									<a href="http://www.nahao.com/" target="_blank">
+										那好网
+									</a>
+								</h3>
+								<p class="into">
+									中小学在线直播课堂
+								</p>
+								<p class="grey">
+									名师公开课 素质教育
+								</p>
+							</div>
+						</li>
+						<li class="cf">
+							<a href="http://www.91waijiao.com" target="_blank" class="fl picWrap">
+								<img src="{$static_url}{$static_version}image/homePage/logo_91waijiao.gif" alt="91外教网" />
+							</a>
+							<div class="text fl">
+								<h3>
+									<a href="http://www.91waijiao.com" target="_blank">
+										91外教网
+									</a>
+								</h3>
+								<p class="into">
+									全外教在线互动口语学习
+								</p>
+							</div>
+						</li>
+					</ul>
+					<ul class="item noticeList" id="noticeList">
+						{foreach $tizi_announce as $value}
+						<li>
+							<a href="{$site_url}about/newsdetails/{$value.id}" title="{$value.title}">{sub_str($value.title, 0, 81)}</a>
+						</li>
+						{/foreach}
+					</ul>
+				</div>
+			</div>
+			<!-- 致谢结束 -->
+		</div>
+		<!-- 左侧信息结束 -->
+		<!-- 右侧内容开始 -->
+		<div class="content fr">
+			<!-- 幻灯片开始 -->
+			{include file='homepage/homepage_slide.html'}
+			<!-- 幻灯片结束 -->
+			<div class="areaWrap cf">
+				<div class="fl leftWrap">
+					<!-- 老师专区开始 -->
+					<div class="teacherArea ">
+						<div class="hd areaTitleWrap">
+							<h2 >
+								<a href="{$site_url}laoshi" class="areaTitle">
+									老师专区
+								</a>
+							</h2>
+						</div> 
+						<div class="bd">
+							<!-- 通知开始 -->
+							{if $tizi_space_article}
+							<div class="notice">
+								<p>
+									<a href="{$tizi_space_article.url}" title="{$tizi_space_article.title}" target="_blank">
+										{sub_str($tizi_space_article.title,0,69)}
+									</a>
+								</p>
+							</div>
+							{/if}
+							<!-- 通知结束 -->
+							<div class="con">
+								<!-- 备课资源统计开始 -->
+								<div class="box lesson">
+									<h2 class="numWrap">
+										<a href="{$tizi_url}beike" class="num lessonNum">
+											{number_format($statistics.lesson_total)}
+										</a>
+										份备课资源
+									</h2>
+									<h3 class="desc">
+										教学资源分享，免费下载，上传得积分
+									</h3>
+									<a href="{$site_url}teacher/lesson/upload" class="up cBtnNormalOrg loginCheck yh">
+										上传我的文件
+									</a>
+								</div>
+								<!-- 备课资源统计结束 -->
+								<!-- 试题统计开始 -->
+								<div class="box paper">
+									<h2 class="numWrap">
+										<a href="{$tizi_url}juanzi" class="num paperNum" >
+											{number_format($statistics.question_total)}
+										</a>
+										道试题
+									</h2>
+									<h3 class="desc">
+										全学科多版本单题+套卷，在线组卷打印
+									</h3>
+								</div>
+								<!-- 试题统计结束 -->
+								<!-- 教师统计开始 -->
+								<div class="box teacher">
+									<h2 class="numWrap">
+										<a href="{$login_url}renzheng" class="num teacherNum">
+											{number_format($statistics.teacher)}
+										</a>
+										位教师
+									</h2>
+									<h3 class="desc">
+										参加教师认证，获得更多
+										<a href="{$login_url}jifen" class="jifen">
+											积分和特权
+										</a>
+									</h3>
+									<a href="{$login_url}teacher/cert/certification" class="cer cBtnNormal loginCheck yh">
+										申请教师认证
+									</a>
+								</div>
+								<!-- 教师统计结束 -->
+							</div>
+						</div>
+					</div>
+					<!-- 老师专区结束 -->
+				</div>
+				<div class="fr rightWrap">
+					<!-- 学生专区开始 -->
+					<div class="studentArea ">
+						<div class="hd areaTitleWrap">
+							<h2>
+								<a href="{$site_url}xuesheng" class="areaTitle">学生专区</a>
+							</h2>
+						</div>
+						<div class="bd">
+							<!-- 天天外教开始 -->
+							<div class="englishBox cf">
+								<h3 class="cf stuSubtitle">
+									<a href="{$waijiao_url}">天天外教</a>
+								</h3>
+								<div class="con cf">
+									<div class="fl videoPicWrap">
+										<a class="fl" href="{$waijiao_url}lesson/index/{$fls.id}" title="{$fls.chs_title}">	
+											<span class="videoIcon" ></span>
+											<img src="http://{$fls_domain}/{$fls.thumb_uri}" alt="{$fls.chs_title}" />
+										</a>
+									</div>
+									<p class="fl waijiaoView">
+										<span class="n">适合年级：{$fls.stage}</span>
+										<a href="{$waijiao_url}lesson/index/{$fls.id}" class="videoTitle" title="{$fls.en_title}">
+											{sub_str($fls.en_title,0,51)}
+										</a>
+										<span class="t">{$fls.chs_title}</span>
+									</p>
+								</div>
+							</div>
+							<!-- 天天外教结束 -->
+							<!-- 专项挑战开始 -->
+							<div class="specialDo cf">
+								<h3 class="cf stuSubtitle">
+									<a href="{$site_url}pk" class="moreLink">
+										更多>>
+									</a>
+									<a href="{$site_url}pk">专项挑战</a>
+								</h3>
+								<div class="challengeList cf">
+									{foreach $practice as $key=>$value}
+									<div class="challengeItem {if $key==0}fl{else}fr{/if}">
+										<a href="{$value.url}" class="fl">
+											<img src="{$static_url}{$value.icon}" alt="{$value.p_c_name}"/>
+										</a>
+										<div class="text fl">
+											<a href="{$value.url}" title="{$value.p_c_name}">
+												{sub_str($value.p_c_name,0,15)}
+											</a>
+											<span class="num">{$value.user_num}人参与</span>
+											<a href="{$value.url}" class="cBtnNormal start">
+												开始挑战
+											</a>
+										</div>
+									</div>
+									{/foreach}
+								</div>
+							</div>
+							<!-- 专项挑战结束 -->
+						</div>
+					</div>
+					<!-- 学生专区结束 -->
+					<!-- 家长专区开始 -->
+					<div class="parentArea">
+						<div class="hd areaTitleWrap">
+							<h2 class="fl ">
+								<a href="{$site_url}jiazhang" class="areaTitle">家长专区</a>
+							</h2>
+							<a href="{$site_url}jiazhang" class="moreLink">
+								更多>>
+							</a>
+						</div>
+						<div class="bd">
+							<ul class="topics">
+								{foreach $jia as $value}
+								<li>
+									<a href="{$jia_url}parent-content-{$value.id}.html" title="{$value.title}" target="_blank">
+										{sub_str($value.title,0,87)}
+									</a>
+								</li>
+								{/foreach}
+							</ul>
+						</div>
+					</div>
+					<!-- 家长专区结束 -->
+				</div>
+			</div>
+		</div>
+		<!-- 右侧内容结束 -->
+	</div>
+	<!-- 主要区域结束 -->
+	<!-- 媒体报道区域开始 -->
+	<div class="mediaArea cf">
+		<div class="hd mediaHead">
+			<h2 class="fl">
+				 <a href="{$site_url}about/report" target="_blank">媒体报道</a>
+			</h2>
+			<a href="{$site_url}about/report" target="_blank" class="moreLink">更多>></a>
+		</div>
+		<div class="bd">
+			{foreach $reports as $value}
+			<dl class="fl">
+				<dt>
+					[{$value.copyfrom}]
+				</dt>
+				<dd>
+					<a href="{$value.data.url}" rel="nofollow" target="_blank">
+						{sub_str($value.data.title,0,99)}
+					</a>
+				</dd>
+			</dl>
+			{/foreach}
+		</div>
+	</div>
+	<!-- 媒体报道区域结束 -->
+{/block}

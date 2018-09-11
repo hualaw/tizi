@@ -1,0 +1,46 @@
+<!--全部其他文档开始-->
+<div class="otherFileText">
+    <div class="otherFileList">
+        <div class="md_bd">
+            <ul>
+                <li class="nav_tab">
+                    <label class="fl">名称</label>
+                    <span class="fl fsize">大小</span>
+                    <span class="fl ftime">创建时间</span>
+                </li>
+                <li  {if $dir_id eq 0}style="display:none" {/if}>
+                <label class='fl go_back_dir' data-dir-id={$dir_id} >返回上级目录</label>
+                <span></span>
+                <span></span>
+                </li>
+                {if $data}
+                {if isset($data.dir) && $data.dir}{foreach $data.dir as $k1=>$d}<!--遍历文件夹-->
+                <li class="folders">
+                    <label class="fl into_dir" data-dir-id="{$d.dir_id}" >{$d.dir_name}</label>
+                    <span class="fl fsize">--</span>
+                    <span class="fl ftime">{date("Y-m-d H:i",$d.create_time)}</span>
+                    <div class="btnList">
+                        <a href="javascript:void(0);" class="cBtnSilver resetFlieName" file_id="{$d.dir_id}" file_name="{$d.dir_name}">重命名</a>
+                        <a href="javascript:void(0);" class="cBtnSilver moveFlie" moved-resource-id="{$d.dir_id}">移动</a>
+                        <a href="javascript:void(0);" class="cBtnSilver deleteFile" file_id="{$d.dir_id}">删除</a>
+                    </div>
+                </li>
+                {/foreach}
+                {/if}
+                {if $data.file} <!--遍历文档-->
+                {foreach $data.file as $k2=>$v}
+                {include file='teacher/resource/file_list_tpl.html'}
+                {/foreach}
+                {/if}
+                {/if}
+
+            </ul>
+            <!--分页开始-->
+            <div class="page cf">
+                <p class="fr">{$pages}</p>
+            </div>
+            <!--分页结束-->
+        </div>
+    </div>
+</div>
+ 

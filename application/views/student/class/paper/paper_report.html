@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{block name=title}{/block}-梯子网</title>
+<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="{$static_url}{$static_version}css/studentPaper/style.css" />
+{block name=stylesheet}{/block}
+</head>
+<body class="navClass">
+{include file='file:[lib]common/student/header.html'}
+{include file='file:[lib]common/student/nav.html'}
+<!--主要部分开始-->
+<div class="wrap layout studentPaper" id="tiziModule" module="studentPaper">
+	<input type="hidden" name="homework_id" value="{$zuoye_id}"/>
+	<input type="hidden" name="paper_id" value="{$paper_index}"/>
+    <!-- 正文代码开始 -->
+    <div class="stuPaperWrap" pagetype="paperReport">
+    	<div class="handIn_answerBox">
+			<p class="answerTime">作答时间：{$paper_starttime} 至 {$paper_deadline}</p>  
+			<p class="paperInfo">{if $have_access}选择题正确率：{$correct_rate}%{else}到达截止时间后可看到所有题目答案及解析{/if}</p>
+			<div class="cf returnHomeworkList">
+				<a href="{$site_url}student/class/homework" class="fr">返回作业列表</a>
+			</div>
+			{$i=1}
+            <div class="paperContent">
+				{foreach $questions as $question}
+				{if $question.is_online}
+				{if $have_access}
+				{if $question['status'] == 2}
+				{$question_status = 'right'}
+				{else}
+				{$question_status = 'error'}
+				{/if}
+				{else}
+				{$question_status = ''}
+				{/if}
+				<div class="questionList {$question_status}">
+					<p class="questionNum">第{$i++}题</p>
+					<p class="questionTitle">{$question.body}</p>
+					<div class="answerArea">
+						<p class="title">
+						{if $have_access}
+						<span>你选择的答案是</span>
+						<span>正确答案是</span>
+						{else}
+						你选择的答案是
+						{/if}
+						</p>
+						<span class="id">ID：{$question.id}</span>
+						<div class="answerOption">
+							{if $have_access}
+							{if $question['status'] == 2}
+							<a href="javascript:void(0)" class="active">{$question['input']}</a>
+							{else}
+							<a href="javascript:void(0)" class="errorBtn">{$question['input']}</a>
+							{/if}
+							<a href="javascript:void(0)" class="active">{$question['asw']}</a>
+							{else}
+							<a href="javascript:void(0)" class="active">{$question.input}</a>
+							{/if}
+						</div>
+						{if $have_access}
+						<div class="analyticalBox">
+                            <!--<p class="title">解析：</p>-->
+							<p>{$question.analysis}</p>
+						</div> 
+						{/if}
+					</div> 
+				</div>
+				{else}
+				{if !$have_access || $question['status'] == 0}
+				{$question_status = ''}
+				{elseif $question['status'] == 1}
+				{$question_status = 'error'}
+				{else}
+				{$question_status = 'right'}
+				{/if}
+				<div class="questionList {$question_status}">
+					<input type="hidden" value="{$question.id}" class="question_id"/>
+					<p class="questionNum">第{$i++}题</p>
+					<p class="questionTitle">{$question.body}</p>
+					<div class="answerArea">
+						{if $have_access}
+						<p class="title">你的对错</p>
+						{/if}
+						<span class="id">ID：{$question.id}</span>
+						{if $have_access}
+						<div class="answerOption">
+							{if $question.status == 0}
+							<a href="javascript:void(0)" class="q_status" val='2'>做对了</a>
+							<a href="javascript:void(0)" class="q_status" val='1'>做错了</a>
+							{elseif $question.status == 1}
+							<a href="javascript:void(0)" class="errorBtn">做错了</a>
+							{elseif $question.status == 2}
+							<a href="javascript:void(0)" class="active">做对了</a>
+							{/if}
+						</div>
+						<div class="analyticalBox">
+                            <!--<p class="title">答案：</p>-->
+							<p>{$question.answer}</p>
+						</div>
+						<div class="analyticalBox">
+                            <!--<p class="title">解析：</p>-->
+							<p>{$question.analysis}</p>
+						</div>                      
+						{/if}
+					</div>
+				</div>
+				{/if}
+				{/foreach}
+            </div>
+        </div>
+    </div>
+    <!-- 正文代码结束 -->
+</div>
+<!--主要部分结束-->
+{include file='file:[lib]common/student/footer.html'}
+<!-- js引入开始 -->
+<script type="text/javascript" src="{$static_url}{$static_version}public/sea/2.1.0/sea.js"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}public/config.js"></script>
+<!--js引入结束-->
+{block name=script}{/block}
+{include file='file:[lib]common/tizi_ga.html'}
+</body>
+</html>

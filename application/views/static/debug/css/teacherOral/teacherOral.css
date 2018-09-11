@@ -1,0 +1,44 @@
+.teacherOral .mainDetial_nav li.active{color:#f90;}
+.teacherOral .videoBox{width:830px;margin:0 auto;}
+/*课外练习内容列表样式开始*/
+.teacherOral .prBox{padding-top:20px;}
+.teacherOral .prBox p.date{line-height:50px;font-size:24px;padding-bottom:5px;}
+
+.teacherOral .prBox .listBox li{width:242px;float:left;margin-right:3px;_display:inline;}
+.teacherOral .prBox .listBox li.noVideo{width:244px;height:164px;background:url(../../image/stuOral/novideo.gif) no-repeat center center #eee;}
+.teacherOral .prBox .listBox li .picBox a{overflow:hidden;display:block;width:240px;height:160px; display: table-cell;
+ text-align:center;*font-size:120px; zoom:1; vertical-align:middle;}
+.teacherOral .prBox .listBox li .picBox a img{vertical-align:middle;margin:auto;width:240px;height:160px;}
+.teacherOral .prBox .listBox li .picBox a:hover{opacity: 0.8;filter: alpha(opacity=80);}
+/*.teacherOral .prBox .listBox li .picBox a.active{border:2px solid #09aa83;}*/
+.teacherOral .prBox .listBox li .title{line-height:22px;text-align:left;padding: 5px 9px;font-size:14px;height:44px;}
+
+/*课外练习内容列表样式结束*/
+/*每日口语样式开始*/
+.teacherOral .returnVideoPage{padding-top:15px;}
+.teacherOral .returnVideoPage a {
+display: inline-block;font-size: 14px;color: #179c7e;background: url(../../image/studentCommon/icon_back.gif) no-repeat;
+height: 19px;padding-left: 25px;line-height: 20px;}
+.teacherOral .video_hd {font-size: 12px;color: #333;line-height: 20px;background: #fff;padding-top: 10px;}         
+.teacherOral .video_hd h2{font-size: 14px;color: #333;line-height: 20px;font-size:14px;font-weight:normal;}         
+.teacherOral .containerBox{position:relative;padding-top:10px;}
+.teacherOral .containerBox .seaMoreBox{position:absolute;bottom:0;right:0px;overflow:hidden;}
+.teacherOral .containerBox .seaMore{width:200px;height:57px;display:block;background: black;opacity: 0.6;filter:Alpha(opacity=60);}
+.teacherOral .containerBox .seaMoreBox a{overflow:hidden;padding:0px 20px;position: absolute;right: 55px;bottom:10px;}
+
+.teacherOral .languageTab{padding:10px;background:#f6f6f6;margin-top:10px;}
+.teacherOral .languageTab .languageBox{line-height:40px;}
+.teacherOral .languageTab .languageBox input{margin-right: 5px;margin-top: 12px;}
+.teacherOral .languageTab .inputBox{line-height:40px; }
+.teacherOral .languageTab label{margin-right:35px;}
+.teacherOral .languageTab .dl_audio{color:#fff;}
+.teacherOral .languageTab .dl_audio:hover{color:#fff;}
+.teacherOral .video_91img {height: 100px;margin-top: 20px;margin-right:-17px;_margin-right:-15px;}
+.teacherOral .video_91img a{display:block;float:left;overflow:hidden;border:2px solid #cdcdcd;margin-right:17px;_margin-right:15px;cursor:pointer;}
+.teacherOral .video_91img a.mr_r0{margin-right:0px;}
+/*2.0样式*/
+#mainDetial_nav {overflow: hidden;  padding: 15px 0 10px 0 ;}
+#mainDetial_nav ul {display:block;  margin-left: -30px;_width:100%;}
+#mainDetial_nav li {border-left: 1px solid #CCCCCC; cursor: pointer; float: left; margin-left: 15px; padding-left: 15px;}
+/*2.0样式 end*/
+/*每日口语样式结束*/

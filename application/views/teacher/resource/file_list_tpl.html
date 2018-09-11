@@ -1,0 +1,34 @@
+<!-- res_dir, res_list_tpl , cloud_file_list, cloud_file_list_tpl -->
+<li df_id='{$v.id}'>
+                            <label class="fl ftitle" title="{$v.file_name}.{$v.file_ext}" file-ext="{$v.file_ext}">{$v.file_name|truncate:35}{if $v.file_ext}.{$v.file_ext}{/if}</label>
+                            <span class="fl fsize">{trans_filesize($v.file_size)}</span>
+                            <span class="fl ftime">{date('Y-m-d H:i',$v.upload_time)}</span>
+                            <div class="btnList">
+                                <a href="javascript:void(0);" file_id="{$v.id}" class="cBtnSilver ClassShareFile">班级分享</a>
+                                <!-- 预览开始 -->
+                                {if $v.file_type==Constant::CLOUD_FILETYPE_PIC }
+                                <a href="{$site_url}cloud/cloud/file_detail/{$v.id}" class="cBtnSilver" target="_blank">预览</a>
+                                {elseif ($v.file_type == Constant::CLOUD_FILETYPE_AUDIO or $v.file_type==Constant::CLOUD_FILETYPE_VIDEO)}
+                                         {if $v.persistent_id>0 or $v.file_ext == 'mp4' or $v.file_ext =='swf' or $v.file_ext =='mp3' }
+                                         {if $v.pfop or $v.file_ext == 'mp4' or $v.file_ext =='swf' or $v.file_ext =='mp3' }
+                                        <a  href="{$site_url}cloud/cloud/file_detail/{$v.id}" class="cBtnSilver" target="_blank">预览</a>
+                                        {else}
+                                        <a class="cBtnSilver check_pfop_file" file_id='{$v.id}'><span>预览</span></a> 
+                                        {/if}
+                                        {/if}
+                                {elseif $v.file_type==Constant::CLOUD_FILETYPE_DOC}
+                                {if $v.queue_status==1}
+                        <a href="{$site_url}cloud/cloud/file_detail/{$v.id}" class="cBtnSilver" target="_blank">预览</a>
+                        {elseif $v.queue_status==4}
+                        <a class="cBtnSilver" ><span>不支持预览</span></a>
+                        {else}<a class="cBtnSilver file_trans_inprocess" href="javascript:;" file_id="{$v.id}">预览</a>
+                        {/if}
+                        {else}
+                        {/if}
+                        <!-- 预览button结束 -->
+                                <a href="javascript:void(0);" is_file=1 class="cBtnSilver resetFlieName" file_id="{$v.id}" file_name="{$v.file_name}">重命名</a>
+                                <a href="javascript:void(0);" class="cBtnSilver downloadFile" file_id="{$v.id}" file_name="{$v.file_name}.{$v.file_ext}" is_qiniu="{if $v.file_type==1}1{else}0{/if}">下载</a>
+                                <a href="javascript:void(0);" class="cBtnSilver moveFlie" is_file="1" moved-resource-id="{$v.id}">移动</a>
+                                <a href="javascript:void(0);" is_file=1 class="cBtnSilver deleteFile" file_id="{$v.id}">删除</a>
+                            </div>
+                        </li>

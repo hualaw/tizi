@@ -1,0 +1,48 @@
+/*头部登录区域样式开始*/
+.mobileLoginPage{background:#fff;width:100%;}
+.mobileLoginPage .cBtnNormal,.mobileLoginPage .cBtnSilver{height:3em;line-height:3em;}
+.mobileLoginPage header .navbar{display: block;width:95%; margin: 0 auto;margin-bottom:1em;}
+.mobileLoginPage header .navbar h1{height:2em; border-radius:0.5em; margin-bottom:1em; text-align: center; background-color: #e6e6e8; font-size:1.5em; line-height: 2em;}
+.mobileLoginPage header .navbar a{display:block;text-align: center;width:80%; margin:0 auto;}
+.mobileLoginPage header .navbar img{width:90%;}
+.mobileLoginPage .loginWrap{width: 95%;margin: 0 auto; text-align: center;}
+/*头部登录区域样式结束*/
+/*登录前样式开始*/
+.mobileLoginPage .loginArea .loginAreaBefore .aRegister{display:none;}
+.mobileLoginPage .loginArea{width: 95%;margin: 0 auto;text-align: center;}
+.mobileLoginPage .loginArea .loginAreaBefore .hd{padding-bottom:1em;}
+.mobileLoginPage .loginArea .loginAreaBefore .hd h2{font-size:1em;}
+.mobileLoginPage .loginArea .loginAreaBefore .hd span{margin-top:1em;}
+.mobileLoginPage .loginArea .loginAreaBefore .hd a{color:#09aa83;}
+.mobileLoginPage .loginArea .loginAreaBefore .hd a:hover{color:#f90;}
+.mobileLoginPage .loginArea .loginAreaBefore .bd{margin: 0 auto; text-align: center;}
+.mobileLoginPage .loginArea .loginAreaBefore .bd li{margin-bottom:1em;position: relative;}
+.mobileLoginPage .loginArea .loginAreaBefore .bd li input,
+.mobileLoginPage .addClassNumFrom input{height:3em; line-height:2em; padding:5px 10px;border-radius:0.5em;font-size:1.4em;border:1px solid #c4c5c4;box-shadow:1px 1px 1px #dadddc inset;}
+.mobileLoginPage .loginArea .loginAreaBefore .bottomLogin{padding:1em 0em;}
+.mobileLoginPage .loginArea .loginAreaBefore .submitBtn{cursor: pointer;width:40%;line-height:3em; height:3em;font-size:1.4em;}
+.mobileLoginPage .loginArea .loginAreaBefore .aReg{width:40%;text-align: center;line-height:3em; height:3em;font-size:1.4em;}
+.mobileLoginPage .loginArea .loginAreaBefore .aReg:hover{color: #333;}
+.mobileLoginPage .loginArea .loginAreaBefore .fogetPw{display:block;color:#09aa83; text-align: right;}
+.mobileLoginPage .loginArea .loginAreaBefore .fogetPw:hover{color: #f90}
+.mobileLoginPage .loginArea .loginAreaBefore .ft{border-top: 1px solid #B9D8D6;margin-top: 2em;padding: 1em 0;}
+.mobileLoginPage .loginArea .loginAreaBefore .ft p{font-size:1.4em; text-align: left; line-height: 3em;}
+.mobileLoginPage .loginArea .loginAreaBefore .status{text-align: right;/*width: 95%;*/}
+.mobileLoginPage .loginArea .loginAreaBefore .status a{font-size: 1.2em;}
+.mobileLoginPage .loginArea .loginAreaBefore .remerberPass{clear:both; overflow:hidden;}
+.mobileLoginPage .loginArea .loginAreaBefore .remerberPass span{display: block; float: left; margin-left: 1em;margin-top:-0.2em;font-size: 1em;}
+.mobileLoginPage .loginArea .loginAreaBefore .remerberPass a{font-size: 1em;}
+
+.mobileLoginPage .loginArea .oauthLogin{padding-bottom:5px;}
+.mobileLoginPage .loginArea .oauthLogin a{text-indent: -999em;overflow:hidden;background:url(../../../lib/tizi_static/image/common/ico_out_login.png) no-repeat;_background:url(../../../lib/tizi_static/image/common/ico_out_login.gif) no-repeat;display: block;height:20px;margin-left:10px;}
+.mobileLoginPage .loginArea .oauthLogin a.qq{width:18px;}
+.mobileLoginPage .loginArea .oauthLogin a.weibo{width:25px;background-position: -31px 0;}
+/*登录前样式结束*/
+/*登录后样式开始*/
+.mobileLoginPage .loginArea .loginAreaAfter{width: 95%;margin: 0 auto;text-align: center;margin-top: 3em;}
+.mobileLoginPage .loginArea .loginAreaAfter ul li{margin-bottom:1em;position: relative;margin-bottom: 1.4em;}
+.mobileLoginPage .loginArea .loginAreaAfter ul li a{display:block;width: 90%;padding:0px 10px; font-size: 1.5em; margin: 0 auto;}
+/*登录后样式结束*/
+.mobileLoginPage .addClassNumFrom input{height: 2.5em;line-height: 2em;font-size: 1.2em;}
+.mobileLoginPage .addClassNumFrom input.className{width: 60%;}
+.mobileLoginPage .addClassNumFrom input.submit{width: 30%;border: none;box-shadow: none;}

@@ -1,0 +1,77 @@
+{extends file='teacher/class/base_main.html'}
+{block name=title}作答记录{/block}
+
+{block name=container}
+<!-- 作答记录开始 -->
+<input type="hidden" class="homeworkPreCon">
+    <div class="doReports">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th colspan="5" scope="col">
+                <div class="titles cf">
+                    <p class="fr">
+                        <!-- <a href="#" class="cBtnSilver">导出报告</a> -->
+                        <a href="#" class="cBtnSilver" onclick="window.print();">打印</a>
+                    </p>
+                    <div class="mTitle fl">
+                        作答记录
+                    </div>
+                </div>
+            </th>
+          </tr>
+          <tr>
+            <th width="100">名次</th>
+            <th width="100">学生姓名</th>
+            <th width="100">成绩</th>
+            <th width="100">正确率</th>
+            <th>选择题对错</th>
+          </tr>
+           
+        {foreach $student_infos as $key=>$val}
+        <tr>
+        <td>{$val@iteration}</td>
+        <td title="{$val.name}">{sub_str($val.name,0,12)}</td>
+        <td>{if isset($val.process_ans) and count($val.process_ans)}{round(100*($val.correct_num/count($val.process_ans)))}{else}0{/if}</td>
+            <td>{if isset($val.process_ans) and count($val.process_ans)}{round(100*($val.correct_num/count($val.process_ans)))}%{else}0{/if}</td>
+          <td align="left">
+                <div class="re">
+                    {if isset($val.process_ans) and $val.process_ans}
+                        {foreach $val.process_ans as  $q=>$a}
+                        <a class="{$a.color} subjectDetial" href="javascript:;" qid={$a.qid}>{$a.order}</a>
+                        {/foreach}
+                        {else}
+                        --
+                        {/if}
+                </div>
+            </td>   
+        </tr>
+        {/foreach}
+        </table>
+    </div>
+    <!-- 作答记录结束 -->
+
+    
+<!-- 题目详情弹出框 start --> 
+{if $hw_q}
+{foreach $hw_q as $key=>$val}
+    <div id="subjectDetialPop{$val.qid}" class="pop_box" >
+    <div class="teacherClass">
+        <div class="pop_main"  >
+            <dl class="click_qs">
+                <dt>{if false!==strpos($val.body,'题文')}{$val.body}{else}【题文】{$val.body}{/if}</dt><dt>
+                </dt>
+                <dd class="answer">
+        {if false!==strpos($val.answer_text,'答案')}{$val.answer_text}{else}【答案】{$val.answer_text}{/if}
+        </dd>
+                <dd class="answer">
+                {if false!==strpos($val.analysis_text,'解析')}{$val.analysis_text}{else}【解析】{$val.analysis_text}{/if}
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+{/foreach}
+{/if}
+<!-- 题目详情弹出框 结束 --> 
+ 
+{/block}

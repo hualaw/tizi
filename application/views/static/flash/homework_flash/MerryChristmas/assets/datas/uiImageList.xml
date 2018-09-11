@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:060d4cce1c246588640766431d7ca796$ -->
+<TextureAtlas imagePath="uiImageList.png">
+    <SubTexture name="lose" x="2" y="120" width="37" height="43"/>
+    <SubTexture name="rollLatticeBackGound" x="2" y="2" width="248" height="116" frameX="-1" frameY="0" frameWidth="250" frameHeight="116"/>
+    <SubTexture name="soundPlayButton_1" x="41" y="120" width="50" height="39"/>
+    <SubTexture name="soundPlayButton_2" x="2" y="165" width="50" height="39"/>
+    <SubTexture name="win" x="2" y="206" width="49" height="38" frameX="0" frameY="0" frameWidth="49" frameHeight="40"/>
+</TextureAtlas>

@@ -1,0 +1,45 @@
+﻿{extends file='teacher/paper/paper_center_base.html'}
+
+{block name=keywords}英语试卷,数学试卷,物理化学试卷,2014高考试卷{/block}
+{block name=description}梯子网致力于提供中小学各科试卷，并为各个版本，各个知识点提供相应的练习题，让老师可以轻松出题，独创的组卷系统更是大大的节约了老师的出题时间。{/block}
+{block name=title}英语试卷_数学试卷_物理化学试卷_2014高考试卷{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="layout">
+<!-- 出卷子存档为空开始 -->
+    <div class="unloginPaper">
+        <h2>轻松组卷，免费下载</h2>
+        <a href="{$site_url}teacher/paper/new" class="cBtnNormal paperBtn">进入选题中心</a>
+        <p class="tipsImg">
+            <img src="{$static_url}{$static_version}image/teacherPaper/unLoginPaperImg.jpg" alt="">
+        </p>
+        <ul class="cf">
+            <li class="fl">
+                <span class="title">①选题</span>
+                <p>小初高各学科海量题库，多种选题方式</p>
+            </li>
+            <li class="fl">
+                <span class="title">②排版</span>
+                <p>标准试卷结构，灵活自由的排版</p>
+            </li>
+            <li class="fl">
+                <span class="title">③免费下载</span>
+                <p>多种纸张规格的Word格式试卷输出</p>
+            </li>
+        </ul>
+    </div>
+<!-- 出卷子存档为空结束 -->
+<!-- 梯子打分广告位开始 -->
+<div class="layout dafenBanner">
+    <a href="{$dafen_url}" target="_blank">
+        <img src="{$static_url}{$static_version}image/common/ad/dafen_banner.gif" alt="梯子打分">
+    </a>
+</div>
+<!-- 梯子打分广告位结束 -->
+</div>
+{/block}
+{block name=script}
+{/block}

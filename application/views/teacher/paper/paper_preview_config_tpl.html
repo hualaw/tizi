@@ -1,0 +1,174 @@
+<div class="savePaperContent undis">
+    <div class="savePaper">
+        <form method="post" action="{$site_url}paper/paper_archive/save" class="commonSaveTitleForm_beta">
+            <div class="line cf">
+                <span class="fl">试卷标题：</span>
+                <input id="save_sid" type="hidden" name="subject_id" value="{$data.subject_id}" />
+                <input id="save_as" type="hidden" name="save_as" value="" />
+                <input id="save_title" class="paper_title text fl" type="text" name="title" value="未命名" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="setting-content" class="undis">
+<div class="paper-set-win">
+    <table id="win-paper-title" pos="main_title">
+        <tr><td><span class="fn-hide radio-render" name="paper-title" >{$data.paper.paper_config->is_show_main_title}</span></td><tr>
+        <tr>
+            <td class="title-td">主标题</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="paper-title" type="radio"  value="1" /> 显示</span><span><input name="paper-title" type="radio" value="0" /> 不显示</span></li>
+                    <li class="fn-clear"><span>文本</span><span><input class="text-input" name="" type="text" value="{$data.paper.paper_config->main_title}" /></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table id="win-paper-prititle" pos="sub_title">
+        <tr><td><span class="fn-hide radio-render" name="paper-prititle" >{$data.paper.paper_config->is_show_sub_title}</span></td><tr>
+        <tr>
+            <td class="title-td">副标题</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="paper-prititle" type="radio"  value="1" /> 显示</span><span><input name="paper-prititle" type="radio" value="0" /> 不显示</span></li>
+                    <li class="fn-clear"><span>文本</span><span><input name="" class="text-input" type="text" value="{$data.paper.paper_config->sub_title}" /></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table id="win-separate-line" pos="line">
+        <tr><td><span class="fn-hide radio-render" name="separate-line" >{$data.paper.paper_config->is_show_line}</span></td><tr>
+        <tr>
+            <td class="title-td">装订线</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="separate-line" type="radio"  value="1" /> 显示</span><span><input name="separate-line" type="radio" value="0" /> 不显示</span></li>       
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table id="win-secret-mark" pos="secret_sign">
+        <tr><td><span class="fn-hide radio-render" name="secret-mark" >{$data.paper.paper_config->is_show_secret_sign}</span></td><tr>
+        <tr>
+            <td class="title-td">保密标记</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="secret-mark" type="radio"  value="1" /> 显示</span><span><input name="secret-mark" type="radio" value="0" /> 不显示</span></li>
+                    <li class="fn-clear"><span>文本</span><span><input class="text-input" name="" type="text" value="{$data.paper.paper_config->secret_sign}" /></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table id="win-paper-info" pos="info">
+        <tr><td><span class="fn-hide radio-render" name="paper-info" >{$data.paper.paper_config->is_show_info}</span></td><tr>
+        <tr>
+            <td class="title-td">试卷信息栏</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="paper-info" type="radio"  value="1" /> 显示</span><span><input name="paper-info" type="radio" value="0" /> 不显示</span></li>
+                    <li class="fn-clear"><span>文本</span><span><input name="" class="text-input" type="text" value="{$data.paper.paper_config->info}" /></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table id="win-student-info" pos="student_input">
+        <tr><td><span class="fn-hide radio-render" name="student-info" >{$data.paper.paper_config->is_show_student_input}</span></td><tr>
+        <tr>
+            <td class="title-td">考生输入栏</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="student-info" type="radio"  value="1" /> 显示</span><span><input name="student-info" type="radio" value="0" /> 不显示</span></li>
+                    <li class="fn-clear"><span>文本</span><span><input class="text-input" name="" type="text" value="{$data.paper.paper_config->student_input}" /></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table id="win-cent-box" pos="performance">
+        <tr><td><span class="fn-hide radio-render" name="cent-box" >{$data.paper.paper_config->is_show_performance}</span></td><tr>
+        <tr>
+            <td class="title-td">誊分栏</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="cent-box" type="radio"  value="1" /> 显示</span><span><input name="cent-box" type="radio" value="0" /> 不显示</span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table id="win-alert-info" pos="pay_attention">
+        <tr><td><span class="fn-hide radio-render" name="alert-info" >{$data.paper.paper_config->is_show_pay_attention}</span></td><tr>
+        <tr>
+            <td class="title-td">注意事项栏</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="alert-info" type="radio"  value="1" /> 显示</span><span><input name="alert-info" type="radio" value="0" /> 不显示</span></li>
+                    <li class="fn-clear"><span>文本</span><span><textarea name="" cols="" rows="">{$data.paper.paper_config->pay_attention}</textarea></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <table id="win-paper-type1" pos="win-paper-typeone{$data.paper.section_config[1]->id}">
+        <tr><td><span class="fn-hide radio-render" name="paper-type1" >{$data.paper.section_config[1]->is_show_section_header}</span></td><tr>
+        <tr>
+            <td class="title-td">分卷I头部</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="paper-type1" type="radio"  value="1" /> 显示</span><span><input name="paper-type1" type="radio" value="0" /> 不显示</span></li>
+                    <li class="fn-clear"><span>卷标</span><span><input class="text-input" name="" type="text" value="{$data.paper.section_config[1]->label}" /></span></li>
+                    <li class="fn-clear"><span>卷注</span><span><textarea name="" cols="" rows="">{$data.paper.section_config[1]->note}</textarea></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    {$question_type_num=0}
+    {foreach $data.paper.question_config[1] as $paper_question_type_id=>$dtqc}
+    {$question_type_num=$question_type_num+1}
+    <table id="win-question-type{$paper_question_type_id}" pos="win-question-type{$paper_question_type_id}">
+        <tr><td><span class="fn-hide radio-render" name="question-type{$paper_question_type_id}" >{$data.paper.question_config[1][$paper_question_type_id]->is_show_question_type}</span></td><tr>
+        <tr><td><span class="fn-hide radio-render radio-render-cent-verify" name="question-type-cent{$paper_question_type_id}" >{$data.paper.question_config[1][$paper_question_type_id]->is_show_performance}</span></td><tr>
+        <tr>
+            <td class="title-td">题型{$question_type_num}头部</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="question-type{$paper_question_type_id}" type="radio"  value="1" />显示</span><span><input name="question-type{$paper_question_type_id}" type="radio" value="0" />不显示</span></li>
+                    <li class="fn-clear"><span>评分栏</span><span><input name="question-type-cent{$paper_question_type_id}" type="radio"  value="1" /> 显示</span><span><input name="question-type-cent{$paper_question_type_id}" type="radio" value="0" /> 不显示</span></li>
+                    <li class="fn-clear"><span>名称</span><span><input class="text-input" name="" type="text" value="{$dtqc->name}" /></span></li>
+                    <li class="fn-clear"><span>注释</span><span><textarea name="" cols="" rows="">{$data.paper.question_config[1][$paper_question_type_id]->note}</textarea></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    {/foreach}
+    <table id="win-paper-type2" pos="win-paper-typetwo{$data.paper.section_config[2]->id}">
+        <tr><td><span class="fn-hide radio-render" name="paper-type2" >{$data.paper.section_config[2]->is_show_section_header}</span></td><tr>
+        <tr>
+            <td class="title-td">分卷II头部</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="paper-type2" type="radio"  value="1" /> 显示</span><span><input name="paper-type2" type="radio" value="0" /> 不显示</span></li>
+                    <li class="fn-clear"><span>卷标</span><span><input class="text-input" name="" type="text" value="{$data.paper.section_config[2]->label}" /></span></li>
+                    <li class="fn-clear"><span>卷注</span><span><textarea name="" cols="" rows="">{$data.paper.section_config[2]->note}</textarea></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    {foreach $data.paper.question_config[2] as $paper_question_type_id=>$dtqc}
+    {$question_type_num=$question_type_num+1}
+    <table id="win-question-type{$paper_question_type_id}" pos="win-question-type{$paper_question_type_id}">
+        <tr><td><span class="fn-hide radio-render" name="question-type{$paper_question_type_id}" >{$data.paper.question_config[2][$paper_question_type_id]->is_show_question_type}</span></td><tr>
+        <tr><td><span class="fn-hide radio-render radio-render-cent-verify" name="question-type-cent{$paper_question_type_id}" >{$data.paper.question_config[2][$paper_question_type_id]->is_show_performance}</span></td><tr>
+        <tr>
+            <td class="title-td">题型{$question_type_num}头部</td>
+            <td class="option-td">
+                <ul>
+                    <li class="fn-clear"><span><input name="question-type{$paper_question_type_id}" type="radio"  value="1" />显示</span><span><input name="question-type{$paper_question_type_id}" type="radio" value="0" />不显示</span></li>
+                    <li class="fn-clear"><span>评分栏</span><span><input name="question-type-cent{$paper_question_type_id}" type="radio"  value="1" /> 显示</span><span><input name="question-type-cent{$paper_question_type_id}" type="radio" value="0" /> 不显示</span></li>
+                    <li class="fn-clear"><span>名称</span><span><input class="text-input" name="" type="text" value="{$dtqc->name}" /></span></li>
+                    <li class="fn-clear"><span>注释</span><span><textarea name="" cols="" rows="">{$data.paper.question_config[2][$paper_question_type_id]->note}</textarea></span></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    {/foreach}
+</div>
+</div>

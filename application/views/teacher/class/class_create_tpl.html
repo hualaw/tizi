@@ -1,0 +1,267 @@
+<div class="class layout cf">
+  <!-- <div class="join_class">
+    <h2>添加班级后您可以</h2>
+    <div class="box mayDoBox cf">
+      <div class="mayDo homework fl">
+        <h4>在线留作业</h4>
+        <p>选择题自动批改，还能统计错题排行！</p>
+      </div>
+      <div class="mayDo share fl">
+        <h4>在线分享</h4>            
+        <p>组卷，下载课件，上传文档，分享给学生！</p>
+      </div>
+      <div class="mayDo administration fl">
+        <h4>创建掌中班级</h4>
+        <p>上传班级照片，免费发通知给家长！</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- 4.0添加班级 开始 -->
+  <div class="addClassLeft fl">
+    <h2>好用的班级共享空间！</h2>
+    <ul>
+      <li class="list02">
+        <h3>作业管理</h3>
+        <p>可打印的作业汇总、答题、错题报告，一目了然。</p>
+      </li>
+      <li class="list01">
+        <h3>文件共享</h3>
+        <p>学习资料班级内分享与下载，大容量，永久免费。</p>
+      </li>
+      <li class="list03">
+        <h3>班级管理</h3>
+        <p>创建班级、学生账号，统一管理学生名单。</p>
+      </li>
+    </ul>
+    <!-- <dl class="news">
+      <dt>最新动态</dt>
+      {foreach $class as $value}
+      <dd>
+		  <span class="colorGreen">{$value.realname}</span>
+		  &nbsp;刚刚开通了：<span class="classGrade">{$value.school}{if isset($arr_grade[$value.class_grade])}{$arr_grade[$value.class_grade]}{/if}{$value.classname}</span>
+	  </dd>
+	  {/foreach}
+    </dl> -->
+  </div>
+  <div class="addClassRight fr">
+    {if $user_type eq $constant.user_type_teacher or !$user_type}
+    <div class="join_class">
+      <div class="box cf">
+        <div class="outBox">
+          <div class="newClass">
+            <h3 class="cf">
+                <a class="fr" href="{$login_url}jifen">积分奖励</a>
+                开通班级空间
+            </h3>
+            <div class="formBox stepBg">
+              <form method="post" onsubmit="return false;" action="{$site_url}class/create" class="creatNewClassForm">
+                <ul>
+                <li class="cf schoolArea">
+                  <div class="theGenusSchollBox cf">
+                      <div class="theGenusScholl_y fl">
+                          <div class="inputBox schoolBox fl">
+                              <span id="school"></span>
+                              <input type="hidden" value="" name="school_id" id="schoolVal" />
+                              <input type="hidden" value="" name="area_county_id" id="area_county_id"/>
+                              <input type="hidden" value="" name="school_type" id="school_type">
+                              <input type="hidden" value="" name="schoolname" id="schoolname" />
+                          </div> 
+                      </div>
+                      <div class="resetSchool fl ">
+                        <span class="schoolFullName"></span>
+                        <a class="resetSchool aGreen" href="javascript:void(0);">点击这里选择学校</a>
+                      </div>
+                  </div>
+                </li>
+                  <li class="cf list02">
+                    <h4>填写班级名称</h4>
+                    <select name="class_grade" id="class_grade" class="selectSchool">
+                      {foreach $igrade as $ig}
+                        {foreach $ig as $k => $v}
+                        {if $k == 0}
+                        <optgroup label="{$v}"></optgroup>
+                        {else}
+                        <option value="{$k}">{$v}</option>
+                        {/if}
+                        {/foreach}
+                      {/foreach}
+                    </select>
+                    <input type="text" name="classname" class="classNameInput" placeholder="班名">班
+                    <div class="ValidformInfo">
+                        <span class="Validform_checktip">请输入班级</span>
+                        <span class="dec">
+                          <s class="dec1">&#9670;</s>
+                          <s class="dec2">&#9670;</s>
+                        </span>
+                    </div>
+                          
+                  </li>
+                  <li class="cf">
+                    <input type="hidden" name="redirect" value="callback:classCreate">
+                    <input type="hidden" name="reg_redirect" value="{$site_url}banji">
+                    <div class="inputBox yh submitBox submitBox1 fl"><input type="submit" class="cBtnNormal yh" value="立即开通"></div>
+                  </li>
+                </ul>
+              </form>
+              <p class="addVilbleClass cf">加入已有班级空间<a class="colorGreen" href="javascript:;">说明<span>您所教的班级有可能已经由其他任课老师创建了班级，可以向他们询问班级编号，直接加入该班级。</span></a></p>
+              <form method="post" onsubmit="return false;" action="{$site_url}class/apply/dosubmit" class="inVislbleClassForm">
+                <ul>
+                  <li class="cf posr">
+                      <input type="text" name="class_id" class="in_vislble_class_text fl" placeholder="班级编号">
+                      <div class="ValidformInfo">
+                          <span class="Validform_checktip">请输入班级</span>
+                          <span class="dec">
+                            <s class="dec1">&#9670;</s>
+                            <s class="dec2">&#9670;</s>
+                          </span>
+                      </div>
+                      <input type="hidden" name="redirect" value="callback:classJoin">
+                      <input type="hidden" name="reg_redirect" value="{$site_url}banji">
+                      <input type="submit" class="cBtnSilver addVilbleClassBtn  fl" value="加入班级">
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {else}
+    <img src="{$static_url}{$static_version}image/studentClass/classZoneImg.png" alt="" >
+    {/if}
+  </div>
+  <!-- 4.0添加班级 结束 -->
+ <!--  <div class="join_class">
+    <h2>添加班级，开始您的班级互动之旅！</h2>
+    <div class="box cf">
+      <div class="outBox fl">
+        <div class="newClass ">
+          <h3>添加新班级</h3>
+          <div class="formBox">
+            <form method="post" onsubmit="return false;" action="{$site_url}class/create" class="creatNewClassForm">
+              <ul>
+              <li class="cf ">
+                <span class="spanBox fl">所属学校：</span>
+                <div class="theGenusSchollBox fl">
+                    <div class="theGenusScholl_y fl">
+                        <div class="inputBox schoolBox fl">
+                            <span id="school"></span>
+                            <input type="hidden" value="" name="school_id" id="schoolVal" />
+                            <input type="hidden" value="" name="area_county_id" id="area_county_id"/>
+                            <input type="hidden" value="" name="school_type" id="school_type">
+                            <input type="hidden" value="" name="schoolname" id="schoolname" />
+                        </div> 
+                    </div>
+                    <div class="resetSchool fl ">
+                      <span class="schoolFullName"></span>
+                      <a class="resetSchool aGreen" href="javascript:void(0);">选择学校</a>
+                    </div>
+                </div>
+              </li>
+                <li class="cf">
+                    <span class="spanBox fl">年级班级：</span>
+                    <ul class="classGraVeri cf">
+                        <li class="classGraList ie6Select1">
+							<select name="class_grade" id="class_grade" class="selectSchool">
+								{foreach $igrade as $ig}
+									{foreach $ig as $k => $v}
+									{if $k == 0}
+									<optgroup label="{$v}"></optgroup>
+									{else}
+									<option value="{$k}">{$v}</option>
+									{/if}
+									{/foreach}
+								{/foreach}
+							</select>
+                        </li>
+                        <li class="inputClass posr">                         
+                            <input type="text" name="classname" class="classNameInput fl">班
+                            <div class="ValidformInfo">
+                                <span class="Validform_checktip">请输入班级</span>
+                                <span class="dec">
+                                  <s class="dec1">&#9670;</s>
+                                  <s class="dec2">&#9670;</s>
+                                </span>
+                            </div>
+                        </li>
+                    </ul> 
+                </li>
+                <li class="cf">
+                  <span class="spanBox fl">教授课目：</span>
+                  <div class="inputBox fl">
+                    <select name="subject_id" id="subject_type" class="subjectInput fl">
+					  {foreach $subject_type as $key => $value}
+                      <option value="{$key}">{$value}</option>
+                      {/foreach}
+                    </select>
+                  </div>
+                </li>
+                <li class="cf">
+                  {if isset($show_login_check) and $show_login_check}
+                  <input type="hidden" name="redirect" value="callback:classCreate">
+                  <input type="hidden" name="reg_redirect" value="{$site_url}teacher/class/my">
+                  {/if}
+                  <div class="inputBox submitBox fl"><input type="submit" class="cBtnNormal" value="{if !$user_type}登录并{/if}创建"></div>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="outBox  fr">
+        <div class="haveClass">
+          <h3>加入已有新班级</h3>
+          <div class="formBox">
+            <form method="post" onsubmit="return false;" action="{$site_url}class/apply/dosubmit" class="inVislbleClassForm">
+              <ul>
+                <li class="cf posr">
+                  <span class="spanBox fl">班级编号：</span>
+                  <div class="inputBox fl posr">
+                    <input type="text" name="class_id" class="in_vislble_class_text fl">
+                    <div class="ValidformInfo">
+                      <span class="Validform_checktip">请输入班级</span>
+                      <span class="dec">
+                        <s class="dec1">&#9670;</s>
+                        <s class="dec2">&#9670;</s>
+                      </span>
+                  </div>
+                  </div>
+                </li>
+                <li class="cf">
+                  <span class="spanBox fl">教授课目：</span>
+                  <div class="inputBox fl">
+                    <select name="subject_id" class="subjectInput fl">
+					  {foreach $subject_type as $key => $value}
+                      <option value="{$key}">{$value}</option>
+                      {/foreach}
+                    </select>
+                  </div>
+                </li>
+                <li class="cf">               
+                  <div class="inputBox submitBox fl">
+                    {if isset($show_login_check) and $show_login_check}
+                    <input type="hidden" name="redirect" value="callback:classJoin">
+                    <input type="hidden" name="reg_redirect" value="{$site_url}teacher/class/my">
+                    {/if}
+                    <input type="submit" class="cBtnNormal" value="{if !$user_type}登录并{/if}加入">
+                  </div>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+        <div class="getClassNum">
+          <h4>从哪里获得班级编号？</h4>
+          <p>您所教的班级有可能已经由其他任课老师创建了班级，可以向他们
+            询问班级编号，直接加入该班级。</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+</div>
+</div>
+<!-- 加载选择学校html开始 -->
+{include file='file:[lib]addon/teacherSetSchool.html'}
+<!-- 加载选择学校html结束 -->

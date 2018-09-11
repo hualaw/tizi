@@ -1,0 +1,35 @@
+/*-------------------------------------框架左侧样式开始-------------------------------------*/
+.wrap .slide .slideBox{background:#f6f6f6;border-radius: 8px;}
+/*个人信息开始*/
+.wrap .slide .slideBox .memberInfo{padding-top:15px;text-align: center; }
+.wrap .slide .slideBox .memberInfo p{background:url(../../image/common/headerImg_bottom.gif) no-repeat bottom center;padding-bottom:7px;}
+.wrap .slide .slideBox .memberInfo p img{border:1px solid #d7d7d7;padding:7px;margin:0 auto;width: 100px;height:100px;display: block;}
+.wrap .slide .slideBox .memberInfo h2{font-size: 18px; font-weight: normal;padding:5px 0 0px;color:#898989;}
+.wrap .slide .slideBox .memberInfo h2 i{background: url(../../image/common/button/ico_v.gif) no-repeat;width: 17px;height:15px;display: inline-block; text-indent: -999em; overflow: hidden;margin-top: 2px;}
+.wrap .slide .slideBox .memberInfo h3{text-align: center;color:#ff9600; font-size: 14px;padding-right:17px;}
+.wrap .slide .slideBox .memberInfo span.number{padding-top:10px;display:block;}
+.wrap .slide .slideBox .integral{width:120px;margin:12px auto 30px auto;}
+.wrap .slide .slideBox .integral .hd{border:1px solid #d7d7d7;height:4px; overflow: hidden; border-radius: 8px;}
+.wrap .slide .slideBox .integral .hd .progress{background:#27bf9b;height:4px; overflow: hidden;}
+.wrap .slide .slideBox .integral .bd{line-height: 30px; text-align: center;color:#898989;}
+.wrap .slide .slideBox .integral .bd em{color:#ff9600;}
+/*个人信息结束*/
+/*左侧导航开始*/
+.wrap .slide .slideBox .menu{margin-top:15px;}
+.wrap .slide .slideBox .menu li a{text-align:left}
+.wrap .slide .slideBox .menu li a:hover{background-color:#eee;text-decoration: none}
+.wrap .slide .slideBox .menu li a{background:url(../../image/studentCommon/ico_slide.png) no-repeat 0px 0px;_background:url(../../image/studentCommon/ico_slide_8.png) no-repeat 0px 0px;padding-left:50px;}
+.wrap .slide .slideBox .menu li a.studentHome{background-position: 20px 12px}
+.wrap .slide .slideBox .menu li a.studentTeacherShare{background-position: 20px -32px}
+.wrap .slide .slideBox .menu li a.studentMyWork{background-position: 20px -75px}
+.wrap .slide .slideBox .menu li a.studentMyMate{background-position: 20px -120px}
+.wrap .slide .slideBox .menu li a.studentMyTeacher{background-position: 20px -165px}
+.wrap .slide .slideBox .menu li a.studentSubscribe{background-position: 20px -208px}
+.wrap .slide .slideBox .menu li a.studentPractice{background-position: 20px -253px}
+.wrap .slide .slideBox .menu li a.studentOral{background-position: 20px -297px}
+.wrap .slide .slideBox .menu li a.studentAnswerQuestion{background-position: 20px -341px}
+.wrap .slide .slideBox .menu li a.studentUserSetting{background-position: 20px -384px}
+
+.wrap .slide .slideBox .menu li .active{text-decoration: none;background-color:#c2efd8!important;}
+/*左侧导航结束*/
+/*-------------------------------------框架左侧样式结束-------------------------------------*/

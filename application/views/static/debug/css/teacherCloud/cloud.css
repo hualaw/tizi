@@ -1,0 +1,125 @@
+/*网盘样式开始*/
+.teacherCloud .tableStyle{margin-bottom: 20px;}
+.teacherCloud .tableStyle .tdf1 td{background:#f1f1f1}
+.teacherCloud .first_view_head{padding-bottom: 10px;border-bottom: 1px solid #ccc;}
+.teacherCloud .first_view_head a{color: #fff;padding-left: 10px;display:block;float: left;margin-right: 15px;}
+.teacherCloud .class_guid_head{font-size: 16px;margin-top: 15px;margin-bottom:10px;font-weight: normal;}
+.teacherCloud .class_guid_head a,
+.teacherCloud .class_guid_head2 a {color: #159c7e;}
+.teacherCloud .createNewFileBox {background: #f6f6f6;padding:7px 20px;border-bottom: none;font-size: 14px;}
+.teacherCloud .createNewFileBox .cBtnNormal{padding: 0px;width: 110px;height: 35px;line-height: 35px;text-align: center;}
+.teacherCloud .createNewFileBox .cBtnSilver{color: #333;padding: 0px 21px;line-height: 35px;height: 35px;}
+.teacherCloud .createNewFileBox .capacity{margin-top: 10px;}
+.teacherCloud .createNewFileBox .capacity strong{width: 80px;height: 4px;border:1px solid #d9d9d9;background: #fff;display: inline-block;font-size: 0px;position: relative;top: -2px;margin: 0px 5px;}
+.teacherCloud .createNewFileBox .capacity strong span{width: 30%;height:4px;background: #27bf9b;display: inline-block;font-size: 0px;}
+.teacherCloud .createNewFileBox .uploadify-button{background: none;border:none;}
+.teacherCloud .pop_main #createClassNow{padding: 0px 20px;}
+.teacherCloud .pop_main .shareClass{margin-bottom: 10px;}
+.teacherCloud .pop_main .shareClass .classes li{float: left;margin-right: 20px;}
+.teacherCloud .pop_main .shareClass .classes li input{position: relative;top: 2px;margin-right: 5px;}
+/*新版移动文件弹框开始*/
+.teacherCloud .pop_main .moveFile{clear:both; overflow:hidden;}
+.teacherCloud .pop_main .moveFile .textFolder{width:230px;margin-right: 10px;}
+.teacherCloud .pop_main .moveFile .textFolder h2{margin-bottom:10px;font-size:14px;color:#333333;}
+.teacherCloud .pop_main .moveFile .textFolder .textView{line-height: 24px;border: 1px solid #737373;height:260px;overflow:hidden;overflow-y:auto;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a{display: block;color:#333333; text-indent: 5px;line-height: 28px;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a:hover{background-color: #b9d8d6;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a.active{background-color: #b9d8d6;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a.depth_1{text-indent:5px;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a.depth_2{text-indent:20px;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a.depth_3{text-indent:35px;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a.depth_4{text-indent:50px;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a.depth_5{text-indent:65px;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a.depth_6{text-indent:80px;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a.depth_7{text-indent:95px;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a.depth_8{text-indent:110px;}
+.teacherCloud .pop_main .moveFile .textFolder .textView a.depth_9{text-indent:125px;}
+/*新版移动文件弹框结束*/
+.teacherCloud .pop_main .upFileTable{width: 560px;}
+.teacherCloud .pop_main .upFileTable th,
+.teacherCloud .pop_main .upFileTable td{border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;padding-left: 10px;height: 29px;}
+.teacherCloud .pop_main .upFileTable th{background: #eee;}
+.teacherCloud .pop_main .upFileTable td a.complete,
+.teacherCloud .pop_main .upFileTable td a.upLoading{color: #159c7e;cursor: default;}
+.teacherCloud .pop_main .upFileTable td a.complete{font-family: "微软雅黑";font-weight: bold;font-size: 14px;}
+.teacherCloud .pop_main .upFileTable td a.waiting{color: #999;cursor: default;}
+.teacherCloud .pop_main .upFileTable td a.deleteFile{color: #666;font-size: 14px;}
+.teacherCloud .pop_main input.new_class_text {width:385px;height: 26px;padding-left: 6px;border: 1px solid #999;}
+.teacherCloud .pop_main .fileDisc{margin-top: 5px;}
+.teacherCloud .pop_main .fileDisc textarea{width: 558px;height: 78px;}
+.teacherCloud .pop_main .upFileTable{width: 560px;}
+.teacherCloud .pop_main .upFileTable li{width: 100%;}
+.teacherCloud .pop_main .upFileTable span{border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;padding-left: 10px;height: 29px;display: inline-block;float: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.teacherCloud .pop_main .upFileTable span.col1{width: 220px;}
+.teacherCloud .pop_main .upFileTable span.col2{width: 80px;}
+.teacherCloud .pop_main .upFileTable span.col3{width: 90px;}
+.teacherCloud .pop_main .upFileTable span.col4{width: 80px;}
+.teacherCloud .pop_main .upFileTable span.col5{width: 40px;}
+.teacherCloud .pop_main .upFileTable .UFHeader span{background: #eee;border-bottom:none;}
+.teacherCloud .pop_main .upFileTable .fileList a.complete,
+.teacherCloud .pop_main .upFileTable .fileList a.upLoading{color: #159c7e;cursor: default;}
+.teacherCloud .pop_main .upFileTable .fileList a.complete{font-family: "微软雅黑";font-weight: bold;font-size: 14px;}
+.teacherCloud .pop_main .upFileTable .fileList a.waiting{color: #999;cursor: default;}
+.teacherCloud .pop_main .upFileTable .fileList a.deleteFile{color: #666;font-size: 14px;}
+.teacherCloud .pop_main .upFileTable .fileList a.onCancel{color: #666;font-size: 14px;}
+.teacherCloud .pop_main .upFileTable .loadingBg,
+.teacherCloud .pop_main .upList .loadingBg{position: relative;}
+.teacherCloud .pop_main .upFileTable .loadingBg strong,
+.teacherCloud .pop_main .upList .loadingBg strong{display: inline-block;height: 29px;position: absolute;left: 0px;top: 1px;background: #159c7e;opacity: 0.2;filter:alpha(opacity=20);}
+.teacherCloud .pop_main .upList .loadingBg strong{height: 24px;opacity: 0.5;filter:alpha(opacity=50);top:0px;}
+.teacherCloud .myDropbox{text-align: left;width:100%;}
+.teacherCloud .myDropbox th,
+.teacherCloud .myDropbox td{padding-left: 20px;border: 1px solid #d7d7d7;}
+.teacherCloud .myDropbox th{background: #f6f6f6;font-weight: normal;height: 40px;font-size: 16px;}
+.teacherCloud .myDropbox td{height: 35px;font-size: 14px;}
+.teacherCloud .myDropbox td a{color: #159c7e;margin-right: 6px;}
+.teacherCloud .myDropbox td a:hover{color: #f90;}
+.teacherCloud .myDropbox .for_rename{color: #333;}
+.teacherCloud .myDropbox .classFile{padding:3px 0;padding-left: 30px;background: url(../../image/teacherCloud/filebg_ico.png) 0px 6px  no-repeat;color: #159c7e;cursor: pointer;}
+.teacherCloud .uploadify {position: relative;}
+.teacherCloud .uploadify div.choseFileBtn{text-shadow: none;font-size: 13px;}
+.teacherCloud .pop_main .sharAllFile{font-size:14px; line-height: 24px;color: #333333;}
+.teacherCloud .pop_main .sharAllFile label input{margin-right: 5px; vertical-align: middle; margin-top: -2px;}
+.teacherCloud .pop_main .sharAllFile p{font-size:14px;margin-left: 20px; color: #333333;}
+/* 内容为空开始 */
+.teacherCloud .emptyNotice img{display: block;margin: 50px auto 20px;}
+.teacherCloud .emptyNotice ul li{width: 100%;line-height: 30px;text-align: center;}
+/* 内容为空结束 */
+/*导航开始*/
+.teacherCloud .hd_title{background-color:#f6f6f6;padding:15px 20px;margin-bottom:10px;font-size: 14px;clear:both; overflow: hidden; border: 1px solid #ddd;*zoom:1;}
+.teacherCloud .hd_title a{font-size: 14px;}
+.teacherCloud .hd_title a.cgr{color: #159c7e;}
+.teacherCloud .hd_title a.cBtnNormal{width: 160px;height: 30px;line-height: 30px;text-align: center; margin-right: 10px;}
+.teacherCloud .hd_title .capacity strong{width: 80px;height: 4px;border:1px solid #d9d9d9;background: #fff;display: inline-block;font-size: 0px;position: relative;top: -2px;margin: 0px 5px;}
+.teacherCloud .hd_title .capacity strong span{width: 30%;height:4px;background: #27bf9b;display: inline-block;font-size: 0px;}
+/*导航结束*/
+/*其他文档目录开始*/
+.teacherCloud .otherFileText{width: 830px;}
+.teacherCloud .otherFileText .first_view_head{padding-bottom: 10px;border-bottom: 1px solid #ccc;}
+.teacherCloud .otherFileText .first_view_head a{color: #fff;padding-left: 10px;display:block; float: left;margin-right: 15px;}
+.teacherCloud .otherFileText .createNewFileBox {background: #f6f6f6;padding:10px;border-bottom: none;font-size: 14px;clear:both;overflow: hidden;}
+.teacherCloud .otherFileText .createNewFileBox .cBtnNormal{padding: 0px;width: 110px;height: 35px;line-height: 35px;text-align: center;position: relative;}
+.teacherCloud .otherFileText .createNewFileBox .cBtnNormal em{display: block; width:15px; height:12px;position: absolute;top:13px;_top:9px;left:10px;background: url("../../image/teacherResource/icon_upload.gif") no-repeat center center;}
+.teacherCloud .otherFileText .createNewFileBox .cBtnNormal .uploadify{position: absolute;top:1px;left:3px;}
+.teacherCloud .otherFileText .createNewFileBox .cBtnSilver{color: #333;padding: 0px 21px;line-height: 35px;height: 35px;}
+.teacherCloud .otherFileText .createNewFileBox .uploadify-button{background: none;border:none;}
+.teacherCloud .otherFileText .md_hd{border-bottom:1px solid #eee; clear: both; height:40px; line-height: 40px;}
+.teacherCloud .otherFileText .md_hd h2{font-size: 14px;padding: 5px;}
+.teacherCloud .otherFileText .md_bd{padding:5px;clear: both; overflow: hidden;}
+.teacherCloud .otherFileText .md_bd ul{list-style:none; margin-bottom: 5px;}
+.teacherCloud .otherFileText .md_bd ul li{position: relative;clear:both; overflow:hidden;border:1px solid #fff;border-bottom:1px solid #eee; cursor:pointer;zoom:1;padding:5px 0px;}
+.teacherCloud .otherFileText .md_bd ul li.nav_tab{cursor: default;}
+.teacherCloud .otherFileText .md_bd ul li label{display:block;font-size:14px; color: #333333; width:55%;overflow: hidden; text-align: left; text-indent: 5px;line-height:28px;}
+.teacherCloud .otherFileText .md_bd ul li span{display:block;font-size:14px; color: #333333;text-align: left;}
+.teacherCloud .otherFileText .md_bd ul li span.fsize{width:120px;_width:110px;line-height:28px; text-align:center;}
+.teacherCloud .otherFileText .md_bd ul li span.ftime{width:190px;padding-right: 10px;line-height:28px; text-align:center;}
+.teacherCloud .otherFileText .md_bd ul li .btnList{display:none;float:right;line-height:28px;margin-top:6px;}
+.teacherCloud .otherFileText .md_bd ul li .btnList a{margin-right:8px;}
+.teacherCloud .otherFileText .md_bd ul li.active{background-color:#f6f6f6; overflow: hidden;}
+.teacherCloud .otherFileText .md_bd ul li.active label{width:51%;}
+.teacherCloud .otherFileText .md_bd ul li.active span.fsize,.teacherCloud .otherFileText .md_bd ul li.active span.ftime{display: none;}
+.teacherCloud .otherFileText .md_bd ul li.active .btnList{display: block;}
+.teacherCloud .otherFileText .md_bd ul li.folders label{display: block;text-indent:45px;background: url(../../image/teacherResource/folder_icon.gif) no-repeat 5px center;cursor:pointer;}
+.teacherCloud .otherFileText .md_bd .go_back_dir{cursor:pointer;}
+/*其他文档目录结束*/
+/*网盘样式结束*/

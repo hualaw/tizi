@@ -1,0 +1,10 @@
+.layout{width:980px; margin:0 auto;}
+/*全局结构开始*/
+.wrap{margin:20px auto 60px auto;}
+.wrap .wrapContent{width:830px;}
+.wrap .slide{width:140px;}
+.wrap .slide a{font-size:14px;}
+.wrap .slide .menu a{height:40px;line-height:40px; display: block; text-align: center;overflow: hidden;}
+.wrap .slide .menu a.active{background-color: #e6e6e5;}  
+.wrap .slide .menu a:hover{background-color: #e6e6e5;color:#333;}
+/*全局结构结束*/

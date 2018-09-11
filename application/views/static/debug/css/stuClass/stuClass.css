@@ -1,0 +1,84 @@
+/*班级分享-个人信息样式开始*/
+.stuClass .personInfo{border:2px solid #d9e2ec;padding:10px;margin-bottom:20px;}
+.stuClass .personInfo h2{font-size: 20px;color:#565656;font-weight:normal;line-height:36px;}
+.stuClass .personInfo p{line-height:30px;}
+.stuClass .personInfo p span{margin-right:24px;color:#565656;}
+/*班级分享-个人信stuOtherBox息样式结束*/
+/*学生端公共右侧box开始*/
+.stuClass .bra10{border-radius: 10px;}
+.stuClass .stuBox{border-radius: 10px;background:#d9e2ec;margin-top: 20px;padding:10px;position: relative;}
+.stuClass .stuBox h2{font-size: 18px;padding-bottom:10px;padding-left:10px; font-weight: bold;}
+.stuClass .stuBox .inner{background:#fff;}
+.stuClass .stuBox a{color:#179C7E;}
+.stuClass .stuBox .videoIntro{padding: 30px 0px 30px 30px;width: 390px;}
+.stuClass .stuBox .videoIntro li{font-size:16px;color:#565656;}
+.stuClass .stuBox .videoIntro li.title{font-size: 18px;padding: 10px 0px;}
+/*学生端公共右侧box结束*/
+/*otherBox样式开始*/
+.stuClass .stuBox{position:relative;margin-top:50px;}
+.stuClass .stuOtherBox h2.otherH2{border-top-left-radius:10px;border-top-right-radius:10px;position:absolute;display;background:#d9e2ec;height:40px;top:-30px;left:0;_left:-10px;line-height:40px;padding:0 20px;}
+.stuClass .box{padding: 30px 0px 10px 30px;}
+.stuClass .box p{font-size:16px;color:#565656;line-height:16px;margin-bottom:15px;}
+.stuClass .box p.shareTitleWord{background:url(../../image/iClass/shareWordIcon.gif) no-repeat left center;text-indent:25px;}
+.stuClass .box p.shareTitlePic{background:url(../../image/iClass/sharePicIcon.gif) no-repeat left center;text-indent:25px;}
+.stuClass .box p.shareTitleVideo{background:url(../../image/iClass/shareVideo.gif) no-repeat left center;text-indent:25px;}
+.stuClass .box p.shareTitleAudio{background:url(../../image/iClass/shareAudio.gif) no-repeat left center;text-indent:25px;}
+/*下载按钮样式开始*/
+.stuClass .downloadBox{padding:0  0 30px 30px;}
+.stuClass .downloadBox a{text-align:center;padding:3px 10px;margin-right:10px;font-size:14px;}
+.stuClass .downloadBox a.cBtnNormal{color:#fff;}
+.stuClass .downloadBox a{color:#999;}
+.stuClass span.teacherComment{font-size:14px;color:#565656;}
+/*下载按钮样式结束*/
+ /*stuBox下方灰条样式开始*/
+.stuClass .btmBar{padding:0 10px;font-size:14px;color:#999999;background:#f2f2f2;line-height:30px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.stuClass .btmBar .priase{color:#179c7e;background:url(../../image/iClass/priase.gif) no-repeat right center;padding-right:20px;}
+.stuClass .btmBar a:hover{color:#f90;}
+.stuClass .btmBar .name em{padding:0 10px;}
+ /*stuBox下方灰条样式结束*/
+ /*右上方下载状态样式开始*/
+.stuClass .stuDownload{position:absolute;top:43px;right:65px;padding:0 20px;height:39px;font-size:14px;color:#fff;line-height:39px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.stuClass .otherDownload{position:absolute;top:10px;right:65px;padding:0 20px;height:39px;font-size:14px;color:#fff;line-height:39px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.stuClass .haveDown{background:#179c7e;}
+.stuClass .noDown{background:#f90;}
+/*右上方下载状态样式结束*/
+.stuClass .stuBox .workIntro{padding: 30px 0px 15px 30px;}
+.stuClass .stuBox .workIntro li{font-size:16px;margin-bottom:10px;color:#565656;}
+.stuClass .stuOtherBox .sharePic{padding: 0px 0px 30px 30px;}
+/*otherBox样式结束*/
+/*学生端公共右侧box结束*/
+/*我的同学样式开始*/
+.stuClass .myClassmates{padding-top:20px;}
+.stuClass .myClassmates li{border:2px solid #d9e2ec;float:left;padding:10px;width:176px;height:70px;margin:0 10px 10px 0;}
+.stuClass .myClassmates li .headerPic{width:66px;height:66px;background-color:#d9e2ec;}
+.stuClass .myClassmates li .nameAndTime{padding:10px 0 0 10px;}
+.stuClass .myClassmates li .nameAndTime p.name{font-size:16px;color:#565656;line-height:24px;}
+.stuClass .myClassmates li .nameAndTime p.time{line-height:22px;}
+.stuClass .myClassmates li.mr_r0{margin-right:0;}
+/*我的同学样式结束*/
+.stuClass .myTeacher{padding-top:20px;}
+.stuClass .myTeacher li{width:89px;padding:15px;border:2px solid #d9e2ec;float:left;margin-right:18px;}
+.stuClass .myTeacher li .headerPic{width:88px;height:88px;background:#d9e2ec;margin-bottom:15px;}
+.stuClass .myTeacher li .subjectAndName p.subject{text-align:center;color:#565656;}
+.stuClass .myTeacher li .subjectAndName p.name{text-align:center;color:#565656;font-size: 16px;}
+.stuClass .myTeacher li.mr_r0{margin-right:0;}
+.stuClass .practiceBox{display:none;}
+.stuClass div.dis{display: block;}
+/***************/
+/*没有班级样式开始*/
+.stuClass .noHasClass h3{line-height: 40px;font-size:16px;color:#565656;}
+.stuClass .noHasClass .pop_box{background:#f6f6f6;padding:25px 20px;}
+.stuClass .noHasClass .pop_box li{font-size:16px;line-height:30px;margin-right:10px;}
+.stuClass .noHasClass .pop_box li.classNum input{height:26px;line-height:26px;border:2px solid #d9e2ec;padding:0 5px ;}
+.stuClass .noHasClass .pop_box li input.joinClass{_height:30px;cursor:pointer;*+line-height:22px;}
+.stuClass .noHasClass .textBox{padding:10px 0 20px 0;color:#565656;}
+.stuClass .noHasClass .textBox h4{font-size:16px;line-height:40px;}
+.stuClass .noHasClass .textBox p{font-size:14px;line-height:30px;}
+.stuClass .noHasClass .textBox ul{padding-top:30px;}
+.stuClass .noHasClass .textBox li{padding-top:80px;float:left;width: 275px;}
+.stuClass .noHasClass .textBox li.share{background:url(../../image/iclass/noClass_share.gif) no-repeat top center;}
+.stuClass .noHasClass .textBox li.downLoad{background:url(../../image/iclass/noClass_down.gif) no-repeat top center;}
+.stuClass .noHasClass .textBox li.student{background:url(../../image/iclass/noClass_student.gif) no-repeat top center;}
+.stuClass .noHasClass .textBox li p{text-align:center;font-size:14px;}
+.stuClass .noHasClass .textBox li p.pTop{font-size:16px;}
+/*没有班级样式结束。*/

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:b4b167dd8c2cd7881819a1eb7ed218b8$ -->
+<TextureAtlas imagePath="uiImageList.png">
+    <SubTexture name="background" x="2" y="2" width="700" height="500"/>
+</TextureAtlas>

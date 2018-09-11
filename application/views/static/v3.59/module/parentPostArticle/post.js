@@ -1,0 +1,1 @@
+define("module/parentPostArticle/post",[],function(require,exports){exports.onInpit=function(){}});

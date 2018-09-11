@@ -1,0 +1,89 @@
+/*当前位置样式开始*/
+.parentArticle .parentPath{font-size:14px;}
+.parentArticle .parentPath a{color:#50B49E;}
+.parentArticle .parentPath a:hover{color:#f90;}
+/*当前位置样式结束*/
+.parentArticle var{ font-style: normal;}
+/*家长端资讯列表开始*/
+.parentArticle  .noborder{ border: none!important;}
+.parentArticle .parInforList a{ color:#50b49e;padding:0 10px;}
+.parentArticle .parInforList a.parnoPadding{ padding:0;}
+.parentArticle .parInforListBox .parTime{line-height:22px;color: #999;font-size: 12px;margin-bottom: 5px;}
+.parentArticle .parInforListBox .parTime span{margin-left:15px;}
+.parentArticle .parInforListBox li{border-bottom:1px solid #ccc;zoom:1;padding:20px 0;}
+.parentArticle .parInforListBox li img{width:200px;}
+.parentArticle .parInforListBox li:after{content:"";display:table;clear:both;}
+.parentArticle .parInforListBox .info_content{width:436px;}
+.parentArticle .parInforListBox h4{font-size:18px;font-weight:normal;}
+.parentArticle .parTime{ color: #999;font-size: 12px;margin-bottom: 5px;line-height:22px;}
+.parentArticle .parInforListBox h4 a{color:#484848;}
+.parentArticle .parInforListBox h4 a:hover,.parentArticle .parInforList a:hover,.parentArticle .articleCont p a:hover,
+.parentArticle .hotArticleList a:hover,.parentArticle .hotArticleList .hotTags a:hover{color: #f90;}
+.parentArticle .parInforListBox .infor_summary{height:auto!important;height:59px;min-height:59px;font-size:14px;line-height: 22px;color:#666;}
+.parentArticle .parInforListBox .infor_tab{margin-top:10px;}
+.parentArticle .parInforListBox .infor_tab span{color:#848484;padding-right:20px;}
+.parentArticle .parInforListBox .infor_tab a{display:inline-block;padding:0 12px;height:25px;line-height:25px;color:#fff;text-align:center;background:#32b3a4;margin:10px 10px 0 0;}
+.parentArticle .parInforListBox .infor_tab a:hover,.parentArticle .parInforListBox .more_info a:hover{background:#239083;}
+.parentArticle .parInforListBox .more_info a{display:block;width:820px;height:25px;margin-top:20px;line-height:25px;color:#fff;text-align:center;background:#179c7e;}
+/*家长端资讯列表结束*/
+/*家长端 家长课堂右侧开始*/
+.parentArticle .parAnsQuest{ background: #e3e3e3;}
+.parentArticle .parAnsQuest{ padding:12px 0 22px 20px;}
+.parentArticle  a.onlineAnsQues{ font-size: 20px;margin: 12px 0 14px;display: block;}
+.parentArticle .hotArticle {margin:0px 0 28px;}
+.parentArticle .hotArticle h2{ font-weight:normal;height:38px;line-height:38px;background: #28b1a4;padding-left: 14px;}
+.parentArticle .hotArticle h2 a{ font-size: 16px;color:#fff;}
+.parentArticle .hotArticle ul{ background: #f6f6f6;padding:0 10px;}
+.parentArticle .hotArticle li{ padding: 15px 0 20px;}
+.parentArticle .hotArticleList .hotTags a{ color:#50b49e;font-size: 12px;margin-right:20px;}
+.parentArticle .hotArticleList{ width:172px;}
+.parentArticle .hotArticleList p{ line-height: 16px;margin-bottom: 5px;}
+.parentArticle .QRCode{ width:160px;height:203px;background: #179c7e;text-align: center;}
+.parentArticle .QRCode p{ text-align: center;color: #fff;}
+.parentArticle .QRCode p.QRCodeText{ line-height: 30px;height: 30px;}
+/* img 写width  height 是为了占位 ----------*/
+.parentArticle .QRCode img{ width:120px;height:120px;margin-bottom: 4px;}
+.parentArticle .hotArticle li img{ width:100px;height: 70px;}
+.parentArticle .hotArticle .parTime{ display: inline-block;}
+/*家长端 家长课堂右侧结束*/
+
+/*关键词 开始 静态*/
+.parentArticle .key_word_title{ font-size: 20px;font-weight: normal;}
+.parentArticle .key_word_title span { color:#179c7e;margin:0 5px;}
+.parentArticle .searchListBox .infor_container li{border-top:none;border-bottom: 1px solid #ccc;zoom: 1;}
+
+/*关键词 结束*/
+/*资讯展示页 开始*/
+.parentArticle .articleCont h1{ font-size: 24px;text-align: center;font-weight: normal;}
+.parentArticle .articleCont p{ margin:20px 0;}
+.parentArticle .articleCont p a{ color:#09aa83;}
+.parentArticle .articleCont p *{ margin-right:16px;}
+.parentArticle .praise,.parentArticle .praised {display: inline-block;background: url("../../image/parentHomePage/praise.png") left 3px no-repeat;padding-left: 14px;height:16px;}
+.parentArticle .articleContHead{padding-top:20px;}
+.parentArticle .articleContHead p,.parentArticle .articleContHead{ text-align: center;}
+.parentArticle .articleContBox{ font-size: 16px;line-height: 24px;margin:25px 0;}
+.parentArticle .articleContBox h3{ font-size: 16px;font-weight: normal;}
+.parentArticle .articleContBox img{ max-width: 660px;margin: 0 auto;}
+.parentArticle .articleContFoot{ background: #f6f6f6;padding:12px 20px;}
+.parentArticle .collect{ background:url("../../image/parentHomePage/collect.png") left 3px no-repeat;padding-left: 14px;height:16px; }
+.parentArticle .articleContFoot .fl span{ margin-right:34px;cursor: pointer; }
+.parentArticle .articleContFoot .fl span.praised{ margin-right:34px;cursor: default; }
+.parentArticle .articleContFoot .fl{ margin-top:5px; }
+.parentArticle .parShare{ width:172px;}
+.parentArticle .parShare *{ float: left;width:22px;height:16px;}
+.parentArticle .parShare span{ width:40px;text-align: center;}
+.parentArticle .relaArticle .oldH1{ font-size: 18px;margin:40px 0 10px;text-align: left;font-weight: normal;}
+.parentArticle .relaArticle li{ height:30px;line-height: 30px;width:100%;font-size:14px; }
+.parentArticle .relaArticle .parTime{margin-bottom:0px;line-height:34px;}
+.parentArticle .relaArticle ul{ border-top:1px solid #ccc;zoom:1;padding-top:8px;}
+/*资讯展示页 结束*/
+/*上一篇下一篇开始*/
+.parentArticle .prevNext{padding:20px 0px;}
+/*上一篇下一篇结束*/
+/*省份列表样式开始*/
+.parentArticle .provinceList{padding:13px;line-height:24px;background: #f6f6f6;margin-top:15px;}
+.parentArticle .provinceList span{width:38px;}
+.parentArticle .provinceList .list{width:586px;}
+.parentArticle .provinceList .list a{margin:0 2px;display: inline-block;color:#484848;}
+.parentArticle .provinceList .list a:hover{color:#f90;}
+/*省份列表样式结束*/ 

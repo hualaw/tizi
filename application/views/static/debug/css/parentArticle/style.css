@@ -1,0 +1,14 @@
+/*加载base.css----包括reset,common.cssSprites,layout,header,footer,button,dialog,valid.css*/
+@import url('../common/base.css');
+
+/*加载导航样式*/
+@import url('../common/parentNav.css');
+/*加载顶部样式*/
+@import url('../parentCommon/header.css');
+/*加载热门tag样式*/
+@import url('../parentCommon/parent_hot_tag.css');
+/*加载布局样式*/
+@import url('layout.css');
+
+/*加载家长课堂样式*/
+@import url('article.css');

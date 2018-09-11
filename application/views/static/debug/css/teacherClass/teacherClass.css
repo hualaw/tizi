@@ -1,0 +1,618 @@
+/* 班级管理样式开始 */
+/* 班级详情 */
+.teacherClass .ValidformInfo{*top:-40px;}
+.teacherClass #ClassGrade{font-size: 18px;font-weight: normal;}
+.teacherClass .ClassGrade{font-size: 18px;font-weight: normal;}
+.teacherClass #ClassGrade a{font-size: 12px;color: #01b88b;margin-left: 6px;}
+.teacherClass .detial_line .detitle{margin-top: 10px;}
+.teacherClass .detial_line a,
+.teacherClass .deleteClass{color: #01b88b;}
+/*.teacherClass a.deleteClass:hover{color: #f90;}*/
+.teacherClass .studentManage,
+.teacherClass .classTeacher,
+.teacherClass .studentHomework{font-size: 14px;}
+
+.teacherClass .class_manage_btn{}
+.teacherClass .class_manage_btn li{float: left;margin-left: 30px;}
+.teacherClass .class_manage_btn li.noBorderLeft{border-left: 0px;}
+.teacherClass .class_manage_btn li.active{border-bottom: none;}
+.teacherClass .class_manage_btn li a{display: block;color: #555656;text-align: center;font-size: 16px;}
+.teacherClass .class_manage_btn li.active{border-bottom: none;}
+.teacherClass .class_manage_btn li.active a{border-bottom: 3px solid #f90;}
+
+.teacherClass .all_people{padding: 0px 0 13px;}
+.teacherClass .all_people a{color: #01b88b;}
+.teacherClass .myallClass_teacher,
+.teacherClass .myallClass_student{text-align: center;width: 100%;}
+.teacherClass .myallClass_student .colorGreen {color: #2A8D6A;}
+.teacherClass .myallClass_student .colorRed {color: #ff3d3d;}
+.teacherClass .myallClass_student .colorGray {color:gray;}
+.teacherClass .myallClass_teacher th,
+.teacherClass .myallClass_teacher td,
+.teacherClass .myallClass_student th,
+.teacherClass .myallClass_student td{border: 1px solid #d7d7d7;}
+.teacherClass .myallClass_teacher th{background: #f6f6f6;font-weight: normal;}
+.teacherClass .myallClass_student th,
+.teacherClass .myallClass_teacher th{background: #f6f6f6;font-weight: normal;height: 40px;font-size: 12px;}
+.teacherClass .myallClass_student td,
+.teacherClass .myallClass_teacher td{height: 39px;font-size: 12px;}
+.teacherClass .myallClass_teacher td a{color: #01b88b;}
+.teacherClass .myallClass_student th.w30,
+.teacherClass .myallClass_student td.w30{width:150px;}
+.teacherClass .myallClass_student td a{color: #01b88b;margin:0px 2px;}
+.teacherClass .myallClass_teacher td a:hover,
+.teacherClass .myallClass_student td a:hover{color: #f90;}
+.teacherClass .copyButton{margin-right:6px;}
+/*.teacherClass .myallClass_student td a.rmcreate{width: 30px;height: 30px;display: block;background: url(../../image/teacherClass/shareFileBg.png) 0px 0px no-repeat;margin-left: 88px;*margin-left: 10px;}
+.teacherClass .myallClass_student td a.reset_password{width: 30px;height: 30px;display: block;background: url(../../image/teacherClass/shareFileBg.png) 0px -120px no-repeat;float: left;margin-left: 68px;margin-right: 10px;*margin-left: 30px;}
+.teacherClass .myallClass_student td a.rms{width: 30px;height: 30px;display: block;background: url(../../image/teacherClass/shareFileBg.png) 0px -80px no-repeat;float: left;}*/
+.teacherClass .myallClass_teacher td .manager_icon{padding-right: 40px;background: url(../../image/teacherClass/manager_icon.gif) right center no-repeat; }
+.teacherClass .myallClass_teacher a.kickout{background: url(../../image/teacherClass/shareFileBg.png) 0px -80px no-repeat;width: 30px;height: 30px;display: inline-block;}
+/*.teacherClass .myallClass_teacher a.quitClass{background: url(../../image/teacherClass/shareFileBg.png) 0px -160px no-repeat;width: 30px;height: 30px;display: inline-block}*/
+.teacherClass .myallClass_student a.downloadHomework{width: 30px;height: 30px;display: block;background: url(../../image/teacherClass/shareFileBg.png) 0px -40px no-repeat;margin-left: 45px;margin-right: 10px;}
+.teacherClass .myallClass_student a.deleteDownHomework{width: 30px;height: 30px;display: block;background: url(../../image/teacherClass/shareFileBg.png) 0px 0px no-repeat;}
+.teacherClass .myallClass_student_paper a.downloadHomework{margin-left: 0px;}
+.teacherClass .myallClass_student_paper a.check_paper{width: 70px;line-height: 30px;height: 30px;background: #f6f6f6;border-radius: 5px;margin-right: 10px;margin-left: 27px;}
+.teacherClass .commentBpx .m_b_5{margin-bottom: 5px;}
+.teacherClass .commentBpx .checkAll{margin-top: 10px;margin-left: 6px;}
+.teacherClass .commentBpx .checkAll input{position: relative;top: 2px;margin-right: 5px;}
+.teacherClass .commentName{margin-right: 10px;}
+.teacherClass .commentName ul{width: 150px;height: 200px;overflow: auto;padding: 5px;border: 1px solid #999;}
+.teacherClass .commentName ul li{line-height: 21px;height: 21px;}
+.teacherClass .commentName ul li input{margin-right: 5px;position: relative;top: 2px;}
+.teacherClass .commentDetial textarea{width: 550px;height: 200px;padding: 5px;border: 1px solid #999;}
+/* 班级分享 */
+.teacherClass .shareListBox {margin: 30px 0px 35px 10px;}
+.teacherClass .shareListBox li{height: 34px;padding: 44px 25px 0;float: left;background: url(../../image/teacherClass/claSharebg_ico.png) no-repeat;_background: url(../../image/teacherClass/claSharebg_ico_ie6.png) no-repeat;text-align: center;cursor: pointer;border-right: 1px dashed #ececec;height: 15px;font-size: 14px;}
+.teacherClass .shareListBox li.shareDoc{background-position:36px 0px;}
+.teacherClass .shareListBox li.shareImg{background-position:-40px 0px;}
+.teacherClass .shareListBox li.shareVideo{background-position:-116px 0px;}
+.teacherClass .shareListBox li.shareSing{background-position:-192px 0px;}
+.teacherClass .shareListBox li.shareOther{background-position:-268px 0px;border-right: none;}
+.teacherClass .shareFileBox{padding:0px 0px 20px 20px;}
+.teacherClass .shareFileBox a{margin-right: 20px;}
+.teacherClass a.shareFile,
+.teacherClass a.addStuBtn{padding:0px 20px;height: 39px;line-height: 39px;text-align: center;font-size: 18px;}
+.teacherClass a.dlbtn{color: #2A8D6A;font-size: 14px;padding: 0px;}
+.teacherClass a.shareFile:hover{color:#fff;}
+.teacherClass a.stuCountNotice{border-bottom: 1px dashed #2A8D6A;position: relative;}
+.teacherClass a.stuCountNotice .stuCountNoticeBox{display: none;font-size:12px;width: 230px;padding: 5px;background: #ffffcc;border: 1px solid #999;line-height: 18px;color: #333;position: absolute;left: 0px;top: -65px;}
+.teacherClass a.stuCountNotice:hover .stuCountNoticeBox{display: block;}
+.teacherClass .shareBox{border: 1px solid #ccc;position: relative;margin-bottom: 10px;}
+.teacherClass .shareBox .title{height: 32px;line-height: 32px;font-size: 16px;padding-left: 20px;background: url(../../image/teacherClass/shareTitleBG.png) repeat-x;border-bottom: 1px solid #d7d7d7;color: #545656;}
+.teacherClass .shareBox .downloadsBox{padding: 10px 20px 20px;font-size: 14px;}
+.teacherClass .shareBox .downloadsBox div.img{margin-top: 10px;}
+.teacherClass .shareBox .downloadsBox div.words{color: #9c9c9c;}
+.teacherClass .shareBox .downloadsBox .shareContr{margin-top: 20px;}
+.teacherClass .shareBox .downloadsBox p.tit{margin-bottom: 5px;height:20px;line-height:21px;padding-left: 26px;background: url(../../image/teacherClass/doc_ico.png) no-repeat;}
+.teacherClass .shareBox .downloadsBox p.doc{background-position: 0px 0px;}
+.teacherClass .shareBox .downloadsBox p.img{background-position: 0px 0px;}
+.teacherClass .shareBox .downloadsBox p.video{background-position: 0px 0px;}
+.teacherClass .shareBox .downloadsBox p.audio{background-position: 0px 0px;}
+.teacherClass .shareBox .downloadsBox p.other{background-position: 0px 0px;}
+.teacherClass .shareBox .downloadsBox .shareContr a{margin-right: 10px;}
+.teacherClass .shareBox .downloadsBox .shareContr a:hover{color:#fff;}
+/*.teacherClass .shareBox .downloadsBox .shareContr .cBtnNormal{padding: 0px 23px;}*/
+.teacherClass .shareBox .downloadsBox .shareContr .cBtnSilver{background: #ececec;border: 1px solid #999899;color: #a5a5a5;cursor: default;}
+.teacherClass .shareBox .countBar{height: 33px;line-height: 33px;color: #a6a6a6;margin:0px 20px;border-top: 1px dashed #ccc;}
+.teacherClass .shareBox .countBar span a{margin-left: 15px;color: #a6a6a6;}
+.teacherClass .sharePage{margin-bottom: 20px;margin-top: 20px;}
+.teacherClass .dropSharePage{width:auto;margin-top: 10px;}
+.teacherClass .classHeader{background: #d8eeec;border: 1px solid #b9d8d6;padding: 10px 20px;position: relative;font-size: 14px;}
+.teacherClass .classHeader .detial_line{/*margin-right: 20px;*/margin-top: 5px;}
+.teacherClass .classHeader .detial_time{width: 130px;}
+.teacherClass .classMain{}
+.teacherClass .classMain .shareMainLeft{}
+.teacherClass .classMain .shareMainRight{width: 235px;background: #f6f6f6;padding: 10px 15px 20px;}
+.teacherClass .classMain .shareMainRight .detial_line{margin-left: 10px;font-size: 14px;line-height: 30px;}
+.teacherClass .classMain .shareMainRight .detial_invit_line{background: #fff;padding: 10px;font-size: 14px;margin-top: 15px;}
+.teacherClass .classMain .shareMainRight .detial_invit_line a{color: #01b88b;}
+.teacherClass .classMain .shareMainRight .detial_invit_line a:hover{color: #f90;}
+.teacherClass .classMain .shareMainRight .detial_invit_line span{display: block;}
+.teacherClass .classMain .shareMainRight .detial_invit_line em{display: block;color: #898989;margin-top: 10px;}
+
+.teacherClass .homeworkPreTab{border-bottom: 1px solid #d7d7d7;margin: 10px 0;}
+.teacherClass .homeworkPreTab li{float: left;border: 1px solid #d7d7d7;position: relative;top: 1px;}
+.teacherClass .homeworkPreTab li.noBorderLeft{border-left: 0px;}
+.teacherClass .homeworkPreTab li.active{border-bottom: none;}
+.teacherClass .homeworkPreTab li a{width: 121px;line-height: 32px;background: #f6f6f6;display: block;color: #555656;text-align: center;font-size: 16px;}
+.teacherClass .homeworkPreTab li.active{border-bottom: none;}
+.teacherClass .homeworkPreTab li.active a{background: #fff;line-height: 33px;}
+
+.teacherClass .homeworkPreCon .homeworkCont{margin-bottom: 15px;}
+.teacherClass .homeworkPreCon .homeworkCont h3{font-size: 16px;font-weight: normal;margin-bottom: 10px;}
+.teacherClass .homeworkPreCon .homeworkCont .subjectBox{border: 1px solid #ccc;margin-bottom: 10px;}
+.teacherClass .homeworkPreCon .homeworkCont .subjectBox .subjectHead{line-height: 35px;background: #eee;border-bottom: 1px solid #ccc;font-size: 14px;}
+.teacherClass .homeworkPreCon .homeworkCont .subjectBox .subjectHead span{margin-left: 10px;}
+.teacherClass .homeworkPreCon .homeworkCont .subjectBox dl{padding: 15px 20px;}
+.teacherClass .homeworkPreCon .homeworkCont .subjectBox .click_q{cursor: pointer;line-height: 22px;}
+.teacherClass .homeworkPreCon .homeworkCont .subjectBox dl dt{font-size: 14px;color: #555656;}
+.teacherClass .homeworkPreCon .homeworkCont .subjectBox dl dt{font-size: 14px;color: #555656;}
+.teacherClass .homeworkPreCon .homeworkCont .BgPink{background: #ffeef1;}
+.teacherClass .homeworkPreCon .homeworkCont .BgGreen{background: #ceffd2;}
+
+.teacherClass .homeworkPreCon .homeworkCont .wrongTips{padding:5px 0 10px 0;}
+.teacherClass .homeworkPreCon .homeworkCont .wrongTips span{display: inline-block;padding-left:20px;background:url(../../image/teacherClass/icoRight.gif) no-repeat left;margin-left:20px;}
+.teacherClass .homeworkPreCon .homeworkCont .wrongTips span.icoWrong{background:url(../../image/teacherClass/icoWrong.gif) no-repeat left;}
+/* 弹出框样式 */
+.teacherClass .pop_main{color: #333;}
+.teacherClass .pop_main p{font-size: 14px;}
+.teacherClass .pop_main p.font12{font-size: 12px;line-height: 18px;}
+.teacherClass .pop_main h4{font-weight: normal;font-size:14px;}
+.teacherClass .pop_main input.in_vislble_class_text{width: 150px;height: 26px;padding-left: 6px;border:1px solid #999;line-height: 26px;}
+.teacherClass .pop_main input.new_class_text{width: 200px;height: 26px;padding-left: 6px;border:1px solid #999;}
+.teacherClass .pop_main .orangedeep{color: #ff7324;}
+.teacherClass .pop_main .red{color: #f00;}
+.teacherClass .pop_main input.newClassGrade{width: 230px;line-height: 26px;height: 26px;padding-left: 6px;border: 1px solid #999;}
+/*.teacherClass .pop_main ul.schooLocation{border: 1px solid #999;padding:10px 8px;background: #eee;margin-bottom: 10px;width:798px;}
+.teacherClass .pop_main ul.schooLocation li{float: left;padding: 0px 7px;line-height: 20px;cursor: pointer;white-space:nowrap;margin:0px!important;}
+.teacherClass .pop_main ul.schooLocation li.active{background: #f90;color: #fff;}
+.teacherClass .pop_main ul.school li{width:24%;padding:0px;text-indent:6px;}*/
+.teacherClass .pop_main .studentText{width: 215px;height: 160px;position: relative;}
+.teacherClass .pop_main .studentText textarea{width: 215px;height: 125px;border: 1px solid #999999;position: absolute;top: 28px;left: 0px;}
+.teacherClass .pop_main .studentText .studentREF{position: absolute;top: 0px;_top:-2px;left: 232px;width: 216px;}
+.teacherClass .pop_main .studentText .studentREF ul{background: #eee;border: 1px solid #999;margin-top: 3px;}
+.teacherClass .pop_main .studentText .studentREF ul li{padding-left: 8px;line-height: 21px!important;margin:0px!important;}
+.teacherClass .pop_main .studentText .ValidformInfo{_top:-43px;top: 0px;}
+.teacherClass .pop_main .choseFile{margin: 10px 0 0 30px;position:relative;/*width:340px;height: 80px;*/ clear:both; overflow:hidden;}
+.teacherClass .pop_main .choseFile input.choseFileTxt{height: 29px;line-height: 29px;width: 193px;padding: 0px;}
+.teacherClass .pop_main .choseFile div.uploadify{ position:absolute;left:0px;*left:35px;_left: 44px;top:0px;width:192px;}
+.teacherClass .pop_main .choseFile div.choseFileBtn{border:0 none;height: 30px;line-height: 30px;color:#fff;border: 0 none;border-radius: 0px;background:none;font-size: 14px; text-align:center;text-shadow: none;}
+.teacherClass .pop_main .choseFile div.choseFileBtn span{/*padding-right: 25px;*/background:none;display: inline-block;line-height: 30px; color:#fff; text-align:center; font-weight:normal;width:195px;}
+.teacherClass .pop_main .choseFile a.green{margin-left: 20px;}
+.teacherClass .pop_main .choseFile .file{ position:absolute; top:-1px; right:0px; height:30px;line-height:30px; filter:alpha(opacity:0);opacity: 0;width:340px; z-index: 3;cursor: pointer;}
+.teacherClass .pop_main .textDownload{color: #179c7e;font-size: 14px;margin-bottom: 10px;}
+.teacherClass .pop_main .textDownload a{color: #179c7e;}
+.teacherClass .pop_main .textDownload a:hover{color:#f60;}
+.teacherClass .pop_main .textDownloadREF{margin-top: 10px;}
+.teacherClass .pop_main li{}
+.teacherClass .pop_main li.cf input{*float:left;}
+.teacherClass .pop_main .Validform_checktip{*line-height:26px;*display: inline-block;}
+.teacherClass .pop_main .creatStuNav{}
+.teacherClass .pop_main .creatStuNav li{float: left;background: #e6e6e6;height: 29px;line-height: 29px;border: 1px solid #d7d7d7;border-left:none;padding: 0 20px;position: relative;top: 1px;margin: 0px;font-size: 14px;cursor: pointer;color: #565656;}
+.teacherClass .pop_main .creatStuNav li.border_none{border-left:1px solid #ccc;}
+.teacherClass .pop_main .creatStuNav li.active{background: #fff;border-bottom: 1px solid #fff;}
+.teacherClass .pop_main .creatStuNotice{line-height: 24px;margin-top: 10px;color: #565656;}
+.teacherClass .pop_main .creatStuNotice p{font-size: 12px;}
+.teacherClass .pop_main .acount{font-size: 14px;position: relative;color: #898989;}
+.teacherClass .pop_main .acount .li_hd{position: relative;top: -5px;}
+.teacherClass .pop_main .acount .caution_tips{position: absolute;left: 0px;top: 40px;font-size: 12px;color: #f00;}
+.teacherClass .pop_main .acount .count_box{width: 80px;display: inline-block;overflow: hidden;height: 35px;position: relative;top: 12px;}
+.teacherClass .pop_main .acount .count_box a{width: 26px;height: 26px;text-align: center;display: inline-block;font-size: 16px;font-family: "宋体";float: left;background: url(../../image/teacherClass/addPlus_ico.png) no-repeat;}
+.teacherClass .pop_main .acount .count_box a.num_min{background-position: right top;}
+.teacherClass .pop_main .acount .count_box a.num_plus{background-position: left top;}
+.teacherClass .pop_main .acount .input_txt{width: 63px;padding-left:5px;height: 24px;line-height: 24px;background: #fff;font-size: 14px;border: none;float: left;border: 1px solid #d7d7d7;margin: 0px 5px;font-size: 12px;}
+.teacherClass .pop_main .stuAccNameBox{height: 240px;padding-top: 15px;position: relative;}
+.teacherClass .pop_main .stuAccNameBox .ValidformInfo{top: -11px;left: 75px;}
+.teacherClass .pop_main .stuAccNameBox .stuAccName{width: 200px;height: 26px;line-height: 26px;border: 1px solid #ccc;padding-left: 5px;}
+.teacherClass .pop_main .tabBox{height: 160px;overflow: hidden;padding:10px 20px;border: 1px solid #d7d7d7;}
+.teacherClass .pop_main .tabBoxChild{height: 140px;width: 518px;}
+.teacherClass .pop_main .addNewClassBox{width: 268px;overflow:hidden;padding-bottom: 10px;}
+.teacherClass .pop_main .addNewClassBox h4{height: 32px;line-height: 32px;padding-left:12px;border-radius: 3px;font-size:16px;background: #f6f5f5;background-image: linear-gradient(to bottom, #fff, #edeceb);}
+.teacherClass .pop_main .addNewClassBox ul{padding: 0px 30px 10px 10px;}
+.teacherClass .pop_main .addNewClassBox ul li{margin-top: 10px;position: relative;}
+.teacherClass .pop_main .addNewClassBox ul li i{margin-right: 5px;float: left;}
+.teacherClass .pop_main .addNewClassBox ul li input{width: 132px;height: 26px;line-height: 26px;border: 1px solid #d7d7d7;float: left;margin-right: 10px;}
+.teacherClass .schollName{padding-left:6px;margin:10px 0 0 0px;}
+.teacherClass .pop_main .addNewClassBox ul li .schoolBox{width: 167px;margin:5px 0  0 3px;font-size: 12px;line-height: 18px;}
+.teacherClass a.resetSchool{color: #01b88b;font-size:14px;white-space: nowrap; }
+.teacherClass .theGenusSchollBox{width:250px;margin-top:-5px;}
+.teacherClass .pop_main .addNewClassBox ul li .theGenusSchollBox .ValidformInfo{left:0;}
+.teacherClass .pop_main .addNewClassBox ul li .theGenusSchollBox ul{padding:0;}
+.teacherClass .pop_main .addNewClassBox ul li .theGenusSchollBox ul li{margin:0;}
+.teacherClass .pop_main a.green:hover{color:#f90;}
+.teacherClass .pop_main .addNewClassBox ul li select {width: 150px;padding: 3px;border: 1px solid #d7d7d7;}
+.teacherClass .pop_main .addNewClassLeft{border-right: 1px solid #ddd;}
+.teacherClass .pop_main .addNewClassRight{margin-left: 20px;}
+.teacherClass .pop_main .addNewClassBox .createNewClass{width:100%;height: 39px;line-height: 39px;padding:0;margin-top: 5px;cursor: pointer;border: none;font-size: 18px;}
+.teacherClass .pop_main .addNewClassBox .addVisClass{padding: 0px;font-size: 12px;width: 68px;line-height: 28px;height: 28px;}
+.teacherClass .pop_main .addNotice{padding-left: 10px;}
+.teacherClass .pop_main .addNotice h5{font-weight: normal;}
+.teacherClass .noMySchollBtn{color:#09aa83;}
+.teacherClass .noMySchollBtn:hover{color:#f90;}
+.teacherClass .pop_main .creatStuNotice .upList .text{width:300px;}
+.teacherClass .pop_main .creatStuNotice .upList .text em.yellow{color:#f60;margin-right:5px;}
+.teacherClass .pop_main .creatStuNotice .upList .text h2{font-size:12px;font-weight: normal;}
+.teacherClass .pop_main .creatStuNotice .upList .text p{color:#999;padding-left:40px;}
+.teacherClass .pop_main .creatStuNotice .upList .demo p.pic{background: url(../../image/teacherClass/demo_excel_pic.gif) no-repeat;width:201px;height:131px;}
+/* 班级分享弹出层 */
+.teacherClass .pop_main .upStyle{margin-bottom: 10px;width: 560px;}
+.teacherClass .pop_main .upStyle ul.upBtn{}
+.teacherClass .pop_main .upStyle ul.upBtn li{float: left;}
+.teacherClass .pop_main .upStyle ul.upBtn li a{margin-right: 13px;padding: 0px 20px;height: 35px;line-height: 35px;}
+.teacherClass .pop_main .upStyle ul.upBtn li a.cBtnNormalEx{padding: 0px;_overflow: hidden;}
+.teacherClass .pop_main .upStyle ul.upBtn li a:hover{color:#fff;}
+.teacherClass .pop_main .upStyle ul.upList li{border-bottom: 1px solid #6cbdab;border-top: 1px solid #6cbdab;margin:0px;margin-bottom: 5px;background: #c3ded8;padding: 0px 15px;position: relative;}
+.teacherClass .pop_main .upStyle ul.upList li strong{display: inline-block;height: 24px;position: absolute;left: 0px;top: 0px;background: #159c7e;opacity: 0.2;filter: alpha(opacity=20);}
+.teacherClass .pop_main .upStyle ul.upList li span.status{width: 135px;text-align: center;}
+.teacherClass .pop_main .upStyle ul.upList li span.delete{cursor: pointer;}
+.teacherClass .pop_main .fileDisc{margin-top: 5px;}
+.teacherClass .pop_main .fileDisc textarea{width: 558px;height: 78px;font-size: 14px;}
+.teacherClass .pop_main .InterDis{border:1px solid #d7d7d7;width: 560px;overflow: hidden;}
+.teacherClass .pop_main .InterDis .DisLeft{width: 164px;border-right: 1px solid #ddd;white-space: nowrap;height: 290px;overflow: auto;position: relative;padding-top: 10px;}
+.teacherClass .pop_main .InterDis .DisLeft .tree-title{height: 20px;padding: 0px 0px 5px 10px;*height:20px;}
+.teacherClass .pop_main .InterDis .DisLeft .tree-title-add{background: #e6e6e6;}
+.teacherClass .pop_main .InterDis .DisLeft .tree-title-add a{background-color: #e6e6e6;}
+.teacherClass .pop_main .InterDis .DisLeft .icon-plus,
+.teacherClass .pop_main .InterDis .DisLeft .icon-add{width: 13px;height: 13px;background: url(../../image/teacherClass/add_plus_ico.png) no-repeat;display: inline-block;}
+.teacherClass .pop_main .InterDis .DisLeft .icon-plus{background-position: 0px 0px;_background-position: 0px 4px;}
+.teacherClass .pop_main .InterDis .DisLeft .icon-add{background-position: 0px bottom;}
+.teacherClass .pop_main .InterDis .DisLeft .m_l_15{margin-left: 15px;}
+.teacherClass .pop_main .InterDis .DisLeft .unfold,
+.teacherClass .pop_main .InterDis .DisLeft .fold{padding:2px 0;padding-left: 30px;background: url(../../image/teacherClass/filebg_ico.png) no-repeat;margin-left: 10px;color: #333;}
+.teacherClass .pop_main .InterDis .DisLeft .fold{background-position: 0px 5px;}
+.teacherClass .pop_main .InterDis .DisLeft .unfold{background-position: 0px -30px;}
+.teacherClass .pop_main .DisLeft .icon-width{width: 12px;height: 12px;display: inline-block;}
+.teacherClass .pop_main .InterDis .DisRight{height: 280px;width:375px;overflow-y: auto;overflow-x:hidden;padding: 10px;position: relative; }
+.teacherClass .pop_main .InterDis .DisRight table{width: 100%;text-align: center;}
+.teacherClass .pop_main .InterDis .DisRight table input{margin-right: 5px;position: relative;top: 1px;}
+.teacherClass .pop_main .InterDis .DisRight table td,
+.teacherClass .pop_main .InterDis .DisRight table th{border:1px solid #ddd;}
+.teacherClass .pop_main .InterDis .DisRight table th{background: #f6f6f6;height: 32px;}
+.teacherClass .pop_main .InterDis .DisRight table td{height: 29px;}
+.teacherClass .pop_main .InterDis .DisRight table td.alignLeft{text-align: left;padding-left: 10px;}
+.teacherClass .pop_main .InterDis .DisRight table td label{width:160px;display: block;word-wrap: break-word;}
+.teacherClass .pop_main .upStyle .uploadify-button{background: none;border:none;}
+.teacherClass .pop_main .studentList li{float: left;margin-right: 10px;}
+.teacherClass .pop_main .m_t_20{margin-top: 20px;}
+/* 班级管理样式结束 */
+
+/*未登录班级开始*/
+.teacherClass .class .join_class{background: #f9f9f9;margin-bottom:10px;font-size: 14px;}
+.teacherClass .class .join_class h2{background: #d8eeec;border:1px solid #b9d8d6;line-height:43px;font-weight:normal;color:#565656;font-size:24px;text-align:center;}
+.teacherClass .class .join_class .box{border:1px solid #ccc;padding:20px;_width: 310px;}
+.teacherClass .class .join_class .box .outBox{width:310px;}
+.teacherClass .class .join_class .box .outBox .haveClass,
+.teacherClass .class .join_class .box .outBox .newClass{background:#f9f9f9;}
+
+.teacherClass .class .join_class .box h3{font-size:18px;font-weight: normal; border-bottom:1px solid #ccc;line-height: 30px;}
+.teacherClass .class .join_class .box h3 a{font-size: 12px;color: #f90;}
+.teacherClass .class .join_class .box h3 a:hover{color:#f00;}
+.teacherClass .class .join_class .box h4{font-size:12px;font-weight: normal;}
+.teacherClass .class .join_class .box .formBox{padding:10px 20px 10px 30px;background: url(../../image/teacherClass/step_bg.gif) no-repeat 0px 20px;}
+.teacherClass .class .join_class .box .formBox .theGenusSchollBox{line-height: 30px;}
+.teacherClass .classGraVeri li {float:left;}
+.teacherClass .classGraVeri .inputClass input{width: 68px;margin-right: 6px;}
+.teacherClass .class .join_class .box .formBox li{line-height:35px;margin-bottom:15px;*line-height:normal;position: relative;}
+.teacherClass .class .join_class .box .formBox li.schoolArea{margin-bottom:0px;}
+.teacherClass .class .join_class .box .formBox li .spanBox{width:100px;font-size:18px;color:#898989;}
+.teacherClass .class .join_class .box .formBox li .schoolBox{width: 250px;margin-left: 3px;line-height: 20px;}
+.teacherClass .class .join_class .box .formBox li .schoolBox #school{font-size: 16px;}
+.teacherClass .class .join_class .box .formBox li .schoolBox #resetSchool{color: #01b88b;font-size: 12px;}
+.teacherClass .class .join_class .box .formBox li.list02 .ValidformInfo{left: 90px;top:6px;}
+.teacherClass .class .join_class .box .formBox li input.classNameInput{line-height:26px;border:1px solid #d7d7d7;height:26px;padding:0 5px;margin-right: 5px;width: 70px;}
+.teacherClass .class .join_class .box .formBox li select{width: 80px;margin-right: 6px;border: 1px solid #d7d7d7;}
+.teacherClass .class .join_class .box .theGenusSchollBox li{margin-bottom:0;}
+.teacherClass .class .join_class .box .theGenusSchollBox {width:270px;}
+.teacherClass .class .join_class .box .formBox li .submitBox1{width: 100%;}
+.teacherClass .class .join_class .box .formBox li .undis{display:none;}
+.teacherClass .class .join_class .box .formBox li .resetSchool{margin-top:5px;word-wrap:break-word;height:60px;}
+.teacherClass .class .join_class .box .formBox li a.resetSchool:hover{color:#f90;}
+.teacherClass .class .join_class .box .formBox li .submitBox1 input{cursor:pointer;width: 100%;text-align:center;line-height:40px;height: 40px;font-size: 18px;}
+.teacherClass .class .join_class .box .getClassNum{padding:10px 30px;}
+.teacherClass .class .join_class .box .getClassNum h4{font-size:14px;color:#565656;line-height:30px;font-weight:normal;}
+.teacherClass .class .join_class .box .getClassNum p{line-height:20px;color:#898989;}
+.teacherClass .class .join_class .mayDoBox{background:#fff;}
+.teacherClass .class .join_class .box .mayDo {width:270px;height:90px;padding-top: 10px;}
+.teacherClass .class .join_class .box .mayDo h4{line-height:56px;font-size:18px;font-weight:normal;color:#565656;}
+.teacherClass .class .join_class .box .mayDo p{line-height:20px;font-size:14px;color:#898989;}
+.teacherClass .class .join_class .box .share {padding:10px 20px 0 25px;border-right:1px dashed #d7d7d7;}
+.teacherClass .class .join_class .box .administration {padding-left:30px;}
+.teacherClass .class .join_class .box .homework {border-right:1px dashed #d7d7d7;}
+.teacherClass .class .join_class .box .share h4{text-indent:60px;background: url(../../image/teacherClass/class_share.gif) no-repeat left 5px;}
+.teacherClass .class .join_class .box .administration h4{text-indent:60px;background: url(../../image/teacherClass/class_admin.gif) no-repeat left top;}
+.teacherClass .class .join_class .box .homework h4{text-indent:50px;background: url(../../image/teacherClass/class_homework.gif) no-repeat left 0px;}
+.teacherClass .class .join_class .box .in_vislble_class_text{width: 150px;height: 28px;line-height: 28px;border:1px solid #ccc;padding:0px 5px;}
+.teacherClass .class .join_class .box .addVilbleClass{padding-top: 25px;border-top: 1px solid #ccc;margin-bottom: 10px;margin-top: 30px;}
+.teacherClass .class .join_class .box .addVilbleClass a{border-bottom: 1px dashed #2A8D6A;margin-left: 10px; position: relative;}
+.teacherClass .class .join_class .box .addVilbleClass a span{width: 258px;padding:5px;background: #ffc;border: 1px solid #999;position: absolute;font-size: 12px;line-height: 18px;left: -122px;top: -64px;color: #333;display: none;}
+.teacherClass .class .join_class .box .addVilbleClass a:hover span{display: block;}
+.teacherClass .class .join_class .box .addVilbleClassBtn{margin-left: 10px;width: 78px;}
+/*未登录班级结束*/
+/* 班级预览页面开始 */
+.teacherClass .preview .hd {padding: 16px 0 8px 0;text-align: center;line-height: 30px;}
+.teacherClass .preview .hd .inf span {margin: 0px 10px;}
+.teacherClass .preview .shareImgBox{width:1000px;}
+.teacherClass .preview .shareImgBox img{display: block;margin: 0 auto;}
+/* 班级预览页面结束 */
+
+/* 模块内容为空开始 */
+.teacherClass .emptyNotice img{display: block;margin: 50px auto 20px;}
+.teacherClass .emptyNotice ul li{width: 100%;line-height: 30px;text-align: center;font-size: 14px;color: #999;}
+.teacherClass .emptyNotice ul li .shareFile{margin-top: 10px;}
+.teacherClass .emptyNotice ul li span{color: #6ac1a7;}
+/* 模块内容为空结束 */
+
+/* 作业下载弹窗验证开始 */
+.teacherClass .pop_main .paperCaptchaWord{}
+.teacherClass .pop_main .paperCaptchaWord .paperCodeBox{margin-top: 5px;}
+.teacherClass .pop_main .paperCaptchaWord .cInput {height: 32px;line-height: 32px;margin-right: 10px;}
+/* 作业下载弹窗验证开始 */
+/* 错题排行为空开始 */
+.teacherClass .homeworkPreNull{text-align: center;padding-top: 30px;}
+.teacherClass .homeworkPreNull p{line-height: 30px;}
+.teacherClass .homeworkPreNull img{margin-top: 20px;display: inline-block;}
+/* 错题排行为空结束 */
+
+/* 添加学生优化开始 */
+.teacherClass .addTeaWay .slideBox{padding-top: 28px;}
+.teacherClass .detial_btn li a{padding: 0px 15px;height: 30px;line-height: 30px;font-size: 12px;}
+.teacherClass .slideDownClass .slideBox{ display: block!important;}
+.teacherClass .addWay .slideBox{display: none;}
+.teacherClass a.greenText{color:#52b198;}
+.teacherClass a.greenText:hover{color: #f90}
+.teacherClass .addWay h2{font-size: 24px;height: 24px;line-height: 24px;font-weight: normal;}
+.teacherClass .addWay{background: #f6f6f6;margin-bottom: 10px;color:#565656;padding:26px 22px 0;font-size: 14px;}
+.teacherClass .addWay .addStuBtn{padding: 0px 15px;height: 30px;line-height: 30px;font-size: 12px;_padding-top:8px;}
+.teacherClass .addWay .addStuBtn span{_width:72px;}
+.teacherClass .addWay .cBtnNormal:hover{color:#fff;}
+.teacherClass .addWay .cBtnSilver:hover{color:#333;}
+.teacherClass .addWay .slideUp{ background:url(../../image/common/slideUp.png) no-repeat;_background:url(../../image/common/slideUp_8.png) no-repeat;}
+.teacherClass .addWay .slideDown{ background:url(../../image/common/slideDown.png) no-repeat;_background:url(../../image/common/slideDown_8.png) no-repeat;}
+.teacherClass .addWay .addText{cursor: pointer;width: 168px;background-position:right center;}
+.teacherClass .addWayList li{padding:28px 0 0px;}
+.teacherClass .addWayList #dlacc{padding-bottom: 25px;}
+.teacherClass .undis{display: none;}
+/*.teacherClass .wayP h3{margin-right: 10px;}*/
+.teacherClass .wayP a{margin: -8px 0 0 10px;}
+.teacherClass .addTeaWay .wayP a{margin:0;}
+.teacherClass .slideDownClass .wayP a{display: none;}
+.teacherClass .addWayList h3{font-weight: normal;font-size: 18px;height: 18px;line-height: 18px;padding-left: 22px;background:url(../../image/teacherClass/addListBg.png) left center no-repeat;_background-image:url(../../image/teacherClass/addListBg_8.png);/*margin-bottom: 25px;*/}
+.teacherClass .addWayBox{font-size: 14px;padding-bottom: 35px;}
+.teacherClass .addWayBox p{line-height: 24px;}
+.teacherClass .addTeaWay .addListP{padding-bottom: 35px;border-bottom: 1px dashed #bfbfbf;}
+.teacherClass .addTeaWay li.noBorber{padding-bottom: 25px;}
+.teacherClass .addClassBg{display: inline-block;width:51px;height: 24px;margin-bottom: -5px;background:url(../../image/teacherClass/addClassBg.jpg) no-repeat;}
+.teacherClass .addStuWay p.fl{width: 314px;padding-left: 6px;}
+.teacherClass .addStuWay p.fr{width: 354px;padding-right: 10px;}
+.teacherClass .addStuWay p.fl span{color:#f90;}
+.teacherClass .addStuWay .cBtnNormalOrg{height: 22px;line-height: 22px;padding: 0 5px;font-size: 10px;}
+.teacherClass .addStuWay .cBtnNormalOrg:hover{color:#fff;}
+.teacherClass .addListP p{padding-top: 90px;}
+.teacherClass .addListP p.fl{background:url(../../image/teacherClass/addGra1.jpg) center top no-repeat;}
+.teacherClass .addListP p.fr{background:url(../../image/teacherClass/addGra2.jpg) center top no-repeat;}
+.teacherClass .addListBg{background:url(../../image/teacherClass/addGraBg.gif) center top no-repeat;}
+.teacherClass .addStuWay .addListBg{width:73px;height: 36px;}
+.teacherClass .addStuWay .addListP .addListBg{margin:20px 0 0 20px;}
+.teacherClass .addWay  a.iniBtnStyle{cursor: default;background: #ccc;border-radius: 5px;height: 30px;line-height: 30px;color:#333;}
+.teacherClass .addWay  .slideBox a.iniBtnStyle{display: inline-block;}
+.teacherClass .threeColuBg span{height: 93px;}
+.teacherClass .threeColuBg .uploadList{width: 206px;background:url(../../image/teacherClass/addGra3.jpg) 36px center no-repeat;}
+.teacherClass .threeColuBg .addListBg{width: 132px;background-position: 0 36px;}
+.teacherClass .threeColuBg .downloadList{width: 140px;background:url(../../image/teacherClass/addGra4.jpg) no-repeat;}
+.teacherClass .threeColuBg .addSucceed{width: 115px;background:url(../../image/teacherClass/addGra5.jpg) left center no-repeat;}
+.teacherClass .threeColuText{padding: 14px 6px 28px;border-bottom: 1px dashed #bfbfbf;}
+.teacherClass .addStuWay .addWayBox{ border-bottom: 1px dashed #bfbfbf;padding-top: 25px;}
+.teacherClass .threeColuBg{padding-top: 25px;}
+.teacherClass .threeColuText span{line-height: 24px;width: 236px;_display:inline-block;}
+.teacherClass .threeColuText .first{width: 200px;margin-right: 60px;}
+.teacherClass .threeColuText .addStuBtn{margin: 6px 0 0 57px;}
+.teacherClass .threeColuText .first .addStuBtn{margin-left: 30px;}
+.teacherClass .addWay .addFollow h2{height: 64px;line-height: 64px;text-align: center;margin-top:4px;}
+.teacherClass .addFollowBox{ border: 1px solid #d7d7d7}
+.teacherClass .addFollowBox div{width:260px;padding: 108px 0 18px;font-size: 18px;text-align: center;border-right: 1px dashed #d7d7d7;}
+.teacherClass .noBorber{border: none!important;}
+.teacherClass .addFollow .greenText{display: inline-block;height: 44px;line-height: 44px;cursor: pointer;}
+.teacherClass .addFollowBox .addHwork{background:url(../../image/teacherClass/homework.png) center 27px no-repeat;_background-image:url(../../image/teacherClass/homework.gif);}
+.teacherClass .addFollowBox .addDoc{background:url(../../image/teacherClass/shareDoc.png) center 20px no-repeat;_background-image:url(../../image/teacherClass/shareDoc.gif);}
+.teacherClass .addFollowBox .addAdmin{background:url(../../image/teacherClass/adminClass.png) center 40px no-repeat;_background-image:url(../../image/teacherClass/adminClass.gif);}
+.teacherClass .detitle{width: 250px;border-right: 1px solid #1d9b79;}
+.teacherClass .detitleFr{width: 500px;}
+.teacherClass .detitleInfor{font-size: 24px;}
+.teacherClass .preserveBtn,
+.teacherClass .deleteClass{padding: 0px 20px;height: 39px;line-height: 39px;font-size: 18px;}
+.teacherClass .preserveBtn{border:1px solid #0cbe93;}
+.teacherClass .deleteClass{margin-left: 10px;color: #333;*bottom: 7px;*position: relative;*height: 38px;}
+.teacherClass .detitleFr p span.detMargin{width:150px;text-align: left;}
+.teacherClass .detitleFr p span,.teacherClass .detitleFr p a{display: inline-block;line-height: 24px;}
+.teacherClass .detitleFr p a:hover{color:#f90}
+.teacherClass .inviteTeaAdd .addListBg{padding-top: 36px;text-align: center;width: 362px;margin: 0 auto;line-height: 24px;}
+.teacherClass .addTeaWay .addListP p{display: inline;}
+.teacherClass .addTeaWay .addListP p.fr{width: 210px;margin-right: 90px;background-position: center 10px;padding-top: 106px;}
+.teacherClass .addTeaWay .addListP p.fl{width: 162px;margin-left:122px;text-align: center;background-image:url(../../image/teacherClass/addGra6.jpg);padding-top: 120px;}
+.teacherClass .addTeaWay .addListP .addListBg{padding-top: 107px;background-position: center 34px;}
+.teacherClass .inviteTeaAdd .greenText{margin-left: 6px;display: inline-block;}
+.teacherClass .inviteTeaAdd .addEmail{width: 126px;height: 81px;background:url(../../image/teacherClass/addGra7.jpg) no-repeat;margin-left:62px;}
+.teacherClass .inviteTeaAdd .addTeaSucc{width: 116px;height: 87px;background:url(../../image/teacherClass/addGra8.jpg) left 5px no-repeat;margin-right: 52px;}
+/*.teacherClass .detMargin{margin-right: 10px;}*/
+/* 添加学生优化弹框 开始 */
+.teacherClass .pop_main .creatNewClassForm h4{color:#000;font-size: 18px;}
+.teacherClass .pop_main .addNewClassBox .creatNewClassForm select{width: 80px;margin-right: 6px;_width:65px;}
+.teacherClass .creatNewClassForm .addGraInput .inputClass{/*padding: 10px 0 6px 73px;*/color:#000;/**padding-left: 0px;*/}
+.teacherClass .pop_main .addNewClassBox ul li.addGraInput input{width: 56px;color:#666;}
+
+.teacherClass .pop_main .addNewClassBox .classGraVeri{padding: 0;margin:0;_width:170px;}
+.teacherClass .pop_main .addNewClassBox .classGraVeri li{float: left;margin-top: 0;}
+.teacherClass .pop_main .addNewClassBox .classGraVeri li.inputClass{/*width: 166px;_width:90px;*/}
+.teacherClass .pop_main .addNewClassBox .classGraVeri li.inputClass input{text-align: center;line-height: 26px;}
+.teacherClass .pop_main .addNewClassBox ul li.inputClass .ValidformInfo{width: 120px;left: 7px;top: -34px;_top:-36px;text-align: center;z-index: 11;}
+.teacherClass .pop_main .addNewClassBox .classGraVeri li .ValidformInfo{top:-24px;*top:-28px;}
+.teacherClass .pop_main .addNewClassBox ul .classGraList .ValidformInfo{left:7px;width: 70px;top:-32px;}
+.teacherClass .choseFile table{color:#222;}
+.teacherClass .choseFile table td{border:1px solid #bbb;line-height: 22px;padding-left: 2px;box-shadow: inset 0px 0px 1px #dedede;}
+.teacherClass table .width_68{width: 68px;}
+.teacherClass table .width_114{width: 114px;_position:relative;}
+.teacherClass .choseFile form{margin-left: 15px;}
+.teacherClass .pop_main .addNewClassBox .classGraList ul{padding:0;}
+/*.teacherClass .pop_main .addNewClassBox .ie6Select1{_width:120px;}*/
+.teacherClass .pop_main .addNewClassBox .classGraVeri li.ie6Select2{_margin-top:12px;}
+.alterClassGradePopForm select{width: 80px;margin-right: 7px;}
+.alterClassGradePopForm .teacherClass .pop_main input.new_class_text{width: 80px;margin-right: 5px;}
+.alterClassGradePopForm .teacherClass .ValidformInfo{width: 120px;text-align: center;}
+/* 添加学生优化弹框 结束 */
+/* 模拟 select 开始*/
+.teacherClass .pop_main .addNewClassBox .classGraVeri .cSelectBox li{float: inherit;}
+.cSelectBox{ width: 100%;color:#000;cursor: pointer;}
+.cSelectBox span{display: block;padding-left:6px;border: 1px solid #d7d7d7;}
+.cSelectBox ul{position: absolute;width: 100%;box-sizing:border-box;z-index: 111;border: 1px solid #d7d7d7;border-top: none;display: none;background: #fff;}
+.cSelectBox span:active,.cSelectBox span:hover,.cSelectBox .spanOn{box-shadow: 1px 0px 1px #90c5f6, -1px -1px 1px #90c5f6;border:1px solid #4d9ee9;}
+.cSelectBox li.liOn{background: #4d9ee9;}
+.cSelectBox li{padding-left:6px;}
+#fileField-queue{width: 314px;position: absolute;top: 40px;}
+/* 添加学生优化结束 */
+
+/*预览音视频*/
+#container_wrapper {margin:0 auto;}
+#container {margin:0 auto;}
+/* 班级空间 4.0 开始 */
+/*.teacherClass .wrapContent{width: 980px;}*/
+.teacherClass .classHeaderNav{padding: 0px 20px;background: #f6f6f6;margin-bottom: 20px;line-height: 46px;font-size: 14px;}
+.teacherClass .classHeaderSelect{margin-bottom: 10px;}
+.teacherClass .classHeaderSelect .addNewClass{color: #09aa83;font-size: 14px;margin-left: 10px;margin-top:5px;}
+.teacherClass .shareBoxTable{width: 100%;text-align: center;}
+.teacherClass .shareBoxTable th,
+.teacherClass .shareBoxTable td{border: 1px solid #ddd;height: 39px;}
+.teacherClass .shareBoxTable th{background: #f6f6f6;}
+.teacherClass .shareBoxTable .p_l_10,
+.teacherClass .myallClass_student_paper .p_l_10{padding-left: 10px;}
+.teacherClass .shareBoxTable .shareCancle{background-position: 0px 0px;}
+.teacherClass .shareBoxTable .downloadFile{margin:0px 4px;}
+.teacherClass .shareBoxTable a{color: #01b88b;}
+.teacherClass .shareBoxTable a:hover{color:#f90;}
+.teacherClass .emptyNotice .addStuBtn{height: 39px;line-height: 39px;padding: 0px 20px;font-size: 18px;margin-top: 10px;}
+.teacherClass .iniInviteBox{margin-bottom: 15px;}
+.teacherClass .addClassLeft h2{font-size: 22px;font-weight: normal;}
+.teacherClass .addClassLeft ul{/*border-bottom: 1px solid #ddd*/;width: 550px;margin: 20px 0;}
+.teacherClass .addClassLeft ul li{padding:15px  0px 22px 100px;margin-bottom: 30px;}
+.teacherClass .addClassLeft ul li h3{font-size: 18px;font-weight: normal;}
+.teacherClass .addClassLeft ul li p{font-size: 14px;}
+.teacherClass .addClassLeft ul li.list01{background: url(../../image/teacherClass/adclass_list01.png) no-repeat;}
+.teacherClass .addClassLeft ul li.list02{background: url(../../image/teacherClass/adclass_list02.png) no-repeat;}
+.teacherClass .addClassLeft ul li.list03{background: url(../../image/teacherClass/adclass_list03.png) no-repeat;}
+.teacherClass .addClassLeft .news{color: #b6b6b6;}
+.teacherClass .addClassLeft .news dt{color: #333;font-size: 14px;}
+.teacherClass .addClassLeft .news dd{line-height: 24px;}
+.teacherClass .addClassLeft .news .classGrade{color: #333;}
+.teacherClass .addClassRight img{width: 390px;height: 272px;display: inline-block;}
+.teacherClass .choose_wrong_sub td,
+.teacherClass .choose_wrong_sub th{height: 29px;}
+.teacherClass .choose_wrong_sub td{font-size: 12px;}
+.teacherClass .wordWrap{word-wrap:break-word;table-layout: fixed;width: 150px;}
+.teacherClass .setUpBox{border: 1px solid #ddd;padding: 20px 0px 0px 60px;font-size: 14px;}
+.teacherClass .setUpBox li{margin-bottom: 20px;}
+.teacherClass .setUpBox li .title{width: 130px;display: inline-block;text-align: right;margin-right: 5px;}
+.teacherClass .setUpBox li .className{width: 80px;height: 24px;line-height: 24px;padding-left: 5px;}
+
+
+/*作业历史页面样式开始*/
+.teacherClass .history .historyH{color: red;line-height: 20px; text-align: right;margin-bottom: 20px;}
+.teacherClass .history .workRIcon{background: url(../../image/teacherHomework/report.gif) no-repeat left center;_padding:3px 0px;padding-left: 23px;color: #17a27e;height: 18px;line-height: 18px;display: inline-block;}
+.teacherClass .history .workRIcon:hover{color: #f90;}
+.teacherClass .history .historyTable{width: 100%; text-align: center;border:1px solid #d7d7d7;}
+.teacherClass .history .historyTable th,.teacherClass .history .historyTable td{border:1px solid #d7d7d7;line-height: 45px; font-weight: normal;}
+.teacherClass .history .historyTable th{background-color: #f6f6f6;}
+.teacherClass .history .subjectName{width: 100px;}
+.teacherClass .history .checkBtn{color: #17a27e; display: inline-block; height: 30px; line-height: 30px; background-color: #f6f6f6; padding: 0px 10px;}
+.teacherClass .history .unCheckBtn{color: #ccc; }
+.teacherClass .history .unCheckBtn:hover{color: #ccc; }
+/*作业历史页面样式结束*/
+
+
+
+/*check_homework页面开始*/
+.teacherClass .checkHomework .backLink{color:#17a27e;font-size: 14px;}
+.teacherClass .checkHomework .checkFormWrap{border:1px solid #d7d7d7;margin-top: 15px;}
+.teacherClass .checkHomework .checkFormWrap .aPrint{position: absolute;top:10px;right:10px;padding:0px 20px;}
+.teacherClass .checkHomework .checkFormWrap .chooseUnit{padding:10px 0px 26px 0px;}
+.teacherClass .checkHomework .checkFormWrap .chooseUnit span{color:#999;}
+.teacherClass .checkHomework .checkFormWrap .wrongDoButton a{font-size:18px;height:40px;line-height: 38px;padding:0px 15px;margin:0px 8px;}
+.teacherClass .checkHomework .formHead{background: url(../../image/teacherHomework/report-headerbg.gif) repeat-x left top  #EFEFEF;text-align: center;border-bottom: 1px solid #d7d7d7;padding-bottom:30px;}
+.teacherClass .checkHomework .className{font-size: 12px; margin: 20px 0px 10px; font-weight: normal;}
+.teacherClass .checkHomework .formName{font-size: 18px; margin: 13px 0px; font-weight: normal;}
+.teacherClass .checkHomework .workDigest{font-size: 12px; color: #999; }
+.teacherClass .checkHomework .reportCont{padding: 20px;}
+.teacherClass .checkHomework .headTable{width: 95%; text-align: center; margin: 30px auto 20px;table-layout:fixed;}
+.teacherClass .checkHomework .headTable.msTable{width: 48%;}
+.teacherClass .checkHomework .headTable td{line-height: 30px;border-right: 1px solid #d7d7d7;}
+.teacherClass .checkHomework .headTable td.last{border-right: none;color:#ff9900;}
+.teacherClass .checkHomework .headTable td span{font-size: 18px;display: block;}
+.teacherClass .checkHomework .detailLinkWrap{text-align: right;}
+.teacherClass .checkHomework .detailLinkBtn{padding-left:25px; padding-right: 25px;}
+.teacherClass .checkHomework .reportTable{width: 100%;border:1px solid #d7d7d7;text-align: center;line-height: 40px;margin-top: 10px;}
+.teacherClass .checkHomework .reportTable th,.teacherClass  .checkHomework .reportTable td{border:1px solid #d7d7d7;font-weight: normal;}
+.teacherClass .checkHomework .reportTable .index{width: 50px;}
+.teacherClass .checkHomework .reportTable .name{width: 180px;}
+.teacherClass .checkHomework .reportTable .num{width: 180px;}
+.teacherClass .checkHomework .reportTable .dTime{width: 344px;}
+.teacherClass .checkHomework .reportTable .cHead{width: 180px;}
+.teacherClass .checkHomework .operateLink{color:#17a27e;}
+/*写评语的dialog样式开始*/
+.teacherClass .dialogWrap{display: none;}
+.teacherClass .writeCommentWrap {width:550px;}
+.teacherClass .writeCommentWrap .wrapTitle{color:#555656; font-size: 14px;display: block; margin-bottom: 15px;}
+.teacherClass .writeCommentWrap .stuList{width: 198px;height: 178px;border:1px solid #d7d7d7;overflow-y:auto;_padding:5px 0px;}
+.teacherClass .writeCommentWrap .stuList li{line-height: 25px; height: 25px; vertical-align: middle;}
+.teacherClass .writeCommentWrap .stuList li input{vertical-align: middle;display: inline-block; margin:0px 5px;}
+.teacherClass .writeCommentWrap .selectAll{display: block; padding: 6px;line-height: 25px;}
+.teacherClass .writeCommentWrap .selectAll input{vertical-align: middle;display: inline-block; margin-right: 8px;}
+.teacherClass .writeCommentWrap .commentInputWrap{width: 338px; height: 178px;}
+.teacherClass .writeCommentWrap .commentInputWrap .commentInput{width: 100%;height: 178px;}
+/*写评语的dialog样式结束*/
+/*check_homework页面结束*/
+
+
+/*homework_report页面开始*/
+.teacherClass .homeworkReport .backLink{color:#17a27e;font-size: 14px;}
+.teacherClass .homeworkReport .reportWrap{border:1px solid #d7d7d7;margin-top: 8px;}
+/*homeworkreport头部开始*/
+.teacherClass .homeworkReport .reportHead{background: url(../../image/teacherHomework/report-headerbg.gif) repeat-x left top  #EFEFEF; height: 88px;text-align: center;margin-top: 8px;border-bottom: 1px solid #d7d7d7;}
+.teacherClass .homeworkReport .className{font-size: 14px; margin: 20px 0px 10px; font-weight: normal;}
+.teacherClass .homeworkReport .reportName{font-size: 18px; font-weight: normal;}
+/*homeworkreport头部结束*/
+/*homeworkreport内容开始*/
+.teacherClass .homeworkReport .reportCont{padding: 16px 15px;}
+.teacherClass .homeworkReport .reportTitle{padding: 5px 10px;font-size: 16px;line-height: 35px;}
+.teacherClass .homeworkReport .reportTitle .subjectTab{display:inline-block; margin-right: 30px;cursor: pointer;}
+.teacherClass .homeworkReport .reportTitle .subjectTab.active{font-weight: bold;}
+.teacherClass .homeworkReport .reportTable{border:1px solid #d7d7d7;width:100%;display: none;}
+.teacherClass .homeworkReport .reportTable.active{display: table;*display: block;}
+.teacherClass .homeworkReport .reportTable .reportHeadBg{width: 98px; height: 59px; background: url(../../image/teacherHomework/report-header.gif) no-repeat;}
+.teacherClass .homeworkReport .reportTable th,.teacherClass .homeworkReport .reportTable td{border:1px solid #d7d7d7;text-align: center;vertical-align: middle;}
+.teacherClass .homeworkReport .reportTable th{background-color: #f6f6f6;font-weight: normal;color:#333;}
+.teacherClass .homeworkReport .reportTable th span{display: block;}
+.teacherClass .homeworkReport .reportTable td{line-height:40px;}
+/*homework_report页面结束*/
+
+/*错题报告样式开始*/
+.teacherClass .wrongReportsTable table{width: 100%; text-align: center;border:1px solid #d7d7d7;}
+.teacherClass .wrongReportsTable table th,.teacherClass .wrongReportsTable table td{border:1px solid #d7d7d7;line-height: 45px; font-weight: normal;}
+.teacherClass .wrongReportsTable table th{background-color: #f6f6f6;}
+.teacherClass .wrongReportsTable .titles{height:60px;background: url(../../image/teacherClass/titles_bg.gif) repeat-x; line-height: 60px;}
+.teacherClass .wrongReportsTable .tips span{display: inline-block;text-indent: 20px;margin-left:20px;}
+.teacherClass .wrongReportsTable .tips span.most{background: url(../../image/teacherClass/ico_most.gif) no-repeat left;}
+.teacherClass .wrongReportsTable .tips span.right{background: url(../../image/teacherClass/ico_right.gif) no-repeat left;}
+.teacherClass .wrongReportsTable .mTitle{margin-right:40px;}
+.teacherClass .wrongReportsTable .mTitle h2{font-size:18px;font-weight: normal;}
+.teacherClass .wrongReportsTable .mTitle p{margin-left:10px;}
+.teacherClass .wrongReportsTable .mTitle p a{margin-left:10px;}
+.teacherClass .wrongReportsTable .classname{margin-left:20px;}
+.teacherClass .wrongReportsTable span.green{color:#09aa83}
+.teacherClass .wrongReportsTable td.tBgGreen{background: #edfffa;}
+.teacherClass .wrongReportsTable span.right{background: url(../../image/teacherClass/ico_right.gif) no-repeat right;display: inline-block;padding-right: 25px;}
+/*错题报告样式结束*/
+/*作答记录样式开始*/
+.teacherClass .doReports table{width: 100%; text-align: center;border:1px solid #d7d7d7;}
+.teacherClass .doReports table th,.teacherClass .doReports table td{border:1px solid #d7d7d7;line-height: 45px; font-weight: normal;}
+.teacherClass .doReports table th{background-color: #f6f6f6;}
+.teacherClass .doReports .titles{height:60px;background: url(../../image/teacherClass/titles_bg.gif) repeat-x; line-height: 60px;}
+.teacherClass .doReports .titles p.fr{margin-right: 20px;}
+.teacherClass .doReports .titles p.fr a{margin-left: 10px;}
+.teacherClass .doReports .mTitle{font-size:18px;margin-left:440px;}
+.teacherClass .doReports .re{margin-left:15px;}
+.teacherClass .doReports .re .red{color:#cc0000;}
+.teacherClass .doReports .re .green{color:#009b4a;}
+/*作答记录样式结束*/
+/*班级空间两列布局开始*/
+.teacherClass .slide{width:120px;}
+.teacherClass .wrapContent{width:850px;}
+/*班级空间两列布局结束*/
+/*班级空间左侧班级列表样式开始*/
+.teacherClass .classMenu{border:1px solid #ddd;}
+.teacherClass .classMenu p.addClass{background:#f6f6f6;height:48px;line-height: 48px; text-align: center;font-size:16px;}
+.teacherClass .classMenu p.addClass a{background: url(../../image/teacherClass/ico_addclass.gif) no-repeat left;padding-left:25px;color:#09aa83;}
+.teacherClass .classMenu p.addClass a:hover{color:#09aa83;}
+.teacherClass .classMenu ul{background: #fff;text-align: center;}
+.teacherClass .classMenu ul li a{height:34px;line-height: 34px;display: block;color: #09aa83}
+.teacherClass .classMenu ul li a.active,
+.teacherClass .classMenu ul li a:hover{background:#09aa83;color: #fff;}
+/*班级空间左侧班级列表样式结束*/

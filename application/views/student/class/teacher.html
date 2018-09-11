@@ -1,0 +1,28 @@
+{extends file='student/class/base.html'}
+{block name=title}老师{/block}
+{block name=container}
+<div class="mainContainer" pagename="">
+    <div class="stuClassBox teacherTable">
+        <table>
+            <tr>
+                <th class="headerImg">头像</th>
+                <th class="name">姓名</th>
+                <th class="sub">任教学科</th>
+                <th class="joinTime">加入班级日期</th>
+            </tr>
+            {foreach $class_teacher as $value}
+            <tr>
+                <td>
+                    <a href="javascript:void(0)" class="img">
+                        <img src="{$static_url}{$static_version}image/studentClass/teacherHeadeImg.png" alt="">
+                    </a>
+                </td>
+                <td>{$value.name}{if $value.teacher_id==$class_info.creator_id}（管理员）{/if}</td>
+                <td>{$value.subject_name}</td>
+                <td>{$value.join_date|date_format:"%Y-%m-%d"}</td>
+            </tr>
+            {/foreach}
+        </table>
+    </div>
+</div>
+{/block}

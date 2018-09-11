@@ -1,0 +1,145 @@
+{extends file='teacher/user/user_question_base.html'}
+
+{block name=title}我的题库{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="main-container mainContainer" pagename="myQuestionLibrary">
+    <div class="myQuestion" id="ajax_content">
+        <div class="myQuestionList">
+			<div class="routeBox">
+				<span class="questionAddress" data-gid="{$data.group_info->id}" ><a href="{$site_url}teacher/user/myquestion">我的题库</a></span><span>/</span><span>{$data.group_info->name}</span>
+			</div>
+			<p class="questionNum">共计{$data.total}道题</p>
+			<div class="questionBox">
+			{foreach $data.question as $question}
+				<div class="listBox" data-qid="{$question.id}">                    
+					<div class="hd">
+						<h3>{$question.title}</h3>
+						<ul>
+							<li class="cf">
+								<span class="fl">上传日期：<em>{$question.date}</em></span>
+								<span class="fl">题型：<em>{$question.qtype_name}</em></span>
+								<span class="fl star-level star-{$question.level_id}"><em class="fl">难易度：</em><em class="icon fl"></em><em class="fl"> ({$data.easy_level[$question.level_id]})</em></span>
+							</li>
+							<li>
+								<span>知识点：<em>{$question.category_info}</em></span>
+							</li>
+							<li>
+								<span>
+									同步信息：
+									<em>{$question.course_info}</em>
+								</span>
+							</li>
+						</ul>
+					</div>
+					<div class="ques-body">
+					<div class="bd tplStyle">
+						<label>【题文】：</label>
+						{$question.body}
+					</div>
+					<div class="ansBox tplStyle">
+					<label>【答案】：</label>
+					{$question.answer}
+					</div>
+					<div class="ansBox tplStyle">
+					<label>【解析】：</label>
+					{$question.analysis}
+					</div>
+					</div>
+					<div class="operationBox">
+                        <a href="javascript:void(0);" class="group_ques" data-num="{$question.id}-{$question.group_id}">题目分组</a>
+						<a href="{$site_url}teacher/user/myquestion/edit/{$question.id}">编辑</a>
+						<a href="javascript:void(0)" class="del_ques" data-num="{$question.id}-{$question.group_id}">删除</a>
+					</div>
+				</div>
+			  {/foreach}
+				<!--分页开始-->
+				<div class="page cf">
+					<p class="fr"></p>
+					<div class="pagination fr">
+						{$pages}
+					</div>
+				</div>
+				<!--分页结束-->
+			</div>
+		</div>
+        
+    </div>
+</div>
+<!--弹出框开始-->
+<div class="pop_box" id="group_ques_box">
+    <div class="teacherTestLibrary">
+        <div class="uploadNewQa">
+            <div class="groupQues">
+                <form action="{$site_url}user/user_question/move_group" method="post" class="GroupQuesForm_beta">
+                    <!-- 我的题库题目分组开始 -->
+                    <h2>将本题转移到以下分组：</h2>
+					<div class="dataStore" style="undis"></div>
+                    <ul>
+                        <li>
+                            <label>学科：</label>
+                            <select name="c_sid" class="csub-list">
+                                <option value="">请选择学科</option>
+								<option value="19">小学语文</option>
+								<option value="20">小学数学</option>
+								<option value="21">小学英语</option>
+								<option value="22">小学科学</option>
+								<option value="26">小学信息技术</option>
+								<option value="1">初中语文</option>
+								<option value="2">初中数学</option>
+								<option value="3">初中英语</option>
+								<option value="4">初中物理</option>
+								<option value="5">初中化学</option>
+								<option value="6">初中生物</option>
+								<option value="7">初中政治</option>
+								<option value="8">初中历史</option>
+								<option value="9">初中地理</option>
+								<option value="24">初中信息技术</option>
+								<option value="10">高中语文</option>
+								<option value="11">高中数学</option>
+								<option value="12">高中英语</option>
+								<option value="13">高中物理</option>
+								<option value="14">高中化学</option>
+								<option value="15">高中生物</option>
+								<option value="16">高中政治</option>
+								<option value="17">高中历史</option>
+								<option value="18">高中地理</option>
+								<option value="25">高中信息技术</option>
+                            </select>
+                            <span class="Validform_checktip"></span>
+                        </li>
+                        <li>
+                            <label>分组：</label>
+                            <select name="c_group" class="s_newGroup">
+                                <option value ="0">请选择分组</option>
+								{foreach $groups as $g}
+								<option value ="{$g->id}" {if $g->id eq $data.group_info->id }selected="selected"{/if} >{$g->name}</option>
+								{/foreach}
+                            </select>
+                            <span class="Validform_checktip"></span>
+                        </li>
+                    </ul>
+					<input type="hidden" value="" name="old_sid" class="old-sid"/>
+					<input type="hidden" value="" name="c_qid" class="c-qid"/>
+                    <input type="submit" value="确认提交" class="undis">
+                    <!-- 我的题库题目分组结束 -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出框结束-->
+{/block}
+
+{block name=script}
+<script type="text/javascript">
+	function teacher_ques_page(page){
+		seajs.use('module/teacherTestLibrary/myQuestions.js', function(_myQuestions) {
+			_myQuestions.myquestionPage(page);
+		});
+	}
+</script>
+{/block}

@@ -1,0 +1,1 @@
+define("module/common/ajax/parentChild/bindAjax",["lib/artDialog/4.1.7/artDialog"],function(require,exports){require("lib/artDialog/4.1.7/artDialog"),exports.bindSubmit=function(data){data.errorcode?data.redirect&&(window.location.href=data.redirect):$.tiziDialog({content:data.error})}});

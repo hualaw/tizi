@@ -1,0 +1,164 @@
+﻿{extends file='teacher/homework/base.html'}
+
+{block name=title}留作业{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--所有班级作业列表开始-->
+<div class="wrap layout classList">
+	<!--1 显示单个作业开始-->
+	{foreach $classes as $key=>$val}
+	<div class="homeworkWrap cf" >
+		<div class="homeworkHeade cf">
+			<h4 class="fl">
+				{$val.class_name}
+			</h4>
+			<!--作业的历史和汇总报告链接开始-->
+			<span class="workForm fr">
+				<a href="{$site_url}teacher/class/{$val.alpha_id}/homework" class="workHistory">查看全部作业</a>
+				<a href="{$site_url}zuoye/class/report/{$val.alpha_id}" class="workReport">汇总报告</a>
+			</span>
+			<!--作业的历史和汇总报告链接开始-->
+		</div>
+		{if !isset($val.zuoye)}
+		<!--未留作业显示框开始-->
+		<div class="noWork cf">
+			<!--显示布置作业按钮-->
+			<a {if $val.has_assigned_today>=Constant::ZUOYE_LIMIT_IN_A_DAY}class="cBtnNormal assignBtn uncheckBtn" {else}class="cBtnNormal assignBtn "  href='{$site_url}zuoye/assign/{$val.alpha_id}'{/if}" >布置作业</a>
+		</div>
+		<!--未留作业显示框结束-->
+		{else}
+		<div class="homeworkCont cf">
+			<div class="fl detailWrap">
+				<!--作业摘要信息开始-->
+				<ul class="summaryList cf">
+					<li>
+						<span>作业时间：{date('Y年m月d日 H:i',$val.zuoye.start_time)} 至 {date('m月d日 H:i',$val.zuoye.end_time)}</span>
+					</li>
+					<li>
+						<span>教材版本：
+							{if $val.zuoye.banbens}
+						{foreach $val.zuoye.banbens as $us=>$u}
+							  {$u} {if $u@iteration!=count($val.zuoye.banbens)},{/if}
+						{/foreach}
+						{else}
+						自选
+						{/if}
+						</span>
+					</li>
+					<li>
+						<span>包含单元：
+							{if $val.zuoye.units}
+							{foreach $val.zuoye.units as $us=>$u}
+							{$u->name}{if $u@iteration!=count($val.zuoye.units)},{/if}
+							{/foreach}
+							{else}
+						自选
+						{/if}
+						</span>
+					</li>
+				</ul>
+				<!--作业摘要信息结束-->
+				<!--作业详细列表开始-->
+				<ul class="homeworkList cf">
+					{if $val.zuoye.video_entities}
+					{foreach $val.zuoye.video_entities as $vs=>$video}
+					<li class="videoItem">
+						<a href="{$waijiao_url}lesson/index/{$video}" target="_blank">
+							<img src="{$static_url}{$static_version}image/teacherHomework/waijiao-video.gif" alt="外教视频"/>
+							<span class="gameTitle">外教视频</span>
+						</a>
+					</li>
+					{/foreach}
+					{/if}
+					{if $val.zuoye.game_entities}
+					{foreach $val.zuoye.game_entities as $gs=>$game}
+					<li class="gameItem" unit_id="{$game.unit_id}" game_id="{$game.game_id}" {if isset($game.game_type_id)}game_type_id='{$game.game_type_id}' {/if} >
+						<a href=" #" target="_blank">
+							<img  game_id='{$game.game_id}' unit id='{$game.unit_id}' src="{$static_url}image/common/game/game_name{$game.game_id}.png"/>
+							<span class="gameTitle">{$game.game_type_name}</span>
+						</a>
+					</li>
+					{/foreach}
+					{/if}
+					{if $val.zuoye.paper_entity}
+					{foreach $val.zuoye.paper_entity as $ps=>$p}
+					<li class="exerciseChoice  file" >
+						<a class='file' href="{$site_url}zuoye/packages/{$p.paper_id}?is_paper=1{if isset($p.package_id)}&package_id={$p.package_id}{/if}" target="_blank">
+						<img title="{$p.name}" src="{$static_url}{$static_version}image/teacherHomework/pic_file.gif" >
+							<span class="gameTitle" title="{$p.name}">{sub_str($p.name,0,15)}</span>
+						</a>
+					</li>
+					{/foreach}
+					{/if}
+				</ul>
+				<!--作业详细列表结束-->
+				<!--删除作业链接-->
+				<a href="javascript:void(0)" class="delHomework" zuoye_id="{$val.zuoye.id}">删除作业</a>
+			</div>
+			<!--作业右侧的人数统计部分开始-->
+			<div class="fr homeworkStatistics">
+				<div class="peopleWrap cf">
+					<div class="finishPeopele fl">
+						<span>已完成人数</span>
+						{$val.zuoye.stu_complet_sum}
+					</div>
+					<div class="unfinishPeople fr">
+						<span>未完成人数</span>
+						{$val.zuoye.stu_sum-$val.zuoye.stu_complet_sum}
+					</div>
+				</div>
+				<div class="checkBtnWrap">
+					<!--时间没到有人没完成就不能检查作业，按钮显示灰色的并且不可点击-->
+					<a {if $val.zuoye.end_time<time() or $val.zuoye.stu_complet_sum==$val.zuoye.stu_sum}href="{$site_url}zuoye/check/{$val.zuoye.id}"{/if} class="cBtnNormal checkBtn {if $val.zuoye.end_time<time() or $val.zuoye.stu_complet_sum==$val.zuoye.stu_sum}{else}uncheckBtn{/if}">检查作业</a>
+				</div>
+				<p class="operateExplain">
+					学生全部完成作业<br />或到达截止时间后可检查作业
+				</p>
+			</div>
+			<!--作业右侧的人数统计部分结束-->
+		</div>
+		{/if}
+
+		{if $val.has_assigned_today < Constant::ZUOYE_LIMIT_IN_A_DAY and isset($val.zuoye)}
+		<!--未留作业显示框开始-->
+		<div class="newWork cf">
+			<!--显示布置作业按钮-->
+			<a {if $val.has_assigned_today>=Constant::ZUOYE_LIMIT_IN_A_DAY}class="cBtnNormal assignBtn uncheckBtn" {else}class="cBtnNormal assignBtn "  href='{$site_url}zuoye/assign/{$val.alpha_id}'{/if}" >布置新作业</a>
+		</div>
+		<!--未留作业显示框结束-->
+		{/if}
+	</div>
+	{/foreach}
+	<!--1 显示单个作业结束-->
+</div>
+<!--所有班级作业列表结束-->
+
+<!-- 体验作业flash弹出框的内容开始 -->
+<div  id="homeworkDialog" class="dialogWrap">
+	<div class="teacherHomework">
+		<div class="flash">
+			<div class="dialogWrapOpen">
+				体验作业flash动画
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 体验作业flash弹出框的内容结束 -->
+
+<!-- 删除作业弹框部分开始 -->
+<div id="delHomeworkDialog" class="dialogWrap">
+	<div class="teacherHomework">
+		<div class="delHomeworpWrap">
+			<div class="dialogWrapOpen">
+				删除作业
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 删除作业弹框部分结束 -->
+{/block}
+{block name=script}
+{/block}

@@ -1,0 +1,381 @@
+{extends file='teacher/paper/paper_base.html'}
+
+{block name=title}知识点选题{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="child-content fn-clear">
+	<div class="content">
+    	<div class="content-wrap contentSecWrap">
+        	<div class="preview-title fn-clear" status="paper_preview">
+            	<h3>{if isset($data.save_log->id)}{sub_str($data.save_log->logname,0,60)}{else}未命名{/if}</h3>
+                <ul class="fn-clear">
+                    <!--
+                    <li>
+                        <span class="cBtnNormalOrg reset-btn" id="reset-btn">
+                            <input type="button" value="" >
+                            <i>新建</i>
+                        </span>
+                    </li>
+                    -->
+                    <li>
+                    	<span class="cBtnNormal save-btn" id="save-btn">
+                        	<input type="button" value="" >
+                            <i>保存试卷</i>
+                    	</span>
+                    </li>
+                    {if isset($data.save_log->id)}
+                    <li>
+                        <span class="cBtnNormal saveas-btn" id="saveas-btn">
+                            <input type="button" value="" >
+                            <i>另存为...</i>
+                        </span>
+                    </li>
+                    {/if}
+                    <!--
+                    <li>
+                        <span class="cBtnSilver">
+                            <a href="{$site_url}teacher/paper/archive">去下载</a>
+                        </span>
+                    </li>
+                    -->
+                </ul>
+                <div class="click_cancle"></div>
+            </div>
+            <div class="preview-content">
+            	<a class="unit-box separate-line {if $data.paper.paper_config->is_show_line eq 0}fn-hide{/if}" id="separate-line" title="设置">
+                <!--<div class="separate-line-inner">
+                        <div class="line">…………○…………外…………○…………装…………○…………订…………○…………线…………○…………</div>
+                        <div class="input-area">
+                            <table>
+                                <tr>
+                                    <td class="pure-box"></td>
+                                    <td><div>{$data.paper.paper_config->student_input}</div></td>
+                                    <td class="pure-box"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="line">…………○…………内…………○…………装…………○…………订…………○…………线…………○…………</div>
+                    </div>-->
+                    <!--<a href="javascript:;" class="g_paper_header"></a>-->
+                </a>
+                <div class="unit-box secret-mark {if $data.paper.paper_config->is_show_secret_sign eq 0}fn-hide{/if}" id="secret-mark" title="设置">{$data.paper.paper_config->secret_sign}</div>
+                <div class="unit-box paper-title {if $data.paper.paper_config->is_show_main_title eq 0}fn-hide{/if}" id="paper-title" title="设置">{$data.paper.paper_config->main_title}</div>
+                <div class="unit-box paper-prititle {if $data.paper.paper_config->is_show_sub_title eq 0}fn-hide{/if}" id="paper-prititle" title="设置">{$data.paper.paper_config->sub_title}</div>
+                <div class="unit-box paper-info {if $data.paper.paper_config->is_show_info eq 0}fn-hide{/if}" id="paper-info" title="设置">{$data.paper.paper_config->info}</div>
+                <div class="unit-box student-info {if $data.paper.paper_config->is_show_student_input eq 0}fn-hide{/if}" id="student-info" title="设置">{$data.paper.paper_config->student_input}</div>
+                <div class="unit-box cent-box {if $data.paper.paper_config->is_show_performance eq 0}fn-hide{/if}" id="cent-box" title="设置">
+                	<table>
+                    	<tr>
+                        	<td>题号</td>
+                            <td>一</td>
+                            <td>二</td>
+                            <td>三</td>
+                            <td>四</td>
+                            <td>五</td>
+                            <td>六</td>
+                            <td>七</td>
+                            <td>八</td>
+                            <td>九</td>
+                            <td>总分</td>
+                        </tr>
+                        <tr>
+                        	<td>得分</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="unit-box alert-info {if $data.paper.paper_config->is_show_pay_attention eq 0}fn-hide{/if}" id="alert-info" title="设置">
+                    <dl>
+                        <dt>注意事项：</dt>
+                	   <dd>{$data.paper.paper_config->pay_attention}</dd>
+                    </dl>
+                </div>
+                <div class="paper-type-box" id="paper-type1">
+                    <div class="type-handle-box handle-box {if $data.paper.section_config[1]->is_show_section_header eq 0}fn-hide{/if}">
+                    	<dl>
+                            <dt>{$data.paper.section_config[1]->label}</dt>
+                            <dd>{$data.paper.section_config[1]->note}</dd>
+                        </dl>
+                        <div class="control-box fn-clear">
+                            <a><span class="set-icon">设置</span></a>
+                        </div>
+                    </div>
+                    {$question_type_num=0}
+                	{foreach $data.paper.paper_question[1] as $paper_question_type_id=>$dtpq}
+                    {$question_type_num=$question_type_num+1}
+                    <div class="question-type-box" id="question-type{$paper_question_type_id}">
+                    	<div class="question-handle-box handle-box fn-clear {if $data.paper.question_config[1][$paper_question_type_id]->is_show_question_type eq 0}fn-hide{/if}">
+                            <div class="deco-box {if $data.paper.question_config[1][$paper_question_type_id]->is_show_performance eq 0}fn-hide{/if}">
+                            	<table>
+                                	<tr>
+                                    	<th>评卷人</th>
+                                        <th>得 分</th>
+                                    </tr>
+                                    <tr>
+                                    	<td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="type-title"><span class="type-title-nu">{$question_type_num}</span>、<span class="change-inner-title">{$data.paper.question_config[1][$paper_question_type_id]->name}</span>（<span class="change-inner-des">{$data.paper.question_config[1][$paper_question_type_id]->note}</span>）</div>
+                            <div class="control-box fn-clear">
+                                <a><span class="text-icon" opt="outer" refer="{$paper_question_type_id}" papertype="1">清空</span></a>
+                                <a><span class="del-icon" opt="outer" refer="{$paper_question_type_id}" papertype    ="1">删除</span></a>
+                                <a><span class="set-icon" opt="outer" refer="{$paper_question_type_id}" papertype    ="1">设置</span></a>
+                                <a><span class="up-icon" opt="outer" refer="{$paper_question_type_id}" papertype    ="1">上移</span></a>
+                                <a><span class="down-icon" opt="outer" refer="{$paper_question_type_id}" papertype    ="1">下移</span></a>
+                            </div> 
+                        </div>
+                        {foreach $dtpq as $pqid=>$q}
+                        {if isset($data.paper.question_origin[$pqid])}
+                            {$qo=$data.paper.question_origin[$pqid]}
+                        {else}
+                            {$qo=0}
+                        {/if}
+                        <div class="question-item-box" id="q{$q}" data-pqid="{$pqid}">
+                        	<div class="control-box fn-clear">
+                            	<!--<a><span class="text-icon" data-qid="{$q}" opt="inner">详细</span></a>-->
+                                {$cid=$data.paper.question_category[$pqid]['category']}
+                                {if $qo eq 0 and $cid and isset($data.paper.question[$qo][$q])}
+                                <a href="{$site_url}teacher/paper/feedback?question_id={$q}" target="_blank"><span class="feedback-icon">纠错</span></a>
+                                {/if}
+                                <a href="javascript:void(0)"><span class="del-icon" data-qid="{$q}" data-qorigin="{$qo}" opt="inner">删除</span></a>
+                                {if $qo eq 0 and $cid and isset($data.paper.question[$qo][$q])}
+                                <a href="javascript:void(0)"><span class="change-icon" data-qid="{$q}" data-qorigin="{$qo}" data-cid="{$cid}" data-qtype_id="{$data.paper.question[$qo][$q]->qtype_id}" data-level="{$data.paper.question[$qo][$q]->level_id}" opt="inner">换一题</span></a>
+                                {/if}
+                                <a href="javascript:void(0)"><span class="up-icon" data-qid="{$q}" data-pqid="{$pqid}" opt="inner">上移</span></a>
+                                <a href="javascript:void(0)"><span class="down-icon" data-qid="{$q}" data-pqid="{$pqid}" opt="inner">下移</span></a>
+                            </div>
+                        	<div class="question{if $qo} noimg tplStyle{/if} ">
+                                <span class="question-index">{$q@iteration}</span>
+                                {if isset($data.paper.question[$qo][$q])}
+                                    {$data.paper.question[$qo][$q]->body}
+                                    <div class="answer undis">
+                                    {$data.paper.question[$qo][$q]->answer}
+                                    {$data.paper.question[$qo][$q]->analysis}
+                                    </div>
+                                {else}
+                                    {if $qo eq 0}
+                                        <div style="margin-top:8px;margin-left:6px;">对不起，此题目已从题库中删除</div>
+                                    {else if $qo eq 1}
+                                        <div style="margin-top:8px;margin-left:6px;">对不起，此题目已从我的题库中删除</div>
+                                    {/if}
+                                {/if}
+                            </div>
+                        </div>
+                        {/foreach}
+                    </div>
+                    {/foreach}
+                </div>    
+                <div class="paper-type-box" id="paper-type2">
+                	<div class="type-handle-box handle-box {if $data.paper.section_config[2]->is_show_section_header eq 0}fn-hide{/if}">
+                    	<dl>
+                            <dt>{$data.paper.section_config[2]->label}</dt>
+                            <dd>{$data.paper.section_config[2]->note}</dd>
+                        </dl>
+                        <div class="control-box fn-clear">
+                            <a><span class="set-icon">设置</span></a>
+                        </div>
+                    </div>
+                	{foreach $data.paper.paper_question[2] as $paper_question_type_id=>$dtpq}
+                    {$question_type_num=$question_type_num+1}
+                    <div class="question-type-box" id="question-type{$paper_question_type_id}">
+                        <div class="question-handle-box handle-box fn-clear {if $data.paper.question_config[2][$paper_question_type_id]->is_show_question_type eq 0}fn-hide{/if}">
+                            <div class="deco-box {if $data.paper.question_config[2][$paper_question_type_id]->is_show_performance eq 0}fn-hide{/if}">
+                                <table>
+                                    <tr>
+                                        <th>评卷人</th>
+                                        <th>得 分</th>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="type-title"><span class="type-title-nu">{$question_type_num}</span>、<span class="change-inner-title">{$data.paper.question_config[2][$paper_question_type_id]->name}</span>（<span class="change-inner-des">{$data.paper.question_config[2][$paper_question_type_id]->note}</span>）</div>
+                            <div class="control-box fn-clear">
+                                <a><span class="text-icon" opt="outer" refer="{$paper_question_type_id}" papertype    ="2">清空</span></a>
+                                <a><span class="del-icon" opt="outer" refer="{$paper_question_type_id}" papertype        ="2">删除</span></a>
+                                <a><span class="set-icon" opt="outer" refer="{$paper_question_type_id}" papertype        ="2">设置</span></a>
+                                <a><span class="up-icon" opt="outer" refer="{$paper_question_type_id}" papertype        ="2">上移</span></a>
+                                <a><span class="down-icon" opt="outer" refer="{$paper_question_type_id}" papertype        ="2">下移</span></a>
+                            </div> 
+                        </div>
+                        {foreach $dtpq as $pqid=>$q}
+                        {if isset($data.paper.question_origin[$pqid])}
+                            {$qo=$data.paper.question_origin[$pqid]}
+                        {else}
+                            {$qo=0}
+                        {/if}
+                        <div class="question-item-box" id="q{$q}" data-pqid="{$pqid}">
+                            <div class="control-box fn-clear">
+                                <!--<a><span class="text-icon" data-qid="{$q}"opt="inner">详细</span></a>-->
+                                {$cid=$data.paper.question_category[$pqid]['category']}
+                                {if $qo eq 0 and $cid and isset($data.paper.question[$qo][$q])}
+                                <a href="{$site_url}teacher/paper/feedback?question_id={$q}" target="_blank"><span class="feedback-icon">纠错</span></a>
+                                {/if}
+                                <a href="javascript:void(0)"><span class="del-icon" data-qid="{$q}" data-qorigin="{$qo}" opt="inner">删除</span></a>
+                                {if $qo eq 0 and $cid and isset($data.paper.question[$qo][$q])}
+                                <a href="javascript:void(0)"><span class="change-icon" data-qid="{$q}" data-qorigin="{$qo}" data-cid="{$cid}" data-qtype_id="{$data.paper.question[$qo][$q]->qtype_id}" data-level="{$data.paper.question[$qo][$q]->level_id}" opt="inner">换一题</span></a>
+                                {/if}
+                                <a href="javascript:void(0)"><span class="up-icon" data-qid="{$q}" data-pqid="{$pqid}" opt="inner" opt="inner">上移</span></a>
+                                <a href="javascript:void(0)"><span class="down-icon" data-qid="{$q}" data-pqid="{$pqid}" opt="inner">下移</span></a>
+                            </div>
+                            <div class="question{if $qo} noimg tplStyle{/if}">
+                                <span class="question-index">{$q@iteration}</span>
+                                {if isset($data.paper.question[$qo][$q])}
+                                    {$data.paper.question[$qo][$q]->body}
+                                    <div class="answer undis">
+                                    {$data.paper.question[$qo][$q]->answer}
+                                    {$data.paper.question[$qo][$q]->analysis}
+                                    </div>
+                                {else}
+                                    {if $qo eq 0}
+                                        <div style="margin-top:8px;margin-left:6px;">对不起，此题目已从题库中删除</div>
+                                    {else if $qo eq 1}
+                                        <div style="margin-top:8px;margin-left:6px;">对不起，此题目已从我的题库中删除</div>
+                                    {/if}
+                                {/if}
+                            </div>
+                        </div>
+                        {/foreach}
+                    </div>
+                    {/foreach}                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="child-menu">
+    	<div class="defaulte-set-box fn-clear">
+        	<div class="type-list">
+                <a class="current-type" style="display:none" href="javascript:void(0)" sty="{$data.paper.paper_config->style}"></a>
+                <p class="cf types">
+                    <span class="fl" title="默认结构">
+                        <input type="radio" name="radioType" checked="checked" class="default" id="default">
+                        <label for="default">默认</label>
+                    </span>
+                    <span class="fl" title="标准结构">
+                        <input type="radio" name="radioType" class="static" id="static">
+                        <label for="static">标准</label>
+                    </span>
+                    <span class="fl" title="测验结构">
+                        <input type="radio" name="radioType" class="test" id="test">
+                        <label for="test">测验</label>
+                    </span>
+                    <span class="fl" title="作业结构">
+                        <input type="radio" name="radioType" class="homework" id="homework">
+                        <label for="homework">作业</label>
+                    </span>
+                </p>
+                <!-- <select>
+                    <option value="default">默认结构</option>
+                    <option value="static">标准结构</option>
+                    <option value="test">测验结构</option>
+                    <option value="homework">作业结构</option>
+                </select> -->
+            </div>
+            <!--<a href="javascript:;" class="reset-btn"><span title="重置试卷">重置</span></a>-->
+            
+        </div>
+        <div class="paper-list-container">
+             <ul class="paper-list paper-header">
+                <li class="part-title cf"><span class="fl">卷头</span><span class="setPapers fl"><a href="javascript:;" class="set-btn">设置</a></span></li>
+                <li class="fn-clear" id="menu-paper-title" data-id="paper-title"><a href="javascript:void(0)" class="icon-view  {if $data.paper.paper_config->is_show_main_title eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title">主标题</a></li>
+                <li class="fn-clear" id="menu-paper-prititle" data-id="paper-prititle"><a href="javascript:void(0)" class="icon-view {if $data.paper.paper_config->is_show_sub_title eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title">副标题</a></li>
+                <li class="fn-clear" id="menu-separate-line" data-id="separate-line"><a href="javascript:void(0)" class="icon-view {if $data.paper.paper_config->is_show_line eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title">装订线</a></li>
+                <li class="fn-clear" id="menu-secret-mark" data-id="secret-mark"><a href="javascript:void(0)" class="icon-view {if $data.paper.paper_config->is_show_secret_sign eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title">保密标记</a></li>
+                <li class="fn-clear" id="menu-paper-info" data-id="paper-info"><a href="javascript:void(0)" class="icon-view  {if $data.paper.paper_config->is_show_info eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title">试卷信息栏</a></li>
+                <li class="fn-clear" id="menu-student-info" data-id="student-info"><a href="javascript:void(0)" class="icon-view {if $data.paper.paper_config->is_show_student_input eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title">考生输入栏</a></li>
+                <li class="fn-clear" id="menu-cent-box" data-id="cent-box"><a href="javascript:void(0)" class="icon-view {if $data.paper.paper_config->is_show_performance eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title">誊分栏</a></li>
+                <li class="fn-clear" id="menu-alert-info" data-id="alert-info"><a href="javascript:void(0)" class="icon-view {if $data.paper.paper_config->is_show_pay_attention eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title">注意事项栏</a></li>
+            </ul>
+            <ul class="paper-list paper-body">
+                <li class="part-title">卷体</li>
+                <li class="fn-clear" id="menu-paper1-con">
+                    <div class="list-title list-type-title fn-clear" id="menu-paper-type1" data-id="paper-type1"><a href="javascript:void(0)" class="icon-view {if $data.paper.section_config[1]->is_show_section_header eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title">第I卷（选择题）</a></div>
+                    <ul class="child-list">                       
+                        {$question_type_num=0}
+                        {foreach $data.paper.paper_question[1] as $paper_question_type_id=>$dtpq}
+                        {$question_type_num=$question_type_num+1}
+                        <li class="fn-clear menu-type-li" id="menu-type-li-questiontype{$paper_question_type_id}">
+                            <div class="list-title fn-clear" id="menu-question-type{$paper_question_type_id}" data-id="question-type{$paper_question_type_id}"><a href="javascript:void(0)" class="icon-view {if $data.paper.question_config[1][$paper_question_type_id]->is_show_question_type eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title"><span class="menu-questiontype-nu">{$question_type_num}</span>、<span class="menu-render-type-name{$paper_question_type_id}">{$data.paper.question_config[1][$paper_question_type_id]->name}</span></a></div>
+                            <ul class="question-box" id="menu-outer-ul-question-type{$paper_question_type_id}">
+                                {foreach $dtpq as $pqid=>$q}
+                                {if isset($data.paper.question_origin[$pqid])}
+                                    {$qo=$data.paper.question_origin[$pqid]}
+                                {else}
+                                    {$qo=0}
+                                {/if}
+                                {if isset($data.paper.question[$qo][$q])}
+                                    {$title=$data.paper.question[$qo][$q]->title}
+                                {else}
+                                    {if $qo eq 0}
+                                        {$title="此题目已从题库中删除"}
+                                    {else if $qo eq 1}
+                                        {$title="此题目已从我的题库中删除"}
+                                    {/if}
+                                {/if}
+                                <li class="fn-clear question-item" id="menu-q{$q}" data-id="q{$q}" data-pqid="{$pqid}" title="{$title}"><span class="list-order">{$q@iteration}</span>.<span class="title-content">{$title}</span></li>
+                                {/foreach}
+                            </ul>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </li>
+                <li class="fn-clear" id="menu-paper2-con">
+                    <div class="list-title list-type-title fn-clear" id="menu-paper-type2" data-id="paper-type2"><a href="javascript:void(0)" class="icon-view {if $data.paper.section_config[2]->is_show_section_header eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title">第II卷（非选择题）</a></div>
+                    <ul class="child-list">
+                        {foreach $data.paper.paper_question[2] as $paper_question_type_id=>$dtpq}
+                        {$question_type_num=$question_type_num+1}
+                        <li class="fn-clear menu-type-li" id="menu-type-li-questiontype{$paper_question_type_id}">
+                            <div class="list-title fn-clear" id="menu-question-type{$paper_question_type_id}" data-id="question-type{$paper_question_type_id}"><a href="javascript:void(0)" class="icon-view {if $data.paper.question_config[2][$paper_question_type_id]->is_show_question_type eq 0}hide{/if}" title="显示隐藏"></a><a href="javascript:void(0)" class="icon-set" title="设置"></a><a href="javascript:void(0)" class="menu-item-title"><span class="menu-questiontype-nu">{$question_type_num}</span>、<span class="menu-render-type-name{$paper_question_type_id}">{$data.paper.question_config[2][$paper_question_type_id]->name}</span></a></div>
+                            <ul class="question-box" id="menu-outer-ul-question-type{$paper_question_type_id}">
+                            {foreach $dtpq as $pqid=>$q}
+                            {if isset($data.paper.question_origin[$pqid])}
+                                {$qo=$data.paper.question_origin[$pqid]}
+                            {else}
+                                {$qo=0}
+                            {/if}
+                            {if isset($data.paper.question[$qo][$q])}
+                                {$title=$data.paper.question[$qo][$q]->title}
+                            {else}
+                                {if $qo eq 0}
+                                    {$title="此题目已从题库中删除"}
+                                {else if $qo eq 1}
+                                    {$title="此题目已从我的题库中删除"}
+                                {/if}
+                            {/if}
+                            <li class="fn-clear question-item" id="menu-q{$q}" data-id="q{$q}" data-pqid="{$pqid}" title="{$title}"><span class="list-order">{$q@iteration}</span>.<span class="title-content">{$title}</span></li>
+                            {/foreach}    
+                            </ul>
+                        </li>
+                        {/foreach}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{include file='teacher/paper/paper_preview_config_tpl.html'}
+{/block}
+
+{block name=script}
+<script type="text/javascript" src="{$static_url}js/teacher/paper_preview.js{$version}"></script>
+<script type="text/javascript">
+Teacher.paper.paper_preview.init();
+</script>
+{/block}
+

@@ -1,0 +1,42 @@
+{if (strpos(Constant::CLOUD_VIDEO_TYPES_JWPLAYER, $file['file_ext'])!==false) or $file.file_type == Constant::CLOUD_FILETYPE_AUDIO }
+<script type="text/javascript" src="{$static_url}{$static_version}lib/TiZiplayer/6.7.0/TiZiplayer.js{$version}"></script>
+<script type="text/javascript">
+    {if isset($url.low) and $url.low} var url_low="{$url.low}";{/if}
+    var url_normal="{$url.normal}";
+    {if isset($url.origin) and $url.origin} var url_origin="{$url.origin}";{/if}
+    TiZiplayer("container").setup({
+        playlist:[
+            {
+                {if $file.file_type==Constant::CLOUD_FILETYPE_VIDEO}
+                  // sources: [{
+                  //   file: url_origin,
+                  //   type:'mp4',
+                  //   label: "原版"
+                  // },{
+                  //   file: url_normal,
+                  //   type:'mp4',
+                  //   label: "清晰",
+                  //   "default": "true"
+                  // },{
+                  //   file: url_low,
+                  //   type:'mp4',
+                  //   label: "流畅"
+                  // }]
+                  sources: [{
+                    file: url_normal,
+                    type:'mp4',
+                    label: "清晰",
+                    "default": "true"
+                  }]
+                {else}
+                    file: url_normal,
+                    type:'mp3'
+                {/if}
+            }
+        ],
+        autostart: 'true',
+        height:{if $file.file_type==Constant::CLOUD_FILETYPE_VIDEO}425{else}30{/if},
+        width:700
+    });
+</script>
+{/if}

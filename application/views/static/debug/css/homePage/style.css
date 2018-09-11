@@ -1,0 +1,11 @@
+/*加载base.css----包括reset,common.cssSprites,layout,header,footer,button,dialog,valid.css*/
+@import url('../common/base.css');
+
+/*加载老师登录后导航样式*/
+@import url('../common/loginNav.css');
+/*----------------------------网站具体样式开始----------------------------*/
+/*加载头部样式*/
+@import url('header.css');
+/*加载首页样式*/
+@import url('homePage_4.css');
+/*----------------------------网站具体样式结束----------------------------*/

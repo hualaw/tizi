@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Tizi 作业 && 专项</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="Tizi 作业 && 专项">
+        <link rel="icon" href="../img/favicon-navy.png" type="image/x-icon">
+        <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>-->
+
+    <!-- LESS -->
+            <link rel="stylesheet" href="../css/daux-navy.min.css">
+    </head>
+<body>
+            <!-- Docs -->
+        <div class="container-fluid fluid-height wrapper">
+
+            <div class="row columns content">
+                <div class="left-column article-tree col-sm-3 hidden-print">
+                    <!-- For Mobile -->
+                    <div class="responsive-collapse">
+                        <button type="button" class="btn btn-sidebar" id="menu-spinner-button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="sub-nav-collapse" class="sub-nav-collapse">
+                        <!-- Navigation -->
+                        <ul class="nav nav-list"><li><a href=".././专项练习_作业.html">专项练习 作业</a></li><li class="open"><a href="#" class="aj-nav folder">专项练习</a><ul class="nav nav-list"><li><a href="../专项练习/./目录文件结构.html">目录文件结构</a></li><li><a href="../专项练习/./文件详解.html">文件详解</a></li></ul></li><li><a href="#" class="aj-nav folder">学生作业</a><ul class="nav nav-list"><li><a href="../学生作业/./目录文件结构.html">目录文件结构</a></li><li><a href="../学生作业/./文件详解.html">文件详解</a></li></ul></li><li><a href="#" class="aj-nav folder">Oauth Server</a><ul class="nav nav-list"><li><a href="../Oauth_Server/./文件结构.html">文件结构</a></li><li><a href="../Oauth_Server/./文件详解.html">文件详解</a></li></ul></li></ul>                                            </div>
+                </div>
+                <div class="right-column  content-area col-sm-9">
+                    <div class="content-page">
+                        <article>
+                                                            <div class="page-header sub-header clearfix">
+                                    <h1>文件详解                                                                            </h1>
+                                        <span style="float: left; font-size: 10px; color: gray;">
+                                            Thursday, August 21, 2014                                        </span>
+                                        <span style="float: right; font-size: 10px; color: gray;">
+                                            7:29 AM                                        </span>
+                                </div>
+                                                        <h4>
+专项练习中 小猪过河为 4个选项， 其余游戏为 3个选项   
+</h4>
+<p>p_c_type 跟 游戏 对应关系</p>
+<ul>
+<li>2=>企鹅,</li>
+<li>3=>小猪过河,</li>
+<li>4=>保卫绵羊,</li>
+<li>5=>魔法师,</li>
+<li>6=>星级迷航,</li>
+<li>7=>捕鱼,</li>
+<li>8=>海底寻宝,</li>
+<li>9=>农场,</li>
+<li>10=>玩转中国,</li>
+<li>11=>比与比例,</li>
+<li>12=>千字文,</li>
+</ul>
+<div style="color:red">game_base.php</div>
+<div>
+    四种游戏数据接口:<br/>
+    protected function get_question_1($p_c_id = 42,$num,$option_num='') <br/>
+    public function get_question_2($p_c_id)
+    <p>
+        p_c_type 为9 调用此数据接口
+    </p>
+    <br/>
+    public function get_question_3($p_c_id)
+    <p>
+        p_c_type 为10,12 调用此数据接口
+    </p>
+    <br/>
+    public function get_question_4($p_c_id)
+    <p>
+        p_c_type 为11 调用此数据接口
+    </p>
+    <br/>
+    <p>
+    做游戏界面数据初始化
+    </p>
+    protected function index($id)<br/>
+    <br/>
+    <p>
+    设置游戏提示语
+    </p>
+    protected function set_game_tip($id)<br/>
+    <br/>
+    <p>
+    我的成绩, 排名列表,我的排名 数据展示
+    </p>
+    protected function _game_display()<br/>
+    <br/>
+</div>
+<div style="color:red">game1.php, game2.php, game3.php </div>
+<p>
+三种游戏展示, practice_category_info game_type 字段存储游戏属于哪个类型(1-3)
+</p>
+<div style="color:red">game_center.php</div>
+<p>
+游戏统一入口<br/>
+public function index($game_id = 0)<br/>
+public function get_question($game_id = 0)<br/>
+public function submit()<br/>
+</p>
+<div style="color:red">practice_base.php</div>
+<p>
+专项练习base
+</p>
+<div>
+     protected function get_categories($grade_id = '') 根据年级获取分类<br/>
+     protected function get_practice_list($grade_id = '') 获取专项列表<br/>
+     protected function ranking_list($p_c_id) 显示排名列表<br/>
+     protected function update_participants_stats($p_c_id) 更新参与人数, 只要打开游戏页面就会计为参与<br/>
+</div>
+<p><br/></p>
+<div style="color:red">practice.php</div>
+<p>
+专项练习
+</p>
+<div>
+    public function index($grade_id = 1) 专项练习首页<br/>
+    private function get_participants_stats 获取参与人数统计<br/>
+    _update_grade_sub && _get_grade_sub 科目,年级 点击记录
+</div>
+<p><br/></p>
+<div style="color:red">practice_training.php</div>
+<p>
+    专项练习在线做题
+</p>
+<div>
+    public function index($p_c_id=1) 首页<br/>
+    public function entry($p_c_id='')点击开始答题会跳转到这个, 生成一份练习<br/>
+    public function ($p_c_id='')点击开始答题会跳转到这个, 生成一份练习, 最后跳转到下面的test function<br/>
+    public function test($training_id)做题页<br/>
+    public function next_question() 点击下一题会调用此方法<br/>
+    public function complete($training_id) 报告页面<br/>
+    private function update_ranking_list($p_c_id, $correct_num)当结束答题会 调用此方法, 更新排名<br/>
+</div>                                                    </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- hightlight.js -->
+    <script src="../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Navigation -->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+    
+  
+        
+        <!-- 分享列表 开始 -->
+        <input type='hidden' class='del_share_class_id' value='{$alpha_class_id}' />
+      <div class="classTableHeight2">
+        {include file='cloud/class_share_pagination.html'}
+        <!-- 分页结束 -->
+      </div>
+    <!-- 分享列表 结束 -->
+    
+        
+    <!-- 从网盘上传 -->
+    <input type='hidden' class="class_share_choose_file" value='1' />
+  <div id="fromInterPop" class="pop_box" chosen-type>
+    <div class="teacherClass">
+      <div class="pop_main">
+        <div class="InterDis">
+            <div class="DisLeft fl">
+              {$tree}
+            </div>
+            <div class="DisRight fr">
+              <table>
+                <tr><th>文件名</th><th>大小</th></tr>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 分享弹出框  -->
+  <div id="sharePop" class="pop_box">
+    <div class="teacherClass">
+      <div class="pop_main">
+        <div class="upStyle">
+          <ul class='upBtn cf'>
+            <li><a id='fromLocalUp' class='cBtnNormal cBtnNormalEx' href='javascript:;'><span>
+                <input type='text' name='sharetextfield' id='sharefield' class='choseFileTxt fl' style='display:none' disabled />
+                <input type='file' name='sharefileField' id='sharefileField_beta' class='file fl' multiple='true' style='display:none'/>
+            </span></a></li>
+            <li><a id='fromInterUp' class='cBtnNormal' href='javascript:;'><span>从网盘选择</span></a></li>
+          </ul>
+        </div>
+        <!-- <p>文件描述（500字以内）</p> -->
+        <div class="fileDisc">
+          <!-- <textarea></textarea> -->
+        </div>
+      </div>
+    </div>
+  </div>

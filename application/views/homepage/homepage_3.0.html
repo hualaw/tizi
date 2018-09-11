@@ -1,0 +1,306 @@
+{extends file='homepage/homepage_base.html'}
+
+{block name=title}中小学优质教学资源服务平台{/block}
+
+{block name=container}
+<!-- <div class="layout ad1">
+    <a href="{$site_url}teacher/paper/cequestion/11" target="_blank">
+        <img src="{$static_url}{$static_version}image/common/ad/collegeExam.gif" alt="梯子网重磅推出名师高考80天冲刺专项训练！详情猛戳教师端“出卷子-高中科目-高考倒计时”。">
+    </a>
+</div> -->
+<!-- 登录部分开始 -->
+<div class="loginWrap layout posr">
+    <!-- 首页登陆区域开始 -->
+    <div class="loginArea">
+        {include file='homepage/homepage_login.html'}
+    </div>
+    <!-- 首页登陆区域结束 -->
+    {include file='homepage/homepage_slide.html'}
+</div>
+<!-- 登录部分结束 -->
+<!-- 备课资源部分开始 -->
+<div class="lesson layout">
+    <div class="hd">
+        <h2>中小学热门备课资源</h2>
+        <!-- 备课二级导航开始 -->
+        <div class="subNav">
+            <div class="subNavBox cf">
+                <span class="fl">
+                    <em>小学:</em>
+                    {foreach $subjects as $value}
+                    {if $value->grade == 1}
+                    <a href="{$site_url}teacher/lesson/prepare/{$value->sid}">{$value->name}</a>
+                    {/if}
+                    {/foreach}
+                </span>
+                <span class="fl">
+                    <em>初中:</em>
+                    {foreach $subjects as $value}
+                    {if $value->grade == 2}
+                    <a href="{$site_url}teacher/lesson/prepare/{$value->sid}">{$value->name}</a>
+                    {/if}
+                    {/foreach}
+                </span>
+                <span class="fl last">
+                    <em>高中:</em>
+                    {foreach $subjects as $value}
+                    {if $value->grade == 3}
+                    <a href="{$site_url}teacher/lesson/prepare/{$value->sid}">{$value->name}</a>
+                    {/if}
+                    {/foreach}
+                </span>
+                
+            </div>
+        </div>
+        <!-- 备课二级导航结束 -->
+    </div>
+    <div class="bd">
+        <ul>
+            {foreach $lessons.data as $value}
+            <li>
+                <a href="{$site_url}teacher/lesson/view/{alpha_id($value.id)}" target="_blank" class="lessonBg" title="{$value.file_name}">
+                    <span class="tip">{$value.doc_type_name}</span>
+                    <em class="{if $value.file_ext=='ppt' or $value.file_ext=='pptx'}ppt{else}doc{/if}"></em>
+                </a>
+                <p>
+                    [<a href="{$site_url}teacher/lesson/prepare/{$value.subject_id}">{$subjects_object[$value.subject_id]}</a>]
+                </p>
+                <a href="{$site_url}teacher/lesson/view/{alpha_id($value.id)}" target="_blank" class="title" title="{$value.file_name}">
+                    {sub_str($value.file_name, 0, 40)}
+                </a>
+                <i>
+                    {$value.hits}人阅读
+                </i>
+            </li>
+            {/foreach}
+        </ul>
+    </div>
+</div>
+<!-- 备课资源部分结束 -->
+<!-- 试卷部分开始 -->
+<div class="paper layout">
+    <div class="hd">
+        <h2 class="fl">
+            初高中精品试卷
+        </h2>
+        <!-- 地区切换开始 -->
+        <div class="area fl">
+            <h3 class="fl"><em id="areaName" area="{$default_area.id}">{$default_area.name}</em>地区</h3>
+            <div class="change fl posr" id="changeCity">
+                <span class="changeCitySpan">[切换地区]</span>
+                <div class="cityContent cf undis" id="cityContent">
+                    {foreach $area as $area_id => $area_name}
+                    <a href="javascript:void(0)" area="{$area_id}">{$area_name}</a>
+                    {/foreach}
+                </div>
+                <em class="narrowDown"></em>
+            </div>
+        </div>
+        <!-- 地区切换结束 -->
+        <div id="changeSubject" class="changeSubject fr">
+            {foreach $subject_type as $s_id => $s_name}
+            <a href="javascript:void(0);"{if $s_id==$default_subject.id} class="active"{/if} sn="{$s_id}">{$s_name}</a>
+            {/foreach}
+        </div>
+    </div>
+    <div id="changeSubjectContent" class="changeSubjectContent">
+        <div class="ft" id="expos_list">
+            {include file='teacher/paper/paper_exam_position.html' homepage_default=true}
+        </div>
+    </div>
+</div>
+<!-- 试卷部分结束 -->
+<!-- 资讯开始 -->
+<div class="news layout">
+    <!-- 教师资讯开始 -->
+    <div class="teacher fl">
+        <div class="hd">
+            <h2 class="fl">教师资讯</h2>
+            <span class="fr">
+                <a href="{$site_url}about/newslist/20/1" target="_blank">更多内容>></a>
+            </span>
+        </div>
+        <div class="bd">
+            <ul>
+                {foreach $teachernews as $value}
+                <li>
+                    <a href="{$site_url}about/newsdetails/{$value.id}" title="{$value.title}" target="_blank">
+                        {sub_str($value.title, 0, 54)}
+                    </a>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+    <!-- 教师资讯结束 -->
+    <!-- 梯子资讯开始 -->
+    <div class="tizi fr">
+        <div class="hd">
+            <h2 class="fl">
+                梯子公告
+            </h2>
+            <div class="tip fr">
+                <em class="fl">梯子官方</em>
+                <div class="fl">
+                    <div id="weixinDiv" class="weixinDiv fl posr">
+                        <a href="javascript:void(0)" class="aWeixin">微信</a>
+                        <div id="weixinDivContent" class="weixinDivContent undis">
+                            <p>
+                                <img src="{$static_url}{$static_version}/image/homePage/ewm.gif" alt="">
+                                <span>扫描梯子网微信二维码</span>
+                            </p>
+                        </div>
+                        <em class="narrowDown"></em>
+                    </div>
+                    <!--<a href="http://weibo.com/tiziwang" target="_blank" class="aWeibo fl">微博</a>-->
+                    <div id="weiboDiv" class="weiboDiv fl posr">
+                        <wb:follow-button uid="3844617484" type="red_4" width="67" height="24" ></wb:follow-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bd">
+            <ul>
+                {foreach $tizinews as $value}
+                <li>
+                    <a href="{$site_url}about/newsdetails/{$value.id}" title="{$value.title}" target="_blank">
+                        {sub_str($value.title,0,50)}
+                    </a>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+    <!-- 梯子资讯结束 -->
+</div>
+<!-- 资讯结束 -->
+<!-- 用户心声开始 -->
+<div class="witness layout">
+    <div class="hd">
+        <h2 class="fl">
+            用户心声
+        </h2>
+        <span class="fr">
+            <a href="{$site_url}about/witness#postWitness" target="_blank" class="post">发表心声</a>
+            <a href="{$site_url}about/witness" target="_blank">更多心声>></a>
+        </span>
+    </div>
+    <div class="bd">
+        <div class="windS1" id="windS1">
+            <div class="w">
+                <ul id="windS1Ul">
+                    {foreach $witness as $value}
+                        <li>
+                            <div class="box">
+                                <div class="cf">
+                                    <a href="{$site_url}about/witness" target="_blank">
+                                        <img class="fl" src="{$value.data.thumb}" alt="">
+                                    </a>
+                                    <h2 class="fl">
+                                        <a href="{$site_url}about/witness" target="_blank">
+                                            {$value.format[1]}
+                                        </a>
+                                        <p>
+                                            {$value.format[2]}
+                                        </p>
+                                    </h2>
+                                </div>
+                                <p class="text">
+                                    {$value.data.description}
+                                </p>
+                            </div>
+                        </li>
+                    {/foreach}
+                    {foreach $witness as $value}
+                        <li>
+                            <div class="box">
+                                <div class="cf">
+                                    <a href="{$site_url}about/witness" target="_blank">
+                                        <img class="fl" src="{$value.data.thumb}" alt="">
+                                    </a>
+                                    <h2 class="fl">
+                                        <a href="{$site_url}about/witness" target="_blank">
+                                            {$value.format[1]}
+                                        </a>
+                                        <p>
+                                            {$value.format[2]}
+                                        </p>
+                                    </h2>
+                                </div>
+                                <p class="text">
+                                    {$value.data.description}
+                                </p>
+                            </div>
+                        </li>
+                    {/foreach}
+                </ul>
+            </div>
+            <a href="javascript:void(0)" id="prev" class="prev">左</a>
+            <a href="javascript:void(0)" id="next" class="next">右</a>
+        </div>
+    </div>
+</div>
+<!-- 用户心声结束 -->
+<!-- 媒体报道和致谢用户开始 -->
+<div class="mediaBox layout">
+    <!-- 媒体报道开始 -->
+    <div class="media fl">
+        <div class="hd">
+            <h2 class="fl">媒体报道</h2>
+            <span class="fr">
+                <a href="{$site_url}about/report" target="_blank">更多内容>></a>
+            </span>
+        </div>
+        <div class="bd">
+            <ul>
+                {foreach $reports as $value}
+                <li>
+                    <span class="fr">{$value.data.inputtime|date_format:'%m月%d日'}</span>
+                    <a href="{$value.data.url}" target="_blank" rel="nofollow">
+                        {$value.data.title}
+                    </a>
+                    <em>[{$value.copyfrom}]</em>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+    <!-- 媒体报道结束 -->
+    <!-- 致谢用户开始 -->
+    <div class="thank fr">
+        <div class="hd">
+            <h2>
+                致谢用户
+            </h2>
+        </div>
+        <div class="bd">
+            <ul id="marqueeBox">
+                {foreach $thankuser as $value}
+                <li class="cf">
+                    <span class="name fl">
+                        {$value.title}
+                    </span>
+                    <span class="address fl" title="{$value.address}">
+                        {sub_str($value.address, 0, 44)}
+                    </span>
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+    </div>
+    <!-- 梯子资讯结束 -->
+</div>
+<!-- 媒体报道和致谢用户结束 -->
+<!-- 友情链接开始 -->
+<div class="link layout">
+    <span class="fl">
+        友情链接
+    </span>
+    <p class="fl">
+	{foreach $links['text'] as $link}
+        <a href="{$link.url}" target="_blank">{$link.title}</a>
+	{/foreach}
+    </p>
+</div>
+<!-- 友情链接结束 -->
+{/block}

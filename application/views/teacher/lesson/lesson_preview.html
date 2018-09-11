@@ -1,0 +1,215 @@
+{extends file='teacher/lesson/lesson_preview_base.html'}
+
+{block name=title}{$data.preview->file_name}-备课{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+{$source_url = $static_base_url}
+<div class="layout lessonPrewContent">
+<input type="hidden" class="tab_name" value="preview">
+    <div class="undis" id="docnum" data-ext="{$data.preview->extension}" data-res_id="{$res_id}">{$data.preview->id}</div>
+	<div class="pageRoute">
+		<span><a href="{$site_url}">首页</a></span>/
+		<span><a href="{$site_url}teacher/lesson/prepare">备课资源</a></span>
+		{if $breadcrumb}
+		/<span><a href="{$site_url}teacher/lesson/prepare/{$breadcrumb.subject.id}">{$breadcrumb.subject.name}</a></span>/<span><a href="{$site_url}teacher/lesson/prepare/{$breadcrumb.subject.id}/{$breadcrumb.version.id}">{$breadcrumb.version.name}</a></span>
+		{if isset($breadcrumb.grade)}
+		/<span><a href="{$site_url}teacher/lesson/prepare/{$breadcrumb.subject.id}/{$breadcrumb.grade.id}">{$breadcrumb.grade.name}</a></span>{/if}
+		{/if}
+	</div>
+	<div class="hd">
+		<h2>{$data.preview->file_name}</h2>
+		<p class="cf">			
+			<span class="star oStar cf">
+				{foreach $data.star_level as $val}
+				<em class="fl {if $val eq 3}all{else if $val eq 2}half{else}{/if}"></em>
+				{/foreach}				
+				<em class="fl have">{$data.assess_count}人评价</em>
+			</span>
+			<!--  <span class="priase-click"><a href="javascript:void(0)">点赞</a></span>  -->
+			<span>{$data.preview->hits}人已阅读</span>
+			<span>{$data.preview->downloads}人下载</span>
+			<span>大小：{$data.preview->file_size}</span>
+		</p>
+	</div>
+	<div class="contentBox cf">
+		<div class="flashBox fl">
+			{if !$unable_view}    <!-- 支持预览 ?  start -->
+            {if Constant::CLOUD_FILETYPE_DOC == $data.preview->type}
+            <div class="bd posr fullView" id="flashContent"></div>
+            {elseif Constant::CLOUD_FILETYPE_PIC == $data.preview->type}
+            <div class="border01">
+            	<img src='{$data.preview->file_path}' />
+        	</div>
+            {elseif (strpos(Constant::CLOUD_VIDEO_TYPES_JWPLAYER, $data.preview->extension)!==false) or $data.preview->type==Constant::CLOUD_FILETYPE_AUDIO}
+            <div class="videoBox border01">
+                <div class="containerBox cf posr">
+                    <div class="containerBox cf posr">      
+                        <div id="container" class="container"><div style="height:425px"></div></div>
+                    </div>
+                </div>
+                <div class="tizi_student_ad video_91img cf"></div>
+            </div>
+            {elseif $data.preview->extension=='swf'}
+            <div class="border01">
+                <object id="mutiupload" name="mutiupload" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="560"><param name="movie" value="{$url}" /><param name="wmode" value="transparent" /><param name="allowScriptAccess" value="always" />
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="{$url}" width="1000" height="560" wmode="transparent" allowScriptAccess="always">
+                <!--<![endif]-->
+                <span class="flashNotice"><a href="http://www.adobe.com/go/getflashplayer" target="_blank"><img src="{$static_url}{$static_version}image/common/get_flash_player.gif" alt="下载Flash播放器" /></a><span>您需要安装11.4.0以上的版本的Flash播放器，才能正常访问此页面。</span><!--[if !IE]>--></object>
+                <!--<![endif]-->
+                </object>
+            </div>
+            {else}  
+
+            {/if}
+        {else}  <!-- 支持预览 ? -->   
+        <div class="dontPrev">
+            此文件不支持在线预览
+        </div>  
+        {/if}   <!-- 支持预览 ?  over -->
+		</div>
+		<div class="lessonListBox fr">
+			<a class="dropBoxup loginCheck" href="{$site_url}teacher/lesson/upload{if $breadcrumb.subject.id && $data.preview->category_id}/{$breadcrumb.subject.id}/{$data.preview->category_id}{else}{/if}">
+				<span>上传文件赚积分</span>
+			</a>
+			<div class="downloadDiv">
+				<h3>文件贡献者</h3>
+				<div class="downInfo cf">
+					{if $data.preview->owner}
+					<a href="{$space_url}{if $data.preview->owner->domain}{$data.preview->owner->domain}{else}space/{$data.preview->owner->space_id}{/if}" target="_blank"><img class="fl" src="{if $data.preview->owner->avatar}{path2spaceAvatar($data.preview->owner->uid)}{else}{$static_url}{$static_version}image/common/{Constant::SPACE_TIZI_AVATAR}{/if}" alt="" width="50" height="50"></a>
+					<div class="fl">
+						<h4><a href="{$space_url}{if $data.preview->owner->domain}{$data.preview->owner->domain}{else}space/{$data.preview->owner->space_id}{/if}" target="_blank">{sub_str($data.preview->owner->nickname,0,18)}</a></h4>
+						<p>上传时间：{$data.preview->upload_time}</p>
+					</div>
+					{else}
+					<a href="{$space_url}{Constant::SPACE_TIZI_DOMAIN}" target="_blank"><img class="fl" src="{$static_url}{$static_version}image/common/{Constant::SPACE_TIZI_AVATAR}" alt="" width="50" height="50"></a>
+					<div class="fl">
+						<h4><a href="{$space_url}{Constant::SPACE_TIZI_DOMAIN}" target="_blank">{Constant::SPACE_TIZI_NICKNAME}</a></h4>
+						<p>上传时间：{$data.preview->upload_time}</p>
+					</div>
+					{/if}
+				</div>
+				<div class="starBox">
+					<span class="star cf" id="satrRating">
+						<em class="title fl">评价：</em>
+						<a href="javascript:void(0)" data-level="1" class="fl"></a>
+						<a href="javascript:void(0)" data-level="2" class="fl"></a>
+						<a href="javascript:void(0)" data-level="3" class="fl"></a>
+						<a href="javascript:void(0)" data-level="4" class="fl"></a>
+						<a href="javascript:void(0)" data-level="5" class="fl"></a>
+						<em class="fl level-text">评星</em>
+					</span>
+				</div>
+				<div class="downloadLine">
+					<a href="javascript:void(0)" class="cBtnNormal doc-down" data-num="{$data.preview->id}">下载</a>
+					{if $favorite_exist}
+					<a href="javascript:void(0)" class="cBtnSilver storeUpOver " data-num="{$data.preview->id}" data-category="{$data.preview->category_id}">已收藏</a>
+					{else}
+					<a href="javascript:void(0)" class="cBtnSilver storeUp " data-num="{$data.preview->id}" data-type="{$data.preview->doc_type}" data-category="{$data.preview->category_id}">收藏</a>
+					{/if}
+				</div>
+				<div class="cf">
+					<!-- JiaThis Button BEGIN -->
+					<div class="jiathis_style_32x32">
+						<a class="jiathis_button_qzone"></a>
+						<a class="jiathis_button_tsina"></a>
+						<a class="jiathis_button_tqq"></a>
+						<a class="jiathis_button_weixin"></a>
+						<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+						
+					</div>
+					<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1400640988756906" charset="utf-8"></script>
+					<!-- JiaThis Button END -->
+				</div>	
+			</div>
+			<div class="listOutBox">
+				<h3>相关文件推荐</h3>
+				<div class="lessonList">	
+					<ul>
+						{foreach $data.related_docs as $val}
+						<li>
+							<h4 class="{$val->ico_class}">
+								<a href="{$site_url}teacher/lesson/view/{$val->id}" title="{$val->file_name}">{sub_str($val->file_name,0,25)}</a>
+							</h4>
+							<span><em>{$val->hits}人已阅读</em><em>{$val->page_count}页</em></span>
+						</li>
+						{/foreach}
+					</ul>
+				</div>	
+			</div>
+		</div>
+		{include file="teacher/lesson/lesson_download_tpl.html"}
+		{/block}
+		{block name=script}
+	    <script type="text/javascript">
+            //console.log(Teacher.lesson.prepare.flash_init());
+            seajs.use(['tizi_ajax','module/teacherLesson/lesson_prepare'],function(tiziAjax,main){
+                var swfversion = "{$swfversion}";
+                var jsversion = "{$version}";
+                main.swfObjectInit(swfversion,jsversion);
+            });
+            var Teacher = {};
+            Teacher.lesson={};
+            Teacher.lesson.prepare={
+                swfObjectHeight:"",
+                flash_init:function(){
+                    var docnum = document.getElementById("docnum").innerHTML;
+                    var arrayInit = new Array();
+                    arrayInit[0] = baseUrlName + 'lesson/lesson_document/flash_get_json';
+                    arrayInit[1] = staticBaseUrlName+'flash/lessonFlash/';
+                    arrayInit[2] = docnum;
+                    arrayInit[3] = basePageToken;
+                    arrayInit[4] = basePageName;
+                    arrayInit[5] = 750;//-134
+                    arrayInit[6] = this.swfObjectHeight;
+					arrayInit[7] =['doc','docx'];
+					arrayInit[8] =['ppt','pptx'];
+                    return arrayInit;
+                },
+				doc_down_auth:function(this_a, file_id, unlock){
+					seajs.use('module/teacherLesson/lesson_prepare',function(main){
+						main.lessonDown(this_a, file_id, unlock);
+					});
+				}
+				
+            }
+		</script>
+		<noscript>
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  id="TiZiPaper" name="TiZiPaper">
+			<param name="movie" value="{$static_base_url}flash/lessonFlash/TiZiPaper.swf{$version}" />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<param name="allowFullScreen" value="true" />
+			<param name="wmode" value="transparent">
+			<param name="wmode" value="Opaque">
+			<!--[if !IE]>-->
+			<object type="application/x-shockwave-flash" data="{$static_base_url}flash/lessonFlash/TiZiPaper.swf{$version}" id="TiZiPaper" name="TiZiPaper">
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="allowScriptAccess" value="sameDomain" />
+				<param name="allowFullScreen" value="true" />
+				<param name="wmode" value="transparent">
+				<param name="wmode" value="Opaque">
+			</object>
+			<!--<![endif]-->
+		</object>
+		</noscript>
+	</div>
+</div>
+{include file='file:[lib]common/tizi_flash.html' assign=noflash}
+<script type="text/javascript">
+var noflash = '{$noflash}';
+{literal}
+seajs.use('tizi_validform',function(ex){
+	ex.detectFlashSupport(function(){
+    	$('#flashContent').html(noflash);
+    });
+});
+{/literal}
+</script>
+{if !$unable_view}{include file='teacher/resource/media_player.html'}{/if}
+{/block}

@@ -1,0 +1,18 @@
+.ActiveHire{}
+.ActiveHire .ownerHire{background-color:#f17a43;margin-bottom:35px;}
+.ActiveHire .hireTitle{background: url("../../image/ActiveHire/img_title.gif") no-repeat; width:983px; height:64px; text-align: center;font-size: 26px; line-height:54px; color:#fff;margin-bottom: 35px;}
+.ActiveHire .hireContent{clear: both; overflow: hidden;margin-bottom:35px;position: relative;height:270px;}
+.ActiveHire .hireContent p{font-size: 14px; line-height:30px; color:#333333;margin-bottom:20px;}
+.ActiveHire .hireContent b{font-weight: normal;color:#ff7a1d;}
+.ActiveHire .hireContent .shareBox{display:block;position: absolute; right:10px;bottom:10px;_left:700px;}
+.ActiveHire .hireDemand{background-color:#f7f7f7;border-top:1px solid #ededed;border-bottom: 1px solid #ededed;height: 680px;margin-bottom: 35px;}
+.ActiveHire .hireDemand .md_hireName{padding-bottom:30px;border-bottom: 1px solid #ededed;padding-top:20px;}
+.ActiveHire .hireDemand .md_hireName h2{font-size:24px; color:#ff7a1d;line-height: 44px;margin-bottom:20px;font-weight: normal;}
+.ActiveHire .hireDemand .md_hireName p{font-size: 16px; color: #333333; line-height:20px;margin-bottom:20px;background: url("../../image/ActiveHire/icon_dot.gif") no-repeat left 3px;padding-left:20px;}
+.ActiveHire .hireDemand .md_hireName b{font-weight: normal;color:#ff7a1d;}
+.ActiveHire .hireDemand .md_hireTeacher{padding-bottom:30px;padding-top:10px;}
+.ActiveHire .hireDemand .md_hireTeacher h2{font-size:24px; color:#ff7a1d;line-height: 44px;margin-bottom:20px;font-weight: normal;}
+.ActiveHire .hireDemand .md_hireTeacher p{font-size: 16px; color: #333333; line-height:30px; text-indent:30px;margin-bottom:35px;}
+.ActiveHire .hireDemand .md_hireTeacher b{font-weight: normal;color:#ff7a1d;}
+.ActiveHire .hireDemand .lorgBtn{display:block;background-color:#fc791d;font-size:18px; color:#fff; width:365px; height: 55px; line-height: 55px;text-align: center;border-radius:5px; box-shadow: 0px 0px 1px 0px #f8881b;}
+.ActiveHire .hireDemand .lorgBtn:hover{background-color:#f8881b;}

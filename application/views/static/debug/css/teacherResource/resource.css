@@ -1,0 +1,240 @@
+/*我的资源库效果开始*/
+.teacherResource{}
+/*我的资源库通用表格样式开始*/
+.teacherResource table{width:100%; border:1px solid #d7d7d7;font-size:14px;}
+.teacherResource table a{color: #17a27e;}
+.teacherResource table a:hover{color: #f90;}
+.teacherResource table td,.teacherResource table th{text-align:center;line-height:40px;border:1px solid #d7d7d7;}
+.teacherResource table th{background:#f6f6f6;font-size:16px;color:#565656;font-weight:normal;}
+/*我的资源库通用表格样式结束*/
+/*导航开始*/
+.teacherResource .hd_title{background-color:#f6f6f6;padding:15px 20px;margin-bottom:10px;font-size: 14px;clear:both; overflow: hidden; border: 1px solid #ddd;*zoom:1;}
+.teacherResource .hd_title a{font-size: 14px;}
+.teacherResource .hd_title a.cgr{color: #159c7e;}
+.teacherResource .hd_title a.cgr:hover{color: #f90;cursor: pointer;}
+.teacherResource .hd_title a.cBtnNormal{width: 160px;height: 30px;line-height: 30px;text-align: center; margin-right: 10px;}
+.teacherResource .hd_title a.cBtnNormal:hover{color: #fff;}
+.teacherResource .hd_title .capacity strong{width: 80px;height: 4px;border:1px solid #d9d9d9;background: #fff;display: inline-block;font-size: 0px;position: relative;top: -2px;margin: 0px 5px;}
+.teacherResource .hd_title .capacity strong span{width: 30%;height:4px;background: #27bf9b;display: inline-block;font-size: 0px;}
+/*导航结束*/
+/*我的资源库左侧样式开始*/
+.teacherResource .slide{background-color: #f6f6f6;}
+.teacherResource .w220{width:220px;}
+.teacherResource .org{color:#ff9900;}
+.teacherResource .main{width:auto;}
+.teacherResource .cgr{color: #159c7e;}
+.teacherResource .slide .slideBox{text-align: left; text-indent: 2px;}
+.teacherResource .slide .slideBox h2{font-size:18px;line-height:50px; height:45px;color:#565656;font-weight:normal;padding-left:15px;padding-right:20px;}
+.teacherResource .slide .slideBox .slideContent{overflow:visible;background:url(../../image/teacherLesson/line5.png) repeat-y 16px center;}
+.teacherResource .slide  .tree-list li{line-height:30px;margin:3px 0; position: relative;*zoom:1;}
+.teacherResource .slide  .tree-list li a{line-height:30px;display:block;height:30px;white-space: nowrap;}
+.teacherResource .slide  .tree-list li a:hover{background-color:#e7e6e5;color:#333;}
+.teacherResource .slide  .tree-list li em.arrow{display: none;}
+.teacherResource .slide  .tree-list li.active em.arrow{display:block; width:10px; height:30px;position: absolute;right:-9px; top:0px; background: url("../../image/teacherResource/icon_arrow.png") no-repeat left top;_background:url("../../image/teacherResource/icon_arrow.gif") no-repeat left top;}
+.teacherResource .slide  .tree-list li.depth_1 a{background:url(../../image/teacherLesson/line3.png) no-repeat 15px center;}
+.teacherResource .slide  .tree-list li.depth_1 a:hover{background-color:#e7e6e5;}
+.teacherResource .slide  .tree-list li.depth_1{font-weight:normal;cursor:pointer;font-size:14px;color:#545656;line-height:36px;text-indent:28px;}
+.teacherResource .slide  .tree-list li.depth_2{text-indent:28px;}
+.teacherResource .slide  .tree-list li.depth_3{text-indent:42px;}
+.teacherResource .slide  .tree-list li.depth_4{text-indent:56px;}
+.teacherResource .slide  .tree-list li.depth_5{text-indent:70px;}
+.teacherResource .slide  .tree-list li.depth_2 a:hover,
+.teacherResource .slide  .tree-list li.depth_3 a:hover,
+.teacherResource .slide  .tree-list li.depth_4 a:hover,
+.teacherResource .slide  .tree-list li.depth_5 a:hover{background:url(../../image/teacherLesson/line5.png) repeat-y 16px center #ddd;}
+.teacherResource .slide  .tree-list li.active{background-color:#0bbe93;}
+.teacherResource .slide  .tree-list li.active a{color:#fff;}
+.teacherResource .slide  .tree-list li.active a:hover{background-color:#0bbe93;color: #fff;}
+/*我的资源库左侧样式结束*/
+/*初始首页样式开始*/
+.teacherResource .ResourceIndex{text-align: center;padding:15px 50px; background-color: #f7f7f7;}
+.teacherResource .ResourceIndex h2{font-size:24px; margin-bottom:10px; color: #333;}
+.teacherResource .ResourceIndex p{font-size: 12px; color: #333333;}
+.teacherResource .ResourceIndex .ResourceIndex_bd{margin-top: 20px;}
+.teacherResource .ResourceIndex .ResourceIndex_bd .cBtnNormal{width:245px;height:40px; line-height:40px; font-size:18px; margin-bottom: 20px;}
+.teacherResource .ResourceIndex .ResourceIndex_bd .cBtnNormal:hover{color: #fff;}
+.teacherResource .ResourceIndex .ResourceIndex_bd .leftFolder,.teacherResource .ResourceIndex .ResourceIndex_bd .rightFolder{width:510px; background-color: #fdfdfd; padding:35px; border: 1px solid #eee; position: relative;margin-left:150px;margin-bottom: 50px;}
+.teacherResource .ResourceIndex .ResourceIndex_bd p{text-align: center;margin-left:150px;*margin-left:0px;}
+.teacherResource .ResourceIndex .explain{margin-top:0px;text-align: left;margin-bottom: 20px;}
+.teacherResource .ResourceIndex .explain h3{font-size: 14px;font-weight: bold;color: #333;line-height: 30px;margin-bottom: 0;}
+.teacherResource .ResourceIndex .explain p {font-size: 14px;color: #333;line-height: 30px; text-align: left;}
+/*初始首页样式结束*/
+/*常规首页样式开始*/
+.teacherResource .ResourceCommon{margin-top: 5px;}
+.teacherResource .ResourceCommon .Folderlist{padding: 5px;clear: both; overflow: hidden;}
+.teacherResource .ResourceCommon .Folderlist ul{list-style:none; margin-bottom: 5px;}
+.teacherResource .ResourceCommon .Folderlist ul li{position: relative;line-height:50px;height:50px;border:1px solid #fff;border-bottom:1px solid #eee; cursor:pointer;clear:both;*zoom:1;}
+.teacherResource .ResourceCommon .Folderlist ul li label{float:left;display:block;font-size:14px; color: #333333;text-align: left; text-indent: 5px; cursor: pointer; width:15%;}
+.teacherResource .ResourceCommon .Folderlist ul li label.folderName{width:500px;font-size: 14px;}
+.teacherResource .ResourceCommon .Folderlist ul li label.folderName a{display: block;text-indent:45px;background: url(../../image/teacherResource/folder_icon.gif) no-repeat 5px center;}
+.teacherResource .ResourceCommon .Folderlist ul li label.folderTime{position: relative;}
+.teacherResource .ResourceCommon .Folderlist ul li label.folderType{width:12%;}
+.teacherResource .ResourceCommon .Folderlist ul li label.folderSize{width:15%; text-align: center;}
+.teacherResource .ResourceCommon .Folderlist ul li label.folderTime a.TextDel{display:none;position:absolute; right:-57px; top:12px; font-size:12px; width:35px; height:25px;line-height: 25px; color: #333;}
+.teacherResource .ResourceCommon .Folderlist ul li.active{background-color: #f6f6f6; border: 1px solid #eeeeee;cursor: pointer;}
+.teacherResource .ResourceCommon .Folderlist ul li.active label.folderTime a.TextDel{display: block;}
+/*常规首页样式结束*/
+/*没有教材表单样式开始*/
+.teacherResource .havenovIndexBox{margin-left: 20px;}
+.teacherResource .havenovIndexBox h2{font-size:14px; color:#333;font-weight: normal;margin-bottom: 20px;}
+.teacherResource .havenovIndexBox ul li{margin-bottom:10px;clear: both; overflow: hidden; line-height:27px;}
+.teacherResource .havenovIndexBox ul li label{float: left;width: 90px; text-align: left;}
+.teacherResource .havenovIndexBox ul li input.textInput{float:left;line-height:27px;border:1px solid #ddd;height:27px;padding:0 5px;margin-left: 5px;}
+/*没有教材表单样式结束*/
+/*同步知识点目录开始*/
+.teacherResource .sysDirect{line-height: 24px; clear: both; overflow: hidden;}
+.teacherResource .sysDirect .fileDirectList{float: left; width:740px;}
+.teacherResource .sysDirect .fileDirectText{margin-bottom:20px; clear: both; overflow: hidden;}
+.teacherResource .sysDirect .fileDirectText .md_hd{border-bottom:1px solid #eee; clear: both; height:40px; line-height: 40px;}
+.teacherResource .sysDirect .fileDirectText .md_hd h2{font-size: 14px;padding: 5px;}
+.teacherResource .sysDirect .fileDirectText .md_hd .mh_title{float: left; color: #ff9900; font-size: 16px;border-bottom: 1px solid #ff9900; height:40px;}
+.teacherResource .sysDirect .fileDirectText .md_hd .mh_title b{color: #999999; font-size: 14px;}
+.teacherResource .sysDirect .fileDirectText .md_hd .mh_option{float: right;position: relative;}
+.teacherResource .sysDirect .fileDirectText .md_hd .mh_option a{font-size: 12px; color: #fff;margin-top:5px;display:block;position: relative; text-indent: 6px; width: 87px; height: 27px; line-height: 27px;}
+.teacherResource .sysDirect .fileDirectText .md_hd .mh_option a:hover{color: #fff;}
+.teacherResource .sysDirect .fileDirectText .md_hd .mh_option a em{display: block; width:15px; height:12px;position: absolute;top:8px;left:10px;background: url("../../image/teacherResource/icon_upload.gif") no-repeat center center;}
+.teacherResource .sysDirect .fileDirectText .md_hd .mh_option a.active{color:#ff9900;}
+.teacherResource .sysDirect .fileDirectText .md_hd .mh_option .uploadify-button{background: none;border:none;}
+.teacherResource .sysDirect .fileDirectText .md_hd .mh_option .uploadify{position: absolute;top:1px;left:3px;}
+.teacherResource .sysDirect .fileDirectText .md_hd .mh_option .uploadify-queue{display:none;margin-bottom: 0px;}
+.teacherResource .sysDirect .fileDirectText .md_bd{clear: both; overflow: hidden;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul{list-style:none; margin-bottom: 5px;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li{position: relative;clear:both; overflow:hidden;border:1px solid #fff;border-bottom:1px solid #eee; cursor:pointer;zoom:1;padding:5px 0px;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li label{display:block;font-size:14px;color: #333333; width:55%;text-align: left;cursor: pointer;line-height:35px;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li span{display:block;font-size:14px; color: #333333;text-align: right;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li span.fsize{width:120px;_width:110px;line-height: 35px;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li span.ftime{width:190px;padding-right: 10px;line-height: 35px;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li .btnList{display:none;float:right;line-height: 35px;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li .btnList a{margin-right:8px;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li.active{background-color:#f6f6f6;border:1px solid #fff;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li.active label{width:45%;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li.active span.fsize,.teacherResource .sysDirect .fileDirectText .md_bd ul li.active span.ftime{display: none;}
+.teacherResource .sysDirect .fileDirectText .md_bd ul li.active .btnList{display: block;}
+/*同步知识点目录结束*/
+/*更多内容页开始*/
+.teacherResource .sysDirectMore{text-align: center;line-height: 24px;}
+.teacherResource .sysDirect  .sysDirectMore .fileDirectText .md_bd ul{margin-bottom:20px; clear: both; overflow: hidden;}
+.teacherResource .sysDirect  .sysDirectMore .fileDirectText .md_bd ul li label{width:640px;}
+.teacherResource .sysDirect  .sysDirectMore .fileDirectText .md_bd ul li.active label{width:45%;}
+/*更多内容页结束*/
+/*其他文档目录开始*/
+.teacherResource .sysDirect .w140{width: 140px; margin-right: 20px;}
+.teacherResource .sysDirect .otherFileText{width: 830px;}
+.teacherResource .sysDirect .otherFileText .first_view_head{padding-bottom: 10px;border-bottom: 1px solid #ccc;}
+.teacherResource .sysDirect .otherFileText .first_view_head a{color: #fff;padding-left: 10px;display:block; float: left;margin-right: 15px;}
+.teacherResource .sysDirect .otherFileText .createNewFileBox {background: #f6f6f6;padding:10px;border-bottom: none;font-size: 14px;clear:both;overflow: hidden;}
+.teacherResource .sysDirect .otherFileText .createNewFileBox .cBtnNormal{padding: 0px;width: 110px;height: 35px;line-height: 35px;text-align: center;position: relative;}
+.teacherResource .sysDirect .otherFileText .createNewFileBox .cBtnNormal em{display: block; width:15px; height:12px;position: absolute;top:13px;_top:9px;left:10px;background: url("../../image/teacherResource/icon_upload.gif") no-repeat center center;}
+.teacherResource .sysDirect .otherFileText .createNewFileBox .cBtnNormal .uploadify{position: absolute;top:1px;left:3px;}
+.teacherResource .sysDirect .otherFileText .createNewFileBox .cBtnSilver{color: #333;padding: 0px 21px;line-height: 35px;height: 35px;}
+.teacherResource .sysDirect .otherFileText .createNewFileBox .uploadify-button{background: none;border:none;}
+.teacherResource .sysDirect .otherFileText .md_hd{border-bottom:1px solid #eee; clear: both; height:40px; line-height: 40px;}
+.teacherResource .sysDirect .otherFileText .md_hd h2{font-size: 14px;padding: 5px;}
+.teacherResource .sysDirect .otherFileText .md_bd{padding:5px;clear: both; overflow: hidden;}
+.teacherResource .sysDirect .otherFileText .md_bd ul{list-style:none; margin-bottom: 5px;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li{height:50px;line-height:50px;position: relative;border-bottom:1px solid #eee; cursor: pointer;clear: both;*zoom:1;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li.nav_tab{cursor: default;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li label{display:block;font-size:14px; color: #333333; width:530px; overflow: hidden; text-align: left; text-indent: 5px;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li span{display:block;font-size:14px; color: #333333;text-align: left;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li span.fsize{width:120px;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li span.ftime{width:160px; text-align: right;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li .btnList{display:none;position: absolute; right:10px; top: 2px;_top:10px;*zoom:1;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li .btnList a{margin-right:8px;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li.active{background-color:#f6f6f6; overflow: hidden;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li.active span.fsize,.teacherResource .sysDirect .otherFileText .md_bd ul li.active span.ftime{display: none;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li.active .btnList{display: block;}
+.teacherResource .sysDirect .otherFileText .md_bd ul li.folders label{display: block;text-indent:45px;background: url(../../image/teacherResource/folder_icon.gif) no-repeat 5px center;cursor:pointer;}
+/*其他文档目录结束*/
+/*资源阅览页面开始*/
+.teacherResource .ResourceView{line-height:30px; text-align: center;}
+.teacherResource .ResourceView h2{font-size:14px; color: #333333;}
+.teacherResource .ResourceView p{margin-bottom:20px;}
+.teacherResource .ResourceView p span{margin-right:20px;}
+.teacherResource .ResourceView p span.ViewSize{margin-left:40px;}
+.teacherResource .ResourceView p span em{font-style:normal;}
+.teacherResource .ResourceView a.download{width: 75px; height: 35px; line-height:35px;text-align: center;font-size: 14px;}
+.teacherResource .ResourceView .flashView{margin-top: 10px; height: auto;padding: 20px;}
+.teacherResource .ResourceView .noflashView{padding-top:80px;background: url("../../image/teacherResource/noflash.gif") no-repeat center center; text-align: center;}
+.teacherResource .ResourceView .noflashView h2{margin-top:60px;}
+/*资源阅览页面结束*/
+/*首页ResourceIndex 弹出框 chapterIndexBox开始*/
+.teacherResource .chapterIndexBox{clear:both;width:780px;line-height: 24px;}
+.teacherResource .chapterIndexBox .md_hd p{font-size: 12px;}
+.teacherResource .chapterIndexBox .md_bd{padding: 10px 0px;}
+.teacherResource .chapterIndexBox .md_bd h2{font-size: 16px; color: #333333; margin-bottom:10px;}
+.teacherResource .chapterIndexBox .md_bd ul{list-style:none;}
+.teacherResource .chapterIndexBox .md_bd ul li{clear: both;display:block;border-top:1px solid #eee; line-height:40px;}
+.teacherResource .chapterIndexBox .md_bd ul li .Validform_checktip{font-size: 12px;}
+.teacherResource .chapterIndexBox .md_bd ul li label{float: left;width:70px; overflow: hidden;}
+.teacherResource .chapterIndexBox .md_bd ul li .vlist{float: left;width:670px;}
+.teacherResource .chapterIndexBox .md_bd ul li .vlist a{display:block;float:left;font-size: 12px; color: #333; margin-right: 30px;white-space:nowrap;}
+.teacherResource .chapterIndexBox .md_bd ul li .vlist a:hover{color:#f90;}
+.teacherResource .chapterIndexBox .md_bd ul li .vlist a.active{color:#f90;}
+.teacherResource .chapterIndexBox .md_bd ul li .vlist .gradeList{height:70px;overflow-y:auto;}
+.teacherResource .chapterIndexBox .md_bd ul li.posVersion{border: 0;}
+.teacherResource .chapterIndexBox .md_bd ul li.posVersion a.havenov{display:block;font-size:12px;margin-left:70px;clear: both; overflow: hidden; width:125px;}
+/*首页ResourceIndex 弹出框 chapterIndexBox结束*/
+/*移动分享网盘样式开始*/
+.teacherResource .pop_main .moveFile{clear:both; overflow:hidden;}
+.teacherResource .pop_main .moveFile .textFolder{width:230px;margin-right: 10px;}
+.teacherResource .pop_main .moveFile .textFolder h2{margin-bottom:10px;font-size:14px;color:#333333;}
+.teacherResource .pop_main .moveFile .textFolder .textView{line-height: 24px;border: 1px solid #737373;height:260px;overflow:hidden;overflow-y:auto;}
+.teacherResource .pop_main .moveFile .textFolder .textView a{display: block;color:#333333; text-indent: 5px;line-height: 28px;}
+.teacherResource .pop_main .moveFile .textFolder .textView a:hover{background-color: #b9d8d6;}
+.teacherResource .pop_main .moveFile .textFolder .textView a.active{background-color: #b9d8d6;}
+.teacherResource .pop_main .moveFile .textFolder .textView a.depth_1{text-indent:5px;}
+.teacherResource .pop_main .moveFile .textFolder .textView a.depth_2{text-indent:20px;}
+.teacherResource .pop_main .moveFile .textFolder .textView a.depth_3{text-indent:35px;}
+.teacherResource .pop_main .moveFile .textFolder .textView a.depth_4{text-indent:50px;}
+.teacherResource .pop_main .moveFile .textFolder .textView a.depth_5{text-indent:65px;}
+.teacherResource .pop_main .upFileTable{width: 560px;}
+.teacherResource .pop_main .upFileTable th,
+.teacherResource .pop_main .upFileTable td{border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;padding-left: 10px;height: 29px;}
+.teacherResource .pop_main .upFileTable th{background: #eee;}
+.teacherResource .pop_main .upFileTable td a.complete,
+.teacherResource .pop_main .upFileTable td a.upLoading{color: #159c7e;cursor: default;}
+.teacherResource .pop_main .upFileTable td a.complete{font-weight: bold;font-size: 14px;}
+.teacherResource .pop_main .upFileTable td a.waiting{color: #999;cursor: default;}
+.teacherResource .pop_main .upFileTable td a.deleteFile{color: #666;font-size: 14px;}
+.teacherResource .pop_main input.new_class_text {width:385px;height: 26px;padding-left: 6px;border: 1px solid #999;}
+.teacherResource .pop_main .fileDisc{margin-top: 5px;}
+.teacherResource .pop_main .fileDisc textarea{width: 558px;height: 78px;}
+.teacherResource .pop_main .upFileTable{width: 560px;margin-bottom:10px;}
+.teacherResource .pop_main .upFileTable li{width: 100%;}
+.teacherResource .pop_main .upFileTable span{border-top: 1px solid #6dbdab;border-bottom: 1px solid #6dbdab;padding-left: 10px;height: 29px;display: inline-block;float: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.teacherResource .pop_main .upFileTable span.col1{width: 220px;}
+.teacherResource .pop_main .upFileTable span.col2{width: 80px;}
+.teacherResource .pop_main .upFileTable span.col3{width: 90px;}
+.teacherResource .pop_main .upFileTable span.col4{width: 80px;}
+.teacherResource .pop_main .upFileTable span.col5{width: 40px;}
+.teacherResource .pop_main .upFileTable .UFHeader span{background: #eee;border-bottom:none;}
+.teacherResource .pop_main .upFileTable .fileList a.complete,
+.teacherResource .pop_main .upFileTable .fileList a.upLoading{color: #159c7e;cursor: default;}
+.teacherResource .pop_main .upFileTable .fileList a.complete{font-weight: bold;font-size: 14px;}
+.teacherResource .pop_main .upFileTable .fileList a.waiting{color: #999;cursor: default;}
+.teacherResource .pop_main .upFileTable .fileList a.deleteFile{color: #666;font-size: 14px;}
+.teacherResource .pop_main .upFileTable .fileList a.onCancel{color:#666;font-size: 14px;}
+.teacherResource .pop_main .upFileTable .loadingBg,
+.teacherResource .pop_main .upList .loadingBg{position: relative;}
+.teacherResource .pop_main .upFileTable .loadingBg strong,
+.teacherResource .pop_main .upList .loadingBg strong{display: inline-block;height: 29px;position: absolute;left: 0px;top: 1px;background: #159c7e;opacity: 0.2;filter:alpha(opacity=20);}
+.teacherResource .pop_main .upList .loadingBg strong{height: 24px;opacity: 0.5;filter:alpha(opacity=50);top:0px;}
+.teacherResource .pop_main .sharAllFile{font-size:14px; line-height:24px;color: #333333;margin-top:20px;_margin-top:5px;}
+.teacherResource .pop_main .sharAllFile label{display: block;}
+.teacherResource .pop_main .sharAllFile label input{margin-right:5px;vertical-align: middle; margin-top: -2px;}
+.teacherResource .pop_main .sharAllFile span{font-size:12px;margin-left:2px; color: #666666;margin-left:3px;}
+.teacherResource .pop_main .fileListQueue{margin-bottom:5px;*zoom:1;}
+/*移动分享网盘样式结束*/
+/*新版弹出框样式开始*/
+.teacherResource .pop_main .fileListUpload{font-size: 12px;clear:both;overflow: hidden;margin-bottom:10px;}
+.teacherResource .pop_main .fileListUpload p.fileListTip{font-size: 12px; color: #333;margin-bottom: 5px;}
+.teacherResource .pop_main .fileListUpload .uploadBtn{position: relative;zoom:1;}
+.teacherResource .pop_main .fileListUpload .uploadBtn .cBtnNormal{padding: 0px;width: 110px;height:37px;line-height: 37px;text-align: center;position: relative;}
+.teacherResource .pop_main .fileListUpload .uploadBtn .cBtnNormal em{display: block; width:15px; height:12px;position: absolute;top:13px;_top:9px;left:10px;background: url("../../image/teacherResource/icon_upload.gif") no-repeat center center;}
+.teacherResource .pop_main .fileListUpload .uploadBtn .cBtnNormal:hover{color:#fff;}
+.teacherResource .pop_main .fileListUpload .uploadBtn .uploadSwf{position: absolute;top:0px;left:0px;}
+.teacherResource .pop_main .fileListUpload .uploadBtn .uploadSwf .uploadify .swfupload{left:0px;}
+.teacherResource .pop_main .fileListUpload .uploadBtn .uploadSwf .uploadify-button{background: none;border:none;}
+.teacherResource .pop_main .fileListUpload .uploadBtn .uploadSwf .uploadify-queue{display:none;margin-bottom: 0px;}
+/*新版弹出框样式结束*/
+/*我的资源库效果结束*/

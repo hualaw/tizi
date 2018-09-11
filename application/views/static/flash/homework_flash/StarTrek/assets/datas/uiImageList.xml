@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:25ea672b6abf6c9304f9ab02613a3607$ -->
+<TextureAtlas imagePath="uiImageList.png">
+    <SubTexture name="win" x="2" y="2" width="26" height="16" frameX="-6" frameY="-11" frameWidth="38" frameHeight="38"/>
+</TextureAtlas>

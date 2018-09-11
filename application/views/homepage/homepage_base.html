@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="keywords" content="{block name=keywords}{/block}"/>
+<meta name="description" content="{block name=description}{/block}"/>
+<meta property="qc:admins" content="2571203702641216375" />
+<meta property="wb:webmaster" content="7a300e9731d274ad" />
+<title>{block name=title}{/block}-梯子网</title>
+<link rel="stylesheet" type="text/css" href="{$static_url}{$static_version}css/homePage/style.css" />
+{block name=stylesheet}{/block}
+</head>
+
+<body class="navHome">
+{include file='file:[lib]common/homepage/header.html'}
+<div class="layout homePage" id="tiziModule" module="homePage">
+	{block name=container}{/block}
+</div>
+{include file='file:[lib]common/homepage/footer.html'}
+<!-- js引入开始 -->
+<script type="text/javascript" src="{$static_url}{$static_version}public/sea/2.1.0/sea.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}public/config.js{$version}"></script>
+<!--js引入结束-->
+{block name=script}{/block}
+{include file='file:[lib]common/tizi_ga.html'}
+</body>
+</html>

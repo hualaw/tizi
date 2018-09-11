@@ -1,0 +1,36 @@
+<!--排行开始-->
+<div class="special_rank fl">
+	<h1>{$p_c_name}</h1>
+	<h2>规则：{$rule}</h2>
+	<div class="rank_hd cf">
+		<div class="fl">我的名次<h4>{$my_rank}</h4></div>
+		<div class="fl">我的成绩<h4>{$my_score}</h4></div>
+	</div>
+	<h3>全站排行榜</h3>
+	<div class="rank_bd">
+		<ul>
+			<!--hd开始-->
+			<li class="hd">
+			<span>名次</span>
+			<span>成绩</span>
+			<span>姓名</span>
+			<span>地区</span>
+			</li>
+			<!--hd结束-->
+			{foreach $ranking_list as $val name=rank_li}
+                {if $smarty.foreach.rank_li.index%2==0}
+                <li>
+                {else}
+                <li class="odd">
+                {/if}
+                <span>{$val.order}</span>
+                <span>{$val.score}</span>
+                <span>{$val.username}</span>
+                <span>{$val.area}</span>
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+</div>
+<!--排行结束-->
+

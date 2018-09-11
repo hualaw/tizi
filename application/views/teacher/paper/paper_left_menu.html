@@ -1,0 +1,32 @@
+<!--左侧选择学科下拉开始-->
+<ul>
+    <li name="paper_question">
+    	<a href="{$site_url}teacher/paper/question/{$data.subject_id}">知识点选题</a>
+    </li>
+    <li name="paper_course">
+        <a href="{$site_url}teacher/paper/course/{$data.subject_id}">同步章节选题</a>
+    </li>
+    <li name="paper_exam">
+        <a href="{$site_url}teacher/paper/exam/{$data.subject_id}">试卷选题</a>
+    </li>
+    <li name="paper_search">
+    	<a href="{$site_url}teacher/paper/search/{$data.subject_id}">搜索选题</a>
+    </li>
+    <li name="paper_intelligent">
+        <a href="{$site_url}teacher/paper/intelligent/{$data.subject_id}">智能选题</a>
+    </li>
+    {nocache}
+    {if $user_type eq $constant.user_type_teacher}
+    <li name="paper_myquestion">
+        <a href="{$site_url}teacher/paper/myquestion/{$data.subject_id}">我的题库选题</a>
+    </li>
+    {/if}
+    {/nocache}
+</ul>
+<div class="demoAnimation">
+    <span class="outPaper">出卷子演示动画</span>
+</div>
+<div class="preview-btn">
+    <a class="cBtnfixed184" href="{$site_url}teacher/paper/preview/{$data.subject_id}">试卷预览</a>
+</div>
+<div class="question-cart"></div>

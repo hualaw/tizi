@@ -1,0 +1,25 @@
+{extends file='teacher/class/base.html'}
+{block name=title}作业{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<div class="mainContainer history" pagename="class_{$alpha_class_id}">
+    <input type="hidden" id="class_id" value="{$alpha_class_id}" />
+	<div class="historyH">
+		{if $has_old_paper}
+		<a style='margin-right:10px' href="{$site_url}teacher/class/{$alpha_class_id}/paper" target="_blank" class="workRIcon">查看历史作业</a>
+		{/if}
+		<a href="{$site_url}zuoye/class/report/{$alpha_class_id}" class="workRIcon">汇总报告</a>
+	</div>
+
+	<div class="zuoye_list">
+	{include file='teacher/class/class_zuoye_page.html'}
+	</div>
+    <!-- 加载选择学校html开始 -->
+    {include file='file:[lib]addon/teacherSetSchool.html'}
+    <!-- 加载选择学校html结束 -->
+	 
+	
+	
+</div>
+{/block}

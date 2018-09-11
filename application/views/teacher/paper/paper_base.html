@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{block name=title}{/block}-梯子网</title>
+<!--全站的公共样式文件-->
+<link rel="stylesheet" type="text/css" href="{$static_url}css/base/base.css{$version}" />
+<!--老师端的公共样式文件-->
+<link rel="stylesheet" type="text/css" href="{$static_url}css/teacher/common.css{$version}" />
+<!--老师端的非公共样式文件-->
+<link rel="stylesheet" type="text/css" href="{$static_url}css/teacher/teacher.css{$version}" />
+<!--jquery-ui-1.10.3.custom.min.css-->
+<link href="{$static_url}css/lib/jquery-ui-1.10.3.custom.min.css{$version}" rel="stylesheet" type="text/css" />
+{block name=stylesheet}{/block}
+</head>
+
+<body class="headerQuestion">
+{include file='file:[lib]common/tizi_token.html'}
+<div class="header">
+    <div class="topNav">
+        <div class="miniBox cf">
+            {include file='teacher/paper/top_nav.html'}
+        </div>
+    </div>
+</div>
+<!--主要部分开始-->
+<div class="wrap">
+    <div class="mainContent fl">
+        <div class="mainWrap main-wrap">
+            {block name=container}{/block}
+        </div>
+    </div>
+    <div class="leftBar fl">
+        <div class="mainMenu main-menu fl">
+            <!--个人中心开始-->
+            <div class="memberCenter">
+                <!-- 当前学科开始 -->
+                <!-- class="subject-chose" data-subject="{$data.subject_id}" 这2个不能删,很多都依赖这2个 -->
+                <div class="currentSubject subject-chose posr" class="subject-chose" data-subject="{$data.subject_id}">
+                    <div class="hd">
+                        <h2 class="fl"><span>{$data.subject_name}</span></h2>
+                        <div class="changeSubjet fr">
+                            更换学科
+                            <div class="bd undis">
+                            <dl>
+                                <dt>
+                                    <a href="javascript:void(0)">初中</a>
+                                </dt>
+                                <dd>
+                                    <a href="{$sj_url}/1">语文</a>
+                                    <a href="{$sj_url}/2">数学</a>
+                                    <a href="{$sj_url}/3">英语</a>
+                                    <a href="{$sj_url}/4">物理</a>
+                                    <a href="{$sj_url}/5">化学</a>
+                                    <a href="{$sj_url}/6">生物</a>
+                                    <a href="{$sj_url}/7">政治</a>
+                                    <a href="{$sj_url}/8">历史</a>
+                                    <a href="{$sj_url}/9">地理</a>
+                                    <a href="{$sj_url}/24">信息技术</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <a href="javascript:void(0)">高中</a>
+                                </dt>
+                                <dd>
+                                    <a href="{$sj_url}/10">语文</a>
+                                    <a href="{$sj_url}/11">数学</a>
+                                    <a href="{$sj_url}/12">英语</a>
+                                    <a href="{$sj_url}/13">物理</a>
+                                    <a href="{$sj_url}/14">化学</a>
+                                    <a href="{$sj_url}/15">生物</a>
+                                    <a href="{$sj_url}/16">政治</a>
+                                    <a href="{$sj_url}/17">历史</a>
+                                    <a href="{$sj_url}/18">地理</a>
+                                    <a href="{$sj_url}/25">信息技术</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <a href="javascript:void(0)">小学</a>
+                                </dt>
+                                <dd>
+                                    <a href="{$sj_url}/19">语文</a>
+                                    <a href="{$sj_url}/20">数学</a>
+                                    <a href="{$sj_url}/21">英语</a>
+                                    <a href="{$sj_url}/22" class="tempSubject">科学</a>
+                                    <a href="{$sj_url}/26">信息技术</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 当前学科结束 -->
+                {include file='teacher/paper/paper_left_menu.html'}
+            </div>
+            <!--个人中心结束-->
+        </div>
+        <div class="hidden-arrow fl"><a class="hide-menu"></a></div>
+    </div>
+</div>
+{include file="feedback/feedback_question.html"}
+<!--主要部分结束-->
+{include file='teacher/paper/footer.html'}
+<script type="text/javascript" src="{$static_url}{$static_version}lib/jquery/1.8.2/jquery.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}lib/artDialog/4.1.7/artDialog.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}lib/Validform/5.3.2/Validform.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}lib/cookies/0.0.1/jquery.cookies.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}lib/jqueryui/1.10.3/jqueryui.min.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}lib/json2/0.0.1/json2.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}lib/tizi_ajax/0.0.1/tizi_ajax.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}lib/uploadify/2.2/jquery.uploadify.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}public/sea/2.1.0/sea.js{$version}"></script>
+
+<script type="text/javascript" src="{$static_url}js/common/common.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}js/teacher/paper.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}js/teacher/paper_common.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}js/teacher/paper_question.js{$version}"></script>
+<script type="text/javascript">
+Teacher.paper.paper_common.init();
+//v20140120 知识点选题注入纠错功能
+//Teacher.paper.paper_question.haveError();
+//收藏题目
+//Teacher.paper.paper_question.paperFavorit();
+</script>
+{block name=script}{/block}
+<!--js引入结束-->
+{include file='file:[lib]common/tizi_ga.html'}
+</body>
+</html>

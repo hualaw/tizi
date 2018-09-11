@@ -1,0 +1,39 @@
+{extends file='about/about_base.html'}
+
+{block name=title}{$news.title} - {$catname}{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--详细内容开始-->
+{if $news.catid == 19}
+<div class="mainContainer" pagename="notice">
+{else}
+<div class="mainContainer" pagename="information">
+{/if}
+    <div class="content articleCotent">
+        <div class="innerText">
+            <div class="path">
+    			{if $news.catid == 19}
+                 <a href="{$site_url}about/newslist/{$news.catid}/1">{$catname}</a>/<em>公告正文</em>
+                {else}
+                <a href="{$site_url}about/newslist/{$news.catid}/1">{$catname}</a>/<em>资讯正文</em>
+                {/if}
+            </div>
+            <div class="hd">
+                <h2>{$news.title}</h2>
+                <p class="info">
+    				来源：{if $news.copyfrom}{$news.copyfrom}{else}梯子网{/if}
+    			&nbsp;&nbsp;{$news.updatetime|date_format:'%Y年%m月%d日'}</p>
+            </div>
+            <div class="bd">
+                <p>
+    				{$news.content}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 详细内容结束 -->
+{/block}

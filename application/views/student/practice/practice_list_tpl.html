@@ -1,0 +1,47 @@
+            {foreach $all_categories as $a_c_key => $categories}
+			<div class="praTabPar">
+				<ul class="courseNav">
+                    {foreach $pra_subjects[$a_c_key] as $key=>$subject}
+                    <li class="s_{$key} fl subject_n">{$subject}</li>
+                    {/foreach}
+                    {if $a_c_key eq 1}
+                    <li class="fl"><a href="{$site_url}student/oral/1">每日口语（1-3）</a></li>
+                    <li class="fl"><a href="{$site_url}student/oral/2">每日口语（4-6）</a></li>
+                    {else}
+                    <li class="fl"><a href="{$site_url}student/oral/{$a_c_key+1}">每日口语</a></li>
+                    {/if}
+				</ul>
+				<div class="exercises">
+                    {foreach $categories as $val}
+                    <div class="practiceBox">
+                        {foreach $val as $g_key=>$g_category}
+                            <ul class="pieceCon cf">
+                            {if in_array($g_key,array(1,8,12))}
+						        <div class="pieceTitle">综合({count($g_category)}个)</div>
+                            {else}
+						        <div class="pieceTitle">{$grades[$g_key]}({count($g_category)}个)</div>
+                            {/if}
+                            {foreach $g_category as $category}
+                            <li class="fl">
+                            <a href="{$category['url']}{if !in_array($category['id'],$single_ids)}{$category['id']}{/if}">
+                                {if isset($category['icon'])}
+                                <img src="{$static_url}image/student/special/{$category['icon']}" alt="{$category['p_c_name']}" class="fl" />
+                                {else}
+                                <img src="{$static_url}image/student/special/subject_{$category['subject_id']}.jpg" alt="{$category['p_c_name']}" class="fl"/>
+                                {/if}
+                                <p class="fl">
+                                <span>{$category['p_c_name']}</span>
+                                <br/>
+                                <span>{$category['version']}</span>
+                                </p>
+                            </a>
+                            </li>
+                            {/foreach}
+                            </ul>
+                        {/foreach}
+                    </div>
+                    {/foreach}
+				</div>
+			</div>
+            {/foreach}
+

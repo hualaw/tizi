@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{block name=title}{/block}-班级空间-梯子网</title>
+<link rel="stylesheet" type="text/css" href="{$static_url}{$static_version}css/teacherClass/style.css" />
+{block name=stylesheet}{/block}
+</head>
+<body class="navClass">
+{include file='file:[lib]common/teacher/header.html' logout_redirect=$tizi_url|cat:'banji'}
+{include file='file:[lib]common/teacher/nav.html'}
+<!--主要部分开始-->
+<!--主要部分开始-->
+<div class="wrap layout teacherClass" id="tiziModule" module="teacherClass">
+		<!-- 右侧框架开始 -->
+		<div class="wrapContent fr" id="wrapContent">
+			<!-- 新版班级头部 开始 -->
+			<!-- 新版班级详情 开始 -->
+			<div class="classHeaderNav cf">
+				<!-- if $part != 'checkhomework' -->
+				<!-- 新版班级详情 结束 -->
+				<span class="fl">班级编号：{$alpha_class_id}</span>
+				<input type="hidden" class="alpha_class_id" value="{$alpha_class_id}" />
+				<!-- tab切换 -->
+				<ul class="class_manage_btn fr fn-clear">
+					<!-- <li class="paper noBorderLeft  if $part=='paper' or $part=='checkhomework'  active  /if  "><a href="  $site_url  teacher/class/  $alpha_class_id /paper">试卷( $paper_total )</a></li> -->
+					<li class="work noBorderLeft {if $part=='homework'}active{/if} ">
+						<a href="{$site_url}teacher/class/{$alpha_class_id}/homework" title="">作业({$ex_total})</a>
+					</li>
+					<li class="fill noBorderLeft{if $part=='share'} active{/if}"><a href="{$site_url}teacher/class/{$alpha_class_id}/share">文件({$share_total})</a></li>
+
+					<li class="student {if $part=='student'} active{/if}"><a href="{$site_url}teacher/class/{$alpha_class_id}/student">学生(<span id="student_total">{$student_total}</span>)</a></li>
+					<li class="teacher noBorderLeft{if $part=='teacher'} active{/if}"><a href="{$site_url}teacher/class/{$alpha_class_id}/teacher">老师(<span id="teacher_total">{$classes.tch_count}</span>)</a></li>
+					{if $teacher_id == $classes.creator_id}
+					<li class="set {if $part=='settings'} active{/if}"><a href="{$site_url}teacher/class/{$alpha_class_id}/settings">设置</a></li>
+					{/if}
+				</ul>
+				<!-- 新版班级头部 结束 -->
+			</div>
+			{block name=container}{/block}
+		</div> 
+		<!-- 右侧框架结束 -->
+		<!-- 左侧框架开始 -->
+		<div class="slide fl">
+			<div class="classMenu">
+				<p class="addClass">
+					<a href="javascript:void(0)" class="addNewClass">添加班级</a>
+				</p>
+				<ul>
+					{foreach $i_class as $value}
+					<li >
+						<a href="{$tizi_url}teacher/class/{$value['alpha_class_id']}"{if ($value['alpha_class_id']==$alpha_class_id)} class="active"{/if} title="{$value['classname']}">{if isset($arr_grade[$value.class_grade])}{$arr_grade[$value.class_grade]}{/if}{sub_str($value['classname'],0,18)}</a>
+					</li>
+                    {/foreach}
+				</ul>
+			</div>
+		</div>
+		<!-- 左侧框架结束 -->
+</div>
+<!--添加新班级弹出框 开始-->
+<div id="inVislbleClass" class="pop_box">
+	<div class="teacherClass">
+		<div class="pop_main cf">
+			<!--创建新班级-->
+			<div class="addNewClassLeft addNewClassBox fl">
+				<form class="creatNewClassForm_beta" action="{$site_url}teacher/class/create" method="post" onsubmit="return false;">
+					<!-- <h4>添加新班级</h4> -->
+					<ul>
+						<li class="cf">
+							<!-- <i class="fl">所属学校：</i> -->
+							<div class="theGenusSchollBox fl">
+								<div class="theGenusScholl_y">
+									<div class="schoolBox ">
+										<span id="school"></span>
+										<input type="hidden" value="" id="schoolVal" name="school_id"/>
+										<input type="hidden" value="" name="area_county_id" id="area_county_id"/>
+										<input type="hidden" value="" name="school_type" id="school_type">   
+										<input type="hidden" value="" name="schoolname" id="schoolname" />
+										<div class="ValidformInfo">
+											<span class="Validform_checktip">请选择学校</span>
+											<span class="dec">
+												<s class="dec1">&#9670;</s>
+												<s class="dec2">&#9670;</s>
+											</span>
+										</div>
+									</div>
+								</div>
+								<span class="schoolFullName"></span>
+								<a class="resetSchool" href="javascript:void(0);">选择学校</a>
+							</div>		
+						</li>  
+						<li class="cf addGraInput">
+							<!-- <i>年级班级：</i> -->
+							<ul class="classGraVeri cf">
+								<li class="classGraList ie6Select1">
+									<select name="class_grade" id="class_grade" class="selectSchool class_grade">
+										{foreach $igrade as $ig}
+											{foreach $ig as $k => $v}
+											{if $k == 0}
+											<optgroup label="{$v}"></optgroup>
+											{else}
+											<option value="{$k}">{$v}</option>
+											{/if}
+											{/foreach}
+										{/foreach}
+									</select>
+									<!-- <div class="ValidformInfo">
+										<span class="Validform_checktip">请选择学校</span>
+										<span class="dec">
+											<s class="dec1">&#9670;</s>
+											<s class="dec2">&#9670;</s>
+										</span>
+									</div> -->
+								</li>
+								<li class="inputClass ie6Select3">
+									<input class="new_class_text classNameInput" name="classname" type="text" id="create_clsname" placeholder=""/>班
+									<div class="ValidformInfo">
+										<span class="Validform_checktip">请输入班级</span>
+										<span class="dec">
+											<s class="dec1">&#9670;</s>
+											<s class="dec2">&#9670;</s>
+										</span>
+									</div>
+								</li>
+							</ul>							
+						</li>            
+						<!-- <li class="cf"><i>教授科目：</i>
+							<select name="subject_id" class="teacher_subject">
+								{foreach $subject_type as $key => $value}
+								<option value="{$key}">{$value}</option>
+								{/foreach}
+							</select>
+							<div class="ValidformInfo">
+								<span class="Validform_checktip">请选择学校</span>
+								<span class="dec">
+									<s class="dec1">&#9670;</s>
+									<s class="dec2">&#9670;</s>
+								</span>
+							</div>
+						</li> -->
+						<li class="cf"><input class="createNewClass cBtnNormal yh" type="submit" name="" value="立即开通"></li>
+					</ul>
+				</form>
+			</div>
+			<div class="addNewClassRight addNewClassBox fl">
+				<form class="inVislbleClassForm_beta" action="{$site_url}class/apply/dosubmit" method="post" onsubmit="return false;">
+					<!-- <h4>加入已有班级</h4> -->
+					<ul>
+							<li>加入已有班级空间</li>
+							<li class="cf"><!-- <i>班级编号：</i> --><input class="in_vislble_class_text" name="class_id" type="text" id="class_code" placeholder="班级编号"/>
+									<div class="ValidformInfo">
+										<span class="Validform_checktip">请输入班级编号</span>
+										<span class="dec">
+											<s class="dec1">&#9670;</s>
+											<s class="dec2">&#9670;</s>
+										</span>
+									</div>
+									<input class="cBtnSilver addVisClass" type="submit" name="" value="加入班级">
+							</li>
+							<!-- <li class="cf"><i>教授科目：</i>
+								<select name="subject_id" class="teacher_subject">
+									{foreach $subject_type as $key => $value}
+									<option value="{$key}">{$value}</option>
+									{/foreach}
+								</select>
+								<div class="ValidformInfo">
+									<span class="Validform_checktip">请选择学校</span>
+									<span class="dec">
+										<s class="dec1">&#9670;</s>
+										<s class="dec2">&#9670;</s>
+									</span>
+								</div>
+							</li> -->
+							<!-- <li class="cf"><input class="addVisClass cBtnNormal" type="submit" name="" value="加入"></li> -->
+					</ul>
+				</form>
+				<div class="addNotice">
+					<h5>从哪里获得班级编号？</h5>
+					<p class="font12">您所教的班级有可能已经由其他任课老师创建了班级，可以向他们询问班级编号，直接加入该班级。</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+	<!--
+		*
+		* 修改入学年份
+		-->
+	<div id="resetSchoolYearPop" class="pop_box">
+		<div class="teacherClass">
+			<div class="pop_main">
+				请选择：<select id="set_year" classid="{$alpha_class_id}">
+				{foreach $class_year as $y}
+				<option>{$y}</option>
+				{/foreach}
+			</select> 
+			</div>
+		</div>
+	</div>
+	<!--
+		*
+		* 退出班级
+		-->
+	<div id="quitClassPop" class="pop_box">
+		<form class="quitClassPopForm_beta" method="post">
+			<div class="pop_main">
+				<p>是否确定退出<span class="orangedeep">%classname%</span>？</p>
+			</div>
+		</form>
+	</div>
+<!--添加新班级弹出框 结束-->
+<!--主要部分结束-->
+<!--底部开始-->
+{include file='file:[lib]common/teacher/footer.html'}
+<!--底部结束-->
+<!---->
+<div id="alterClassGradePop" class="pop_box">
+    <form class="alterClassGradePopForm_beta" action="{$site_url}class/update_info/classname" method="post">
+      <div class="teacherClass">
+        <div class="pop_main">
+          <ul class="cf">
+              <li class="fl">
+                  <input type="hidden" name="class_id" value="{$alpha_class_id}">
+                  <select name="class_grade" id="class_grade" class="selectSchool class_grade">
+                    {foreach $igrade as $ig}
+                      {foreach $ig as $k => $v}
+                      {if $k == 0}
+                      <optgroup label="{$v}"></optgroup>
+                      {else}
+                      <option value="{$k}">{$v}</option>
+                      {/if}
+                      {/foreach}
+                    {/foreach}
+                  </select>
+                </li>
+              <li class="inputClass fl posr">
+                <input class="new_class_text classNameInput newClassGrade" name="classname" type="text" id="create_clsname" placeholder="" value=""/>班
+                <div class="ValidformInfo">
+                  <span class="Validform_checktip">请输入班级</span>
+                  <span class="dec">
+                    <s class="dec1">&#9670;</s>
+                    <s class="dec2">&#9670;</s>
+                  </span>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+<!-- js引入开始 -->
+<script type="text/javascript" src="{$static_url}{$static_version}public/sea/2.1.0/sea.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}public/config.js{$version}"></script>
+<script type="text/javascript">
+    function change_class(value){
+        seajs.use("module/teacherClass/teacherClass",function(main){
+            main.goclass(value);
+        });
+    }
+</script>
+<!--js引入结束-->
+{block name=script}{/block}
+{include file='file:[lib]common/tizi_ga.html'}
+</body>
+</html>

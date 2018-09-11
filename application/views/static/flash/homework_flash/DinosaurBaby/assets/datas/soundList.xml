@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soundList>
+<url name="lose">
+assets/sound/lose.mp3
+</url>
+<url name="win">
+assets/sound/win.mp3
+</url>
+<url name="background">
+assets/sound/background.mp3
+</url>
+<url name="click">
+assets/sound/click.mp3
+</url>
+</soundList>

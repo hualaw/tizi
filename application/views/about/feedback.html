@@ -1,0 +1,86 @@
+{extends file='about/about_base.html'}
+
+{block name=title}反馈建议{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--内容start-->
+<div class="mainContainer feedback" pagename="feedback">
+    <div class="content">
+        <div class="innerText cf">
+            <div class="hd">
+                <h2>反馈建议</h2>
+            </div>
+            <form action="{$tizi_url}send_feedback" method="post" dataType="jsonp" class="cFeedbackQQ feedbackForm cf">
+                <div class="info">
+                    使用以下表格将您的意见或使用中遇到的问题提交给我们，我们将会仔细阅读您的反馈。
+                </div>
+                <div class="fl feedback_text">
+                    <div class="hd">
+                        <h4>反馈内容<em>（5-1000字）</em></h4>
+                        <ul>
+                            <li class="cf textareaContent posr">
+                                <textarea name="content" class="contentTextarea"></textarea>
+                                <span class="Validform_checktip"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+                            <li class="cf">
+                                <label class="label">QQ号</label>
+                            </li>
+                            <li class="cf">
+                                <input type="text" name="qq" class="fl QQText{if !$user_type}Unlogin{/if}" value=""/>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="cf">
+                                <label class="label">验证码</label>
+                            </li>
+                            <li class="cf">
+                                <div class="commonCaptcha cf">
+                                    <input type="hidden" name="captcha_name" class="feedbackBox" value="feedbackBox" />
+                                    <input type="text" name="captcha_word" class="feedbackBoxWord textCaptcha fl" />
+                                    <img class="fl imgCaptcha changeCaptcha" />
+                                    <span class="changeCaptcha fl">换一张</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>  
+                    <div class="ft">
+                        <input type="submit" class="cBtnNormal" value="提交" />
+                    </div>
+                </div>
+                <!-- <div class="fl line_dotted"></div> -->
+                <div class="qq_tip_about fr">
+                    <div id="qq1" class="qq_contact_about"></div>
+                    <div class="dot_line"></div>
+                    <span id="qq_tip_span" class="qq_tip_span">QQ客服在线时间<br />周一至周六 9:00-18:00</span>
+               </div>
+            </form>
+       </div>
+    </div>
+</div>
+<!--内容end-->
+{/block}
+
+{block name=script}
+<script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php{$version}"></script>
+<script type="text/javascript">
+if(window.BizQQWPA!=undefined){
+    BizQQWPA.add({ 
+        aty: '0', //接入到指定工号 
+        type: '10', //使用按钮类型WPA
+        fsty:'1',
+        fposX:'2',
+        fposY:'2',
+        ws: 'www.tizi.com',
+        nameAccount: '800068391', //营销QQ号码 
+        parent: 'qq1' //将WPA放置在ID为testAdd的元素里 
+    });
+}
+</script>
+{/block}

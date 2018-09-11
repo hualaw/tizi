@@ -1,0 +1,78 @@
+<!-- 同步章节弹出框开始-->
+<div id="chapterBox" class="pop_box">
+    <div class="teacherResource">
+         <div class="chapterIndexBox Synchapter">
+            <form class="chapterIndexBoxForm_beta" action="{$site_url}teacher/cloud/res/make_res_dir" method="post">
+                 <input type="hidden" name="cat_type" value="0" />
+                 <input type="hidden" name="dir_name" value="{$grade_name}{if isset($data.category_root_id.1->name)}{$data.category_root_id.1->name}{/if}{if isset($data.category_root_id.1->sub_cat.0->name)}{$data.category_root_id.1->sub_cat.0->name}{/if}" class="folderName"/>
+                <div class="md_hd">
+                    <p>文件夹名称：<b id="chapterName">{$grade_name}{if isset($data.category_root_id.1->name)}{$data.category_root_id.1->name}{/if}{if isset($data.category_root_id.1->sub_cat.0->name)}{$data.category_root_id.1->sub_cat.0->name}{/if}</b></p>
+                </div>
+                <div class="md_bd">
+                    <h2>请选择教材</h2>
+                    <ul>
+                        <li>
+                            <label>学段：</label>
+                            <div class="vlist fl">
+                                <a href="javascript:void(0);" {if $grade==1}class="active"{/if} data-sid="1">小学</a>
+                                <a href="javascript:void(0);" {if $grade==2}class="active"{/if} data-sid="2">初中</a>
+                                <a href="javascript:void(0);" {if $grade==3}class="active"{/if} data-sid="3">高中</a>
+                            </div>
+                            <input type="hidden" name="semester" value="{$grade}" id="semester" class="pool semester" data-title="{if $grade==1}小学{elseif $grade==2}初中{elseif $grade==3}高中{/if}"/>
+                        </li>
+                        <li>
+                            <label>学科：</label>
+                            <div class="vlist fl" id="sub_from_grade">
+                                {if $sub_from_grade}
+                                {foreach $sub_from_grade as $k=>$val}
+                                    <a href="javascript:;" data-gradeid="{$val->id}" data-s_type="{$val->type}" {if $val->id==$subject_id} class="active" {/if}>{$val->name}</a>
+                                {/foreach}
+                                {/if}
+                            </div>
+                            <input type="hidden" name="subject" value="{$subject_id}" id="subject" class="pool subject" data-title="{mb_substr($grade_name,2)}"/>
+                            <input type="hidden" name="subject_type" value="{$subject_id}" id="s_type" class="pool subject"/>
+                        </li>
+                        <li>
+                            <label>版本：</label>
+                            <div class="vlist fl" id="category_root_id">
+                                {if $data.category_root_id}
+                                {foreach $data.category_root_id as $k=>$val}
+                                <a href="javascript:;" data-versionid="{$val->id}" {if $val@iteration==1}class="active"{/if} >{$val->name}</a>
+                                {if $val@iteration==1}
+                                 <input type="hidden" name="subversion" value="{$val->id}" id="subversion" class="pool subversion" data-title="{$val->name}"/>
+                                {/if}
+                                {/foreach}    
+                                {/if}
+                            </div>
+                        </li>
+                        <li class="posVersion">
+                            <a class="havenov cgr" href="javascript:void(0);">没有我的教材版本？</a>
+                        </li>
+                        <li>
+                            <label>年级：</label>
+                            <div class="vlist fl" id="grade_cat_id">
+                                {if $data.category_root_id}
+                                {foreach $data.category_root_id as $k=>$val}
+                                <div class="gradeList {if $val@iteration==1}dis{else}undis{/if}" data-cat_id="{$val->id}">
+                                    {if $val->sub_cat}
+                                    {foreach $val->sub_cat as $c}
+                                    <a href="javascript:;" data-sub_cat_id="{$c->id}" {if $c@iteration ==1}class="active"{/if}>{$c->name}</a>
+                                    {if $c@iteration==1 and $val@iteration==1}
+                                     <input type="hidden" name="cat_id" value="{$c->id}" id="grade" class="pool grade" data-title="{$c->name}"/>
+                                    {/if}
+                                    {/foreach}
+                                    {/if}
+                                </div>
+                                {/foreach}    
+                                {/if}
+                            </div>
+                            
+                        </li>
+                    </ul>
+                    <input type="submit" class="undis"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 同步章节弹出框结束-->

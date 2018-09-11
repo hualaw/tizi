@@ -1,0 +1,78 @@
+{extends file='student/class/no_left_base.html'}
+
+{block name=keywords}班级空间{/block}
+{block name=description}梯子网为每一个学生都准备了独特的班级空间，让同一个班级的同学，老师可以实现实时互动，方便的交流。{/block}
+{block name=title}独特的梯子班级空间-学生版{/block}
+
+{block name=container}
+<div class="mainContainer" pageName="noAddClass">
+	<!-- 正文代码开始 -->
+	<div class="noJoinWrap">
+		<div class="fl leftBox">
+			<h2>梯子网班级空间</h2>	
+			<div class="infoBox">
+				<p class="addClassIcon">
+					<span>加班级</span>
+					<em>加入网上班级，与老师同学在一起。</em>
+				</p>
+				<p class="onlineP">
+					<span>写作业</span>
+					<em>老师留的作业，分享的资料，立即能知道。</em>
+				</p>
+			</div>
+			<!-- <div class="news">
+				<h3>最新动态</h3>
+				{foreach $class as $value}
+				<p>
+					<a href="javascript:void(0)">{$value.realname}</a>
+					<span>刚刚开通了</span>
+					<em>{$value.school}{if isset($arr_grade[$value.class_grade])}{$arr_grade[$value.class_grade]}{/if}{$value.classname}</em>
+				</p>
+				{/foreach}
+			</div>	 -->
+		</div>
+		<div class="fr rightBox">
+			{if $user_type eq $constant.user_type_student or !$user_type}
+			<div class="joinClass">
+				<h3>加入班级空间</h3>
+				<form action="{$site_url}class/student_class/sign" mothed="post" onsubmit="return false" class="studentAddClassForm">
+					<div class="posr">
+						<input type="text" name="class_id" class="classNumInput fl" placeholder="班级编号">
+						<div class="ValidformInfo">
+							<span class="Validform_checktip"></span>
+							<span class="dec">
+								<s class="dec1">◆</s>
+								<s class="dec2">◆</s>
+							</span>
+						</div>
+						<input type="hidden" name="redirect" value="callback:classJoin">
+						<input type="submit" class="submit" value="加入班级" >
+						
+					</div>
+				</form>
+				<p>没有班级编号？</p>
+				<p>如果你的老师已经在梯子网创建了班级，请向</p>
+				<p>他们询问班级编号。</p>
+				<p>如果还没有创建，可以让他们创建一个后将班</p>
+				<p>级编号发给你</p>
+			</div>
+			{else}
+			<div class="imgBox">
+				<img src="{$static_url}{$static_version}image/studentClass/classZoneImg.png" alt="">
+			</div>
+			{/if}
+		</div>	
+	</div>
+	<!-- 正文代码结束 -->
+</div>
+
+<!--弹出框开始-->
+<div id="addNewClassuccWin" class="undis">
+    <div class="pop_main">
+        <p>你已经成功加入班级：</p>
+        <p>%classname%</p>
+        <p class="m_t_10">你的学号是：%student_id%</p>
+    </div>
+</div>
+<!--弹出框结束-->
+{/block}

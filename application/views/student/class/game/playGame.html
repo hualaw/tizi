@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{block name=title}{/block}-梯子网</title>
+        <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="{$static_url}{$static_version}css/studentPaper/style.css" />
+        {block name=stylesheet}{/block}
+    </head>
+    <body class="navClass">
+        {if $preview}
+        {include file='file:[lib]common/tizi_token.html'}
+        {else}
+        {include file='file:[lib]common/student/header.html'}
+        {include file='file:[lib]common/student/nav.html'}
+        {/if}
+        <!--主要部分开始-->
+        <div class="{if !$preview}wrap{/if}  studentPaper textCenter" id="tiziModule" >
+            <input type="hidden" class="game_id" value="{$game_id}" />
+            <input type="hidden" class="category_id" value="{$category_id}" />
+            <input type="hidden" class="game_type_id" value="{$game_type_id}" />
+            <div id="flashContent"></div>
+            {$source_url = $static_url}
+            {$game_path = $game_path}
+            {$game_file = $game_path}
+            <input type='hidden' id='path'  value='{$game_path}' />
+            <script type="text/javascript" src="{$source_url}flash/swfobject.js{$version}"></script>
+            <noscript>
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="700" height="500" id="PigsAcrossTheRiver">
+                    <param name="movie" value="{$source_url}flash/homework_flash/{$game_path}/{$game_file}.swf{$version}" />
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <param name="allowScriptAccess" value="always" />
+                    <param name="allowFullScreen" value="true" />
+                    <!--[if !IE]>-->
+                    <object type="application/x-shockwave-flash" data="{$source_url}flash/homework_flash/{$game_path}/{$game_file}.swf{$version}" width="700" height="500">
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="#ffffff" />
+                        <param name="allowScriptAccess" value="always" />
+                        <param name="allowFullScreen" value="true" />
+                    </object>
+                    <!--<![endif]-->
+                </object>
+            </noscript>     
+            {include file='file:[lib]common/tizi_flash.html' assign=noflash}
+            <script>
+                window.onload = function(){
+
+                    seajs.use(['tizi_ajax'],function(ex){
+                        Student = {};
+                        Student.homework = {};
+                        Student.homework.game_load = function(){
+                            var path = $("#path").val();
+                            var category_id = $(".category_id").val();
+                            var game_id = $(".game_id").val();
+                            var game_type_id = $(".game_type_id").val();
+                            //alert(game_type_id);
+                            {if $have_option}
+                            var have_option  = true;
+                            var option_key = 'option';
+                            var correctId = 'correctId';
+                            {else}
+                            var have_option  = false;
+                            var option_key = null;
+                            var correctId = null;
+                            {/if}
+                            var other_data = {};
+                            {if $other_data}
+                                var other_data = {$other_data};
+                            {/if}
+                            {if $preview}
+                                var question_module = 'game_simulate_question';
+                            {else}
+                                var question_module = 'game_question';
+                            {/if}
+                            {if $preview}
+                                var play = 'demo';
+                            {else}
+                                var play = 'play';
+                            {/if}
+                            {if $have_image}
+                            var image_key = "image";
+                            {else}
+                            var image_key = null;
+                            {/if}
+                                
+                            var data = [
+                                baseUrlName+'homework/'+question_module+'/'+category_id+'/'+game_id+'/'+game_type_id,
+                                staticUrlName+'flash/homework_flash/'+path+'/',
+                                play,
+                                'id',
+                                'question',
+                                'word', have_option, option_key, correctId, "explanation", "audio", image_key,
+                                other_data
+                            ];
+                            return data;
+                        };                  
+                        Student.homework.game_over = function(data){
+                            {if $preview}
+                                return false;
+                            {/if}
+                            $.tizi_ajax({
+                                url: baseUrlName+'homework/game_submit',
+                                data:{
+                                    "id":data[0],
+                                    "time":data[1],
+                                    "correct_num":data[2],
+                                    'questions':data[3]
+                                },
+                                type:'POST',
+                                success:function(data){
+                                }
+                            })
+                        };
+
+                        Student.homework.game_close = function(){
+                            {if $preview}
+                                parent.$(".aui_close").click();
+                            {else}
+                                window.top.location.href = baseUrlName+'student/class/homework';
+                            {/if}
+                        };
+
+
+                    })
+                    var swfVersionStr = "{$flash_base_version}";
+                    var xiSwfUrlStr = "{$source_url}flash/homework_flash/{$game_path}/playerProductInstall.swf{$version}"
+                    {literal};
+                    var flashvars = {};
+                    var params = {};
+                    var init_data = new Array();
+
+                    params.quality = "high";
+                    params.bgcolor = "#ffffff";
+                    params.allowscriptaccess = "always";
+                    params.allowfullscreen = "true";
+                    params.wmode="transparent";
+                    params.wmode="Opaque";
+                    var attributes = {};
+                    attributes.align = "middle";
+                    {/literal}
+                    var swfUrl = "{$source_url}flash/homework_flash/{$game_path}/{$game_file}.swf{$swfversion}";
+                    swfobject.embedSWF(
+                    swfUrl, "flashContent", 
+                    "700", "500", 
+                    {literal}
+                    swfVersionStr, xiSwfUrlStr, 
+                    flashvars, params, attributes);
+                    // JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
+                    swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+                    {/literal}
+                    var noflash = '{$noflash}';
+                    {literal}
+                    seajs.use('tizi_validform',function(ex){                                         
+                        ex.detectFlashSupport(function(){                                            
+                            $('#flashContent').html(noflash);                                        
+                        });                                                                          
+                    });
+                    {/literal}
+
+                }
+            </script>                                                      
+
+        </div>
+        {if !$preview}
+            {include file='file:[lib]common/student/footer.html'}
+        {/if}
+        <!-- js引入开始 -->
+        <script type="text/javascript" src="{$static_url}{$static_version}public/sea/2.1.0/sea.js"></script>
+        <script type="text/javascript" src="{$static_url}{$static_version}public/config.js"></script>
+        <!--js引入结束-->
+        {block name=script}{/block}
+        {include file='file:[lib]common/tizi_ga.html'}
+    </body>
+</html>

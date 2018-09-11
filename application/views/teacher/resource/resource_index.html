@@ -1,0 +1,155 @@
+{extends file='teacher/resource/res_base.html'}
+{block name=title}教学网盘{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<!-- 右侧框架开始 -->
+<div class="wrapContent" id="wrapContent">
+    <div class="layout">
+        <!--初始首页开始-->
+        {if empty($dir)}
+        <div class="ResourceIndex">
+            <h2>新建文件夹</h2>
+            <!--<p>您可以创建以同步章节或知识点为目录的文件夹，并在目录下按照不同文件类型存储您的教学资源。</p>-->
+            <div class="cf explain">
+                <p>老师您好，为了方便您管理您的教学资源，我们为您设计了更符合教学规律的目录树文件夹，您可以用同步章节目录的文件夹来管理您的资源，让您的资源树枝繁叶茂。您的资源将在云端存储，方便快捷且不用担心因电脑故障而丢失资源。梯子网和其他老师愿意共享的资料，未来也可一键添加到您的目录树相应位置，欢迎使用。</p>
+            </div>
+            <div class="ResourceIndex_bd cf">
+                <div class="fl leftFolder">
+                    <a href="javascript:;" class="cBtnNormal chapter"><span>新建同步章节目录文件夹</span></a>
+                    <p><img src="{$static_url}/{$static_version}/image/teacherResource/image_tmp1.gif" width="137px" height="198px"/></p>
+                </div>
+                <!-- <div class="fr rightFolder">
+                    <a href="javascript:;" class="cBtnNormal lore"><span>新建知识点目录文件夹</span></a>
+                    <p><img src="$static_url/$static_version/image/teacherResource/image_tmp2.gif" width="190px" height="199px"/></p>
+                </div> -->
+            </div>
+        </div>
+        {/if}
+        <!--初始首页结束-->
+        <!--常规首页开始-->
+        {if $dir}
+        <div class="ResourceCommon {if empty($dir)}undis{/if}">
+            <!--添加我的资源库顶部导航开始-->
+            <div class="hd_title">
+                <div class="fl">
+                    <a class="cBtnNormal chapter" href="javascript:;">新建同步章节目录文件夹</a>
+                    <!-- <a class="cBtnNormal lore" href="javascript:;">新建知识点目录文件夹</a> -->
+                </div>
+                <div class="capacity fr">容量&nbsp;<strong><span cap="55" style="width:{$statistics.cloud_storage.percentage};"></span></strong>&nbsp;{$statistics.cloud_storage.use_storage} / {$statistics.cloud_storage.total_storage}</div>
+            </div>
+            <!--添加我的资源库顶部导航结束-->
+            <!--添加我的资源库顶部导航开始-->
+            <div class="Folderlist" id="FolderList">
+                <ul>
+                    <li class="th_hd">
+                        <label class="fl folderName">名称</label>
+                        <label class="fl folderType">目录类型</label>
+                        <label class="fl folderSize">大小</label>
+                        <label class="fl folderTime">创建时间</label>
+                    </li>
+                    {foreach $dir as $k=>$val}
+                    <li>
+                        <label class="fl folderName">
+                            <a href="{$site_url}teacher/cloud/res/res_dir/{$val.cat_id}" title="{$val.dir_name}" data-gid="0">{$val.dir_name}</a>
+                        </label>
+                        <label class="fl folderType">{if $val.cat_type==0}同步章节目录{elseif $val.cat_type==1}知识点目录{/if}</label>
+                        <label class="fl folderSize">--</label>
+                        <label class="fl folderTime"><span>{date('Y-m-d H:i',$val.create_time)}</span><a class="cBtnSilver TextDel deleteFile" href="javascript:;" file_id="{$val.dir_id}" cat_id="{$val.cat_id}">删除</a></label>
+                    </li>
+                    {/foreach}
+                    <li>
+                        <label class="fl folderName">
+                            <a href='{$site_url}teacher/cloud/other' >其他文件（原网盘）</a>
+                        </label>
+                        <label class="fl folderType">自定义目录</label>
+                        <label class="fl folderSize">--</label>
+                        <label class="fl folderTime"></label>
+                    </li>
+                </ul>
+            </div>
+            <!--添加我的资源库顶部导航结束-->
+        </div>
+        {/if}
+        <!--常规首页结束-->
+    </div>
+</div>
+<!-- 右侧框架结束 -->
+<!-- 页面弹出框开始 -->
+<!-- 同步章节弹出框开始-->
+{include file='teacher/resource/chapterbox_tpl.html'}
+<!-- 同步章节弹出框结束-->
+<!-- 知识点目录弹出框开始-->
+<div id="loreBox" class="pop_box">
+    <div class="teacherResource">
+        <div class="chapterIndexBox Synlore">
+            <form class="loreIndexBoxForm_beta" action="{$site_url}teacher/cloud/res/make_res_dir" method="post">
+                <input type="hidden" name="cat_type" value="1" />
+                <input type="hidden" name="dir_name" value="{$grade_name}知识点库" class="folderName"/>
+                <input type="hidden" name="cat_id" value="{$default_cat_id}" id="category_id" />
+                <div class="md_hd">
+                    <p>文件夹名称：<b id="loreName">{$grade_name}知识点库</b></p>
+                </div>
+                <div class="md_bd">
+                    <h2>请选择学段及学科</h2>
+                    <ul>
+                        <li>
+                            <label>学段：</label>
+                            <div class="vlist fl">
+                                <a href="javascript:;" {if $grade==1}class="active"{/if} data-sid="1">小学</a>
+                                <a href="javascript:;" {if $grade==2}class="active"{/if} data-sid="2">初中</a>
+                                <a href="javascript:;" {if $grade==3}class="active"{/if} data-sid="3">高中</a>
+                            </div>
+                            <input type="hidden" name="semester" value="{$grade}" id="Catasemester" class="pool semester" data-title="{if $grade==1}小学{elseif $grade==2}初中{elseif $grade==3}高中{/if}"/>
+                        </li>
+                        <li>
+                            <label>学科：</label>
+                            <div class="vlist fl" id="cata_from_grade">
+                                {if $cat_sub_from_grade}
+                                {foreach $cat_sub_from_grade as $k=>$val}
+                                    <a href="javascript:;" data-category_id="{$val->category_id}" data-s_id="{$val->id}" {if $val->id==$subject_id} class="active" {/if}>{$val->name}</a>
+                                {/foreach}
+                                {/if}
+                            </div>
+                            <input type="hidden" name="subject" value="{$subject_id}" id="Catasubject" class="pool subject" data-title="{mb_substr($grade_name,2)}"/>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 知识点目录弹出框结束-->
+<!-- 没有我的教材开始-->
+<div id="havenovBox" class="pop_box">
+    <div class="teacherResource">
+        <div class="havenovIndexBox">
+            <h2>我们会与您联系添加您需要的教材版本目录</h2>
+            <form class="havenovIndexBoxForm_beta" action="{$site_url}resource/add_course/add" method="post">
+                <ul>
+                    <li>
+                        <label>您的教材版本:</label>
+                        <input type="text" name="course_name" value="" class="textInput version"/>
+                    </li>
+                    <li>
+                        <label>您的QQ号码:</label>
+                        <input type="text" name="qq_code" value="" class="textInput qqCode"/>
+                    </li>
+                    <li>
+                        <label>您的联系电话:</label>
+                        <input type="text" name="phone" value="" class="textInput phone"/>
+                    </li>
+                </ul>
+                <input type='hidden' name='add_subject_id' id='add_subject_id' />
+                <input type='hidden' name='add_grade' id='add_grade' />
+                <input type="submit" class="undis"/>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 没有我的教材结束-->
+<!-- 页面弹出框结束 -->
+{/block}
+{block name=script}
+
+{/block}

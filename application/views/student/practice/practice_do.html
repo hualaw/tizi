@@ -1,0 +1,39 @@
+{extends file='student/practice/practice_base.html'}
+
+{block name=title}专项挑战-作答-初高中2{/block}
+
+{block name=container}
+<div class="mainContainer studentSpecialWrap" pagename="studentSpecial_high2">
+	
+	<input type="hidden" value="{$training_id}" name="training_id"/>
+    <!--返回按钮开始-->
+    <div class="topline_nav cf">
+		<a href="{$site_url}practice/training/{$p_c_id}" class="goback">返回</a>
+    </div>
+    <!--返回按钮结束-->
+    <!--专项挑战游戏作答开始-->
+    <div class="studentSpecial_game cf">
+        <!--答题互动开始-->
+        <div class="start_action fl">
+            <!--题目列表开始-->
+            <div class="action_aq">
+				{$question.title}			
+            </div>
+            <!--题目列表结束-->
+            <!--答案选项开始-->
+            <div class="action_ft">
+                <a href="javascript:void(0);" class="btn_aq">A</a>
+                <a href="javascript:void(0);" class="btn_aq">B</a>
+                <a href="javascript:void(0);" class="btn_aq">C</a>
+                <a href="javascript:void(0);" class="btn_aq">D</a>
+				<span>连对题数：<b class="correct_num">{$correct_num}</b></span>
+            </div>
+            <!--答案选项结束-->
+        </div>
+        <!--答题互动结束-->
+		{include file="student/practice/practice_ranking_list.html"}
+    </div>
+    <!--专项挑战游戏作答结束-->
+</div>
+{/block}
+{block name=script}{/block}

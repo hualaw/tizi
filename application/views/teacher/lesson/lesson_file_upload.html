@@ -1,0 +1,85 @@
+{extends file='teacher/lesson/lesson_base.html'}
+{block name=title}上传文件-备课{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<div class="wrap layout">
+<input type="hidden" class="tab_name" value="upload">
+	<div class="uploadFile">
+		<div class="lessonNav">
+			<a href="{$site_url}teacher/lesson/prepare" title="">备课</a> / <a href="javascript:;" title="">上传文件</a>
+		</div>
+		<h3>上传文件</h3>
+		<!-- 上传前 开始 -->
+		<div class="uploadFileBox uploadBefore">
+			<div class="uploadInner">
+				{if $user_type && $user_type eq Constant::USER_TYPE_TEACHER}
+				<div class="uploadInnerBtn">
+					<a class="cBtnNormal chooseMyFile" href="javascript:;">选择我的文件</a>
+					<input type='text' name='shareFileUp' id='shareFileUp' class='choseFileTxt fl' disabled style="display:none" />
+					<input type="file" name="shareUpField" id="shareUpField_beta" class="file fl" multiple="true" style="display:none"/></span></a>
+				</div>
+				<p>每次最多可以选择5个文件同时上传</p>
+				{else}
+				<p>抱歉，只有老师用户可以上传备课资料。</p>
+				{/if}
+			</div>
+			<ul class="uploadNotice">
+				<li>上传须知</li>
+				<li>1、您可以上传日常积累和撰写的备课资料，每次最多上传5个文件，每个文件大小不超过200M；</li>
+				<li>2、上传时可设置文件为私有或共享权限，设置为共享的文件经过梯子网审核通过后，任何人将可以浏览或下载，<span>您将获得3个积分奖励</span>；</li>
+				<li>3、上传涉及侵权或违法内容的文档将会被移除。</li>
+			</ul>
+		</div>
+		<!-- 上传前 结束 -->	
+		<!-- 上传后 开始 -->
+		<!--<div class="uploadFileBox uploadAfter undis">-->
+		<div class="uploadFileBox uploadAfter undis">
+			<p class="uploadOver"><em id="count">0</em>个文件上传完毕</p>
+			<ul class="upFileTable">
+
+			</ul>
+			<h4><span>①</span> 选择文件的上传位置</h4>
+			<form action="{$site_url}lesson/lesson_cloud/complete_upload" method="post" class="moveFileTreeForm">
+				<div class="moveFile cf" id="moveFileTree">
+				{include file='teacher/lesson/choose_file_place.html'}
+				</div>
+				<h4><span>②</span> 设置文件权限</h4>
+				<div class="sharAllFile">
+					<label for="checkshareUp0">
+						<input type="radio" value="2" id="checkshareUp0" name="share" checked="checked">共享<span>（任何人可以阅读并下载，需经过梯子网审核，<em>审核通过即获赠3个积分</em>）</span>
+					</label>
+					<label for="checkshareUp">
+						<input type="radio" value="0" id="checkshareUp" name="share">私有<span>（仅自己可见）</span>
+					</label>
+				</div>
+				<div class="confirmUploadBox">
+					<input class="cBtnNormal confirmUpload" value="确认上传" type="submit" />
+					<input class="cBtnSilver cancleUpload" value="取消" type="button" />
+					<input type="hidden" value="" name="new_file_id">
+				</div>
+			</form>
+		</div>
+
+		<!-- 上传后 结束 -->
+	</div>
+</div>
+{/block}
+{block name=script}
+<script type="text/template" id="upFilePop">
+	<%#files%>
+	<li id="file_num_<%queue_id%>" class="fileList loadingBg cf">
+		<strong style="width: 100%;">&nbsp;</strong>
+		<span class="col1"><%file_name%></span>
+		<span class="col2"><%size%></span>
+		<span class="col3"></span>
+		<span class="col4"><a class="complete" href="javascript:;">排队中...</a></span>
+		 <span class="col5"><a class="UploadCancel onCancel" href="javascript:$('#shareFileUp').uploadify('cancel','<%file_id%>');">x</a></span>
+	</li>
+	<%/files%>
+</script>
+{include file='file:[lib]common/tizi_flash.html' assign=noflash}
+<script type="text/javascript">
+	var noflash = '{$noflash}';
+</script>
+{/block}

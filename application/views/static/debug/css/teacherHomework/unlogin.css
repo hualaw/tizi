@@ -1,0 +1,35 @@
+.teacherHomework .unlogin{font-size: 16px;}
+.teacherHomework .unlogin .clipText{line-height: 30px;width: 452px;}
+.teacherHomework .unlogin h2{margin-bottom: 18px;}
+.teacherHomework .unlogin h2,
+.teacherHomework .unlogin h1{font-size: 36px;font-weight: normal;height: 36px;line-height: 36px;*height:auto;}
+.teacherHomework .unlogin li{border-bottom: 1px solid #ddd;}
+.teacherHomework .unlogin .interPlat{text-align: center;padding: 44px 0 50px;}
+.teacherHomework .unlogin .interPlat .cBtnNormal{width: 218px;font-size: 24px;height: 60px;line-height: 60px;margin-top: 38px;}
+.teacherHomework .unlogin .smartSele{padding:50px 30px 50px 40px;}
+.teacherHomework .unlogin .deuceTable{display: table;table-layout: fixed;}
+.teacherHomework .unlogin .deuceTable .tableCell{display: table-cell;vertical-align: middle;}
+.teacherHomework .smartSele .deuceTable{height: 254px;*padding-top:84px;*height:170px;}
+.teacherHomework .foreignVideo .deuceTable{height: 280px;*padding-top:84px;*height:196px;}
+.teacherHomework .hwContent .deuceTable{height: 420px;padding-left: 40px;*padding-top:150px;*height:270px;}
+.teacherHomework .automatedIopt .deuceTable{height: 203px;*padding-top:44px;*height:159px;}
+.teacherHomework .unlogin .seleShow{width: 430px;height: 133px;background: url(../../image/teacherHomework/unlogin/seleShow.gif) no-repeat;}
+.teacherHomework .unlogin .edition a{display:inline-block;width: 82px;height: 102px;margin:0 9px 15px 0;background-image: url(../../image/teacherHomework/unlogin/edition.gif);background-repeat: no-repeat;}
+.teacherHomework .unlogin .edition a.edition2{background-position: -91px top;}
+.teacherHomework .unlogin .edition a.edition3{background-position: -182px top;}
+.teacherHomework .foreignVideo{padding: 50px 80px 50px 30px;}
+.teacherHomework .foreignVideo .videoBg{width: 298px;height: 258px;border: 1px solid #ddd;background: #f6f6f6;position: absolute;}
+.teacherHomework .foreignVideo .videoBg1{left:0;top:0;}
+.teacherHomework .foreignVideo .videoBg2{left:10px;top:10px;}
+.teacherHomework .foreignVideo .videoBg3{left:20px;top:20px;}
+.teacherHomework .foreignVideo .videoShow{height: 280px;width: 320px;}
+.teacherHomework .foreignVideo .videoBg3 a{display: block;padding:4px;text-align: center;}
+.teacherHomework .foreignVideo .videoBg3 img{width: 290px;height: 193px;}
+.teacherHomework .foreignVideo .videoBg3 p{font-size: 14px;margin:6px 0 3px;}
+.teacherHomework .foreignVideo .videoBg3 span{color: #999;font-size: 12px;}
+.teacherHomework .unlogin .gameListBox{width: 420px;padding:48px 0 15px;}
+.teacherHomework .unlogin .gameList{text-align: center;width: 100px;font-size: 12px;margin:0px 84px 32px 16px;cursor: pointer;}
+.teacherHomework .unlogin .gameList h3{font-size: 12px;margin-bottom: 0px;}
+.teacherHomework .unlogin .gameList img{margin:7px 0;}
+.teacherHomework .unlogin .automatedIopt{border-bottom: none;padding-bottom: 30px;padding: 50px 80px 50px 30px;}
+.teacherHomework .automatedIopt .ioptBg{width: 377px;height: 203px;background: url(../../image/teacherHomework/unlogin/ioptShow.gif) no-repeat;}

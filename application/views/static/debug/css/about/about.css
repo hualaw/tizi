@@ -1,0 +1,136 @@
+.about .content{line-height:24px;}
+.about .content .innerText a{color:#009B7D;}
+.about .content .innerText a:hover{color:#f90;}
+.about .content .innerText{ width:800px; margin:0 auto; margin-bottom:50px;}
+.about .content .innerText h2{ display:block; height:34px; border-bottom:1px solid #dddddd; font-size:20px; color:#333;font-weight:100;}
+.about .content .innerText h3{  font-size:16px; color:#333; padding:20px 0px 6px 0; font-weight:100;}
+.about .content .innerText p{ color:#333; font-size:14px; line-height:24px; text-indent:2em; padding:6px 0;}
+.about .advisorCon{ margin-bottom:0px; padding-bottom:10px; border-bottom:1px dotted #ccc;}
+.about .content .bd{ padding:0px 10px;}
+.about .content .bd h4{padding:6px 0px 6px 20px; font-size:14px; font-weight:normal;}
+.about .content .bd ul{ padding-left:40px; line-height:22px; }
+.about .advisorCon img{ margin-left:20px; margin-bottom:20px; border:1px solid #ccc; padding:2px}
+.about .content .bd .tables{ margin:10px 0}
+.about .content .bd .tables table{border-top:1px solid #ccc; border-left:1px solid #ccc; line-height:30px; width:500px;margin-left:40px;}
+.about .content .bd .tables span.red{color:#c00; margin-right:5px;}
+.about .content .bd .tables td{border-right:1px solid #ccc; border-bottom:1px solid #ccc; height:30px; padding-left:10px;}
+.about .content .ft{border-top:1px solid #ccc;padding-top:15px;margin-top:15px; line-height:28px;}
+.about .content .ft li{font-size:14px; clear: both; overflow: hidden;}
+.about .content .ft li label span{margin-right:28px;}
+.about .content .wishCon{ padding: 0px 10px 15px 10px}
+.about .join .hd span{margin-top:10px;color:#666}
+.about .join .hd span a{margin-left:10px;}
+.about .join h3{border-top: 1px dotted #ccc; margin-top: 22px;}
+.about .join h3.no{border-top: 0px; margin-top: 0px;}
+.about .content .wishCon img{margin-left:15px; margin-top:25px; margin-bottom:15px;}
+.about .if{ padding-left:20px;}
+.about .if li{ width: 50%; float: left;}
+.about .brand{border-top:1px solid #ccc; margin-top: 20px; padding-top:20px;}
+.about .img_us img{width:471px; margin: 0 auto;}
+.about .guide .bd{padding: 0px;margin: 10px auto;}
+.about .guide .hd h2{width: 820px;}
+.about .guide .innerText{width: 820px;margin-bottom:0px;}
+/* 媒体报道 开始*/
+.about .report .bd h3{font-size:20px; padding-bottom:10px;padding-top:0px;}
+.about .report .bd li{margin-top:20px;border-bottom:1px solid #ccc;padding-bottom:20px;overflow: hidden;}
+.about .report .bd{padding: 0px;}
+.about .report .bd p{line-height:25px;padding:0;font-size:14px;text-indent: 0px;}
+.about .report .bd p.con{padding:10px 0px; text-indent: 2em}
+.about .report .bd ul{padding-left: 0px;}
+.about .report .news-img{float:left;}
+.about .report .news-box{float:right;width:580px;}
+.about .report .news-reprint span{font-size:14px;float:left;}
+.about .report .news-more{text-align:right;}
+.about .report .media-list{width:520px;float:left;_display:inline;margin-left:-10px;}
+.about .report .media-list li{padding:0;border:1px solid #ccc;float:left;display:inline;margin:0 0 10px 10px;}
+/* 媒体报道 结束*/
+/*教师资讯样式开始*/
+.about .notice .innerText{margin:0 auto; margin-bottom:50px;color:#333;}
+.about .notice .bd ul{ padding-left:0px; line-height:22px; }
+.about .notice .bd h3{font-size:20px; padding-bottom:10px;padding-top:0px;color:#333;}
+.about .notice .bd li{margin-top:20px;border-bottom:1px solid #ccc;padding-bottom:20px;overflow: hidden;}
+.about .notice .bd p{line-height:25px;padding:0;font-size:14px;text-indent: 0px;}
+.about .notice .bd p.news-time{padding:0px 0px 10px 0;}
+.about .notice .news-more{text-align:right;}
+/*教师资讯样式结束*/
+/*梯子公告样式开始*/
+.about .information .innerText{ width:auto; margin:0 auto; margin-bottom:50px;color:#333;}
+.about .information .bd ul{ padding-left:0px; line-height:22px; }
+.about .information .bd h3{font-size:20px; padding-bottom:10px;padding-top:0px;color:#333;}
+.about .information .bd li{margin-top:20px;border-bottom:1px solid #ccc;padding-bottom:20px;overflow: hidden;}
+.about .information .bd p{line-height:25px;padding:0;font-size:14px;text-indent: 0px;}
+.about .information .bd p.news-time{padding:0px 0px 10px 0;}
+.about .information .news-more{text-align:right;}
+/*梯子公告样式结束*/
+/*内容样式开始*/
+.about .articleCotent .path{ height:28px;line-height:28px; border-bottom:1px solid #dddddd;font-size: 14px;}
+.about .articleCotent .path a{ color:#09aa83;}
+.about .articleCotent .path a:hover{ color:#f90;}
+.about .articleCotent .hd h2{font-size:20px; padding:10px 0;color:#333;font-weight: normal;}
+.about .articleCotent .hd p.info{font-size:14px;}
+.about .articleCotent .bd {padding:0px;}
+.about .articleCotent .bd p{line-height:24px;margin:10px 0;text-indent:2em;padding:0;font-size:14px;}
+/*内容样式结束*/
+/*联系我们样式开始*/
+.about .contact .links{width:540px;}
+.about .contact .links p{text-indent: 0px;}
+.about .contact .links p a{color:#009B7D;}
+.about .contact .links p a:hover{color:#f90;}
+/*企业QQ样式开始*/
+.about .contact #qq_tip_span{text-indent: -5px;display: block;}
+.about .contact .qq_tip_about{position: relative;margin-right: 80px;margin-top: 230px;}
+.about .contact .qq_tip_about .qq_contact_about{position:absolute;top:30px;right:10px;_top:0px;}
+.about .contact .qq_tip_about span.qq_tip_span{color: #999999;text-indent:0;margin-top: 30px;_margin-top: 50px;margin-right: -3px;width: 134px;height: 30px;text-align: center;}
+.about .contact .qq_tip_about .dot_line{position: absolute;top:-200px;right:165px;height: 370px;color: #000000;border: 0 none;border-left: 1px dotted #000000}
+/*企业QQ样式结束*/
+/*联系我们样式结束*/
+.about .cFeedbackQQ .info{color:#f60;padding:10px 0;}
+.about .cFeedbackQQ .feedback_text{width: 500px;}
+.about .cFeedbackQQ .feedback_text .tips{font-weight: normal;color: #c00;margin-left:10px; display: nsone;}
+.about .cFeedbackQQ .feedback_text .hd h4{padding-bottom:6px; font-size:14px;padding:10px 0 10px 0; font-weight:normal}
+.about .cFeedbackQQ .feedback_text .hd textarea{border:1px solid #999; height: 160px; overflow: auto;padding:5px;width:490px; line-height: 24px;}
+.about .cFeedbackQQ .feedback_text .bd{padding:0px;}
+.about .cFeedbackQQ .feedback_text ul{padding-left:0px;}
+.about .cFeedbackQQ .feedback_text ul li{padding:3px 0;line-height:20px;}
+.about .cFeedbackQQ .feedback_text label{float:left; text-align:left;}
+.about .cFeedbackQQ .feedback_text input{width:200px;float:left; height:32px; line-height:32px;border:1px solid #ccc;padding:0 5px;}
+.about .cFeedbackQQ .feedback_text input.cBtnNormal{width: 100px;border:0px;}
+.about .cFeedbackQQ .feedback_text .Validform_checktip{text-align:left; margin-left:10px;display:inline-block;line-height: 32px;height:32px;overflow:hidden;}
+.about .cFeedbackQQ .textareaContent .Validform_checktip{ position: absolute;top: -27px;right:0px;}
+.about .cFeedbackQQ .feedback_text input.textCaptcha{width:90px;margin-right:6px;}
+.about .cFeedbackQQ .feedback_text .bd span.changeCaptcha{float: left;margin-left:6px;cursor: pointer;line-height:32px;}
+.about .cFeedbackQQ .feedback_text #captcha{margin-left:10px}
+.about .cFeedbackQQ .feedback_text #captcha a{margin-left:10px;color:#298D6A;line-height:32px;}
+.about .cFeedbackQQ .feedback_text .bd .ValidformTips{left:50px}
+.about .cFeedbackQQ .feedback_text input.QQText{width:180px;}
+.about .cFeedbackQQ .feedback_QQ{position: relative; padding-top:14px; margin-right:60px;}
+.about .cFeedbackQQ .feedback_QQ .qq_tip{margin-right: 10px;margin-top: 180px;}
+.about .cFeedbackQQ .feedback_QQ .qq_tip .qq_contact{position:absolute;right:30px;}
+.about .cFeedbackQQ .feedback_QQ .qq_tip span.qq_span{color: #999999;display: block;width: 124px;text-align: center;margin-right: 12px;}
+.about .cFeedbackQQ .line_dotted{height: 370px;color: #000000;border: 0 none;border-left: 1px dotted #000000; margin-left:25px;}
+
+/*企业QQ样式开始*/
+.about .cFeedbackQQ #qq_tip_span{text-indent: -5px;display: block;}
+.about .cFeedbackQQ .qq_tip_about{position: relative;margin-right: 80px;margin-top: 230px;}
+.about .cFeedbackQQ .qq_tip_about .qq_contact_about{position:absolute;top:30px;right:10px;_top:0px;}
+.about .cFeedbackQQ .qq_tip_about span.qq_tip_span{color: #999999;text-indent:0;margin-top: 30px;_margin-top: 50px;margin-right: -3px;width: 134px;height: 30px;text-align: center;}
+.about .cFeedbackQQ .qq_tip_about .dot_line{position: absolute;top:-200px;right:165px;height: 370px;color: #000000;border: 0 none;border-left: 1px dotted #000000}
+/*企业QQ样式结束*/
+/*用户心声样式开始*/
+.about .witness .hd a{margin-top:5px;background: url(../../image/common/ico_postWitness.gif) no-repeat left;padding-left:20px;color:#909090;}
+.about .witness .ft{background:#eee;border-top:0px;margin: 60px 10px 60px 10px;padding-bottom:20px;}
+.about .witness .ft ul{padding-left:20px;}
+/*用户心声样式结束*/
+/*站点地图样式开始*/
+.about .sitmap{border:1px solid #ddd;padding: 30px 39px;}
+.about .sitmap dl{width: 180px;display: inline-block;text-indent: 15px}
+.about .sitmap dl{line-height: 30px;font-size: 14px;}
+.about .sitmap dt{font-weight: bold}
+.about .sitmap dl.text40{text-indent: 40px}
+/*站点地图样式结束*/
+/*内页友情链接样式开始*/
+.about .secLink{border:1px solid #ddd;padding: 20px;}
+.about .secLink .hd h2{font-size:18px;font-weight: normal;border-bottom:1px solid #ddd;padding-bottom:10px;}
+.about .secLink .bd{line-height: 30px;padding:10px 0;}
+.about .secLink .bd a{margin-right:30px;display:inline-block;}
+/*内页友情链接样式结束*/

@@ -1,0 +1,85 @@
+<div class="allPaper">
+<!--右侧内容开始-->
+<!--当前位置开始-->
+<div class="path cf">
+    <a href="{$site_url}teacher/paper/intelligent">智能选题</a> /
+</div>
+ <div class="page cf">
+        <p class="fr">
+            <!-- 添加全部加入按钮开始 -->
+            <span class="all_in cBtnNormal fl" style="margin-right:5px;">
+                <a class="addAllPaper"><i>将本页题目全部加入试卷</i></a>
+            </span>
+            <!-- 添加全部加入按钮结束 -->
+            {$pages}
+        </p>
+        <p class="fl">共计<span class="bold diff" difficult="{$data.difficult}">{$data.total}</span>题（点击题目可查看答案和解析）</p>
+ </div>
+<!--当前位置结束-->
+<!--试卷内容开始-->
+<!--试卷详细内容开始-->       
+<div class="paperDetails">
+    {foreach $data.question as $question}
+    <div class="question-intelligent-item">
+        <div data-question_id="{$question.id}" data-category_id="{if isset($question.category_id) and $question.category_id > 0}{$question.category_id}{else}0{/if}" class="question-box">
+            <div class="question-title cf">
+                 <!-- 加入试卷按钮开始 -->
+                <div class="fr">
+                    <!-- 加入试卷和移出试卷开始 -->
+                    <a data-question_id="{$question.id}" data-category_id="{if isset($question.category_id) and $question.category_id > 0}{$question.category_id}{else}0{/if}" class="control-btn add-{if $question.is_add_paper}true{else}false{/if}">
+                        <span class="cBtnNormal fl">
+                            <i>加入试卷</i>
+                        </span>
+                        <em class="fl">
+                            <b class="cBtnSilver fl"><i>移出试卷</i></b>
+                        </em>
+                    </a>
+                    <a data-question_id="{$question.id}" data-category_id="{if isset($question.category_id) and $question.category_id > 0}{$question.category_id}{else}0{/if}" data-qtype_id="{$question.qtype}" class="change-btn">
+                       <em class="fl">
+                            <b class="cBtnSilver fl"><i>换一题</i></b>
+                        </em> 
+                    </a>
+                    <!-- 加入试卷和移出试卷结束 -->
+                    <!-- 加入用户纠错按钮开始 -->
+                    <a href="{$site_url}teacher/paper/feedback?question_id={$question.id}" class="paperTip" target="_blank">纠错</a>
+                    <!-- 加入用户纠错按钮结束 -->
+                    <!-- 收藏按钮开始 -->
+                    <!--<a href="javascript:void(0);" class="paperFavorit"></a>-->
+                    <!-- 收藏按钮结束 -->
+                </div>
+                <!-- 加入试卷按钮结束 -->
+                <!-- 答题卡标题开始 -->
+                <dl class="fl">
+                    <dd class="cf">
+                        {if isset($data.question_count[$question@index]) and $data.question_count[$question@index]}
+                        {$data.question_count[$question@index] = {$data.question_count[$question@index]} + 20}
+                        <div class="fl">组卷次数：<em class="org">{$data.question_count[$question@index]}</em></div>
+                        {/if}
+                        <div class="fl">编号：{$question.id}</div>
+                        <div class="fl">知识点：{$question.category_name}</div>
+                        <div class="fl"><span class="fl">难易度：</span><span class="star-level star-{$question.qlevel}">
+                                <em class="fl">{$question.qlevel_name}</em></span>
+                        </div>
+                        <div class="fl">更新日期：{$question.date}</div>
+                    </dd>
+                    <dd class="fl">来源：{$question.title}</dd>
+                </dl>
+                <!-- 答题卡标题结束 -->
+            </div>
+            <div class="question-content">
+                <div class="question">
+                    <div>{$question.body}</div>
+                </div>
+                <div class="answer">
+                    <div>{$question.answer}</div>
+                    <div>{$question.analysis}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/foreach}
+</div>
+<!--试卷详细内容结束-->
+<!--试卷内容结束-->
+</div>
+<!--右侧内容开始-->

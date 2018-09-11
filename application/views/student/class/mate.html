@@ -1,0 +1,43 @@
+{extends file='student/class/base.html'}
+
+{block name=title}同学{/block}
+
+{block name=container}
+<div class="mainContainer" pagename="">
+    <div class="stuClassBox stuTable">
+        <table>
+            <tr>
+                <th class="headerImg">头像</th>
+                <th class="name">姓名</th>
+                <th class="joinTime">加入班级日期</th>
+            </tr>
+            {foreach $class_mates as $value}
+            <tr>
+                <td>
+                    <a href="javascript:void(0)" class="img">
+                        {if $value['avatar'] == 1}
+                        <img src="{path2avatar($value['user_id'], 2)}{$version}" title="{$value.name}">
+                        {else}
+                        <img src="{$static_url}{$static_version}image/studentClass/studentHeaderImg1.png" title="{$value.name}">
+                        {/if}
+                    </a>
+                </td>
+                <td>{$value.name}</td>
+                <td>{$value.join_date|date_format:'%Y-%m-%d'}</td>
+            </tr>
+            {/foreach}
+            {foreach $create_mates as $value}
+            <tr>
+                <td>
+                    <a href="javascript:void(0)" class="img">
+                        <img src="{$static_url}{$static_version}image/studentClass/studentHeaderImg2.png" title="{$value.student_name}">
+                    </a>
+                </td>
+                <td>{$value.student_name}</td>
+                <td>未激活</td>
+            </tr>
+            {/foreach}
+        </table>
+    </div>
+</div>
+{/block}

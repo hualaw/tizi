@@ -1,0 +1,5 @@
+.wrap{margin:30px auto 60px auto;}
+.wrap .slide{background: #f6f6f6;}
+.wrap .slide .hd{ text-align: center;}
+.wrap .slide a.upNewPaper{margin:20px auto;width: 90px;height:35px;line-height:35px;}
+.wrap .slide a.upNewPaper:hover{color: #fff;}

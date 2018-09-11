@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soundList>
+<url name="lose">
+assets/sound/lose.mp3
+</url>
+<url name="star">
+assets/sound/star.mp3
+</url>
+<url name="win">
+assets/sound/win.mp3
+</url>
+<url name="winPass">
+assets/sound/winPass.mp3
+</url>
+<url name="loseAgain">
+assets/sound/loseAgain.mp3
+</url>
+<url name="pass_1">
+assets/sound/pass_1.mp3
+</url>
+<url name="pass_2">
+assets/sound/pass_2.mp3
+</url>
+<url name="pass_3">
+assets/sound/pass_3.mp3
+</url>
+<url name="welcome">
+assets/sound/welcome.mp3
+</url>
+</soundList>

@@ -1,0 +1,202 @@
+.studentAnswerQuestion{}
+.studentAnswerQuestion .stuBox{border:2px solid #d9e2ec;margin-top:20px;padding:20px;}
+.studentAnswerQuestion .stuBox .appLink{padding:6px 0 7px 0;height:30px;background:url(../../image/stuAnswerQuestion/appLink.gif) no-repeat 20px center;position:relative;}
+.studentAnswerQuestion .stuBox .appLink p{display:block;height:30px;padding-left:55px;background:#d9e2ec;width:280px;opacity:0.5;filter:alpha(opacity=50);-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
+.studentAnswerQuestion .stuBox .appLink a{position:absolute;left:60px;top:12px;}
+.studentAnswerQuestion .stuBox .stuIQa h2{font-size:24px;color:#333;line-height:50px;font-weight:normal;}
+.studentAnswerQuestion .stuBox .stuIQa h2 b{color:#f90;font-weight:normal;}
+.studentAnswerQuestion .stuBox .stuIQa li .lite_title{color:#333333;font-size:14px;line-height:30px;margin: 20px 0 10px 0;}
+.studentAnswerQuestion .stuBox .stuIQa li .lite_area{border:2px solid #d9e2ec;width:540px;height:102px;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;overflow:hidden;padding:10px;}
+/*.studentAnswerQuestion .stuBox .stuIQa li .image_upload {clear: both;position: relative;overflow: hidden;}*/
+/*.studentAnswerQuestion .stuBox .stuIQa li .image_upload .lite_upload {float: left;width: 110px;margin-right: 10px;position: relative;}*/
+/*.studentAnswerQuestion .stuBox .stuIQa li .image_upload .lite_upload span.upladpic {display: block;background: url(../../image/stuAnswerQuestion/upload_img.gif) no-repeat;*/
+/*width: 102px;height: 81px;margin-bottom: 15px;text-align: center;vertical-align: middle;}*/
+/*.studentAnswerQuestion .stuBox .stuIQa li .image_upload .lite_upload .choseFileBtn {background-color: #52cb8c;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;text-align: center;}*/
+/*.studentAnswerQuestion .stuBox .stuIQa li .imgTips {clear: both;overflow: hidden;margin-top: 10px;font-size: 14px;color: #000000;}*/
+/*.studentAnswerQuestion .stuBox .stuIQa .sub_action {margin: 20px 10px;}*/
+/*.studentAnswerQuestion .stuBox .stuIQa .sub_action .act_submitQa {width: 133px;height: 35px;line-height: 35px;font-size: 18px;color: #fff;text-align: center;}*/
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload{clear:both;position: relative; overflow:hidden;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload{float:left; width:110px; margin-right:10px; position:relative;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload span.upladpic {display: block; background:url(../../image/stuAnswerQuestion/upload_img.gif) no-repeat; width:102px; height:81px; margin-bottom:15px; text-align:center; vertical-align:middle;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload span.upladpicSpan {display: block;border: 5px solid #FCFAE6;border-radius: 5px;box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; width: 92px;height: 71px; margin-bottom:15px; text-align:center; vertical-align:middle;background: 0 none;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload span.upladpic img.picture_urls,.stuBox .stuIQa ul li .image_upload .lite_upload span.upladpicSpan img.picture_urls{ display:inline;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload .imgloading{padding:25px 30px;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload .uploadify-button{background:0 none; border:0 none; box-shadow:none;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload .choseFileBtn{background-color:#52cb8c;-moz-border-radius:10px;-webkit-border-radius: 10px;border-radius: 10px; border:1px solid #179c7e;-webkit-box-shadow:0px 4px 0px #e5e5e5;-moz-box-shadow:0px 4px 0px #e5e5e5;box-shadow:0px 4px 0px #e5e5e5; cursor:pointer; text-align:center;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload .choseFileBtn.active{background-color:#77dba2;-webkit-box-shadow:0px 4px 0px #fff;-moz-box-shadow:0px 4px 0px #fff;box-shadow:0px 4px 0px #fff;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload .choseFileBtn span{color:#fff;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload .uploadify-queue{ display: none;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .image_upload .lite_upload div.clearpic {display: none;background:url(../../image/stuAnswerQuestion/aq_closeBtn.gif) no-repeat;width: 16px;height: 15px;position: absolute;right: 13px;top:5px;cursor: pointer;}
+.studentAnswerQuestion .stuBox .stuIQa ul li .imgTips{clear:both;overflow:hidden; margin-top:10px; font-size:14px; color:#000000;}
+.studentAnswerQuestion .stuBox .stuIQa .sub_action{margin:20px 10px;}
+.studentAnswerQuestion .stuBox .stuIQa .sub_action .act_submitQa{width:133px; height:50px; line-height:45px; font-size:18px; color:#fff; text-align:center;}
+
+.studentAnswerQuestion .aqTeacherInfo{ margin:40px 20px 0px 20px; padding-bottom:20px; border-bottom:1px solid #ccc;}
+.studentAnswerQuestion .aqTeacherInfo .headerImg{}
+.studentAnswerQuestion .aqTeacherInfo .text{ margin-left:15px; width:500px;}
+.studentAnswerQuestion .aqTeacherInfo .text p{font-size:14px;}
+.studentAnswerQuestion .aqTeacherInfo .text h2{ padding:4px 0 10px 0; height:24px; line-height:24px; font-size:24px;}
+.studentAnswerQuestion .aqTeacherInfo .text h2 a{ color:#333;}
+.studentAnswerQuestion .aqTeacherInfo .text span{ background:url(../../image/stuAnswerQuestion/ico_teacher_info.gif) no-repeat; width:25px; height:25px; margin-top:5px; margin-left:5px; display:block; text-indent:-999px; overflow:hidden;}
+.studentAnswerQuestion .aqTeacherInfo .text .ico_good{ background-position:0 0;}
+.studentAnswerQuestion .aqTeacherInfo .text .ico_fast{ background-position:-29px 0;}
+.studentAnswerQuestion .aqTeacherInfo .text .ico_good_gray{background:url(../../image/stuAnswerQuestion/ico_teacher_info_gray.gif) no-repeat; width:25px; height:25px; margin-top:5px; display:block; text-indent:-999px; overflow:hidden;background-position:0 0;}
+.studentAnswerQuestion .aqTeacherInfo .text .ico_fast_gray{background:url(../../image/stuAnswerQuestion/ico_teacher_info_gray.gif) no-repeat; width:25px; height:25px; margin-top:5px; display:block; text-indent:-999px; overflow:hidden;background-position:-29px 0;}
+
+.studentAnswerQuestion .aqTeacherInfo .text .padding{ padding:20px 0;}
+.studentAnswerQuestion .aqTeacherInfo .text .padding a{ color:#01b88a; margin-left:15px;}
+.studentAnswerQuestion .aqTeacherInfo .btnAsk a{ background:url(../../image/stuAnswerQuestion/ico_btnAsk.gif) no-repeat; width:76px; height:24px; text-align:center;color:#333; line-height:24px;}
+/*内容开始*/
+.studentAnswerQuestion .aqContent{margin:0px 20px 20px 20px;}
+.studentAnswerQuestion .aqContent .title{ height:45px; line-height:45px;border-bottom:2px solid #333;}
+.studentAnswerQuestion .aqContent .title a{ font-size:18px; margin-left:20px;color:#01b88a; padding-bottom:11px;}
+.studentAnswerQuestion .aqContent .title a.on,.studentAnswerQuestion .aqContent .title a:hover{ background:url(../../image/stuAnswerQuestion/ico_aq_narrow.gif) no-repeat 15px bottom; text-decoration:none; color:#333;}
+.studentAnswerQuestion .aqContent .title a span{ font-size:14px;}
+.studentAnswerQuestion .aqContent .con{ padding:5px 0; display:none}
+.studentAnswerQuestion .aqContent .dis{ display:block;}
+.studentAnswerQuestion .aQuestionCon,.studentAnswerQuestion .studentAnswerQuestion .aQuestionComment,.studentAnswerQuestion .studentAnswerQuestion .quesPage,.studentAnswerQuestion .applyQuestion,.studentAnswerQuestion .studentAnswerQuestion .aQuestionWrite{/*border:1px solid #ccc;*/ padding:10px 20px;}
+.studentAnswerQuestion .aQuestionCon a{color:#000;}
+.studentAnswerQuestion .aQuestionCon ul{ margin-top:-10px; }
+.studentAnswerQuestion .aQuestionCon li{ border-bottom:1px solid #ccc; margin-top:10px;}
+.studentAnswerQuestion .aQuestionCon li em{ background:url(../../image/stuAnswerQuestion/ico_star.gif) no-repeat; width:84px; height:16px; overflow:hidden; display:block; margin-top:5px;}
+.studentAnswerQuestion .aQuestionCon li .aqStar1{ background-position:0 0;}
+.studentAnswerQuestion .aQuestionCon li .aqStar2{ background-position:0 -17px;}
+.studentAnswerQuestion .aQuestionCon li .aqStar3{ background-position:0 -33px;}
+.studentAnswerQuestion .aQuestionCon li .aqStar4{ background-position:0 -48px;}
+.studentAnswerQuestion .aQuestionCon li .aqStar5{ background-position:0 -66px;}
+.studentAnswerQuestion .aQuestionCon li p{ font-size:14px; line-height:24px; width:666px;}
+.studentAnswerQuestion .aQuestionCon .ico_voiceResponse{ background:url(../../image/stuAnswerQuestion/ico_void.gif) no-repeat left; font-size:14px; margin:10px 0; display:inline-block; text-indent:20px; color:#666;}
+.studentAnswerQuestion .aQuestionCon li.on,.aQuestionCon li.on a{ color:#01B88A}
+
+.studentAnswerQuestion .aQuestionCon .ico_pic_apply{ background:url(../../image/stuAnswerQuestion/ico_pic_apply.gif) no-repeat left;font-size:14px; margin:10px 0; display:inline-block; text-indent:20px; color:#666;}
+
+/*内容结束*/
+/*评价开始*/
+.studentAnswerQuestion .aQuestionComment .commentContent ul{ margin-top:10px; margin-bottom:40px;}
+.studentAnswerQuestion .aQuestionComment .commentContent li{ height:21px; overflow:hidden; padding-bottom:10px;}
+.studentAnswerQuestion .aQuestionComment .commentContent span{ background:url(../../image/stuAnswerQuestion/ico_star_big.gif) no-repeat; width:123px; height:21px; display:block}
+.studentAnswerQuestion .aQuestionComment .commentContent .star5{ background-position:0 0}
+.studentAnswerQuestion .aQuestionComment .commentContent .star4{ background-position:0 -31px}
+.studentAnswerQuestion .aQuestionComment .commentContent .star3{ background-position:0 -62px}
+.studentAnswerQuestion .aQuestionComment .commentContent .star2{ background-position:0 -91px}
+.studentAnswerQuestion .aQuestionComment .commentContent .star1{ background-position:0 -120px}
+.studentAnswerQuestion .aQuestionComment .commentContent p{ width:140px;height:13px; line-height:13px;display:block; margin:4px 10px 0 10px;}
+.studentAnswerQuestion .aQuestionComment .commentContent p i{ background:#ccc; display:block;height:13px; line-height:13px}
+.studentAnswerQuestion .aQuestionComment .commentContent em{ height:21px; line-height:21px; overflow:hidden; font-size:14px;}
+.studentAnswerQuestion .commentList li{ border-bottom:1px solid #ccc; padding:20px 0 15px 0;}
+.studentAnswerQuestion .commentList li span{background:url(../../image/stuAnswerQuestion/ico_star.gif) no-repeat; width:84px; height:16px; overflow:hidden; display:block;}
+.studentAnswerQuestion .commentList li .aqStar1{ background-position:0 0;}
+.studentAnswerQuestion .commentList li .aqStar2{ background-position:0 -17px;}
+.studentAnswerQuestion .commentList li .aqStar3{ background-position:0 -33px;}
+.studentAnswerQuestion .commentList li .aqStar4{ background-position:0 -48px;}
+.studentAnswerQuestion .commentList li .aqStar5{ background-position:0 -66px;}
+.studentAnswerQuestion .commentList li p{ margin-left:12px; font-size:14px;}
+.studentAnswerQuestion .commentList li em{ color:#ccc;}
+.studentAnswerQuestion .commentList li p.content{color:#000;font-family: '微软雅黑',Tahoma,Arial,sans-serif;}
+.studentAnswerQuestion .commentList li.on,.studentAnswerQuestion .commentList li.on a{ color:#01B88A}
+.studentAnswerQuestion .commentList li a:hover{color:#01B88A}
+/*评价结束*/
+/*提问页面开始*/
+.studentAnswerQuestion .quesPage{ margin:10px 15px; line-height:24px;}
+.studentAnswerQuestion .quesPage .title{ padding:10px 0px}
+.studentAnswerQuestion .quesPage .pic{width:82px; text-align:center;}
+.studentAnswerQuestion .quesPage .pic a{ color:#333;}
+.studentAnswerQuestion .quesPage .pic img{ width:35px; margin:0 auto}
+.studentAnswerQuestion .quesPage .info{ width:570px; margin-left:20px; font-size:14px; line-height:22px;}
+.studentAnswerQuestion .quesPage .info p{ font-size:14px;}
+.studentAnswerQuestion .quesPage .ccc{color:#ccc; margin-top:15px; margin-right:10px; width: 120px;}
+.studentAnswerQuestion .applyQuestion{ margin:10px 15px; padding:15px 20px;}
+.studentAnswerQuestion .applyQuestion .headerImg{ width:80px;}
+.studentAnswerQuestion .applyQuestion .headerImg img{ width:70px;height:70px;}
+.studentAnswerQuestion .applyQuestion .text span{ background:url(../../image/stuAnswerQuestion/ico_teacher_info.gif) no-repeat; width:25px; height:25px; margin-top:5px; margin-right:5px; display:block; text-indent:-999px; overflow:hidden;}
+.studentAnswerQuestion .applyQuestion .text .ico_good_gray{background:url(../../image/stuAnswerQuestion/ico_teacher_info_gray.gif) no-repeat; width:25px; height:25px; margin-top:5px; margin-right:5px; display:block; text-indent:-999px; overflow:hidden;background-position:0 0;}
+.studentAnswerQuestion .applyQuestion .text .ico_fast_gray{background:url(../../image/stuAnswerQuestion/ico_teacher_info_gray.gif) no-repeat; width:25px; height:25px; margin-top:5px; margin-right:5px; display:block; text-indent:-999px; overflow:hidden;background-position:-29px 0;}
+.studentAnswerQuestion .applyQuestion .text .title{ font-size:16px;}
+.studentAnswerQuestion .applyQuestion .text .ico_good{ background-position:0 0;}
+.studentAnswerQuestion .applyQuestion .text .ico_fast{ background-position:-29px 0;}
+.studentAnswerQuestion .applyQuestionInfo{ padding:12px 0px; margin-left:-15px;}
+.studentAnswerQuestion .applyQuestionInfo span{ margin:0px 15px;}
+.studentAnswerQuestion .applyQuestionInfo .star{background:url(../../image/stuAnswerQuestion/ico_star.gif) no-repeat; width:84px; height:16px; overflow:hidden; display:block;}
+.studentAnswerQuestion .applyQuestionInfo .aqStar1{ background-position:0 0;}
+.studentAnswerQuestion .applyQuestionInfo .aqStar2{ background-position:0 -17px;}
+.studentAnswerQuestion .applyQuestionInfo .aqStar3{ background-position:0 -33px;}
+.studentAnswerQuestion .applyQuestionInfo .aqStar4{ background-position:0 -48px;}
+.studentAnswerQuestion .applyQuestionInfo .aqStar5{ background-position:0 -66px;}
+.studentAnswerQuestion .applyVoid{ margin-top:20px; background:#f7f7f7; border-radius:5px; padding:13px;}
+.studentAnswerQuestion .applyVoid .time{ position:absolute; bottom:13px; right:13px; color:#666;}
+/*.studentAnswerQuestion .applyVoid img{ width: 680px; margin-bottom: 30px;}*/
+.studentAnswerQuestion .applyVoid h2{ color:#b1b0b0; font-size:14px; margin-bottom: 5px;}
+.studentAnswerQuestion .applyVoid .play{ margin-top:10px;}
+/*提问页面结束*/
+/*提问阶段步骤开始*/
+.studentAnswerQuestion .queStep{ border-top:1px solid #ccc; margin-top:30px; padding:30px 0}
+.studentAnswerQuestion .queStep .edit{ position:absolute; top:-35px; right:0px; background:url(../../image/stuAnswerQuestion/ico_edit.gif) no-repeat; width:22px; height:22px; display:inline-block;}
+.studentAnswerQuestion .queStep ul{ width:635px; margin:10px auto 50px auto}
+.studentAnswerQuestion .queStep li{ float:left; position:relative;}
+.studentAnswerQuestion .queStep li .title{ padding:0px;}
+.studentAnswerQuestion .queStep li p{ display:none;position:absolute; top:70px; left:-17px; width:130px;}
+.studentAnswerQuestion .queStep li p a{ color:#298d6a;}
+.studentAnswerQuestion .queStep li .dis{ display:block;}
+.studentAnswerQuestion .queStep li.narrow{ background:#c00; background:url(../../image/stuAnswerQuestion/ico_step.gif) no-repeat -74px -23px; width:99px; height:23px; line-height:23px; overflow:hidden; margin:25px 10px 0px 10px;}
+.studentAnswerQuestion .queStep span{ background:url(../../image/stuAnswerQuestion/ico_step.gif) no-repeat; width:69px; display:block; line-height:69px; overflow:hidden; text-align:center; font-size:16px;}
+.studentAnswerQuestion .queStep li.on span{background:url(../../image/stuAnswerQuestion/ico_step.gif) no-repeat 0px -69px;}
+.studentAnswerQuestion .queStep li.on{background:url(../../image/stuAnswerQuestion/ico_step.gif) no-repeat -74px -94px;}
+/*提问阶段步骤开始*/
+/*评价输入开始*/
+.studentAnswerQuestion .aQuestionWrite{ padding-top:15px;}
+.studentAnswerQuestion .aQuestionWrite a{color:#01B88A}
+.studentAnswerQuestion .aQuestionWrite .write{ padding:10px 0px;}
+.studentAnswerQuestion .aQuestionWrite .text{ border:1px solid #cfcfcf; line-height:30px; width:428px; height:30px;font-size:14px; padding:3px 10px;}
+.studentAnswerQuestion .aQuestionWrite .submit{ background:url(../../image/stuAnswerQuestion/ico_btnSubmit.gif) no-repeat; width:101px;height:31px; border:0px; margin-top:3px; margin-left:10px; cursor:pointer;}
+/*评价输入结束*/
+/*评价输入开始*/
+.studentAnswerQuestion .aQuestionWrite span{ background:url(../../image/stuAnswerQuestion/ico_star_big.gif) no-repeat; width:123px; height:21px; display:block}
+.studentAnswerQuestion .aQuestionWrite .star5{ background-position:0 0}
+.studentAnswerQuestion .aQuestionWrite .star4{ background-position:0 -31px}
+.studentAnswerQuestion .aQuestionWrite .star3{ background-position:0 -62px}
+.studentAnswerQuestion .aQuestionWrite .star2{ background-position:0 -91px}
+.studentAnswerQuestion .aQuestionWrite .star1{ background-position:0 -120px}
+.studentAnswerQuestion .aQuestionWrite .star0{ background-position:0 -120px}
+.studentAnswerQuestion .aQuestionWrite .star{ background-position:0 -120px}
+.studentAnswerQuestion .aQuestionWrite p{ padding:20px 0px;}
+/*评价展示结束*/
+/*我的提问列表开始*/
+.studentAnswerQuestion .myAskList{ padding:10px 0px; line-height:23px;}
+.studentAnswerQuestion .myAskList .myAskUl{margin: 0 auto;padding-bottom: 20px;height: 100%;min-height: 360px;_height: 360px;}
+.studentAnswerQuestion .myAskList .nolist{background: url(../../image/stuAnswerQuestion/noBg.gif) no-repeat center;}
+.studentAnswerQuestion .myAskList li{border-bottom:1px solid #ddd;}
+.studentAnswerQuestion .myAskList li.on,.studentAnswerQuestion .myAskList li.on a{ color:#01B88A}
+.studentAnswerQuestion .myAskList li .con{padding-bottom:12px; margin:12px 0 10px 10px;}
+.studentAnswerQuestion .myAskList li .text{ width:650px;}
+.studentAnswerQuestion .myAskList li .tip{ width:100px; text-align:center; margin-top:15px; font-size:14px;}
+.studentAnswerQuestion .myAskList li .ico_inHand{color:#ed1751;}
+.studentAnswerQuestion .myAskList li .ico_newAnswer{color:#f4a907;}
+.studentAnswerQuestion .myAskList li .ico_comment input{ background:#01b88a; height:30px; line-height:30px; width:76px; text-align:center; border:0px; cursor:pointer; color:#fff;}
+.studentAnswerQuestion .myAskList .moneyDiv{background:#f7f7f7; height:35px; line-height:35px;}
+.studentAnswerQuestion .myAskList .moneyDiv h3{ background:url(../../image/stuAnswerQuestion/ico_coinNum_small.gif) no-repeat left; font-weight:normal;padding-left:35px; color:#eaab4d; margin-left:10px; width:26px; height:26px; padding-top:10px; display:none;}
+.studentAnswerQuestion .myAskList .moneyDiv span{ margin-right:10px; color:#ccc;}
+.studentAnswerQuestion .myAskList li p .star{ background:url(../../image/stuAnswerQuestion/ico_star.gif) no-repeat; width:84px; height:16px;overflow:hidden; display:block;}
+.studentAnswerQuestion .myAskList li p .aqStar1{ background-position:0 0;}
+.studentAnswerQuestion .myAskList li p .aqStar2{ background-position:0 -17px;}
+.studentAnswerQuestion .myAskList li p .aqStar3{ background-position:0 -33px;}
+.studentAnswerQuestion .myAskList li p .aqStar4{ background-position:0 -48px;}
+.studentAnswerQuestion .myAskList li p .aqStar5{ background-position:0 -66px;}
+/*鼠标经过星星开始*/
+.studentAnswerQuestion .aQuestionWrite .aqStarNormal{position:relative; height:21px; overflow:hidden;}
+.studentAnswerQuestion .aQuestionWrite .aqStarNormal ul,.studentAnswerQuestion .aQuestionWrite .aqStarNormal span{float:left;display:inline;height:19px;line-height:19px;}
+.studentAnswerQuestion .aQuestionWrite .aqStarNormal em{ margin-top:1px; float:left;}
+.studentAnswerQuestion .aQuestionWrite .aqStarNormal li{float:left;width:21px;cursor:pointer;text-indent:-9999px;background:url(../../image/stuAnswerQuestion/star.gif) no-repeat; height: 21px; margin-right: 5px;}
+.studentAnswerQuestion .aQuestionWrite .aqStarNormal li.on{background-position:0 -22px;}
+/*鼠标经过星星结束*/
+
+
+
+
+
+
+
+
+
+
+
+

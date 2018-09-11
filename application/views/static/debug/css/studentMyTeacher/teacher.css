@@ -1,0 +1,11 @@
+.studentMyTeacher{}
+.studentMyTeacher .teacherList li{border:1px solid #d7d7d7;padding:14px;width:100px;float:left;margin:0 10px 10px 0;}
+.studentMyTeacher .teacherList li.noMr_r{margin-right:0px;}
+.studentMyTeacher .headerImg{width:100px;height:100px;background-color:#d9e2ec;}
+.studentMyTeacher .headerImg img{width:100px;;height:100px;;}
+.studentMyTeacher .teacherList p{color:#565656;text-align:center;margin-bottom:10px;}
+.studentMyTeacher .teacherList .name p{margin-top:10px;margin-bottom:0;font-size:16px;}
+.studentMyTeacher .teacherList .name p.noAdd{margin-top:10px;margin-bottom:0;color:#999999}
+
+
+

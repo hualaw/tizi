@@ -1,0 +1,48 @@
+/*学生作业管理tab选项卡样式开始*/
+.stuDownHomework .stuHomeworkCount{margin-top:20px;}
+.studentCommonBox .stuBox h2{height:25px;}
+.stuDownHomework .homeworkTab{border-bottom:2px solid #d9e2ec;height:30px;line-height:30px;position:relative;}
+.stuDownHomework .homeworkTab h2{position:absolute;left;0;bottom:-2px;font-weight:normal;}
+.stuDownHomework .homeworkTab h2 a{display:block;width:125px;line-height:28px;height:28px;text-align:center;border:2px solid #d9e2ec;float:left;color:#565656;background-color:#f6f6f6;}
+.stuDownHomework .homeworkTab h2 a.br_0{border-right:0;}
+.stuDownHomework .homeworkTab h2 a.active{display:block;background-color:#fff;border-bottom-color:#fff;}
+/*学生作业管理tab选项卡样式结束*/
+.stuDownHomework .stuBox .workIntro{padding: 30px 0px 15px 30px;}
+.stuDownHomework .stuBox .workIntro li{font-size:16px;margin-bottom:10px;color:#565656;}
+/*下载按钮样式开始*/
+.stuDownHomework .downloadBox{padding:0 0 30px 30px;width:505px;}
+.stuDownHomework .downloadBox a{text-align:center;padding:3px 10px;margin-right:10px;font-size:14px;}
+.stuDownHomework .downloadBox a.cBtnNormal{color:#fff;}
+.stuDownHomework .downloadBox a{color:#999;}
+.stuDownHomework span.teacherComment{font-size:14px;color:#565656;line-height:34px;}
+/*下载按钮样式结束*/
+/*stuBox下方灰条样式开始*/
+.stuDownHomework .btmBar{padding:0 10px;font-size:14px;color:#999999;background:#f2f2f2;line-height:30px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.stuDownHomework .btmBar .priase{color:#179c7e;background:url(../../image/studentHomeWork/priase.gif) no-repeat right center;padding-right:20px;}
+.stuDownHomework .btmBar a:hover{color:#f90;}
+.stuDownHomework .btmBar .name em{padding:0 10px;}
+/*stuBox下方灰条样式结束*/
+/*右上方下载状态样式开始*/
+.stuDownHomework .stuDownload{position:absolute;top:45px;*+top:44px;right:65px;padding:0 20px;height:39px;font-size:14px;color:#fff;line-height:39px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.stuDownHomework .haveDown{background:#179c7e;}
+.stuDownHomework .noDown{background:#f90;}
+/*右上方下载状态样式结束*/
+/*****************************************************/
+/*学生作业统计tab选项卡样式开始*/
+.stuDownHomework .homeworkTab{border-bottom:2px solid #d9e2ec;height:30px;line-height:30px;position:relative;margin-bottom:20px;}
+.stuDownHomework .homeworkTab h2{position:absolute;left;0;bottom:-2px;font-weight:normal;}
+.stuDownHomework .homeworkTab h2 a{display:block;width:125px;line-height:28px;height:28px;text-align:center;border:2px solid #d9e2ec;float:left;color:#565656;background-color:#f6f6f6;}
+.stuDownHomework .homeworkTab h2 a.br_0{border-right:0;}
+.stuDownHomework .homeworkTab h2 a.active{display:block;background-color:#fff;border-bottom-color:#fff;}
+/*学生作业统计tab选项卡样式结束*/
+/*表格公共样式开始*/
+.stuDownHomework table{width:100%;border:1px solid #d9e2ec;}
+.stuDownHomework table td,.stuDownHomework table th{text-align:center;line-height:32px;border:1px solid #d9e2ec;}
+.stuDownHomework table th{background:#f6f6f6;font-size:14px;color:#565656;font-weight:normal;}
+/*表格公共样式结束*/
+.stuDownHomework table .width_100{width:100px;}
+.stuDownHomework table .width_76{width:76px;}
+.stuDownHomework table .width_125{width:125px;}
+.stuDownHomework table td a{color:#09aa83;}
+.stuDownHomework table td a:hover{color:#F90;}
+.stuDownHomework table td a.active{color:#F90;}

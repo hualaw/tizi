@@ -1,0 +1,13 @@
+
+            <span class="leftTitle">{if $subject_id==3 or $subject_id==12 or $subject_id==21}单元：{else}章：{/if}</span>
+            <!-- 单元选择列表开始 -->
+            <div class="choiceWrap untilList cf">
+                {foreach $units as $k=>$val}                 
+                <div class="choiceItem untilVal {if $val@iteration==1}selected{/if}"  unit="{$val->id}"> {$val->name}<span class="selectNum">0</span>
+                </div>
+                {/foreach}
+            </div>
+            <!-- 单元选择列表结束 -->
+
+            
+ 

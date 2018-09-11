@@ -1,0 +1,45 @@
+<!--我要投诉内容开始-->
+<div class="complaintConent undis">
+    <form action="{$site_url}student/aq_controller/sue" method="post" class="complaintConentForm_beta">
+        <div class="feedback_text complaintCon fl">
+            <div class="bd">
+                <h3>投诉内容<em>（5-1000字）</em></h3>
+                <ul>
+                    <li class="cf">
+                        <textarea id='sue_content' name="content" class="contentTextarea"></textarea>
+                        <div class="ValidformTips fl">
+                            <span class="Validform_checktip"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li class="cf">
+                        <label class="label">您的手机号（我们将通过该号码联系您）</label>
+                    </li>
+                    <li class="cf">
+                        <input type="text" name="phone" class="tel fl" style="border:1px solid #ccc;height:26px;margin-top:8px;padding-left:5px;width:220px;"/>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="cf">
+                        <label class="label">验证码</label>
+                    </li>
+                    <li class="cf">
+                        <input type="text" name="captcha_word" class="fl textCaptcha" style="border:1px solid #ccc;height:26px;margin-top:8px;padding-left:5px;width:220px;"/>
+                        <span id="captcha" class="fl" style="margin-top:2px;width:113px;float:left;margin-left:10px;">
+                            <img class="imgCaptcha fl" />
+                            <a href="javascript:void(0);" class="changeCaptcha color-green click-to-change-feedback" style="margin-left:38px;color:#298d6a;cursor:pointer;">换一张</a>
+                        </span>
+                        <span class="captchaChecks"></span>
+                    </li>
+                </ul>
+            </div>  
+        </div>
+        <input type="hidden" name="question_id" id="question_id" value="{$question_id}" />
+        <input type="hidden" name="teacher_id" id="teacher_id" value="{$res.teacher_id}" />
+        <input type="submit" class="undis" value="" />
+    </form>
+</div>
+<!--我要投诉内容结束-->

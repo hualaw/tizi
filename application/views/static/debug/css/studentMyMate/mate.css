@@ -1,0 +1,11 @@
+.studentMyMate{}
+.studentMyMate .mateList li{border:1px solid #d7d7d7;padding:10px;width:175px;float:left;margin:0 10px 10px 0;}
+.studentMyMate .mateList li.noMr_r{margin-right:0px;}
+.studentMyMate .headerImg{width:50px;height:50px;background-color:#d9e2ec;}
+.studentMyMate .headerImg img{width:50px;height:50px;}
+.studentMyMate .mateMsg {padding:5px 0 0 10px ;}
+.studentMyMate .mateMsg p.name{font-size:16px;color:#565656;line-height:26px;}
+.studentMyMate .mateMsg p.joinTime{color:#999999;}
+.studentMyMate .mateMsg .joinTime .time{margin-right:5px;}
+
+

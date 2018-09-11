@@ -1,0 +1,53 @@
+<tr>
+    <td>
+        <label for="{$val.id}">
+            <input type="checkbox" id="{$val.id}" name="everyFile" value="checkbox">
+            {if $val.is_share_to_tizi==1}
+            <a target="_blank" 
+            href="{$site_url}teacher/lesson/view/{alpha_id($val.lesson_res_id)}"
+            title="{$val.file_name}">{sub_str($val.file_name,0,72)}
+            </a>
+            {else}
+
+ <!-- 预览开始 -->
+    {if $val.file_type==Constant::CLOUD_FILETYPE_PIC }
+    <a target="_blank" href="{$site_url}teacher/lesson/file_detail/{$val.id}" title="{$val.file_name}">
+        {sub_str($val.file_name,0,72)}  </a>
+    {elseif ($val.file_type == Constant::CLOUD_FILETYPE_AUDIO or $val.file_type==Constant::CLOUD_FILETYPE_VIDEO)}
+        {if $val.persistent_id>0 or $val.file_ext == 'mp4' or $val.file_ext =='swf' or $val.file_ext =='mp3' }
+            {if $val.pfop or $val.file_ext == 'mp4' or $val.file_ext =='swf' or $val.file_ext =='mp3' }
+            <a target="_blank" href="{$site_url}teacher/lesson/file_detail/{$val.id}" title="{$val.file_name}">
+                {sub_str($val.file_name,0,72)}  </a>
+            {else}
+                <a class="beike_check_pfop_file" file_id='{$val.id}' >
+                {sub_str($val.file_name,0,72)}  </a>
+            {/if}
+        {else}
+            {sub_str($val.file_name,0,72)}
+        {/if}
+    {elseif $val.file_type==Constant::CLOUD_FILETYPE_DOC}
+        {if $val.queue_status==1}
+            <a target="_blank" href="{$site_url}teacher/lesson/file_detail/{$val.id}" title="{$val.file_name}">
+                {sub_str($val.file_name,0,72)}  </a>
+        {elseif $val.queue_status==4}
+            {sub_str($val.file_name,0,72)}
+        {else}
+            <a class='beike_file_trans_inprocess' file_id='{$val.id}'>
+            {sub_str($val.file_name,0,72)}</a>
+        {/if}
+    {else}
+        <a target="_blank" href="{$site_url}teacher/lesson/file_detail/{$val.id}" title="{$val.file_name}">
+                {sub_str($val.file_name,0,72)}  </a>
+    {/if}
+<!-- 预览 结束 -->
+
+             
+            {/if} 
+        </label>
+    </td>
+    <td>{$val.file_ext}</td>
+    <td>{Constant::resource_type($val.resource_type)}</td>
+    <td>{date('Y-m-d',$val.upload_time)}</td>
+    <td>上传 </td>
+    <td> {if $val.is_share_to_tizi==1}公开{elseif $val.is_share_to_tizi==2}审核中{elseif $val.is_share_to_tizi==3}未通过审核{else}私有{/if} </td>
+</tr>

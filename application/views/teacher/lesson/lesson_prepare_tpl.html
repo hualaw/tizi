@@ -1,0 +1,124 @@
+<div class="lessonSearch cf">
+	<!-- <span class="fl spanTitle">共{$data.total}个文档</span> -->
+	<div class="fl head-order">
+		<span class="fl screening">排序：</span>
+		<a href="javascript:void(0)" data-order="0" id="odate" class="fl time {if $data.order_sel eq 0}active{/if}">发布时间</a>
+		<a href="javascript:void(0)" data-order="2" id="osize" class="fl {if $data.order_sel eq 2}active {if $data.order_sel>0 && $data.order_desc eq 1}orther{else if $data.order_sel>0 && $data.order_desc eq 2}up{else}{/if}{/if}">大小</a>
+	</div>
+	<a class="dropBoxup fr loginCheck" href="{$site_url}teacher/lesson/upload/{$sid}/{$nselect}{if $doc_type eq 0}{else}/{$doc_type}{/if}" target="_blank">
+		<span>上传文件赚积分</span>
+	</a>
+</div>  
+{if $data.total eq 0}
+<div class="emptyBox">
+	<p>很抱歉，此目录下暂无资源，我们将会尽快补充内容。</p>
+</div>
+{else}                  
+<ul>
+{foreach $data.document as $doc}
+	<li class="cf">
+		 <div class="listIcon fl">
+			 <span class="fileType">{$doc.file_ext}</span>
+		 </div>
+		 <div class="listContent fl">
+			 <h3> 
+				 <a href="{$site_url}teacher/lesson/view/{$doc.id}" target="_blank" data-id="{$doc.file_id}" title="{$doc.file_name}">
+					{sub_str($doc.file_name,0,70)}
+				</a>
+			 </h3>
+			 <span class="other">
+				 大小：
+				 <em>{$doc.file_size}</em>
+				 格式：
+				 <em>{$doc.extension}</em>
+			 </span>
+		 </div>
+		 <div class="praise fr">
+			 <span class="haveRead">{$doc.hits}人已经阅读</span>
+			<span class="star oStar cf">
+				{foreach $doc.star_level as $val}
+				<em class="fl {if $val eq 3}all{else if $val eq 2}half{else}{/if}"></em>
+				{/foreach}				
+				<em class="fl have">{$doc.assess_count}人评价</em>
+			</span>
+		 </div>
+	 </li>
+ {/foreach}
+	 </ul>
+{/if}
+<div class="page cf">
+	<p class="fr">{$pages}</p>
+</div>
+
+
+<!-- 上传文件列表开始 -->
+<div id="fileListUploadPop" class="pop_box">
+    <!--控制上传到哪个文件件下面-->
+    <input type='hidden' class='current_dir_id' data-fname="" value='0' />
+    <form class="fileListUploadForm" action="{$site_url}resource/share_to_tizi/add" method="post">
+        <input type="hidden" class="fileShare" value="" name="fileShare">
+        <input type="hidden" class="fileIdList" value="" name="fileIdList">
+        <div class="teacherLesson">
+            <div class="pop_main">
+                <div class="fileListUpload">
+                    <p class="fileListTip">您每次最多可以选择5个文件同时上传</p>
+                    <div class="uploadBtn">
+                        <!--上传组件开始-->
+                        <a id="upDropFile" class="cBtnNormal" href="javascript:void(0);">
+                            <span>上传文件</span><em></em>
+                        </a>
+                        <div class="uploadSwf">
+                            <input type='text' name='shareFileUp' id='shareFileUp' class='choseFileTxt fl' disabled style="display:none" />
+                            <input type="file" name="shareFileUpField" id="shareFileUpField" class="file fl" multiple="true" style="display:none"/>
+                        </div>
+                        <!--上传组件结束-->
+                    </div>
+                </div>
+                <!--提示队列开始-->
+                <div class="fileListQueue">
+
+                </div>
+                <!--提示队列结束-->
+                <!--共享提示开始-->
+                <div class="sharAllFile">
+                    <label for="checkshareUp0">
+                        <input type="radio" value="1" id="checkshareUp0" name="share" checked="checked"/>将此文件共享给梯子网<span>(我们会在文档中注明由谁上传)</span>
+                    </label>
+                    <label for="checkshareUp">
+                        <input type="radio" value="0" id="checkshareUp" name="share"/>此文件仅限我自己使用
+                    </label>
+                </div>
+                <!--共享提示结束-->
+            </div>
+        </div>
+        <input type="submit" class="undis" />
+    </form>
+</div>
+<!-- 上传文件列表结束 -->
+<input type="hidden" id="class_id" value="" /> <!-- 删了就出js错误 -->
+<script type="text/template" id="upFilePop">
+    <!--上传文件 ing 进度显示框  -->
+    <div class="teacherLesson">
+        <div class="pop_main">
+            <ul class="upFileTable">
+                <!--<li class="UFHeader cf">-->
+                    <!--<span class="col1">文件名</span>-->
+                    <!--<span class="col2">大小</span>-->
+                    <!--<span class="col3">上传目录</span>-->
+                    <!--<span class="col4">状态</span>-->
+                    <!--<span class="col5">操作</span>-->
+                <!--</li>-->
+                <%#files%>
+                <li id="file_num_<%queue_id%>" class="fileList loadingBg cf">
+                    <strong>&nbsp;</strong>
+                    <span class="col1"><%file_name%></span>
+                    <span class="col2"><%size%></span>
+                    <span class="col3"><%cdir%></span>
+                    <span class="col4"><a class="complete" href="javascript:;">排队中...</a></span>
+                    <span class="col5"><a class="UploadCancel onCancel" href="javascript:$('#shareFileUp').uploadify('cancel','<%file_id%>');">x</a></span>
+                </li>
+                <%/files%>
+            </ul>
+        </div>
+    </div>
+</script>

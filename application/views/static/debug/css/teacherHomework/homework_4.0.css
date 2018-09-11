@@ -1,0 +1,175 @@
+/*老师留作业模块的公共部分开始*/
+.teacherHomework .dialogWrap{display: none;}
+.teacherHomework .flash .dialogWrapOpen{width: 670px; color:#fff;text-align: center; background-color: #09A3AA;font-size: 50px;line-height: 100px;height: 100px;}
+/*老师留作业模块的公共部分结束*/
+
+/*留作业class_list页面开始*/
+/*单个班级作业*/
+/*单个班级作业显示框*/
+.teacherHomework .classList .homeworkWrap{background: none repeat scroll 0 0 #f6f6f6;border: 1px solid #d7d7d7;padding:  16px 15px;margin: 15px 0px;}
+.teacherHomework .classList .homeworkHeade{line-height: 20px;}
+.teacherHomework .classList .homeworkHeade h4{font-weight: normal;font-size: 16px;}
+/*右侧的作业历史和作业汇总报告icon开始*/
+.teacherHomework .classList .workForm a{ color: #17a27e;height: 18px;line-height: 18px;display: inline-block;}
+.teacherHomework .classList .workForm a:hover{color: #f90;}
+.teacherHomework .classList .workForm .workHistory,.teacherHomework .workForm .workReport{background: url(../../image/teacherHomework/history.gif) no-repeat left center;margin-left:25px;_padding:3px 0px; padding-left: 23px;}
+.teacherHomework .classList .workForm .workReport{background: url(../../image/teacherHomework/report.gif) no-repeat left center;}
+/*右侧的作业历史和作业汇总报告icon结束*/
+/*单个班级未留作业的显示框开始*/
+.teacherHomework .classList .homeworkWrap .noWork{ background-color: #fff;border: 1px dashed #d7d7d7;height: 110px;text-align: center; padding-top: 50px; margin-top: 15px;}
+.teacherHomework .classList .homeworkWrap .newWork{height: 80px;text-align: center; padding-top: 30px; margin-top: 15px;}
+/*发布作业按钮*/
+.teacherHomework .classList .homeworkWrap .assignBtn{font-size: 20px;line-height:40px;height:40px;width:170px;}
+/*单个班级未留作业的显示框结束*/
+
+/*班级作业详细列表开始*/
+.teacherHomework .classList .homeworkWrap .homeworkCont{margin: 15px 0px 0px; background: url(../../image/teacherHomework/homeworkBg.gif) repeat-x left top  #EFEFEF;border: 1px solid #d7d7d7; border-bottom-width: 2px;}
+.teacherHomework .classList .homeworkWrap .detailWrap{background-color: #fff;padding: 11px 10px;position: relative;width: 639px;border-right: 1px solid #d7d7d7;}
+.teacherHomework .classList .homeworkWrap .summaryList{line-height: 30px;}
+.teacherHomework .classList .homeworkWrap .homeworkList{margin: 10px -10px -15px;*margin-bottom: 10px;}
+.teacherHomework .classList .homeworkWrap .homeworkList li{float:left;margin: 0px 10px 15px; text-align: center;line-height: 20px;}
+.gameTitle{display: inline-block;margin-top: 5px;}
+.teacherHomework .classList .homeworkWrap .homeworkStatistics{ height: 240px; width: 285px;}
+/*作业删除链接开始*/
+.teacherHomework .classList .homeworkWrap .detailWrap .delHomework{position: absolute;right:15px; top:16px; color:#17a27e;}
+.teacherHomework .classList .homeworkWrap .detailWrap .delHomework:hover{color:#f90;}
+/*作业删除链接结束*/
+/*作业右侧的人数统计部分开始*/
+.teacherHomework .classList .homeworkWrap .peopleWrap{margin-top:15px;text-align: center;}
+.teacherHomework .classList .homeworkWrap .peopleWrap div{width: 50%;display: table-cell;line-height: 30px; font-size: 24px;}
+.teacherHomework .classList .homeworkWrap .peopleWrap div span{display: block; font-weight: normal; font-size: 14px;}
+.teacherHomework .classList .homeworkWrap .finishPeopele{border-right: 1px solid #d7d7d7; margin-right: -2px;}
+.teacherHomework .classList .homeworkWrap .unfinishPeople{border-left: 1px solid #d7d7d7; margin-left: -2px;}
+.teacherHomework .classList .homeworkWrap .checkBtnWrap{text-align: center;padding: 40px 0px 10px 0;}
+.teacherHomework .classList .homeworkWrap .checkBtn{line-height: 40px; height: 40px; width: 160px;font-size: 18px;}
+.teacherHomework .classList .homeworkWrap .uncheckBtn{background-color: #fff; background: linear-gradient(#ffffff 0%, #f6f6f6 47%, #ededed 100%); background: -ms-linear-gradient(rgb(255, 255, 255) 0%, rgb(246, 246, 246) 47%, rgb(237, 237, 237) 100%); repeat scroll 0 0 rgba(0, 0, 0, 0); color: #ccc; border-color: #ccc;}
+.teacherHomework .classList .homeworkWrap .operateExplain{padding: 0px 35px; text-align: center;color: #999999;line-height: 20px;}
+/*作业右侧的人数统计部分结束*/
+/*班级作业详细列表结束*/
+/*留作业class_list页面结束*/
+
+
+/*detail_scores页面开始*/
+.teacherHomework .detailScores .formHead{text-align: right;padding: 10px;}
+.teacherHomework .detailScores .exportBtn{width: 150px; }
+.teacherHomework .detailScores .scoresTable{width: 100%;text-align: center; border-collapse:collapse;}
+.teacherHomework .detailScores .scoresTable th,.teacherHomework .detailScores .scoresTable td{border:1px solid #d7d7d7;line-height: 30px; border-collapse:collapse;}
+.teacherHomework .detailScores .scoresTable th{background-color: #f6f6f6;font-weight: normal;border-bottom-width: 0px;}
+.teacherHomework .detailScores .rankH{width: 50px;}
+.teacherHomework .detailScores .nameH{width: 90px;}
+.teacherHomework .detailScores .w100H{width:100px;}
+/*detail_scores页面结束*/
+
+
+/*assign_homework页面开始*/
+.teacherHomework .assignHomework .assignHomeworkH{display: block; margin-bottom: 10px;}
+/*发布作业的外框*/
+.teacherHomework .assignHomework .assignWrap{background-color: #f6f6f6; border:1px solid #d7d7d7;}
+.teacherHomework .assignHomework .topWrap{padding: 30px; padding-bottom: 0px;}
+.teacherHomework .assignHomework .baseItem{margin-bottom: 15px;}
+.teacherHomework .assignHomework .className{line-height: 40px;}
+.teacherHomework .assignHomework .leftTitle{font-weight: bold;display: block; float: left;margin-right: 10px; line-height: 40px;height: 40px;width: 40px;text-align: right;}
+
+.teacherHomework .assignHomework .bottomWrap .leftTitle{width: auto;padding-left: 10px;_padding-left: 5px;}
+.teacherHomework .assignHomework .bottomWrap .labelWrap{height: 40px; line-height: 40px;display: inline-block;margin-right: 25px;_height: 20px; _line-height: 20px; _margin-top:10px;  }
+.teacherHomework .assignHomework .bottomWrap .labelWrap input{vertical-align: middle;display: inline-block; margin-right: 5px;}
+.teacherHomework .assignHomework .choiceWrap{line-height: 32px; padding:4px 0px;float: left;width: 865px;}
+.teacherHomework .assignHomework .datenInput{line-height: 28px; height: 28px;padding: 0px 10px;width: 70px;float: left;border: 1px solid #ddd;}
+.teacherHomework .assignHomework .selectWrap{float: left;padding-left: 5px;padding-right: 5px;}
+.teacherHomework .assignHomework .splitPanel{float: left;padding-left: 5px;padding-right: 5px;display: inline-block;}
+/*可选择项开始*/
+.teacherHomework .assignHomework .choiceItem{line-height: 28px;border:2px solid #ccc;float:left;padding: 0px 20px;border-radius: 4px;margin-right: 10px;margin-bottom: 10px;cursor: pointer;display: block;}
+.teacherHomework .assignHomework .choiceItem.hover{border-color: #ff9900;}
+.teacherHomework .assignHomework .choiceItem.selected{border-color: #ff9900;background-color: #ffffcc !important;}
+/*可选择项结束*/
+.teacherHomework .assignHomework .materialval{padding: 8px;width: 82px;height: 102px;color: #fff;position: relative;text-align: center;}
+.teacherHomework .assignHomework .materialList .green{background: url(../../image/teacherHomework/green-book.gif) no-repeat center; }
+.teacherHomework .assignHomework .materialList .blue{background: url(../../image/teacherHomework/blue-book.gif) no-repeat center;}
+.teacherHomework .assignHomework .materialList .org{background: url(../../image/teacherHomework/org-book.gif) no-repeat center;}
+.teacherHomework .assignHomework .materialval .play{background: url(../../image/teacherHomework/play.png);_background: url(../../image/teacherHomework/play8.png);position: absolute; top:47px; right: 14px;display: inline-block;width: 16px;height: 16px;}
+.teacherHomework .assignHomework .materialval .versions{position: absolute;width: 70%; top:30px;left:0px;font-size: 14px;display: inline-block;text-align: center;_left:8px;margin-left:15px;line-height: 22px;}
+.teacherHomework .assignHomework .materialval .vName{position: absolute;width: 100%; top:35px;left:0px;font-size: 12px;display: inline-block;text-align: center;_left:8px;}
+.teacherHomework .assignHomework .materialval .grade{position: absolute;width: 100%; bottom:16px;left:0px;font-size: 12px;color:#333;font-weight: bold;display: inline-block;text-align: center;_left:8px;}
+/*单元开始*/
+.teacherHomework .assignHomework .untilVal{position: relative;height: 28px;_overflow: hidden;_white-space: nowrap;}
+.teacherHomework .assignHomework .untilList .selectNum{text-align: center;  display: none;color: #fff;width: 20px;height: 20px;line-height: 20px; background-color: #00cc66;position: absolute;top:-2px;right: 5px;}
+.teacherHomework .assignHomework .untilList .checked .selectNum{display: block;}
+/*单元结束*/
+/*练习项的表格开始*/
+.teacherHomework .assignHomework .exerciseTable .choiceItem{float: none;}
+.teacherHomework .assignHomework .exerciseTable{border:1px solid #d7d7d7;width: 100%;text-align: center; table-layout: fixed;display: none;}
+.teacherHomework .assignHomework .exerciseTable.active{display: table;*display: block;}
+.teacherHomework .assignHomework .exerciseTable th,.teacherHomework .assignHomework .exerciseTable td{border:1px solid #d7d7d7;}
+.teacherHomework .assignHomework .exerciseTable th{background: #eee;font-size: 16px; font-weight: normal;height: 60px; vertical-align: middle;}
+.teacherHomework .assignHomework .exerciseTable td{vertical-align: top;}
+/*数学练习项开始*/
+.teacherHomework .assignHomework .exerciseTable.maths .mTitle{width: 170px; height: 108px; background: url(../../image/teacherHomework/ltd-bg.gif) no-repeat #eee; vertical-align: middle;font-size: 14px;text-align: left;} 
+.teacherHomework .assignHomework .exerciseTable.maths .mTitle span.t{padding:5px 10px;display: block;}
+.teacherHomework .assignHomework .exerciseTable.maths .exerciseChoice{width: 300px;float: left;margin: 5px 0px 5px 17px;}
+.teacherHomework .assignHomework .exerciseTable.maths .exerciseChoice.file{width: 300px;background: #fff;}
+.teacherHomework .assignHomework .exerciseTable.maths .exerciseChoice.file a.file{background:url(../../image/teacherHomework/pic_file.gif) no-repeat;width:56px;height:70px;display:block;}
+.teacherHomework .assignHomework .exerciseTable.maths .node input{width:20px;margin-right:5px;}
+.teacherHomework .assignHomework .choiceItem .nodeTitle{line-height: 20px;margin-left:10px;}
+
+/*数学练习项结束*/
+/*练习项的主题部分开始*/
+.teacherHomework .assignHomework .exerciseTable .topicalWrap{font-size: 12px;line-height: 15px; height: 18px; margin-bottom: 5px;position: relative;width: 100%;}
+.teacherHomework .assignHomework .exerciseTable .topicalWrap a{color:#09aa83;line-height: 15px; height: 18px; padding: 0px 3px;display: inline-block;}
+.teacherHomework .assignHomework .exerciseTable .topicalWrap .hoverBox{width: 50%;}
+.teacherHomework .assignHomework .exerciseTable .topicalWrap .hoverBox.full{width: 100%; text-align:center;}
+.teacherHomework .assignHomework .exerciseTable .hoverWrap{background-color: #feee60;display:none; width: 160px;position: absolute; top: 16px; left:50%;margin-left: -81px;z-index: 5;border:1px solid #999;}
+.teacherHomework .assignHomework .exerciseTable .coverBg{ border:none; width: 160px;}
+.teacherHomework .assignHomework .exerciseTable .hoverInner{padding: 10px;text-align: left;word-break:break-all;position: absolute; top: 0px; left: 0px; z-index: 6;background-color: #feee60;width: 140px;}
+.teacherHomework .assignHomework .exerciseTable .topicalWrap .hoverInner a{display: block;line-height: 20px;height: auto; color: #333;padding: 0px;}
+/*练习想的主题部分结束*/
+.teacherHomework .assignHomework .submitWrap{text-align: center;margin-top: 30px;margin-bottom: 30px;}
+.teacherHomework .assignHomework .submitBtn{height: 40px;line-height: 40px; padding-left: 40px; padding-right: 40px;font-size: 18px;}
+.teacherHomework .assignHomework .videoChoice{width:140px;padding: 8px;display: block;margin:5px auto;text-align: left;}
+.teacherHomework .assignHomework .exerciseChoice{width:140px;padding: 8px;text-align: left;display: block;margin:5px auto;}
+.teacherHomework .assignHomework .innerTable{border:none;}
+.teacherHomework .assignHomework .innerTable td{border:none; vertical-align: middle;}
+.teacherHomework .assignHomework .choiceItem  .checkWrapBox{line-height: 30px; height: 30px;}
+.teacherHomework .assignHomework .choiceItem input{vertical-align: middle;padding: 0px;margin: 0px;height: 14px;} 
+.teacherHomework .assignHomework .innerTable .gamePic{width: 50px;height: 50px;}
+.teacherHomework .assignHomework .exerciseSelect{margin-left: 8px;width: 80px;}
+.teacherHomework .assignHomework .exerciseChoice label{height: 20px;line-height: 20px;display: block;margin-bottom: 8px;}
+/*练习项的表格结束*/
+/*体验作业dialog开始*/
+.teacherHomework .assignHomework .experienceInner{width: 700px; height: 500px;background: #50B2D4;font-size: 50px;bottom: 50px;margin-bottom: 0 auto;}
+/*体验作业dialog结束*/
+/*assign_homework页面结束*/
+.teacherHomework .answerTime{text-align: center;font-size: 18px;font-weight: bold;height: 20px;margin: 10px 0 25px 0}
+.teacherHomework .paperInfo{text-align: center;font-size: 14px;height: 16px;margin-bottom: 30px;}
+.teacherHomework .answerBtnBox{text-align: center;margin-bottom: 30px;}
+.teacherHomework .noMb{margin-bottom: 0px;}
+.teacherHomework .answerBtnBox .submit,
+.teacherHomework .answerBtnBox a{margin:0px 20px;display: inline-block;font-size: 14px;color:#fff;width: 140px;height: 40px;line-height: 40px;border-radius: 20px;background: #49b764}
+.teacherHomework .answerBtnBox a:hover{background: #009b4a;color:#fff;}
+.teacherHomework .paperContent{margin-bottom: 30px;}
+.teacherHomework .questionList{border: 1px solid #ccc;border-top-width: 3px;padding: 15px 30px;margin-bottom: 20px;}
+
+.teacherHomework .questionList .questionNum{font-size: 18px;line-height: 30px;}
+.teacherHomework .questionList .questionTitle{font-size: 14px;line-height: 30px;}
+.teacherHomework .questionList .options{line-height: 22px;font-size: 14px;padding-bottom: 30px;}
+.teacherHomework .questionList .options img{display: inline-block;}
+.teacherHomework .questionList .answerArea{position: relative;border-top: 1px solid #ccc;padding: 10px}
+.teacherHomework .questionList .answerArea .title{line-height: 30px;font-size: 14px;margin-bottom: 10px;}
+.teacherHomework .questionList .answerArea .id{position: absolute;right: 10px;top:15px;_right:30px;}
+.teacherHomework .answerOption a{display: inline-block;width: 120px;height: 40px;line-height: 40px;border-radius: 5px;text-align: center;font-size: 18px;font-weight: bold;background: #eeeeee;margin-right: 10px;}
+.teacherHomework .answerOption a.active,
+.teacherHomework .answerOption a:hover{background: #49b764;color: #fff;}
+.teacherHomework .answerOption .errorBtn{background: #ed1c24;color: #fff}
+.teacherHomework .answerOption .errorBtn:hover{background: #ed1c24;color: #fff}
+
+/*交卷——已公布答案样式来说*/
+.teacherHomework .handIn_answerBox .right{border-color: #49b764}
+.teacherHomework .handIn_answerBox .error{border-color: #ed1c24}
+.teacherHomework .handIn_answerBox .answerArea .title span{display: inline-block;width: 150px;}
+.teacherHomework .handIn_answerBox .answerOption a{margin-right: 30px}
+.teacherHomework .handIn_answerBox .analyticalBox{padding-top: 10px;margin-bottom:10px;}
+.teacherHomework .handIn_answerBox .marb20{margin-bottom:210px;}
+.teacherHomework .handIn_answerBox .analyticalBox .title{margin-bottom: 0;font-weight: bold;line-height:22px;f}
+.teacherHomework .handIn_answerBox .analyticalBox p{line-height:22px;font-size: 14px;}
+/*交卷——已公布答案样式结束*/
+
+

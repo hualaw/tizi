@@ -1,0 +1,60 @@
+{extends file='about/about_base.html'}
+
+{block name=title}{$catname}{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--内容start-->
+{if $catid == 19}
+<div class="mainContainer" pagename="notice">
+{else}
+<div class="mainContainer" pagename="information">
+{/if}
+    <div class="content notice">
+        <div class="innerText">
+            <div class="hd">
+                <h2>{$catname}</h2>
+            </div>
+            <div class="bd">
+                <ul>
+					{foreach $newslist as $value}
+                    <li class="cf">
+                        <div class="news-box">
+                            <h3>
+                                <a href="{$site_url}about/newsdetails/{$value.id}">
+                                    {$value.title}
+                                </a>
+                            </h3>
+                            <p class="news-time">来源：
+								{if $value.copyfrom}{$value.copyfrom}{else}梯子网{/if}
+								&nbsp;&nbsp;{$value.updatetime|date_format:'%Y年%m月%d日'}</p>
+                            <div class="news-info">
+                                <p class="con">{$value.description}
+                                </p>
+                                <p class="news-more">
+                                    <a target="blank" href="{$site_url}about/newsdetails/{$value.id}">继续阅读</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="page cf">
+				{$pages}
+            </div>
+        </div>
+    </div>
+</div>
+<!--内容end-->
+{/block}
+
+{block name=script}
+<script type="text/javascript">
+function newslistGo(page){
+	window.location.href = baseUrlName + 'about/newslist/{$catid}/' + page;
+}
+</script>
+{/block}

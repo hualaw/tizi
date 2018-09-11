@@ -1,0 +1,4 @@
+.navEverdayWaijiao ul.main li a.navEverdayWaijiao,
+.navClass li a.navClass,
+.nav ul.main li a.active,
+.nav ul.main li a:hover{background-color: #169171;display: block; text-decoration: none;color:#fff;}

@@ -1,0 +1,18 @@
+.nav{background:#32b3a4;}
+.nav li{background:url(../../image/common/nav_li_jia_bg.gif) no-repeat left 10px}
+.nav li a{color:#fff;width:94px;text-align: center;display: block;}
+.navMemberCenter li a.navhome{padding:0 30px 4px 30px;}
+.navHome li a.navHome,
+.navMemberCenter li a.navMemberCenter,
+.navParClass li a.navParClass,
+.navPolicy li a.navPolicy,
+.navCupGuide li a.navCupGuide,
+.navLesson li a.navLesson,
+.navChild li a.navChild,
+.navParMethod li a.navParMethod,
+.navParStrategy li a.navParStrategy,
+.navParSchool li a.navParSchool,
+.navParSelect li a.navParSelect,
+.navChampions li a.navChampions,
+.nav li a.active,
+.nav li a:hover{background-color: #259689;display: block; text-decoration: none;color:#fff;}

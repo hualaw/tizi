@@ -1,0 +1,71 @@
+{extends file='student/class/base.html'}
+{block name=title}试卷{/block}
+{block name=container}
+<div class="mainContainer" pagename="paper">
+    <!-- 正文代码开始 -->
+    <div class="stuClassWrap">
+        {if empty($papers)}
+        <!-- 试卷初始状态开始 -->
+        <div class="nofill">
+            <p>在这里可以看到老师布置给你的在线试卷</p>
+        </div> 
+        <!-- 试卷初始状态结束 -->
+        {else}
+        <!-- 有内容开始 -->
+        <div class="stuClassBox paperTable">
+            <table>
+                <tr>
+                    <th class="time">时间</th>
+                    <th class="sub">学科</th>
+                    <th class="teacherName">老师</th>
+                    <th class="num">题目数</th>
+                    <th class="endTime">距离作答截止</th>
+                    <th class="accuracy">选择题正确率/班级平均</th>
+                    <th class="operation">操作</th>
+                    <th class="comment">老师评语</th>
+                </tr>
+                {foreach $papers as $paper}
+                <tr>
+                    <td class="time">{date("Y-m-d H:i", $paper.begin_time)} 至 {date("Y-m-d H:i", $paper.deadline)}</td>
+                    <td>{$paper.subject_name}</td>
+                    <td  class="teacherName"><a href="javascript:void(0)">{$paper.teacher_name}</a></td>
+                    <td>{$paper.count}</td>
+                    <td>{$paper.residue_time}</td>
+                    <td>{$paper.correct_rate}%/{$paper.class_correct_rate}%({$paper.student_num}人)</td>                 
+                    <td>
+                        {if $paper.end_time}    
+                        <a href="{$site_url}student/class/paper/report/{$paper.paper_assign_id}" class="lookBtn" target="_blank">查看答案</a>
+                        {else}
+                        {if $paper.start_time}
+                        <a href="{$site_url}student/class/paper/do/{$paper.paper_assign_id}" class="starBtn" target="_blank">继续作答</a>
+                        {else}
+                        <a href="{$site_url}student/class/paper/do/{$paper.paper_assign_id}" class="starBtn" target="_blank" >开始作答</a>
+                        {/if}
+                        {/if}
+                    </td>
+                    <td class="comment">
+                        {if $paper.end_time && !empty($paper.content)}
+                        <span class="undis comment_content">{$paper.content}</span><a href="javascript:void(0)">查看</a>
+                        {else}
+                        --
+                        {/if}
+                    </td>
+                </tr>
+                {/foreach}
+            </table>
+            <div class="page cf">
+                <div class="fr">{$pages}</div>
+            </div>
+        </div>
+        <div class="lookReviewsPop undis">
+            <div class="lookReviews">
+                <p>--</p>
+            </div>
+        </div>
+        <!-- 有内容结束 -->
+        {/if}
+    </div>
+    <!-- 正文代码结束 -->
+    
+</div>
+{/block}

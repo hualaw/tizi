@@ -1,0 +1,102 @@
+﻿{extends file='teacher/homework/base.html'}
+
+{block name=keywords}在线作业,布置作业{/block}
+{block name=description}梯子网用技术手段，建立了方便的在线留作业系统，实现快速布置作业，快速批改的目标。{/block}
+{block name=title}方便的在线作业，在线布置作业{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="work layout unlogin">
+	<ul>
+		<li class="interPlat">
+			<h1>中小学在线作业免费互动平台</h1>
+			{if !$user_type}
+			<a href="{$site_url}zuoye" class="cBtnNormal loginCheck">登录使用</a>
+			{else if $user_type eq $constant.user_type_teacher}
+			<a href="{$site_url}banji" class="cBtnNormal">开通班级空间</a>
+			{/if}
+		</li>
+		<li class="cf smartSele">
+			<div class="fl deuceTable">
+				<div class="tableCell">
+					<h2>智能选题</h2>
+					<p class="clipText">题目与教材内容同步，根据不同练习形式智能匹配。</p>
+				</div>
+			</div>
+			<div class="fr">
+				<div class="edition">
+					<a href="javascript:void(0);" class="edition1"></a>
+					<a href="javascript:void(0);" class="edition2"></a>
+					<a href="javascript:void(0);" class="edition3"></a>
+				</div>
+				<div class="seleShow"></div>
+			</div>
+		</li>
+		<li class="cf foreignVideo">
+			<div class="fl videoShow posr">
+				<div class="videoBg videoBg1"></div>
+				<div class="videoBg videoBg2"></div>
+				<div class="videoBg videoBg3">
+					<a href="">
+						<img src="{$static_url}{$static_version}image/teacherHomework/unlogin/video.gif">
+						<p>My Family</p>
+						<span>我爱我家</span>
+					</a>
+				</div>
+			</div>
+			<div class="fr deuceTable">
+				<div class="tableCell">
+					<h2>同步外教视频</h2>
+					<p class="clipText">每个单元都配有1-3段外教朗读视频，可随作业一起布置给学生，让学生先看视频，再做作业。</p>
+				</div>
+			</div>
+		</li>
+		<li class="cf hwContent">
+			<div class="fl deuceTable">
+				<div class="tableCell">
+					<h2>生动有趣的作业内容</h2>
+					<p class="clipText">几十种游戏作业模版，包含词汇练习、听力练习、听说练习以及语用练习四种作业形式，每种作业形式下搭配多个游戏形式。</p>
+				</div>
+			</div>
+			<div class="fr gameListBox">
+				<div class="gameList fr" unit_id="24202" game_id="5">
+					<h3>听力练习</h3>
+					<img src="{$static_url}{$static_version}image/teacherHomework/unlogin/gameList2.gif">
+					<span>调皮猫</span>
+				</div>
+				<div class="gameList fr" unit_id="24202" game_id="1">
+					<h3>词汇练习</h3>
+					<img src="{$static_url}{$static_version}image/teacherHomework/unlogin/gameList1.gif">
+					<span>海底冒险</span>
+				</div>
+				<div class="gameList fr" unit_id="24202" game_id="15">
+					<h3>语用练习</h3>
+					<img src="{$static_url}{$static_version}image/teacherHomework/unlogin/gameList4.gif">
+					<span>河马洗澡</span>
+				</div>
+				<div class="gameList fr" unit_id="24202" game_id="10">
+					<h3>听说练习</h3>
+					<img src="{$static_url}{$static_version}image/teacherHomework/unlogin/gameList3.gif">
+					<span>小蜜蜂</span>
+				</div>
+			</div>
+		</li>
+		<li class="cf automatedIopt">
+			<div class="fl ioptBg"></div>
+			<div class="fr deuceTable">
+				<div class="tableCell">
+					<h2>自动批改</h2>
+					<p class="clipText">系统自动批改，自动生成作业报告，可针对每个学生写评语</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="homeworkHtml undis">
+	<div>作业内容 弹框</div>
+</div>
+{/block}
+{block name=script}
+{/block}

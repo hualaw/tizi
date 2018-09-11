@@ -1,0 +1,86 @@
+{$paper_name='试卷'}
+<!--当前位置开始-->
+<div class="path cf">
+    <a href="{$site_url}teacher/paper/myquestion">我的题库选题</a> / {$data.group_name}
+</div>
+<!--当前位置结束-->
+<div class="doc_num cf">
+	<p class="fr">
+		<!-- 添加全部加入按钮开始 -->
+        <span class="all_in cBtnNormal fl" style="margin-right:5px;" data-question_origin="1">
+            <a class="addAllPaper"><i>将本页题目全部加入{$paper_name}</i></a>
+        </span>
+        <!-- 添加全部加入按钮结束 -->
+	</p>
+	<p class="fl">
+		共计<span class="bold">{$data.total}</span>道试题
+	</p>
+</div>
+<!--添加题库开始-->
+{foreach $data.question as $question}
+<div class="md_paperCard question-box" data-qid="{$question.id}" data-question_id="{$question.id}">
+	<div class="md_cardNav cf">
+	  	<div class="question-title cf">
+	   		<!-- 加入试卷按钮开始 -->
+	   		<div class="fr">
+				{if $question@index eq 0}
+	                
+	            {/if}
+				<a data-question_id="{$question.id}" data-question_origin="1" class="control-btn add-{if isset($data.is_add_paper[$question.id])}true{else}false{/if} fl" style="margin-top:0px;">
+	                <span class="cBtnNormal fl">
+	                    <i>加入{$paper_name}</i>
+	                </span>
+	                <em class="fl">
+	                    <b class="cBtnSilver fl"><i>移出{$paper_name}</i></b>
+	                </em>
+	            </a>	   			
+	   		</div>
+	        <!-- 加入试卷按钮结束 -->
+			<dl class="fl">
+				<dd class="cf">
+				    <div class="fl">题型：{$question.qtype_name}</div>
+				    <div class="fl">知识点：{$question.category_info}</div>
+				    <div class="fl">
+				    	<span class="fl">难易度：</span>
+				    	<span class="star-level  star-{$question.level_id}">
+				        <em class="fl">（较易）</em></span>
+				    </div>
+				    <div class="fl">同步信息：{$question.course_info}</div>
+				    <div class="fl">上传日期：{$question.date}</div>
+				</dd>
+				<dd class="fl">来源：{$question.title}</dd>
+			</dl>
+		</div>
+	</div>
+	<ul class="tpl_info">
+		<li>
+			<label>【题文】：</label>
+			<div class="tplStyle">
+			{$question.body}
+			</div>
+		</li>
+	</ul>
+	<ul class="tpl_answer">
+		<li>
+			<label>【答案】：</label>
+			<div class="tplStyle">
+			{$question.answer}
+			</div>
+		</li>
+		<li>
+			<label>【解析】：</label>
+			<div class="tplStyle">
+			{$question.analysis}
+			</div>
+		</li>
+	</ul>
+</div>
+<!--添加题库结束-->
+{/foreach}
+<!--分页开始-->
+<div class="page cf">
+	<p class="fr">
+		{$pages}
+	</p>
+</div>
+<!--分页结束-->

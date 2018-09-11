@@ -1,0 +1,6 @@
+/*左侧导航开始*/
+.wrap .slide{background:#f6f6f6;}
+.wrap .slide .menu li a{display: block;height:40px;line-height: 40px; text-align: center;font-size:14px;}
+.wrap .slide .menu li a.active{background:#E6E6E5;text-decoration: none}
+.wrap .slide .menu li a:hover{background:#E6E6E5;text-decoration: none}
+/*左侧导航结束*/

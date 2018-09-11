@@ -1,0 +1,54 @@
+{if $share}
+        <div class="shareFileBox">
+          <a class="cBtnNormal shareFile" href="javascript:;" title="">上传文件</a><a class="colorGreen" href="{$login_url}jifen" target="_blank">积分奖励说明</a>
+        </div>
+          <table class="shareBoxTable">
+            <thead>
+              <tr>
+                <th width="400" class="p_l_10" align="left">文件名</th>
+                <th width="100">大小</th>
+                <th width="100">上传者</th>
+                <th width="100">分享时间</th>
+                <th width="100">下载次数</th>
+                <th width="100">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              {foreach $share as $k=>$v}
+              <tr>
+                <td class="p_l_10" align="left">
+                  {if $v.ok_view}
+                  <a href='{$site_url}teacher/cloud/share_detail/{$v.share_id}' target="_blank" >
+                  {sub_str($v.file_name,0,150)}{if $v.file_ext}.{$v.file_ext}{/if}</a>
+                  {else}
+                  {sub_str($v.file_name,0,150)}{if $v.file_ext}.{$v.file_ext}{/if}
+                    {/if}
+                    </td>
+                <td>{trans_filesize($v.file_size)}</td>
+                <td title='{$v.user_name}'>{sub_str($v.user_name,0,12)}</td>
+                <td>{date('Y-m-d',$v.create_time)}</td>
+                <td>{$v.download_count}</td>
+                <td><a class="downloadFile" file_id='{$v.file_id}' file_name="{$v.file_name}.{$v.file_ext}" href="javascript:;" share_id={$v.share_id} >下载</a>
+                  <a class='shareCancle' href="javascript:;" file_id='{$v.file_id}' share_id={$v.share_id} >取消分享</a></td>
+              </tr>
+            {/foreach}
+            </tbody>
+          </table>
+          {else}
+          <!-- 没有分享内容开始 -->
+          <div class="emptyNotice">
+            <img src="{$static_url}{$static_version}/image/teacherClass/tizi_tree_bg.png" alt="">
+            <ul>
+              <li>向您的学生分享文件，学生随时下载，您也将获得<span>积分奖励</span>！</li>
+              <li><a class="cBtnNormal shareFile" href="javascript:;" title="">上传文件</a></li>
+            </ul>
+          </div>
+          <!-- 没有分享内容结束 -->          
+        {/if}
+        <!-- 分享列表结束 -->
+
+        <!-- 分页开始 -->
+        <input type="hidden" id="current_page" value="{$current_page}"/>
+        <div class="sharePage cf">
+          {$pages}
+        </div>

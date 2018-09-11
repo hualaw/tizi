@@ -1,0 +1,256 @@
+{extends file='teacher/class/base_no_nav.html'}
+
+{block name=title}检查作业{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="wrap layout checkHomework">
+	<input type="hidden" class='ass_id' value="{$zuoye.id}">
+	<a href="{$site_url}teacher/class/{$alpha_class_id}/homework" class="backLink">返回作业列表</a>
+	<div class="checkFormWrap posr">
+		<!-- 打印按钮开始 -->
+		<a href="javascript:void(0);" onClick="window.print()" class="aPrint cBtnSilver">打印</a>
+		<!-- 打印按钮结束 -->
+		<div class="formHead">
+			<!--作业报告的班级信息开始-->
+			<h4 class="className">{$class_name}</h4>
+			<!--作业报告的班级信息结束-->
+			<!--作业报告名开始-->
+			<h2 class="formName">{date('Y年m月d日 H:i',$zuoye.start_time)} 至 {date('m月d日 H:i',$zuoye.end_time)}  作业报告</h2>
+			<!--作业报告名结束-->
+
+			<!--作业摘要信息开始-->
+			<p class="workDigest">
+				<!-- 教材：{if ($bb)}{foreach $bb as $b} {$b} {/foreach}{/if}    -->
+			包含单元：
+			{if $units}
+			{foreach $units as $k=>$u} {$u->name} {/foreach}
+			{else} 自选 {/if}
+			</p>
+			<!--作业摘要信息结束-->
+			<!-- 选择单元开始 -->
+			<div class="chooseUnit">
+				<span>请选择：</span>
+				<select onchange="javascript:location.href=this.value;">
+					<option value="{$site_url}zuoye/check/{$assignment_id}">
+						总体报告
+					</option>
+					{if $papers}
+					{foreach $papers as $ps=>$p}
+					<option value="{$site_url}zuoye/check/{$assignment_id}?type=paper&pass={$p.entity.id}" {if $p.entity.id==$pass}selected{/if} >
+					{$p.entity.name}
+					</option>
+					{/foreach}
+					{/if}
+					{if $zuoye.unit_game_ids}
+					<option value="{$site_url}zuoye/check/{$assignment_id}?type=game" {if $type=='game'}selected{/if} >
+					趣味作业(游戏)
+					</option>
+					{/if}
+				</select>
+			</div>
+			{if $type == 'paper'}
+			<div class="wrongDoButton">
+			<a href="{$site_url}zuoye/wrongq/{$pass}" target="_blank" class="cBtnNormal">错题报告</a>
+			<a href="{$site_url}zuoye/stu_record/{$pass}" target="_blank" class="cBtnNormal">作答记录</a>
+			</div>
+			<!-- 错题报告和作答记录按钮结束 -->
+			{/if}
+		</div>
+
+		<div class="reportCont">
+			<!--作业的基本统计信息开始-->
+			<table class="headTable">
+				<td>班级平均分<span>{round($class_info.avg_score)}</span></td>
+				<td>平均用时<span>{convertToMinsSecs($class_info.avg_time)}</span></td>
+				<td>完成人数<span>{$class_info.complet_sum}</span></td>
+				<td>部分完成人数<span>{$class_info.part_sum}</span></td>
+				<td>未作答人数<span>{count($stu_info) - $class_info.part_sum - $class_info.complet_sum}</span></td>
+				<td class="last">获得积分<span>{$zuoye.score}</span></td>
+			</table>
+			<!--作业的基本统计信息结束-->
+			{if $type=='game'}
+			<div class="detailLinkWrap">
+				<a href="{$site_url}zuoye/score/{$zuoye.id}" class="cBtnSilver detailLinkBtn" target="_blank">查看分数明细</a>
+			</div>
+			{/if}
+			<!--作业报表信息开始-->
+			<table class="reportTable">
+				<!--报表表头开始-->
+				<tr>
+					<!--表头第一栏用图片背景-->
+					<th>名次</th>
+					<th>姓名</th>
+					<th>学号</th>
+					<th>成绩</th>
+					<th>状态</th>
+					<th>完成时间</th>
+					<th>用时</th>
+					<th>操作</th>
+				</tr>
+				<!--报表表头结束-->
+
+				<!-- 总体报告列表  -->
+				{if $type!='paper' and $type!='game'}
+				{if $stu_info}
+				{foreach $stu_info as $key=>$val}
+				<tr>
+					<td>{$val@iteration}</td>
+					<td>{$val.stu_name}</td>
+					<td>{$val.stu_number}</td>
+					<td>{if $val.score}{round($val.score)}{elseif $val.score==0}0{else} -- {/if}</td>
+					<td>
+						{if $val.is_complete == 2 and $val.end_time>$zuoye.end_time}完成(补做)
+						{elseif $val.is_complete == 2 and $val.end_time<=$zuoye.end_time}完成
+						{elseif $val.is_complete==1} 部分完成
+						{else} 未作
+						{/if}
+					</td>
+					<td>{if $val.end_time}{date("Y年m月d日",$val.end_time)}{else} -- {/if} </td>
+					{if $has_paper}
+					<td>
+						{if isset($val.start_time) and isset($val.end_time)}{convertToMinsSecs($val.end_time-$val.start_time)}{else}--{/if}
+					</td>
+					{else}
+					<td>{if isset($val.person_expend_all_game_time)}{convertToMinsSecs($val.person_expend_all_game_time)}{else}--{/if}</td>
+					{/if}
+					 
+					{if $val.comment}
+					<td><a href="#" class="operateLink" student_id="{$val.user_id}" cmt="{$val.comment}">查看</a></td>
+					{else}
+					<td><a href="#" class="operateLink comment" student_id="{$val.user_id}">写评语</a></td>
+					{/if}
+				</tr>
+				{/foreach}
+				{/if}
+				{/if}
+				<!-- 总体报告列表结束 -->
+
+				<!-- 游戏报告列表  -->
+				{if $type=='game'}
+				{if $stu_info}
+				{foreach $stu_info as $key=>$val}
+				<tr>
+					<td>{$val@iteration}</td>
+					<td>{$val.stu_name}</td>
+					<td>{$val.stu_number}</td>
+					<td>{if $val.score}{round($val.score)}{elseif $val.score==0}0{else} -- {/if}</td>
+					<td>
+						{if $val.is_complete == 2 and $val.end_time>$zuoye.end_time}完成(补做)
+						{elseif $val.is_complete == 2 and $val.end_time<=$zuoye.end_time}完成
+						{elseif $val.is_complete==1} 部分完成
+						{else} 未作
+						{/if}
+					</td>
+					<td>{if $val.end_time}{date("Y年m月d日",$val.end_time)}{else} -- {/if} </td>
+					 
+					<td>{if isset($val.person_avg_game_cost)}{convertToMinsSecs($val.person_avg_game_cost*$game_count)}{else}--{/if}</td>
+					 
+					{if $val.comment}
+					<td><a href="#" class="operateLink" student_id="{$val.user_id}" cmt="{$val.comment}">查看</a></td>
+					{else}
+					<td><a href="#" class="operateLink comment" student_id="{$val.user_id}">写评语</a></td>
+					{/if}
+				</tr>
+				{/foreach}
+				{/if}
+				{/if}
+				<!-- 游戏报告结束 -->
+
+				<!-- 资源包做题情况列表  -->
+				{if $type=='paper'}
+				{if $student_infos}
+				{foreach $student_infos as $key=>$val}
+				<tr>
+					<td>{$val@iteration}</td>
+					<td>{$val.name}</td>
+					<td>{$val.stu_number}</td>
+					<td>{if isset($val.process_ans) and count($val.process_ans)}
+						{round($val.correct_num/count($val.process_ans)*100)}
+						{else} 0 {/if}</td>
+					<td>
+						{if $val.is_completed == 1 and $val.end_time>$zuoye.end_time}完成(补做)
+						{elseif $val.is_completed==1} 完成
+						{else} 未完成
+						{/if}
+					</td>
+					<td>{if $val.end_time}{date("Y年m月d日",$val.end_time)}{else} -- {/if} </td>
+					<td>{if $val.expend_time}{convertToMinsSecs($val.expend_time)}{else}--{/if}</td>
+					{if $val.comment}
+					<td><a href="#" class="operateLink" student_id="{$val.user_id}" cmt="{$val.comment}">查看</a></td>
+					{else}
+					<td><a href="#" class="operateLink comment" student_id="{$val.user_id}">写评语</a></td>
+					{/if}
+				</tr>
+				{/foreach}
+				{/if}
+				{/if}
+				<!-- 资源包做题情况结束 -->
+
+
+			</table>
+			<!--作业报表信息结束-->
+
+			 
+		</div>
+	</div>
+	
+</div>
+
+<!-- 查看评语dialog外框开始 -->
+<div class="dialogWrap" id="cDialogWrap">
+	<!-- 查看评语的dialog开始 -->
+	<div class="checkHomework">
+		<div class="commentCont">
+			评语内容评语内容评语内容评语内容评语内容评语内容
+		</div>
+	</div>
+	<!-- 查看评语的dialog结束 -->
+</div>
+<!-- 查看评语dialog外框结束 -->
+
+<!-- 写评语dialog外框开始 -->
+<div class="dialogWrap" id="wcDialogWrap">
+	<!-- 写评语dialog开始 -->
+	<div class="teacherClass">
+		
+		<div class="writeCommentWrap cf">
+			<!--评语表单开始-->
+			<form action="" class="commentForm_beta">
+				<!-- 选择学生部分开始 -->
+				<div class="selectStuWrap fl">
+					<span class="wrapTitle">选择学生</span>
+					<ul class="stuList" id="stuList">
+						{foreach $stu_info as $ss=>$s}
+						{if !$s.comment}
+						<li>
+							<label for="{$s.user_id}"><input type="checkbox" id="{$s.user_id}" student_id='{$s.user_id}' >{if isset($s.stu_name)}{sub_str($s.stu_name)}{else}{sub_str($s.name)}{/if}</label> 
+						</li>
+						{/if}
+						{/foreach}
+					</ul>
+					<label for="selectAll" class="selectAll"><input type="checkbox" id="selectAll">全选</label>
+				</div>
+				<!-- 选择学生部分结束 -->
+				<!-- 评语书写部分开始 -->
+				<div class="commentInputWrap fr">
+					<span class="wrapTitle">评语内容(100字以内)</span>
+					<div class="commentInputBox">
+						<textarea class="commentInput" name="commentInput" id="commentInput"></textarea>
+					</div>
+				</div>
+				<!-- 评语书写部分结束 -->
+			</form>
+			<!-- 评语表单结束 -->
+		</div>
+		
+	</div>
+	<!-- 写评语dialog结束 -->
+</div>
+<!-- 写评语dialog外框结束  -->
+
+{/block}
+{block name=script}
+{/block}

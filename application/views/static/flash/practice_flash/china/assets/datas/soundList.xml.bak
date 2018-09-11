@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<swfList>
+<url name="bomb">
+assets/sound/bomb.mp3
+</url>
+<url name="lose">
+assets/sound/lose.mp3
+</url>
+<url name="star">
+assets/sound/star.mp3
+</url>
+<url name="win">
+assets/sound/win.mp3
+</url>
+</swfList>

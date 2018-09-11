@@ -1,0 +1,49 @@
+{extends file='about/about_base.html'}
+
+{block name=title}用户心声{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--内容start-->
+<div class="mainContainer witness" pagename="witness">
+    <div class="content">
+        <div class="innerText">
+            <div class="hd">
+                <a href="#postWitness" class="fr">发表心声</a>
+                <h2>用户心声</h2>
+            </div>
+            <div class="bd">
+                {foreach $witness as $value}
+                <h3>{$value['title']}</h3>
+                <div class="advisorCon cf">
+                    <img src="{$value['thumb']}" class="fr" />
+                    {$value['content']}
+                </div>
+                {/foreach}
+            </div>
+            <div class="ft" name="postWitness" id="postWitness" >
+                <ul>
+                    <li>
+                        1．请将您使用梯子网的感悟发给我们，体裁、形式无特殊要求，1000字以内；
+                    </li>
+                    <li>
+                        2．请注明您的姓名、学校、联系电话，方便与您联系；
+                    </li>
+                    <li>
+                        3．请附带一张您的照片，以便我们在梯子网首页用户心声栏目展示；
+                    </li>
+                    <li>
+                        4．您的隐私信息将受到我们严格保护。
+                    </li>
+                </ul>
+                <div style="margin:20px 0;padding-left:20px;font-size:18px;">
+                    请将见证内容发送至：<em style="color:#f60">zhangna@tizi.com</em>
+                </div>
+</div>
+        </div>
+    </div>
+</div>
+<!--内容end-->
+{/block}

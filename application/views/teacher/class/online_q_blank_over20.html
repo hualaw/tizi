@@ -1,0 +1,15 @@
+                    <!-- 没有被回答的题目 -->
+                    {if $wrong_not_in_oq}
+                    {foreach $wrong_not_in_oq as $key=>$val}
+                    {if $val@iteration>20*($lp-1) and $val@iteration<20*$lp+1}
+                    <td width="44"  > </td>
+                    {/if}
+                    {/foreach}
+                    {/if}
+
+                    <!-- 用空格填充到20列 -->
+                    {if $lp == $while}
+                    {if $need_blank>0}
+                    {for $i=1 to $need_blank } <td width="44">  </td> {/for}
+                    {/if} {/if}
+                    <!-- 用空格填充到20列 over-->

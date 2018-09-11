@@ -1,0 +1,43 @@
+{extends file='teacher/resource/res_base.html'}
+{block name=title}教学网盘{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<!--添加我的资源库顶部导航开始-->
+{include file='teacher/resource/breadcrumbs_capacity.html'}
+<!--添加我的资源库顶部导航结束-->
+<!-- 右侧框架开始 -->
+<div class="wrapContent main" id="wrapContent">
+    <input type='hidden' class='sub_cat_id' value='{$sub_cat_id}' />
+    <input type='hidden' class='res_type' value='{$res_type}' />
+    <!--同步知识点目录开始-->
+    <div class="sysDirect">
+        <div class="sysDirectContent cf">
+            <!--更多内容页开始-->
+            <div class="sysDirectMore">
+                <!--知识点目录开始-->
+                <div class="fileDirectText otherFileList">
+                    <div class="md_hd">
+                        <span class="mh_title">{$res_type_name}<b>({$count})</b></span>
+                    </div>
+                    <!-- 列表内容主体 start -->
+                    <div class="md_bd reslist_tpl">
+                   {include file='teacher/resource/res_list_tpl.html'}
+                    </div>
+                    <!-- 列表内容主体 over -->
+                </div>
+                <!--知识点目录结束-->
+             </div>
+            <!--更多内容页结束-->
+        </div>
+    </div>
+    <!--同步知识点目录结束-->
+</div>
+<!-- 右侧框架结束 -->
+<!-- 分享弹出框开始-->
+{include file='teacher/resource/res_share.html'}
+<!-- 分享弹出框结束-->
+{/block}
+{block name=script}
+
+{/block}

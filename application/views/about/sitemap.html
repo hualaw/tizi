@@ -1,0 +1,50 @@
+{extends file='about/about_base.html'}
+
+{block name=title}{$page_name='map'}站点地图{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--内容start-->
+<div class="mainContainer" pagename="sitemap">
+    <div class="sitmap cf">
+    	<dl class="fl">
+    		<dt>老师</dt>
+    		<dd><a href="{$tizi_url}juanzi">出卷子</a></dd>
+            <dd><a href="{$tizi_url}zuoye">留作业</a></dd>
+    		<dd><a href="{$tizi_url}beike">备课</a></dd>
+    		<dd><a href="{$tizi_url}banji">班级空间</a></dd>
+    	</dl>
+    	<dl class="fl">
+    		<dt>学生</dt>
+    		<dd><a href="{$waijiao_url}">天天外教</a></dd>
+    		<dd><a href="{$tizi_url}pk">专项挑战</a></dd>
+    		<dd><a href="{$tizi_url}zhuangyuan">状元开讲</a></dd>
+    		<dd><a href="{$tizi_url}ban">班级空间</a></dd>
+    	</dl>
+    	<dl class="fl">
+    		<dt>家长</dt>
+    		<dd><a href="{$jia_url}ysx">幼升小</a></dd>
+    		<dd><a href="{$jia_url}xsc">小升初</a></dd>
+    		<dd><a href="{$jia_url}zk">中考</a></dd>
+    		<dd><a href="{$jia_url}gk">高考</a></dd>
+    		<dd><a href="{$jia_url}cup">杯赛导航</a></dd>
+    	</dl>
+    	<dl class="fl">
+    		<dt>应用中心</dt>
+    		<dd><a href="{$tizi_url}gk_shuati" target="_blank">天天爱刷题-高考版</a></dd>
+    		<dd><a href="{$space_url}" target="_blank">教师空间</a></dd>
+    		<dd><a href="{$xue_url}" target="_blank">梯子学堂</a></dd>
+    	</dl>
+    	<dl class="fl text40">
+    		<dt>资源</dt>
+    		<dd><a href="{$ziyuan_url}ask" target="_blank">答疑</a></dd>
+            <dd><a href="{$ziyuan_url}down" target="_blank">试卷下载</a></dd>
+    	</dl>
+    </div>
+</div>
+<!--内容end-->
+{/block}
+{block name=script}
+{/block}

@@ -1,0 +1,67 @@
+{extends file='about/about_base.html'}
+
+{block name=title}媒体报道{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--内容start-->
+<div class="mainContainer" pagename="report">
+    <div class="content report">
+        <div class="innerText">
+            <div class="hd">
+                <h2>媒体报道</h2>
+            </div>
+            <div class="bd">
+                <ul>
+                    {foreach $news as $value}
+                    <li class="cf">
+                        <a href="{$value['url']}" target="_blank">
+                            <img class="news-img" src="{$value['thumb']}" />
+                        </a>
+                        <div class="news-box">
+                            <h3>
+                                <a href="{$value['url']}" target="_blank">
+                                    {$value['title']}
+                                </a>
+                            </h3>
+                            <p class="news-time">来源：{$value['copyfrom'][0]}  {date("Y年m月d日", $value['inputtime'])}</p>
+                            <div class="news-info">
+                                <p class="con">{$value['description']}</p>
+                                <p class="news-more">
+                                    {if $value['islink'] == 1}
+                                    <a target="blank" href="{$value['url']}">继续阅读</a>
+                                    {/if}
+                                </p>
+                            </div>
+                            {if $value['reports']}
+                            <div class="news-reprint cf">
+                                <span>转载媒体：</span>
+                                <ul class="media-list">
+                                    {foreach $value['reports'] as $report}
+                                    <li><img src="{$report['url']}" alt="{$report['alt']}" /></li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                            {/if}
+                        </div>
+                    </li>
+                    {/foreach}
+                </ul>
+            </div>
+            <div class="page cf">
+                {$pages}
+            </div>
+        </div>
+    </div>
+</div>
+<!--内容end-->
+{/block}
+{block name=script}
+<script type="text/javascript">
+function reportGo(page){
+	window.location.href = baseUrlName + "about/report/" + page;
+}
+</script>
+{/block}

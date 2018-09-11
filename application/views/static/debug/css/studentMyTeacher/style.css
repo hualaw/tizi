@@ -1,0 +1,16 @@
+/*加载base.css----包括reset,common.cssSprites,layout,header,footer,button,dialog,valid.css*/
+@import url('../common/base.css');
+/*学生端头部主导航样式*/
+@import url('../common/studentNav.css');
+/*加载学生端右侧头部导航样式*/
+@import url('../common/stuTabNav.css');
+/*加载学生端未加入班级样式*/
+@import url('../studentCommon/noClass.css');
+
+/*加载布局样式*/
+@import url('../studentCommon/layout.css');
+/*加载学生workBox公共样式*/
+@import url('../studentCommon/stuCommonBox.css');
+/*加载班级分享样式*/
+@import url('teacher.css');
+

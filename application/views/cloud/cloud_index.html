@@ -1,0 +1,184 @@
+{extends file='cloud/cloud_base.html'}
+{block name=title}教学网盘{/block}
+<!--全站的公共样式文件-->
+{block name=stylesheet}
+{/block}
+{block name=container}
+<!-- 上传+新建dir 开始  -->
+<div class="first_view_head createNewFileBox fn-clear">
+{if $user_type == Constant::USER_TYPE_TEACHER}
+<!-- 上传 开始 -->
+<a id="upDropFile" class="cBtnNormal" href="javascript:;"><span>
+<input type='text' name='shareFileUp' id='shareFileUp' class='choseFileTxt fl' disabled style="display:none" />
+<input type="file" name="shareUpField" id="shareUpField_beta" class="file fl" multiple="true" style="display:none"/></span></a>
+<!-- 上传over -->
+{if !in_array($chosen_type,array_keys($filetypes))}
+<a id="createNewFileBtn" class="cBtnSilver" href="javascript:;"><span>新建文件夹</span></a>
+{/if}
+{else}
+抱歉，只有老师用户才能使用网盘上传功能
+{/if}
+<div class="choseFile org"></div>
+</div>
+<!-- 上传+新建dir 结束  -->
+<!-- 文件列表主体 开始 -->
+ 
+<div class='cloud_file_list'>
+{include file='cloud/cloud_file_list.html'  }
+</div>
+
+<!-- 新建文件夹 -->
+<div id="creatNewFlie" class="pop_box">
+<form class="creatNewFileForm_beta" action="{$site_url}teacher/cloud/mkdir" method="post">
+  <input type='hidden' name='cur_dir_id' value='' class='create_folder'/>
+  <div class="teacherCloud">
+    <div class="pop_main">
+      <ul>
+          <li class="cf">
+            <span class="fl">名称：</span><input class="new_class_text fl" type="text" id="create_fileName" name='dir_name'/>
+            <span class="Validform_checktip fl"></span>
+          </li>
+      </ul>
+    </div>
+  </div>
+  <input type="submit" class="undis" />
+</form>
+</div>
+<!--分享文件 - 无班级可分享 -->
+<input type='hidden' class='has_class' value='{if empty($classes)}0{else}1{/if}'/>
+{if empty($classes)}
+<div id="shareFliesBox_noClass" class="pop_box">
+<form class="shareFliesForm_beta" action="{$site_url}class/create" method="post">
+  <div class="teacherCloud">
+    <div class="pop_main">
+      <h4>您可以将文件分享给你所在班级的学生，请创建完班级后进行分享。</h4>
+      <ul>
+          <li class="cf">
+            <a id="createClassNow" class="cBtnNormal" href="{$site_url}teacher/class/my"><span>立即创建班级</span></a>
+          </li>
+      </ul>
+    </div>
+  </div>
+  <input type="submit" class="undis" />
+</form>
+</div>
+<!--分享文件 - 无班级可分享 over-->
+{else}
+<!--  分享弹出框 - 有班级分享 -->
+<div id="shareFliesBox_hasClass" class="pop_box">
+<form class="shareFliesHasClassForm_beta" action="{$site_url}teacher/cloud/share" method="post">
+  <input type='hidden' class='get_file_id' name='file_id' value='' />
+  <div class="teacherCloud">
+    <div class="pop_main">
+      <h4>分享的班级</h4>
+      <div class="shareClass">
+        <ul class="classes cf">
+          {foreach $classes as $key=>$val}
+          <li><label for="{$val.alpha_id}"><input name="class[]" value={$val.alpha_id} id="{$val.alpha_id}" type="checkbox" />{$val.class_name}</label></li>
+          {/foreach}
+        </ul>
+        <span class="Validform_checktip"></span>
+      </div>
+      <!-- <p>文件描述（500字以内）</p> -->
+      <!-- <div class="fileDisc">
+        <textarea id="shareFileTxtDis" name='desc'></textarea>
+        <span class="Validform_checktip"></span>
+      </div> -->
+    </div>
+  </div>
+</form>
+</div>
+<!--  分享弹出框 - 有班级分享 over -->
+{/if}
+ 
+<!--  移动文件新开始  -->
+<div id="moveFilePop" class="pop_box">
+    <div class="teacherCloud new_tree"></div>
+</div>
+<!--  移动文件新结束  -->
+<!--  移动文件夹新开始  -->
+<div id="moveDirPop" class="pop_box">
+    <div class="teacherCloud new_dir_tree"></div>
+</div>
+<!--  移动文件夹新结束  -->
+
+<!-- 新共享给梯子网开始 -->
+<div id="sharAllFilePop" class="pop_box">
+    <form class="sharAllFileForm_beta" action="{$site_url}resource/share_to_tizi/add" method="post">
+        <input type="hidden" class="shareAll_fileId" value="" name="file_id">
+        <div class="teacherCloud">
+            <div class="pop_main">
+                <div class="sharAllFile">
+                    <label for="checkshare">
+                        <input type="checkbox" value="" id="checkshare"/>我愿意将此文件共享给梯子网
+                    </label>
+                    <span class="Validform_checktip"></span>
+                    <p>将文件设置为共享，梯子网将可以公开使用您的文档。</p>
+                </div>
+            </div>
+        </div>
+        <input type="submit" class="undis" />
+    </form>
+</div>
+<!-- 新共享给梯子网结束 -->
+<!-- 重命名文件 -->
+<div id="resetFileNamePop" class="pop_box">
+<form class="resetFileNameForm_beta" action="{$site_url}teacher/cloud/rename" method="post">
+  <input type='hidden' class='is_file' value='0' name='is_file'/>
+  <input type='hidden' class='rename_id' value='0' name='id'/>
+  <div class="teacherCloud">
+    <div class="pop_main">
+      <ul>
+          <li class="cf">
+            名称：<input class="new_class_text" type="text" id="resetFileNameTxt" value='' name='name'/>
+            <span class="Validform_checktip"></span>
+          </li>
+      </ul>
+    </div>
+  </div>
+  <input type="submit" class="undis" />
+</form>
+</div>
+<!-- 弹出框结束 -->
+<input type="hidden" id="class_id" value="" /> <!-- 删了就出js错误 -->
+{/block}
+{block name=script}
+<script type="text/template" id="upFilePop">
+<!--上传文件 ing 进度显示框  -->
+<div class="teacherCloud">
+  <div class="pop_main">
+    <ul class="upFileTable">
+      <li class="UFHeader cf">
+        <span class="col1">文件名</span>
+        <span class="col2">大小</span>
+        <span class="col3">上传目录</span>
+        <span class="col4">状态</span>
+        <span class="col5">操作</span>
+      </li>
+      <%#files%>
+      <li id="file_num_<%queue_id%>" class="fileList loadingBg cf">
+        <strong>&nbsp;</strong>
+        <span class="col1"><%file_name%></span>
+        <span class="col2"><%size%></span>
+        <span class="col3"><%cdir%></span>
+        <span class="col4"><a class="complete" href="javascript:;">排队中...</a></span>
+        <span class="col5"><a class="UploadCancel onCancel" href="javascript:$('#shareFileUp').uploadify('cancel','<%file_id%>');">x</a></span>
+      </li>
+      <%/files%>
+    </ul>
+  </div>
+</div>
+</script>
+{include file='file:[lib]common/tizi_flash.html' assign=noflash}
+{literal}
+<script>
+var noflash = '{/literal}{$noflash}{literal}';
+
+function cloud_page(page){
+seajs.use('module/teacherCloud/cloud', function(c) {
+  c.page(page);
+});
+}
+</script>
+{/literal}
+{/block}

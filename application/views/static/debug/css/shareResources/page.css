@@ -1,0 +1,130 @@
+html{ _text-overflow:ellipsis; } 
+body{_background:url(about:blank) fixed}
+
+.shareResources .w960{width:960px; margin:0 auto;}
+/*任务计划样式开始*/
+.shareResources .wrapfull {width:100%;height:500px; background:#abefec;}
+.shareResources .wrapfull .taskScheduleBg {width:1280px;height:500px; background:url(../../image/shareResources/taskScheduleBg.png) no-repeat 0 0;margin:0 auto;}
+.shareResources .wrapfull .tophr {width:100%;height:3px;  background:url(../../image/shareResources/tophr.png) repeat-x -93px 0 }
+.shareResources .wrapfull .taskSchedule{ width:960px; margin:0 auto;}
+.shareResources .wrapfull .taskSchedule .b-left{ height:auto; background:url(../../image/shareResources/) no-repeat 0 0; width:495px;}
+.shareResources .wrapfull .taskSchedule .b-left .bd  {width:495px; height:361px; background:url(../../image/shareResources/bigicon.png) no-repeat 0 0; margin-top:30px;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='corp', src='../../image/shareResources/bigicon.png');}
+.shareResources .wrapfull .taskSchedule .b-left .ft { width;431px height:49px; margin-top:10px;}
+.shareResources .wrapfull .taskSchedule .b-left .ft li { float:left;}
+.shareResources .wrapfull .taskSchedule .b-left .ft li a{display:block; width:203px; margin-right:25px; height:49px; background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -49px; color:white; text-align:center;line-height:49px; font-size:18px;}
+/* .wrapfull .taskSchedule .b-left .ft li a{display:block; width:203px; height:49px; background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -49px; color:white;} */
+.shareResources .wrapfull .taskSchedule .b-left .ft li a:hover{background:url(../../image/shareResources/btnGroup.png) no-repeat 0 0px;}
+.shareResources .wrapfull .taskSchedule .b-right {width:374px; height:387px;margin-top:50px;}
+.shareResources .wrapfull .taskSchedule .b-right .hd {width:324px; height:70px; border-bottom:1px dashed #d2d2d2;margin:0 auto; line-height: 30px; margin-top:10px;}
+.shareResources .wrapfull .taskSchedule .b-right .hd .TS_title {color:#545656;font-size: 18px; font-weight: normal; height:25px; background:url(../../image/shareResources/TS_titlebg.png) no-repeat 0 0; text-indent: 30px; _line-height: 25px;}
+.shareResources .wrapfull .taskSchedule .b-right .hd .TS_content {color:#38ba8d; line-height: 41px; font-size:14px;}
+.shareResources .wrapfull .taskSchedule .b-right .hd .waning{color:#ffa600; line-height: 41px; font-size:14px;}
+.shareResources .wrapfull .taskSchedule .b-right .bd {width:324px; margin:0 auto; margin-top:12px; padding-bottom: 29px; border-bottom: 1px dashed #d2d2d2; }
+.shareResources .wrapfull .taskSchedule .b-right .bd li{}
+.shareResources .wrapfull .taskSchedule .b-right .bd li .TS_title {text-indent: 10px; font-size:24px; float:left;margin-top:15px; color:#545656;}
+.shareResources .wrapfull .taskSchedule .b-right .bd li em { font-size:22px;font-family: "Arial"; background:url(../../image/shareResources/TS_titlebg.png) no-repeat 0 -25px;_background-position-y:-24px; width:24px; height:24px; display:block; float:left; text-align: center; margin-top:20px; color:#545656;  }
+.shareResources .wrapfull .taskSchedule .b-right .bd li .TS_status {background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -98px; width:121px; height:57px; display:block; float:right;}
+.shareResources .wrapfull .taskSchedule .b-right .bd li .TS_status3 {color:#38ba8d;  margin-top:26px; float:right;}
+.shareResources .wrapfull .taskSchedule .b-right .bd li .TS_status1 {background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -98px; width:121px; height:57px; display:block; float:right;}
+.shareResources .wrapfull .taskSchedule .b-right .bd li .waning{margin-top:25px; float:left; color:#ffa600;}
+.shareResources .wrapfull .taskSchedule .b-right .bd li .attestationBtn{width:127px; height:39px; background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -155px; display:block; text-align:center; line-height:36px; color:white; font-size:18px; font-family:"微软雅黑","黑体"; margin-top:10px;}
+.shareResources .wrapfull .taskSchedule .b-right .bd li .attestationBtn:hover{background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -194px;}
+.shareResources .wrapfull .taskSchedule .b-right .bd li .shareBtn{width:127px; height:39px; background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -233px;display:block; text-align:center; line-height:36px; color:white; font-size:18px; font-family:"微软雅黑","黑体"; margin-top:10px;}
+.shareResources .wrapfull .taskSchedule .b-right .bd li .shareBtn:hover{background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -272px;}
+.shareResources .wrapfull .taskSchedule .b-right .ft {width:324px; margin:0 auto; margin-top:18px;}
+.shareResources .wrapfull .taskSchedule .b-right .ft table{ width:324px;}
+.shareResources .wrapfull .taskSchedule .b-right .ft table thead tr th {border:1px solid white; background: #e5e5e5;  padding:5px; font-size:12px;}
+.shareResources .wrapfull .taskSchedule .b-right .ft table tbody tr td {border:1px solid white; background: #f2f2f2;  padding:5px; font-size:12px;}
+/*任务计划样式结束*/
+/*操作条样式开始*/
+.shareResources .opertionBar {width:100%; height:50px; background:#00c893;}
+.shareResources .opertionBar .bd {width:960px; margin:0 auto;}
+.shareResources .opertionBar .bd li {float:left;}
+.shareResources .opertionBar .bd li a{border-left:1px solid white; border-right:1px solid white;float:left; width:318px; height:50px; display:block; text-align: center; font-size:18px; color:white; line-height: 48px;}
+.shareResources .opertionBar .bd li a.left em{background:url(../../image/shareResources/TS_titlebg.png) no-repeat 0 -50px; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='corp', src='../../image/shareResources/btnbg1.png'); width:21px; height:24px; display:block; position: absolute;top:12px; left:94px; }
+.shareResources .opertionBar .bd li a.right em{background:url(../../image/shareResources/TS_titlebg.png) no-repeat 0 -96px;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='corp', src='../../image/shareResources/btnbg3.png'); width:21px; height:24px; display:block; position: absolute;top:12px; left:94px;}
+.shareResources .opertionBar .bd li a.center{border:0px;}
+.shareResources .opertionBar .bd li a.center em{background:url(../../image/shareResources/TS_titlebg.png) no-repeat 0 -73px;_background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='corp', src='../../image/shareResources/btnbg2.png'); width:21px; height:24px; display:block; position: absolute;top:12px; left:94px;}
+.shareResources .opertionBar .bd li a:hover,
+.shareResources .opertionBar .bd li a.active{background: #00b081;}
+/*操作条样式结束*/
+/*课程介绍样式开始*/
+.shareResources .topicIntroduce{height:auto; width:100%; background:#f5fbff;}
+.shareResources .topicIntroduce .bd {height:auto; width:960px; margin:0 auto; border-bottom: 1px dashed #d2d2d2; padding-bottom:25px; }
+.shareResources .topicIntroduce .bd .box {margin-top:60px;width:800px;}
+.shareResources .topicIntroduce .bd .box h3{font-size:30px; background:url(../../image/shareResources/TS_titlebg.png) no-repeat 0 -120px; text-indent: 30px; line-height: 30px;}
+.shareResources .topicIntroduce .bd .box p{line-height: 30px; margin-top:25px; font-size:18px;color:#545656;}
+.shareResources .topicIntroduce .bd .images{ width:141px; height:176px; margin-top:30px; text-shadow: 0px 0px 10px #d9eaf5;box-shadow: 0px 0px 10px #d9eaf5;}
+.shareResources .topicIntroduce .ft {height:auto; width:960px; margin:0 auto; margin-top:32px; padding-bottom:50px; }
+.shareResources .topicIntroduce .ft ul li.left {float:left; width:291px; padding-right:21px; border-right:1px solid #d2d2d2;}
+.shareResources .topicIntroduce .ft ul li.center {float:left; width:286px; padding-left:25px; padding-right:21px; border-right:1px solid #d2d2d2;}
+.shareResources .topicIntroduce .ft ul li.right {float:left; width:288px; padding-left:24px;}
+.shareResources .topicIntroduce .ft ul li h2{border-left:4px solid #1bb583;padding-left:16px; color:#545656; font-size:18px; font-family: "微软雅黑"}
+.shareResources .topicIntroduce .ft ul li p {line-height: 22px; margin-top:15px; text-indent: 20px;}
+.shareResources .topicIntroduce .ft ul li.right img {width:286px; height:152px;}
+/*课程介绍样式结束*/
+/*活动介绍样式开始*/
+.shareResources .activityIntroduce {width:100%; height:auto; background:#deecf4;}
+.shareResources .activityIntroduce .box {margin-top:50px;width:660px;}
+.shareResources .activityIntroduce .box h3 {font-size:30px;  color:#545656;padding-left:10px; background:url(../../image/shareResources/TS_titlebg.png) no-repeat 0 -150px;text-indent: 22px;line-height: 29px; }
+.shareResources .activityIntroduce .box .box-bd{margin-top:35px;}
+.shareResources .activityIntroduce .box .box-bd h4{font-size:18px;  color:#545656; padding-left:20px; border-left:4px solid #1bb583;}
+.shareResources .activityIntroduce .box .box-bd p{color:#545656; font-size:18px; margin-top:10px;}
+.shareResources .activityIntroduce .box .ft{font-size: 16px;color:#545656; margin-top:20px; margin-bottom: 50px;}
+.shareResources .activityIntroduce .box .ft p{line-height:30px;}
+.shareResources .activityIntroduce .box .ft p strong {color:#ffa600;}
+.shareResources .activityIntroduce .img {width:208px; height:264px; background:white; margin-top:24px;text-shadow: 0px 0px 10px #c4dcea;box-shadow: 0px 0px 10px #c4dcea;}
+/*活动介绍样式结束*/
+/*活动细则样式开始*/
+.shareResources .activityRules{width:100%; height:auto; background:#f5fbff; padding-top:30px;}
+.shareResources .activityRules h3{ font-size: 30px; color:#545656; background:url(../../image/shareResources/TS_titlebg.png) no-repeat 0 -179px; text-indent: 30px;line-height: 32px;_line-height:30px; height:30px;}
+.shareResources .activityRules h4{ font-size: 18px; color:#545656; padding-left:20px; border-left:4px solid #1bb583; margin-top:34px; margin-bottom: 50px;}
+.shareResources .activityRules .left-line {width:20px; height:auto;}
+.shareResources .activityRules .bd {width:907px; border-left: 1px dashed #1bb583; padding-left:49px; margin-bottom:40px;}
+.shareResources .activityRules .bd li {position: relative;}
+.shareResources .activityRules .bd li .AR-content{width:907px; height:auto;}
+.shareResources .activityRules .bd li .bottomHr{width:907px; height:1px; border-bottom:1px dashed #d2d2d2; margin-top:20px; margin-bottom:20px;}
+.shareResources .activityRules .bd li .AR-content .box {width:707px; height:auto;  }
+.shareResources .activityRules .bd li .AR-content .box h2 {width:200px; color:#545656; font-size:18px; position: relative;  display: inline; }
+.shareResources .activityRules .bd li .AR-content .box h2 em { color:#545656; font-size:18px;width:18px; height:18px; display:block; background:url(../../image/shareResources/TS_titlebg.png) no-repeat 0 -209px;  position: absolute; left:-58px; top:0px;font-size:14px;font-family:"Arial"; color:white; text-align:center;}
+.shareResources .activityRules .bd li .AR-content .box p { color:#545656; font-size:14px; line-height: 28px;}
+.shareResources .activityRules .bd li .AR-content .box .attestationBtn {width:127px; height:39px; background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -155px; display:block; text-align:center; line-height:36px; color:white; font-size:18px; font-family:"微软雅黑","黑体"; margin-top:10px;}
+.shareResources .activityRules .bd li .AR-content .box .attestationBtn:hover {background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -194px;}
+.shareResources .activityRules .bd li .AR-content .box .shareBtn{width:127px; height:39px; background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -233px;display:block; text-align:center; line-height:36px; color:white; font-size:18px; font-family:"微软雅黑","黑体"; margin-top:10px;}
+.shareResources .activityRules .bd li .AR-content .box .shareBtn:hover{background:url(../../image/shareResources/btnGroup.png) no-repeat 0 -272px;}
+.shareResources .activityRules .bd li .AR-content .AR-icon {float:right; width:142px; height:143px; margin-right:20px;}
+.shareResources .activityRules .bd li .AR-content .icon1 {background:url(../../image/shareResources/iconGroup.png) no-repeat 0 0; position: absolute; right:0px; top:-52px;}
+.shareResources .activityRules .bd li .AR-content .icon2 {background:url(../../image/shareResources/iconGroup.png) no-repeat 0 -143px;}
+.shareResources .activityRules .bd li .AR-content .icon3 {background:url(../../image/shareResources/iconGroup.png) no-repeat 0 -286px;}
+.shareResources .activityRules .bd li .AR-content .icon4 {background:url(../../image/shareResources/iconGroup.png) no-repeat 0 -429px;}
+.shareResources .activityRules .bd li .AR-content .icon5 {background:url(../../image/shareResources/iconGroup.png) no-repeat 0 -572px;}
+/*活动细则样式结束*/
+/*老师和学生样式开始*/
+.tophrbg{width:100%;height:3px;  background:url(../../image/shareResources/tophr1.png) repeat-x 0px 0;_overflow: hidden;}
+.shareResources { position: relative;}
+.shareResources .assignmentNav{width:209px; height:407px; padding-left:9px; background:url(../../image/shareResources/stuTeacherBottomBg.png) no-repeat 0 0;}
+.shareResources .assignmentNav .hd {color:#9d9d9d; width:197px; margin-top:20px;padding-bottom:20px; text-align:center; color:#9d9d9d; border-bottom: 1px dashed #9d9d9d;font-size:14px;}
+.shareResources .assignmentNav .hd a{color:#1BB583;}
+.shareResources .assignmentNav .hd a:hover{color:#f90;}
+.shareResources .assignmentNav .bd {width:197px; height:auto; margin-top:20px;}
+.shareResources .assignmentNav .bd h2{padding-left:10px; border-left:4px solid #1bb583; color:#545656; font-size:18px; }
+.shareResources .assignmentNav .bd ul{width:160px; margin-top:20px; padding-left:20px; border-left:1px dashed #9d9d9d; float:right;}
+.shareResources .assignmentNav .bd ul li{line-height:40px;}
+.shareResources .assignmentNav .bd ul li a{ color:#545656; position: relative; display:inline;}
+.shareResources .assignmentNav .bd ul li a.active{color:#1bb583;position: relative; display:inline;}
+.shareResources .assignmentNav .bd ul li a em{ color:#545656; position: absolute; left:-27px; top:0px; background:url(../../image/shareResources/stuTeacherNav.png) no-repeat 0 -14px; width:14px; height:14px; display:block;}
+.shareResources .assignmentNav .bd ul li a.active em{color:#545656; position: absolute; left:-27px; top:0px; background:url(../../image/shareResources/stuTeacherNav.png) no-repeat 0 0px; width:14px; height:14px; display:block;}
+.shareResources .ST-content {width:730px; height:auto; background:#f5fbff; padding-top:75px; padding-bottom:40px;}
+.shareResources .ST-content .box{width:100%; height:auto;}
+.shareResources .ST-content .box .hd{}
+.shareResources .ST-content .box .hd h2{padding-left:10px; border-left:4px solid #1bb583; color:#545656; font-size:18px;  }
+.shareResources .ST-content .box .hd h2.ST-title {margin-top:20px;}
+.shareResources .ST-content .box .bd {width:698px; height:auto; margin:0 auto;}
+.shareResources .ST-content .box .bd li {}
+.shareResources .ST-content .box .bd li h3 {color:#545656;margin-top:10px; font-size:14px;  }
+.shareResources .ST-content .box .bd li .content{width:698px; height:436px; margin-top:10px;background:white;text-shadow: 0px 0px 10px #d8eaf5;box-shadow: 0px 0px 10px #d8eaf5; }
+
+
+/*老师和学生样式结束*/
+.shareResources .fixed{position: fixed;top:-58px;z-index:1000;_position:relative;}
+.shareResources .fixed2{position: fixed;top:0px;z-index:1000;_position:relative;}

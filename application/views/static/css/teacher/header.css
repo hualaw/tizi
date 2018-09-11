@@ -1,0 +1,44 @@
+/*头部开始*/
+.header{ background:#179c7e; height:50px;line-height:50px;z-index:9; position: relative;*zoom:1;}
+.header p.fr{color:#fff;margin-right:10px;}
+.header p.fr a{color:#fff;margin:0 10px;}
+.header h1 a{ background:url(../../image/common/small_logo.gif) no-repeat; width:120px; height:50px; text-indent:-999em; overflow:hidden; display:block;margin-left:10px;}
+.header ul.fl{margin-left:30px;}
+.header ul.fl li{ float:left;_display:inline;}
+.header ul.fl li a{ display:block;line-height:50px; color:#fff;font-size:14px;cursor: pointer;padding:0 15px; font-weight:bold;}
+.header ul.fl li a:hover,
+.header ul.fl li.on a,
+/*老师端5个base根据body的class设置的on的样式开始*/
+.headerQuestion ul.fl li.question a,
+.headerPrepare ul.fl li.prepare a,
+.headerExercise ul.fl li.exercise a,
+.headerManage ul.fl li.manage a,
+.headerMember ul.fl li.member a,
+.headerTeacherAqNav ul.fl li.teacherAqNav a
+{ background:#158c71; color:#fff; text-decoration:none;}
+.header .sLink{ margin-top:13px;}
+.header .sLink a{color:#fff;background:url(../../image/student/sLink_a_bg.gif) no-repeat; display:block; text-align:center; width:89px;height:25px; line-height:25px;}
+.header .sLink a:hover{ text-decoration:none;}
+.header .nav .posr{ _display:inline;}
+/*头部视频帮助*/
+.header .vedio_help{width:103px; height:29px; background:url(../../image/common/vedio_help.gif) no-repeat top center; color:#fff; margin-top:10px;}
+.header .vedio_help a{ display:block; width:103px; height:29px;}
+/*头部右侧下拉菜单开始*/
+.header .nav{ padding-right:20px;}
+.header .nav span{padding-right:20px;height:50px; line-height:50px; color:#fff; text-align:right; cursor:pointer;background:url(../../image/teacher/header_narrow_up.gif) no-repeat right center; padding-right:20px;}
+.header .nav span.down{background:url(../../image/teacher/header_narrow_down.gif) no-repeat right center}
+.header .nav p{position:absolute; top:50px; right:0px; border:1px solid #DEDEDE;width:98px; background:#fff;z-index:999}
+/*.header .nav ul span.up{ background:url(../../image/common/ico_headerNav.png) no-repeat top center; position:absolute; top:-6px; left:0px; width:98px; height:6px; overflow:hidden;z-index:3}*/
+.header .nav p a{ display:block;color:#009D6B; height:31px; line-height:31px; padding-left:15px;width:83px;}
+.header .nav p a:hover{ background:#2B8D6A; color:#fff; text-decoration:none;}
+.header .nav .dot{ background:url(../../image/common/ico_dot.gif) no-repeat; position:absolute; top:11px; right:5px; display:block; width:12px;height:11px;}
+.header .nav .num1{ position:absolute; top:7px; right:10px; background:url(../../image/common/ico_common.png) no-repeat;_background:url(../../image/common/ico_common.gif) no-repeat; display:block; width:15px; height:15px; line-height:16px; color:#fff; text-align: center;}
+.header .notification{background-color:#ff6c6c;-moz-border-radius:10px;-webkit-border-radius: 10px;border-radius: 10px; border:1px solid #179c7e;-webkit-box-shadow:0px 2px 0px #158c71;-moz-box-shadow:0px 2px 0px #158c71;box-shadow:0px 2px 0px #158c71; cursor:pointer;display:inline-block;height:25px;line-height: 25px;text-align:center;padding:0px 10px;margin-top:20px;}
+.header p.fr{text-align: right;height:50px;overflow:hidden;}
+.header .notification b{font-weight: normal}
+.header .notification i{background:url(../../image/student/common/notice.gif) no-repeat; width:16px;height:10px;display: inline-block;margin-right:5px;float:left;margin-top:8px;}
+.header .notification:hover{background-color:#f54c4c;}
+/*头部右侧下拉菜单结束*/
+.header .undis{ display:none}
+.header .dis{ display:block}
+/*头部结束*/

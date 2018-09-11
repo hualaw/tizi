@@ -1,0 +1,222 @@
+{extends file='teacher/user/user_questionUpload_base.html'}
+
+{block name=title}上传试题{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="mainContainer" pagename="myQuestionUpload">
+    <!--上传新题开始-->
+    <div class="uploadNewQa cf">
+        <!--上传新题开始-->
+        <div class="md_topicList">
+                <form action="{$site_url}user/user_question/submit" method="POST" class="form_qList">
+                    <ul>
+                        <li>
+                            <label><em class="icon_org"> ＊</em>学段：</label>
+						 <select name="grade" class="s_grade" >
+							<option value ="" {if $data.grade_id eq ''}selected="selected"{/if}>请选择</option>
+							<option value ="1" {if $data.grade_id eq '1'}selected="selected"{/if}>小学</option>
+							<option value ="2" {if $data.grade_id eq '2'}selected="selected"{/if}>初中</option>
+							<option value ="3" {if $data.grade_id eq '3'}selected="selected"{/if}>高中</option>
+						</select>
+                        </li>
+                        <li>
+                            <label><em class="icon_org"> ＊</em>学科：</label>
+							<select name="subject_type"  class="s_subject">
+							<option value ="">请选择学科</option>
+							{foreach $data.subject_list as $sub}
+							<option value ="{$sub->id}" {if $sub->id eq $data.questions->subject_id }selected="selected"{/if}>{$sub->name}</option>
+							{/foreach}
+							</select>
+                        </li>
+                        <li>
+                            <label><em class="icon_org"> ＊</em>题型：</label>
+							<select name="qtype"  class="s_qtype">
+							<option value ="">请选择题型</option>
+							{foreach $data.qtype_arr as $type}
+								<option value ="{$type->id}" {if $type->id eq $data.questions->qtype_id }selected="selected"{/if}>{$type->name}</option>
+							 {/foreach}
+							</select>
+                        </li>
+                        <li>
+                            <label>题目分组：</label>
+							<select name="group" class="s_Group fl">
+								<option value ="0">请选择分组</option>
+								{foreach $data.groups as $group}
+								<option value ="{$group->id}" {if $group->id eq $data.questions->group_id }selected="selected"{/if} >{$group->name}</option>
+								{/foreach}
+							</select>
+                            <a href="javascript:void(0);" class="cBtnSilver add_pick openGroupInfo fl">添加分组</a>
+                        </li>
+                        <li>
+                            <label><em class="icon_org"> ＊</em>题目/来源：</label>
+							<input type="text" class="source" name="source" value="{$data.questions->title}"/>
+                        </li>
+                        <li>
+                            <label><em class="icon_org"> ＊</em>难易度：</label>
+                            {foreach $data.easy_level as $key=>$val}
+							<label class="labelr"><input type="radio" name="level_id" value="{$key}" {if $key eq $data.questions->level_id}checked="true"{/if} class="radior" />{$val}</label>
+							{/foreach}
+                        </li>
+                        <li>
+                            <label>题目内容：</label>
+                            <div class="ckEd">
+                            <p class="dis Tip" style="display:none;">提示：可直接将文档(Word或Wps)中带有图片的题目内容复制粘贴到下面的输入框中</p>
+                            <div class="ckEdTip dis" style="display:none;">
+                                <h2>安装快速传题插件，可直接将文档(Word或Wps)中带有图片的题目内容复制粘贴到下面的输入框中</h2>
+                                <a href="http://java.com/zh_CN/" target="_blank" class="cBtnNormalOrg">下载快速传题插件</a>
+                                <div>提示：安装完成后请重新打开浏览器进入本页，并在随后弹出的对话中选择“允许”，若提示应用程序已被安全设置阻止，请至控制面板->程序->java面板中将安全级别设置为“中”</div>
+                            </div>
+                            <textarea id="question_content" name="question_content" cols="10" rows="7"></textarea>
+                            </div>
+                        </li>
+						{if !$data.show_answer_html}
+						<li id="qestion_select">
+							<label>正确答案：</label>
+							<div class="pickList cf" id="answer_row">
+							<label class="labelr"><input class="radior" type="checkbox" name="option_answer[]" value="A"/>A</label>
+							<label class="labelr"><input class="radior" type="checkbox" name="option_answer[]" value="B"/>B</label>
+							<label class="labelr"><input class="radior" type="checkbox" name="option_answer[]" value="C"/>C</label>
+							<label class="labelr"><input class="radior" type="checkbox" name="option_answer[]" value="D"/>D</label>
+							</div>
+							<div class="pick_span cf">
+								<a class="cBtnSilver add_pick fl" href="javascript:void(0);" id="myadd_option">增加选项</a>
+								<a class="cBtnSilver add_pick fl" href="javascript:void(0);" id="mydel_option">减少选项</a>
+							 </div>
+						</li>
+						<li id="qestion_unselect" style="display:none;">
+							<label>正确答案：</label>
+							<div class="ckEd">
+								<textarea id="option_answer" name="answer_content" cols="10" rows="7"></textarea>
+							</div>
+						</li>
+						{else}
+						<li id="qestion_unselect" >
+							<label>正确答案：</label>
+							<div class="ckEd">
+								<textarea id="option_answer" name="answer_content" cols="10" rows="7"></textarea>
+							</div>
+						</li>
+						<li id="qestion_select" style="display:none;">
+							<label>正确答案：</label>
+							<div class="pickList cf" id="answer_row">
+							<label class="labelr"><input class="radior" type="checkbox" name="option_answer[]" value="A"/>A</label>
+							<label class="labelr"><input class="radior" type="checkbox" name="option_answer[]" value="B"/>B</label>
+							<label class="labelr"><input class="radior" type="checkbox" name="option_answer[]" value="C"/>C</label>
+							<label class="labelr"><input class="radior" type="checkbox" name="option_answer[]" value="D"/>D</label>
+							</div>
+							<div class="pick_span cf">
+								<a class="cBtnSilver add_pick fl" href="javascript:void(0);" id="myadd_option">增加选项</a>
+								<a class="cBtnSilver add_pick fl" href="javascript:void(0);" id="mydel_option">减少选项</a>
+							 </div>
+						</li>
+						{/if}
+                        <li>
+                            <label>解析：</label>
+                            <div class="ckEd">
+                               <textarea id="analysis" name="question_analysis" cols="10" rows="7"></textarea>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="fl">知识点信息：</label>
+                            <!--添加知识点信息开始-->
+                            <div class="all_message fl">
+                                <!--知识点单体开始-->
+                                    <div class="md_TopicMessage">
+										<div class="md_hd knowlage_name">
+										{$data.knowledge_str}
+										</div>
+										<div class="md_bd">
+										  <!--添加知识点单体开始-->
+										  <div class="add_knows">
+											  <div class="ayncSel fl">
+													<select class="s-knowlage tree-item" onchange="Teacher.UserCenter.my_question_ajax.treeItemClick(this);">
+														{if isset($data.version_list['category'])}
+														{$data.version_list['category']}
+														{else}
+														<option value ="">请选择版本</option>
+														{/if}
+													</select>
+												</div>
+												<a href="javascript:void(0)" class="cBtnSilver add_message fl add_category">添加</a>
+												
+											</div>
+											<!--添加知识点单体结束-->
+										</div>
+									 </div>
+                                 <!--知识点单体结束-->
+                             </div>
+                             <!--添加知识点信息结束-->
+                        </li>
+                        <li>
+                            <label class="fl">同步信息：</label>
+                           <!--添加知识点信息开始-->
+                            <div class="all_message shortSelect fl">
+                                <!--知识点单体开始-->
+                                    <div class="md_TopicMessage">
+										<div class="md_hd category_name">
+										{$data.edu_str}
+										 </div>
+										<div class="md_bd">
+											<!--添加同步信息单体开始-->
+											<div class="add_ansyInfo">
+											   <div class="ayncSel fl">
+													<select class="s-version tree-item" onchange="Teacher.UserCenter.ajax_select.treeItemClick(this);">
+														{if isset($data.version_list['course'])}
+														{$data.version_list['course']}
+														{else}
+														<option value ="">请选择版本</option>
+														{/if}
+													</select>
+												</div>
+												<a href="javascript:void(0)" class="cBtnSilver add_message fl add_course">添加</a>
+												
+											</div>
+											<!--添加同步信息单体结束-->
+										</div>
+									 </div>
+                                 <!--知识点单体结束-->
+                             </div>
+                             <!--添加知识点信息结束-->
+                        </li>
+                    </ul>
+                    <div class="sub_btn cf">
+                       <input type="hidden" id="category_id" name="category_id" value="{if $data.esid}{$data.esid}{/if}"/>
+						 <input type="hidden" id="last_option" name="last_option" value="D"/>
+						<input type="hidden" id="knowledge_id" name="knowledge_id" value="{if $data.ksid}{$data.ksid}{/if}"/>
+						<input type="hidden" id="question_id" name="question_id" value=""/>
+                        <span><input type="submit" value="确认提交" class="cBtnNormal submit_btn"/></span>
+                        <span><a href="{$data.referer}"  class="cBtnSilver refer_btn">取消</a></span>
+                    </div>
+                </form>
+            </div>
+        <!--上传新题结束-->
+        <!-- 添加分组提示框开始 -->
+        {include file='file:teacher/user/user_question_group_add.html'}
+        <!-- 添加分组提示框结束 -->
+    </div>
+    <!--用上传新题结束-->
+</div>
+{/block}
+
+{block name=script}
+<script type="text/javascript">
+{literal}
+$('#slide').height($(document).height() - 90);
+{/literal}
+</script>
+<!--引入ckEditor插件-->
+<script type="text/javascript" src="{$static_base_url}{$static_version}lib/ckeditor/4.3/ckeditor.js{$version}"></script>
+<script type="text/javascript" src="{$static_base_url}{$static_version}lib/ckeditor/4.3/adapters/CKSource.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}lib/java_applet/0.0.1/wordimage_uploader.js{$version}"></script>
+<script type="text/javascript">
+Teacher.UserCenter.uploadQuesValid.myQuestion();
+Teacher.UserCenter.UploadAq.appletUrl = '{$static_url}{$static_version}';
+Teacher.UserCenter.UploadAq.init();
+{literal}
+window.onerror=function(){return true;}
+{/literal}
+</script>
+{/block}

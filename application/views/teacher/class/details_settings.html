@@ -1,0 +1,87 @@
+{extends file='teacher/class/base.html'}
+{block name=title}设置{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<div class="mainContainer classTableHeight" pagename="class_{$alpha_class_id}">
+<!--
+    *
+    * 内容部分修改 开始
+    *
+  -->
+<div id="right_content" class="classmanage new_classmanage"> 
+ <div class="newContentOverFlow">
+  {if isset($notfound) and $notfound === 1}
+  <div style="margin-top:12px;">
+	您不是该班级的老师，您无法查看该班级详细信息。
+  </div>
+  {else}
+    <div class="classMain cf">
+      <!-- 新版班级 开始 -->
+        <!-- <div class="class_manage_con">
+          <div class="iniInviteBox">通过邮件或者QQ将班级邀请连接：（<span class="" id="inviteCode">{$site_url}invite/{$alpha_class_id}</span>）<a class="copyButton greenText" id="iniInviteId" href="javascript:;">点击复制</a>&nbsp;发给其他任课老师，他们通过这个地址注册即可加入此班级。
+          </div>
+        </div> -->
+      <!-- 新版班级 结束 -->
+      <!-- 4.0设置 开始 -->
+      <div class="setUpBox">
+        <form class="preserveForm" action="{$site_url}class/update_info/main" method="post" onsubmit="return false;">
+          <input type="hidden" name="class_id" id="class_id" value="{$alpha_class_id}" />
+          <ul class="setUpList">
+            <li><span class="title">班级名称：</span><input class="className" type="text" name="classname" 
+            	value="{if mb_substr($class_info.classname, -1)=='班'}{mb_substr($class_info.classname, 0, -1)}{else}{$class_info.classname}{/if}">&nbsp;班</li>
+            <li><span class="title">班级编号：</span>{$alpha_class_id}</li>
+            <li><span class="title">所属年级：</span>
+              <select name="class_grade">
+              	{if $class_info.class_grade==0}
+              	<option value="0" selected="selected">未设置</option>
+              	{/if}
+              	{foreach $arr_grade as $key => $value}
+                <option value="{$key}"{if $class_info.class_grade==$key} selected="selected"{/if}>{$value}</option>
+                {/foreach}
+              </select>
+            </li>
+            <li><span class="title">所属学校：</span>{sub_str($school,0,40)}</span></li>
+            <li><span class="title">创建者（管理员）：</span>{sub_str($creator_name,0,12)}</li>
+            <li><span class="title">创建日期：</span>{date("Y-m-d", $classes["create_date"])}</li>
+            <li><span class="title">班级邀请链接：</span><span class="" id="inviteCode">{$site_url}invite/{$alpha_class_id}</span>&nbsp;<a class="copyButton greenText" id="iniInviteId" href="javascript:;">点击复制</a></li>
+            <li><span class="title">上传文件权限：</span>所有任课老师</li>
+            <li><span class="title">&nbsp;</span><input class="cBtnNormal preserveBtn yh" type="submit" value="保存设置" /><a class="cBtnSilver deleteClass disband_btn yh" name="{if isset($arr_grade[$class_info.class_grade])}{$arr_grade[$class_info.class_grade]}{/if}{$class_info.classname}" href="javascript:;" title="">解散班级</a></li>
+          </ul>
+        </form>
+      </div>
+      <!-- 4.0设置 结束 -->
+    </div>
+  {/if}
+ </div>
+</div>
+</div>
+<!-- 弹出框 开始 -->
+<!-- 解散班级弹框开始 -->
+<div id="deleteClassPop" class="pop_box">
+	<form class="deleteClassPopForm_beta" action="{$site_url}class/leave/disband" method="post">
+		<div class="teacherClass">
+			<div class="pop_main">
+				<p>是否确定解散<span class="orangedeep">%classname%</span>？</p>
+				<p>解散班级后，所有班级相关内容将会被删除。</p>
+				<ul>
+					<li class="cf">
+						<input type="password" class="in_vislble_class_text" name="password" id="disband_password" placeholder="请输入梯子网登录密码">
+						<input type="hidden" name="class_id" value="{$alpha_class_id}" />
+					</li>
+				</ul>
+			</div>
+			<input type="submit" class="undis" />
+		</div>
+	</form>
+</div>
+<!-- 解散班级弹框结束 -->
+<!-- 加载选择学校html开始 -->
+{include file='file:[lib]addon/teacherSetSchool.html'}
+{include file='file:[lib]common/tizi_flash.html' assign=noflash}
+{literal}
+<script>
+var noflash = '{/literal}{$noflash}{literal}';
+</script>
+{/literal}
+{/block}

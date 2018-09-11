@@ -1,0 +1,47 @@
+{extends file='teacher/paper/paper_center_base.html'}
+
+{block name=title}试卷存档{/block}
+
+{block name=stylesheet}
+{/block}
+{block name=container}
+<div class="mainContainer" pagename="paperArchive">
+	<div class="outPaperCenter">
+		{if $data.save_log_count}
+		<h2 class="cf">
+		    <span class="title fl">我的试卷<!-- （共计{$data.save_log_count}份） --></span>
+		    <a href="{$site_url}teacher/paper/new" class="fr cBtnNormal choosePaperBtn">选题中心</a>
+		</h2>
+	    <div class="archive_list"></div>
+	    {else}
+	    <!-- 出卷子存档为空开始 -->
+	      <div class="empty">
+	        <div class="intoSubjectCenter">
+	            <a href="{$site_url}teacher/paper/new" class="cBtnNormal">进入选题中心</a>
+	        </div>
+	        <div class="explain">
+	            <h3>出卷子说明</h3> 
+	            <p>您可以使用多种方式选择题目，并将题目加入试卷模版灵活自由的进行排版，存档后可以下载多种尺寸规格的Word格式试卷文档。梯子网选题中心拥有数千万道单题，所有题目均包含答案及解析。</p>
+	        </div>
+	    </div>
+	    <!-- 出卷子存档为空结束 -->
+	    {/if}
+	</div>
+	<!-- 梯子打分广告位开始 -->
+	<div class="layout dafenBanner">
+	    <a href="{$dafen_url}" target="_blank">
+	        <img src="{$static_url}{$static_version}image/common/ad/dafen_banner.gif" alt="梯子打分">
+	    </a>
+	</div>
+	<!-- 梯子打分广告位结束 -->
+</div>
+{include file='teacher/paper/paper_archive_download_tpl.html'}
+<!-- 布置作业弹出框开始 -->
+<div id="setHomeworkPop" class="pop_box">
+</div>
+<div id='ori_box'></div>
+<!-- 布置作业弹出框结束 --> 
+{/block}
+
+{block name=script}
+{/block}

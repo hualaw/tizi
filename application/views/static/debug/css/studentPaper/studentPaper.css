@@ -1,0 +1,61 @@
+.studentPaper{}
+.studentPaper #flashContent{display: inline-block;}
+.studentPaper .answerTime{text-align: center;font-size: 18px;font-weight: bold;height: 20px;margin-bottom: 30px}
+.studentPaper .paperInfo{text-align: center;font-size: 14px;height: 16px;margin-bottom: 30px;}
+.studentPaper .answerBtnBox{text-align: center;margin-bottom: 30px;}
+.studentPaper .noMb{margin-bottom: 0px;}
+.studentPaper .answerBtnBox .submit,
+.studentPaper .answerBtnBox a{margin:0px 20px;display: inline-block;font-size: 14px;color:#fff;width: 140px;height: 40px;line-height: 40px;border-radius: 20px;background: #49b764}
+.studentPaper .answerBtnBox a:hover{background: #009b4a;color:#fff;}
+.studentPaper .paperContent{margin-bottom: 30px;}
+.studentPaper .questionList{border: 1px solid #ccc;border-top-width: 2px;padding: 15px 30px;margin-bottom: 20px;}
+
+.studentPaper .questionList .questionNum{font-size: 18px;line-height: 30px;}
+.studentPaper .questionList .questionTitle{font-size: 14px;line-height: 30px;}
+.studentPaper .questionList .options{line-height: 22px;font-size: 14px;padding-bottom: 30px;}
+.studentPaper .questionList .options img{display: inline-block;}
+.studentPaper .questionList .answerArea{position: relative;border-top: 1px solid #ccc;padding: 10px}
+.studentPaper .questionList .answerArea .title{line-height: 30px;font-size: 14px;margin-bottom: 10px;}
+.studentPaper .questionList .answerArea .id{position: absolute;right: 10px;top:15px;_right:30px;}
+.studentPaper .answerOption a{display: inline-block;width: 120px;height: 40px;line-height: 40px;border-radius: 5px;text-align: center;font-size: 18px;font-weight: bold;background: #eeeeee;margin-right: 10px;}
+.studentPaper .answerOption a.active,
+.studentPaper .answerOption a:hover{background: #49b764;color: #fff;}
+.studentPaper .answerOption .errorBtn{background: #ed1c24;color: #fff}
+.studentPaper .answerOption .errorBtn:hover{background: #ed1c24;color: #fff}
+
+/*交卷——已公布答案样式来说*/
+.studentPaper .handIn_answerBox .right{border-color: #49b764}
+.studentPaper .handIn_answerBox .error{border-color: #ed1c24}
+.studentPaper .handIn_answerBox .answerArea .title span{display: inline-block;width: 150px;}
+.studentPaper .handIn_answerBox .answerOption a{margin-right: 30px}
+.studentPaper .handIn_answerBox .analyticalBox{padding-top: 10px;margin-bottom:10px;}
+.studentPaper .handIn_answerBox .analyticalBox .title{margin-bottom: 0;font-weight: bold;line-height:22px;}
+.studentPaper .handIn_answerBox .analyticalBox p{line-height:22px;font-size: 14px;}
+/*交卷——已公布答案样式结束*/
+/*返回作业列表样式开始*/
+.studentPaper .returnHomeworkList{margin-bottom:10px;}
+.studentPaper .returnHomeworkList a{color:#09aa83;}
+.studentPaper .returnHomeworkList a:hover{color:#f90;}
+/*返回作业列表样式结束*/
+.textCenter{text-align: center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

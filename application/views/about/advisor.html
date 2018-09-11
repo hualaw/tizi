@@ -1,0 +1,30 @@
+{extends file='about/about_base.html'}
+
+{block name=keywords}师资力量,师资队伍,名师顾问{/block}
+{block name=description}梯子网拥有众多名师加盟，师资队伍庞大，师资力量强大，是您学习提高的好帮手。{/block}
+{block name=title}师资力量_师资队伍_名师顾问{/block}
+
+{block name=stylesheet}{/block}
+
+{block name=container}
+<!--内容start-->
+<div class="mainContainer" pagename="advisor">
+    <div class="content">
+        <div class="innerText">
+            <div class="hd">
+                <h2>名师顾问</h2>
+            </div>
+            <div class="bd">
+                {foreach $advisor as $row}
+                <h3>{$row['title']}</h3>
+                <div class="advisorCon cf">
+                    {if !empty($row['thumb'])}<img src="{$row['thumb']}" class="fr" />{/if}
+                    <p>{$row['content']}</p>
+                </div>
+                {/foreach}
+			</div>
+        </div>
+    </div>
+</div>
+<!--内容end-->
+{/block}

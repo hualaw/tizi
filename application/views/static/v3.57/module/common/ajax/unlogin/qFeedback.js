@@ -1,0 +1,1 @@
+define("module/common/ajax/unlogin/qFeedback",[],function(){return $(".haveErrorForm").Validform().resetStatus(),$(".haveErrorForm").submit(),!1});

@@ -1,0 +1,144 @@
+.parentHomePage .parHomeHead{ position: relative;margin-bottom: 20px;}
+.parentHomePage .HeadImage{ position: absolute;left:10px;}
+.parentHomePage .parHomeHead h2{font-size:18px;font-weight: normal;line-height: 36px;}
+.parentHomePage .parHomeHead h2 a:hover,
+.parentHomePage .messList .cupList p a:hover em,
+.parentHomePage a:hover,
+.parentHomePage .parInforList a:hover,
+.parentHomePage .messListLabel a:hover,
+.parentHomePage .parInforListBox h4 a:hover,
+.parentHomePage .parLogin .bd a:hover,
+.parentHomePage .loginArea .loginAreaBefore .hd a:hover,
+.parentHomePage .loginArea .loginAreaAfter h4 a:hover,
+#slide .parentHotTag .hd h2, .parentHomePage #slide .messList h2:hover,
+.parentHomePage #slide .messList h2 .cupNava:hover,
+#slide .parentHotTag .hd h2:hover
+{color:#f90;}
+
+.parentHomePage .parHomeHead p{ line-height: 22px;font-size:14px;padding-bottom:8px;color: #909090;}
+.parentHomePage .parInforList a.parhotKey{ color: #484848;}
+.parentHomePage .parHomeHead img{ height:360px;width: 100%}
+.parentHomePage .parInforList a{ font-size: 14px;}
+.parentHomePage .hotArticleList a{ color:#50b49e;}
+.parentHomePage a.parmore:hover{ color:#fff;}
+/*家长端资讯列表开始*/
+.parentHomePage  .noborder{ border: none!important;}
+.parentHomePage .parInforList a{ color:#50b49e;padding:0 10px;}
+.parentHomePage .parInforList a.parnoPadding{ padding:0;}
+.parentHomePage .parInforListBox .parTime{line-height:22px;color: #999;font-size: 12px;margin: 5px 0 3px 0;}
+.parentHomePage .parInforListBox .parTime span{margin-left:15px;}
+.parentHomePage .parInforListBox p.parTimespan{margin-left:15px;}
+.parentHomePage .parInforListBox li{border:1px solid #ccc;zoom:1;padding: 10px 0;margin: 10px 0;}
+.parentHomePage .parInforListBox li img{width:200px;}
+.parentHomePage .parInforListBox li:hover{border-color: #28b4a4;}
+.parentHomePage .parInforListBox li:after{content:"";display:table;clear:both;}
+.parentHomePage .parInforListBox .info_content{width:436px;}
+.parentHomePage .parInforListBox h4{font-size:18px;font-weight:normal;}
+
+.parentHomePage .parInforListBox .infor_summary{height:auto!important;height:59px;min-height:59px;font-size:14px;line-height: 22px;color:#303030;padding-right: 10px;}
+.parentHomePage .parInforListBox .infor_tab{margin-top:10px;}
+.parentHomePage .parInforListBox .infor_tab span{color:#848484;padding-right:20px;}
+.parentHomePage .parInforListBox .infor_tab a{display:inline-block;padding:0 12px;height:25px;line-height:25px;color:#1ba595;text-align:center;background:#e6f3f1;margin:10px 10px 0 0;}
+.parentHomePage .parInforListBox .infor_tab a:hover,.parentHomePage .parInforListBox .more_info a:hover{background:#239083;color: #fff;}
+.parentHomePage .parInforListBox .more_info a{display:block;width:820px;height:25px;margin-top:20px;line-height:25px;color:#fff;text-align:center;background:#179c7e;}
+.parentHomePage .parInforListBox{margin-top: 20px;}
+/*家长端资讯列表结束*/
+.parentHomePage a.parmore{ display: inline-block; color:#fff;margin-top:20px;width:660px;text-align: center;height:34px;line-height: 34px;font-size: 18px;background: #32b3a4}
+.parentHomePage a.parmore:hover{background:#239083;}
+.parentHomePage .parHomeBorder{ border:1px solid #c7e0de;
+	border-radius: 3px;box-shadow:0 2px 5px #e5e5e5;
+	-webkit-border-radius: 3px;-webkit-box-shadow:0 2px 5px #e5e5e5;
+	-moz-border-radius: 3px;-moz-box-shadow:0 2px 5px #e5e5e5;
+	-o-border-radius: 3px;-o-box-shadow:0 2px 5px #e5e5e5;
+	-ms-border-radius: 3px;-ms-box-shadow:0 2px 5px #e5e5e5;
+}
+/* 家长 首页 右侧列表 开始*/
+.parentHomePage .Submission{ padding:21px 13px 18px;}
+.parentHomePage .Submission div{ width:156px;line-height: 20px;}
+.parentHomePage .Submission a{ width:76px;margin-top:10px;text-align: center;height:34px;line-height: 34px;}
+.parentHomePage .Submission a:hover{ color:#fff;}
+.parentHomePage .messList li{ border-top: 1px solid #ccc;zoom:1;}
+.parentHomePage .messList li span.parTime{color:#999;float: right;line-height: 28px;}
+.parentHomePage .messList h2{ font-size: 18px;}
+.parentHomePage .messList { margin:14px 0 0;}
+.parentHomePage .policyread { margin-top:22px;}
+.parentHomePage .messList ul{ margin-top:10px;}
+.parentHomePage .messList li{ padding:20px 0;}
+.parentHomePage .policyMore{ margin-top:3px;}
+.parentHomePage .cupNava{ color:#50b49e; margin:3px 0 0 14px;}
+.parentHomePage .messList li img{ width:100px;height:75px;}
+.parentHomePage .messList li p{ width:190px;font-size:12px;line-height: 22px;color:#666;}
+.parentHomePage .messList em{ font-size: 14px;}
+.parentHomePage .messListCon{ margin:20px 0 8px;}
+.parentHomePage .messListLabel a{ color:#969696;float: left;background: #eee;padding: 4px 10px;margin-right: 10px;}
+.parentHomePage .messList .cupList p{ width:100%;}
+
+.parentHomePage .messList .cupList p em{ color:#909090;font-size: 14px;}
+.parentHomePage .attentionlist {margin-top:0;}
+.parentHomePage .attentionlist div{ border-bottom:1px solid #ccc;zoom:1;padding-bottom: 8px;}
+.parentHomePage .attentionlist li{border:none;padding:8px 0;font-size: 14px;border-bottom:1px dotted #ccc;}
+.parentHomePage .attentionlist em{margin-right: 5px;text-align: center;display: inline-block;background: #cdcdcd;width: 18px;font-size: 12px;}
+.parentHomePage .attentionlist .currentList{ color:#fff;background: #f90;}
+.parentHomePage .attentionlist li:hover em{color: #000}
+.parentHomePage .attentionlist li:hover em.currentList{color: #fff;}
+/* 家长 首页 右侧列表 结束*/
+/*  公共样式 右侧 热门文章 开始*/
+.parentHomePage .hotArticle {margin:0 0 28px;}
+.parentHomePage .hotArticle h2{ font-weight:normal;height:38px;line-height:38px;background: #ff6b23;padding-left: 14px;}
+.parentHomePage .hotArticle h2 a{ font-size: 16px;color:#fff;}
+.parentHomePage .hotArticle ul{ background: #f6f6f6;padding:0 10px;}
+.parentHomePage .hotArticle li{ padding: 15px 0 20px;}
+.parentHomePage .hotArticleList a{ font-size: 12px;margin-right:20px;}
+.parentHomePage .hotArticleList{ width:172px;}
+.parentHomePage .hotArticleList p{ line-height: 16px;margin-bottom: 5px;}
+.parentHomePage .hotArticle li img{ width:100px;height: 70px;}
+.parentHomePage .parAnsQuest{ background: #e3e3e3;margin-bottom: 14px;}
+.parentHomePage .parAnsQuest{ padding:12px 0 22px 20px;}
+.parentHomePage  a.onlineAnsQues{ font-size: 20px;margin: 12px 0 14px;display: block;}
+.parentHomePage .QRCode{ width:160px;height:203px;background: #179c7e;text-align: center;}
+.parentHomePage .QRCode p{ text-align: center;color: #fff;}
+.parentHomePage .QRCode p.QRCodeText{ line-height: 30px;height: 30px;}
+/*  公共样式 热门文章 结束*/
+.parentHomePage  .cupread ul{padding-bottom: 18px;}
+.parentHomePage  .cupread ul li{padding: 8px 0;border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;margin-bottom: 10px;}
+.parentHomePage  .cupread ul li.cupList{border-bottom: none;border-top: none;margin-bottom: 0px;padding: 2px 0;background: url(../../image/homePage/pageHomeBg-24.png) no-repeat 0 -421px;padding-left: 20px;_background: url(../../image/homePage/pageHomeBg-8.png) no-repeat 0 -421px;}
+.parentHomePage  .cupread ul li.cupList:hover{background: url(../../image/homePage/pageHomeBg-24.png) no-repeat 0 -379px;_background: url(../../image/homePage/pageHomeBg-8.png) no-repeat 0 -379px;}
+/* 右侧 二维码*/
+.parentHomePage .parCode{border: 1px solid #33b3a4;padding: 13px 11px 0 126px;height: 120px;background: url("../../image/homePage/ewm.gif") 18px 13px no-repeat;}
+.parentHomePage .parCode .wx{color:#333;text-align: right;font-size: 14px;height: 32px;line-height: 28px;}
+.parentHomePage .parCode .atten{margin: 8px 0 0 6px;padding-left: 22px;font-size: 14px;line-height: 25px;height: 50px;background: url("../../image/parentHomePage/larr.jpg") left center no-repeat;color:#6b6b6b;}
+
+
+
+/* 2014-6-10修改 */
+#slide .parentHotTag{margin: 21px 0;}
+#slide .parentHotTag .bd a:hover{background: #28b4a4;color: #fff;border-color: #28b4a4}
+#slide .parentHotTag .hd h2,.parentHomePage #slide .messList h2{font-size: 14px;color: #777777;font-weight: normal;height: 35px;line-height:35px;padding-left: 12px;border: 1px solid #e4e4e4;width: 286px;background:#f6f6f6 url(../../image/homePage/pageHomeBg-24.png) no-repeat 0 -127px;_background:#f6f6f6 url(../../image/homePage/pageHomeBg-8.png) no-repeat 0 -127px;}
+#slide .parentHotTag .hd,.parentHomePage #slide .attentionlist div{border-bottom: 0;padding-bottom: 0;}
+.parentHomePage #slide .messList h2 .cupNava{line-height: 36px;margin: 0 12px 0 0;height: 36px;color: #303030;font-size: 12px;}
+.parentHomePage #slide .messList h2 .cupNava b{color: #f9bd1d;font-weight: bolder;font-size: 16px;}
+
+#changeCity{height: 26px;border-radius: 15px;border: 1px solid #eaeaea;width: 80px;text-align: center;color: #bcbcbc;cursor: pointer;background:#fff url(../../image/homePage/pageHomeBg-24.png) no-repeat 58px -54px;_background:#fff url(../../image/homePage/pageHomeBg-8.png) no-repeat 58px -54px;_margin-top:10px;}
+.bgBox{background:url(../../image/homePage/pageHomeBg-24.png) no-repeat 0px 15px;_background:url(../../image/homePage/pageHomeBg-8.png) no-repeat 0px 15px;width: 100px;text-align: right;position: relative;line-height: 46px;height: 46px;}
+.bgBox .cityList{position: absolute;border: 1px solid #e5e5e5;right: 0;top:35px; background: #fff;border-bottom: 0;}
+.bgBox .cityList li{list-style: none;line-height: 22px;height: 26px;width: 240px;color: #5a5a5a;text-align: left;padding-left: 10px;background: none;border-bottom:1px solid #e5e5e5;overflow: hidden;}
+.bgBox .cityList li a{color: #5a5a5a;font-size: 12px;padding: 2px 7px;width: auto;display: inline;}
+.bgBox .cityList li a:hover{color: #fff;}
+
+
+.parentHomePage .parHomeHead .playTitle{border-left: 2px solid #f9b705;padding-left: 12px;border-top: 1px solid #e9e9e9;border-right: 1px solid #e9e9e9;padding-top: 8px;}
+.parentHomePage .parHomeHead #listUl{position: relative;overflow: hidden;width: 650px;height: 360px;z-index: 10;}
+.parentHomePage .parHomeHead #listUl li{width:650px;height: 360px;}
+.parentHomePage .parHomeHead #numUl{position: absolute;right: 20px; bottom: 20px;height: 18px;z-index: 21;padding: 0 10px;}
+.parentHomePage .parHomeHead #numUl li{width: 9px;height: 9px;line-height: 18px;background:url(../../image/homePage/pageHomeBg-24.png) no-repeat 0 -344px;margin: 0 3px;_background:url(../../image/homePage/pageHomeBg-8.png) no-repeat 0 -344px;}
+.parentHomePage .parHomeHead #numUl .active{background:url(../../image/homePage/pageHomeBg-24.png) no-repeat 0 -360px;_background:url(../../image/homePage/pageHomeBg-8.png) no-repeat 0 -360px;}
+.parentHomePage .parHomeHead .playImg{position: relative;width: 650px;overflow: hidden;}
+
+.parentHomePage .parHomeHead .playImg .prev{top: 145px;left: 0;background:url(../../image/homePage/pageHomeBg-24.png) no-repeat 0 -248px;_background:url(../../image/homePage/pageHomeBg-8.png) no-repeat 0 -248px;}
+.parentHomePage .parHomeHead .playImg .next{top: 145px;right: 0;background:url(../../image/homePage/pageHomeBg-24.png) no-repeat -48px -168px;_background:url(../../image/homePage/pageHomeBg-8.png) no-repeat -48px -168px;}
+.parentHomePage .parHomeHead .playImg .prev:hover{background-position-x: -48px;}
+.parentHomePage .parHomeHead .playImg .next:hover{background-position-x:0px;}
+.parentHomePage .parHomeHead .playImg .playButton{width: 26px; height: 63px;z-index: 20;position: absolute;}
+
+#slide .parentHotTag .bd{margin-right: -15px;}
+#slide .parentHotTag .bd a{text-align: center;padding:4px 0;width: 65px;}

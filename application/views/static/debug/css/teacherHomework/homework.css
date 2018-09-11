@@ -1,0 +1,152 @@
+/* 留作业样式开始 */
+.teacherHomework{color: #555656;}
+.teacherHomework h3{font-size: 18px;font-weight: normal;margin-bottom: 15px;}
+.teacherHomework h3 a{color: #2A8D6A;}
+.teacherHomework h3 span{font-size: 14px;}
+.teacherHomework table{width: 100%;}
+.teacherHomework table a{color: #17a27e;}
+.teacherHomework table a:hover{color: #f90;}
+.teacherHomework table th{height: 40px;font-size: 16px;font-weight: normal;background: #f6f6f6;}
+.teacherHomework table td,
+.teacherHomework table th{border: 1px solid #d7d7d7;}
+.teacherHomework table .txtAlignLeft{text-align: left;padding-left: 10px;}
+.teacherHomework table td{height: 40px;font-size: 14px;text-align: center;}
+.teacherHomework table .colorGreen{color: #17a27e;}
+.teacherHomework table .colorRed{color: #ff2626;}
+.teacherHomework table.homeworkManage a.setHomework,
+.teacherHomework table.homeworkManage a.downloadHomework,
+.teacherHomework table.homeworkManage a.deleteHomework{margin-left: 10px;}
+.teacherHomework .page{line-height: 14px;margin-top: 20px;}
+.teacherHomework .page .homeworkPage li{float: left;}
+.teacherHomework .page .homeworkPage li a{color: #939393;display: inline-block;padding: 3px 5px;background: #f6f6f6;border: 1px solid #d7d7d7;margin: 0px 3px;}
+.teacherHomework .page .homeworkPage li a.pageContr{border: none;background: none;padding: 4px 0px 3px;}
+.teacherHomework .page .homeworkPage li a.active{border: 1px solid #138c6d;background: #17a27e;color: #fff;}
+.teacherHomework table.classHomework a.checkHomework,
+.teacherHomework table.classHomework a.downloadHomework,
+.teacherHomework table.classHomework a.deleteDownHomework{margin-left: 10px;}
+.teacherHomework .homeworkPreTab{border-bottom: 1px solid #d7d7d7;margin-bottom: 18px;}
+.teacherHomework .homeworkPreTab li{float: left;border: 1px solid #d7d7d7;position: relative;top: 1px;}
+.teacherHomework .homeworkPreTab li.noBorderLeft{border-left: 0px;}
+.teacherHomework .homeworkPreTab li.active{border-bottom: none;}
+.teacherHomework .homeworkPreTab li a{width: 121px;line-height: 30px;background: #f6f6f6;display: block;color: #555656;text-align: center;font-size: 16px;}
+.teacherHomework .homeworkPreTab li.active{border-bottom: none;}
+.teacherHomework .homeworkPreTab li.active a{background: #fff;line-height: 31px;}
+.teacherHomework .homeworkPreCon .cont{display: none;}
+.teacherHomework .homeworkPreCon .cont .subjectBox{border: 1px solid #ccc;margin-bottom: 10px;}
+.teacherHomework .homeworkPreCon .cont .subjectBox .subjectHead{line-height: 35px;background: #eee;border-bottom: 1px solid #ccc;font-size: 14px;}
+.teacherHomework .homeworkPreCon .cont .subjectBox .subjectHead span{margin-left: 10px;}
+.teacherHomework .homeworkPreCon .cont .subjectBox dl{padding: 15px 20px;}
+.teacherHomework .homeworkPreCon .cont .subjectBox .click_q{cursor: pointer;line-height: 22px;}
+.teacherHomework .homeworkPreCon .cont .subjectBox dl dt{font-size: 14px;color: #555656;}
+.teacherHomework .homeworkPreCon .cont .subjectBox dl dt{font-size: 14px;color: #555656;}
+.teacherHomework .homeworkPreCon .cont .myallClass_student .BgPink{background: #ffeef1;}
+.teacherHomework .homeworkPreCon .cont .myallClass_student .BgGreen{background: #ceffd2;}
+
+/* 弹出层样式 */
+.teacherHomework .pop_main h3{font-weight: bold;color: #555656;font-size: 16px;margin-bottom: 0px;line-height: 16px;margin-bottom: 8px;}
+.teacherHomework .pop_main h3 span{position: relative;top: -3px;_top:0px;}
+.teacherHomework .pop_main ul.classGrade{margin-bottom: 25px;padding-left: 20px;}
+.teacherHomework .pop_main ul.classGrade li{float: left;margin-right: 20px;white-space:nowrap;}
+.teacherHomework .pop_main ul.classGrade li label{}
+.teacherHomework .pop_main ul.classGrade li input{margin-right: 5px;position: relative;top: 1px;}
+.teacherHomework .pop_main .leaveWords{margin-left: 15px;}
+.teacherHomework .pop_main .leaveWords textarea{width: 556px;height: 50px;border: 1px solid #d7d7d7;padding: 5px;}
+.teacherHomework .pop_main .studentList li{float: left;margin-right: 10px;}
+.teacherHomework .pop_main .m_t_20{margin-top: 20px;}
+.teacherHomework .pop_main .Wdate{width: 90px;}
+.teacherHomework .pop_main .answerStyleBox{margin-left: 15px;border-top: 1px solid #ccc;margin-bottom: 25px;position: relative;}
+.teacherHomework .pop_main .answerStyle{padding:10px 0px 10px 10px;border-left: 1px solid #ccc;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;display: block;}
+.teacherHomework .pop_main a.answerStyle:hover{background: #daeeec;color: #333;cursor: pointer;}
+.teacherHomework .pop_main .answerStyleBox label{}
+.teacherHomework .pop_main .answerStyle p{font-size: 12px;margin-left: 21px;line-height: 14px;}
+.teacherHomework .pop_main .answerStyle input{margin-right: 8px;position: relative;top: 1px;}
+.teacherHomework .pop_main .answerStyle h4{margin-top: 5px;font-size: 12px;line-height: 14px;position: relative;}
+.teacherHomework .pop_main .answerStyle h4 span{width: 16px;height: 16px;background: url(../../image/common/notice_ico.png) no-repeat;display: inline-block;position: relative;left: 6px;top: 2px;*top:0px;}
+.teacherHomework .pop_main .answerStyle h4 p{display: none;position: absolute;left: 20px;top: -30px;background:#ffffcc;border: 1px solid #999999;line-height: 28px;text-align: center;width: 218px;}
+.teacherHomework .pop_main .answerStyle .homeworkTime{padding:0px 21px;display: none;}
+.teacherHomework .pop_main .answerStyle .Validform_checktip{position: absolute;left: 145px;top: -32px;_top:-30px;} 
+.teacherHomework .pop_main .answerStyle .Validform_right{left: 135px;_left:145px;top: -30px;}
+.teacherHomework .pop_main .answerOrder{margin-bottom: 25px;width: 566px;margin-left: 15px;position: relative;}
+.teacherHomework .pop_main .answerOrder{border: 1px solid #ccc;border-right: none;}
+.teacherHomework .pop_main .answerOrder label{float: left;}
+.teacherHomework .pop_main .answerOrder a{padding: 10px 0px 10px 10px;width: 272px;display: block;border-right: 1px solid #ccc;cursor: pointer;}
+.teacherHomework .pop_main .answerOrder a:hover{background: #daeeec;color: #333;}
+.teacherHomework .pop_main .answerOrder a input{margin-right: 5px;}
+.teacherHomework .pop_main .answerOrder .Validform_checktip{position: absolute;left: 135px;_left: 140px;top: -30px;}
+.teacherHomework .down-word-win{ padding:0 10px;}
+.teacherHomework .down-word-win dl{ padding-bottom:10px;}
+.teacherHomework .down-word-win dl dt{ font-size:16px; line-height:30px;}
+.teacherHomework .down-word-win dl dd{ font-size:14px;}
+.teacherHomework .down-word-win dl dd span{ float:left; padding-right:10px;}
+.teacherHomework .down-word-win dl dd table{ width:100%; border:1px solid #ccc; border-right:none; background:url(../../image/teacherPaper/word_setting.png) no-repeat 6px -5px;}
+.teacherHomework .down-word-win dl dd table tr td{border: none; border-right:1px solid #ccc; line-height:24px; width:120px; text-align:center;}
+.teacherHomework .down-word-win dl dd table tr.word-line td{ height:95px;}
+.teacherHomework .down-card-win{ padding:0 10px;}
+.teacherHomework .down-card-win dl{ padding-bottom:10px;}
+.teacherHomework .down-card-win dl dt{ font-size:16px; line-height:30px;}
+.teacherHomework .down-card-win dl dd{ font-size:14px;}
+.teacherHomework .down-card-win dl dd span{ float:left; padding-right:10px;}
+.teacherHomework .down-card-win dl dd table{ width:100%; border:1px solid #ccc; border-right:none; background:url(../../image/teacherPaper/card_style.png) no-repeat 6px -5px;}
+.teacherHomework .down-card-win dl dd table tr td{ border-right:1px solid #ccc; line-height:24px; width:241px; text-align:center;}
+.teacherHomework .down-card-win dl dd table tr.card-line td{ height:200px;}
+.teacherHomework .teacherTips{line-height:26px;margin:3px 0px 10px 0px;padding:0px 10px 0px 0px;}
+.teacherHomework .paperCaptchaWord{ line-height: 34px;margin-bottom: 10px;}
+.teacherHomework .paperCaptchaWord img{ margin-left: 10px;}
+.teacherHomework .paperCaptchaWord .cInput{ height: 32px;line-height: 32px;}
+.teacherHomework .paperCaptchaWord span.changeCaptcha{ margin-left: 10px;cursor: pointer;color: #36A989}
+
+
+
+.teacherHomework .down-word-win dl dd .wordType{border:1px solid #ccc;}
+.teacherHomework .down-word-win dl dd .wordType li{float:left;}
+.teacherHomework .down-word-win dl dd .wordType li p{padding:5px 10px;width:403px;}
+.teacherHomework .down-word-win dl dd .wordType li p label{display: block;}
+.teacherHomework .down-word-win dl dd .wordType li p.active{background-color:#d9eeec;color:#333;}
+.teacherHomework .down-word-win dl dd p.active em.b{font-weight: bold;}
+
+.teacherHomework .down-word-win dl dd .wordType li p.first{border-right:1px solid #ccc;}
+
+.teacherHomework .down-word-win .paperSizes{height:170px;border-top: 1px solid #ccc;border-left: 1px solid #ccc;}
+.teacherHomework .down-word-win .paperSizes li{float: left;width: 120px;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;height:170px;text-align: center}
+.teacherHomework .down-word-win .paperSizes li p{display: block;;background:url(../../image/teacherPaper/word_setting.png) no-repeat;}
+.teacherHomework .down-word-win .paperSizes li p.a4{background-position: 0 10px}
+.teacherHomework .down-word-win .paperSizes li p.a4h{background-position: -118px 10px;}
+.teacherHomework .down-word-win .paperSizes li p.a3{background-position: -238px 10px;}
+.teacherHomework .down-word-win .paperSizes li p.k16{background-position: -360px 10px;}
+.teacherHomework .down-word-win .paperSizes li p.kh8{background-position: -482px 10px;}
+.teacherHomework .down-word-win .paperSizes li p.a3h{background-position: -600px 10px;}
+.teacherHomework .down-word-win .paperSizes li p.b4{background-position: -713px 10px;}
+.teacherHomework .down-word-win .paperSizes li p.active{background-color:#d9eeec;color:#333;}
+.teacherHomework .down-word-win .paperSizes li label{height:50px;display: block;padding-top:120px;}
+.teacherHomework .down-word-win .paperSizes li label input{display: block;margin-left:54px;*margin-left:0px;}
+
+.teacherHomework .down-word-win dl dd .roleType{border-top: 1px solid #ccc;border-left: 1px solid #ccc}
+.teacherHomework .down-word-win dl dd .roleType li p{padding:5px 10px;width:403px;}
+.teacherHomework .down-word-win dl dd .roleType li p.active{background:#d9eeec;color:#333;}
+.teacherHomework .down-word-win dl dd .roleType li p label{display: block;}
+.teacherHomework .down-word-win dl dd .roleType li{border-right:1px solid #ccc;border-bottom:1px solid #ccc;float: left}
+
+
+
+
+.teacherHomework .homeworkArchive table tr .questionNum{width:50px;}
+.teacherHomework .homeworkArchive table tr .paperName{width:360px;text-align:left;text-indent:10px}
+.teacherHomework .homeworkArchive table tr td.paperName a{color:#17a27e;}
+.teacherHomework .homeworkArchive table tr td.paperName a:hover{color:#f90;}
+.teacherHomework .homeworkArchive table tr .discipline{width:100px;text-align:left;text-indent:10px}
+.teacherHomework .homeworkArchive table tr .fileTime{width:148px;text-align:left;text-indent:10px}
+.teacherHomework .homeworkArchive table tr .operation{text-align:left;padding-left:10px;width:170px;}
+.teacherHomework .homeworkArchive table tr .operation a{padding:0 3px;}
+.teacherHomework .homeworkArchive table tr .operation a.setHomework{padding:0 10px;line-height: 27px;font-size: 12px;color: #fff; }
+/*.teacherHomework .homeworkArchive table tr .operation a:hover{color:#fff;}*/
+.teacherHomework .homeworkArchive table tr .operation a.active{color:#17a27e;}
+/* 留作业存档为空样式开始 */
+.teacherHomework .empty{padding:50px 90px 90px 90px;background: #f7f7f7;margin-bottom:20px;}
+.teacherHomework .intoSubjectCenter{width:580px;height:130px;background: #fff;margin:0 auto;border:1px solid #eee;-webkit-box-shadow: 0px 3px 4px #efefef;  -moz-box-shadow: 0px 3px 4px #efefef;  box-shadow: 0px 3px 4px #efefef;}
+.teacherHomework .intoSubjectCenter a{font-size:18px;margin:0 auto;width:135px;height:35px;line-height:35px;margin:50px 0 0 220px;}
+.teacherHomework .intoSubjectCenter a:hover{color:#fff;}
+.teacherHomework .explain{margin-top:50px;}
+.teacherHomework .explain h3{font-size:14px;font-weight:bold;color:#333;line-height:30px;margin-bottom:0;}
+.teacherHomework .explain p{font-size:14px;color:#333;line-height:30px;}
+/* 留作业存档为空样式结束 */
+/* 留作业样式结束 */

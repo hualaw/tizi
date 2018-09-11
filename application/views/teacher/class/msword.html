@@ -1,0 +1,26 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" 
+xmlns:w="urn:schemas-microsoft-com:office:word" 
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="application/mswrod; charset=UTF-8" />
+</head><body>
+<h2>未登录过学生的账号密码</h2>
+<h5>(备注：已登录过的学生密码不显示)</h5>
+<table style="border:1px solid #000;width:500px;border-collapse:collapse;font-weight:bold;font-family:微软雅黑" cellpadding="0">
+	<tr style="border:1px solid #000;height:36px;line-height:36px;">
+		<td style="width:20px;border:1px solid #000;text-align:center;"></td>
+		<td style="width:60px;border:1px solid #000;text-align:center;">学号</td>
+		<td style="width:60px;border:1px solid #000;text-align:center;">密码</td>
+		<td style="width:80px;border:1px solid #000;text-align:center;">学生姓名</td>
+	</tr>
+	{foreach $user_create as $key => $value}
+	<tr style="border:1px solid #000;height:36px;line-height:36px;">
+		<td style="width:20px;border:1px solid #000;text-align:center;">{$key+1}</td>
+		<td style="width:60px;border:1px solid #000;text-align:center;">{$value['student_id']}</td>
+		<td style="width:60px;border:1px solid #000;text-align:center;">{$value['password']}</td>
+		<td style="width:80px;border:1px solid #000;text-align:center;">{$value['student_name']}</td>
+	</tr>
+	{/foreach}
+</table>
+</body>
+</html>

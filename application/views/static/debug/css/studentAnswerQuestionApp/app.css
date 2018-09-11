@@ -1,0 +1,19 @@
+/*答疑APP样式开始*/
+.studentAnswerQuestionApp{background:url(../../image/aqapp/tizi_dayiapp_bg.png);}
+.tizi_dayiapp_header{ width:100%; height:500px; background:url(../../image/aqapp/tizi_dayiapp_04.png) repeat-x; border-bottom:4px solid #2e87c5;}
+.tizi_dayiapp_img{ background:url(../../image/aqapp/tizi_dayiapp_03.png) no-repeat; height:500px; width:1000px; position:relative;}
+.tizi_dayiapp_apple{ position:absolute; bottom:50px; right:23px;}
+.tizi_dayiapp_apple a{ display:block; width:196px; height:70px;  background:url(../../image/aqapp/tizi_dayiapp_apple.png) no-repeat;}
+.tizi_dayiapp_android{ position:absolute; bottom:50px; right:236px;}
+.tizi_dayiapp_android a{ display:block; width:196px; height:70px;  background:url(../../image/aqapp/tizi_dayiapp_android.png) no-repeat;}
+.tizi_dayiapp_text{ width:326px; line-height:27px; text-align:center; font-size:12px;}
+.tizi_suishiwen{ width:144px; height:42px; background:url(../../image/aqapp/tizi_dayiapp_08.png) no-repeat; _background:url(../../image/aqapp/tizi_dayiapp_08.gif) no-repeat; margin:0 auto; margin-top:54px; margin-bottom:15px;}
+.tizi_laoshiquan{ width:144px; height:42px; background:url(../../image/aqapp/tizi_dayiapp_10.png) no-repeat; _background:url(../../image/aqapp/tizi_dayiapp_10.gif) no-repeat; margin:0 auto; margin-top:54px; margin-bottom:15px;}
+.tizi_jishida{ width:144px; height:42px; background:url(../../image/aqapp/tizi_dayiapp_12.png) no-repeat; _background:url(../../image/aqapp/tizi_dayiapp_12.gif) no-repeat; margin:0 auto; margin-top:54px; margin-bottom:15px;}
+/* 二维码 */
+.downloadcode_box {position: absolute;left: 567px;top: 260px;}
+.downloadcode_box h5{color: #1b6fb4;margin-bottom: 14px;}
+.downloadcode_box .downloadcode a{display: inline-block;float: left;margin-right: 33px;width: 75px;height: 75px;background: url(../../image/aqapp/tizi_downloadcode.png) no-repeat;}
+.downloadcode_box .downloadcode a.code_android{background-position: 0px 0px;}
+.downloadcode_box .downloadcode a.code_apple{background-position: right 0px;}
+/*答疑APP样式结束*/

@@ -1,0 +1,126 @@
+{extends file='student/champions/base.html'}
+
+{block name=keywords}高考状元,高考状元学习方法,状元学习方法{/block}
+{block name=description}梯子网邀请各省百位高考状元，分享状元经验，谈高考状元学习方法，看这些学霸成长之路，希望对大家高考复习有所帮助。{/block}
+{block name=title}百位高考状元谈高考状元学习方法{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--内容start-->
+<div class="mainContainer" pagename="index">
+    <!--导航大图开始-->
+    <!-- <div class="navImage">
+        <div class="layout">
+            <img src="{$static_url}{$static_version}image/activity/champions/img01.jpg" width="980px" height="380px"/>
+        </div>
+    </div> -->
+    <!--导航大图结束-->
+    <div class="layout">
+      <!--视频内容区域开始-->
+      <div class="wrapVideo cf">
+          <!--视频播放开始-->
+          <div class="videoPlay fl">
+              <div id="container" class="container"></div>
+          </div>
+          <!--视频播放结束-->
+          <!--文字说明开始-->
+          <div class="videoText fr">
+            <p class="textp">“状元开讲”邀请了近几年的全国高考状元做客梯子网，与您交流分享自己的学习方法、备考经验和成长故事。高考状元并非都是智力过人的天才，从平常少年到状元，普通学生遇到的问题他们也都会遇到，而他们实现越变的秘诀到底是什么？”状元开讲“将为您揭秘。我们还将举办“状元线上直播互动<b>见面会</b>”，帮助学生找到适合自己的“成功之道”。本活动<b>完全免费</b>。</p>
+             <p>
+                 <b>总裁寄语：</b>大家好，我是梯子网的创始人龚海燕，这次我们邀请了大批的高考状元跟大家分享他们的高考经验、学习方法等等，是希望梯子网的用户还有其它的网友能够从中学习到他们的经验，掌握他们的方法，让自己的学习更轻松，更快乐，更高效。梯子网的宗旨是为老师助力，为学生减负，为家长分忧,我祝愿所有的学子能够取得更好的成绩，所有的老师家庭幸福、万事如意，所有的家长工作顺心如意；也希望同学们走上工作岗位之后，能够成为各行各业的状元。
+             </p>
+          </div>
+          <!--文字说明结束-->
+      </div>
+      <!--视频内容区域结束-->
+      <!--学员列表开始-->
+      <div class="wrapStudent">
+           <ul>
+               <!--循环单例开始-->
+			   {foreach from=$champions item=vc}
+				   <li>
+					   <div class="photoImage fl">
+						   <a href="{$site_url}zhuangyuan/video/{$vc['id']}" target="_blank">
+							   <!--<img src="{$static_url}{$static_version}image/activity/champions/img_photo.jpg" width="215px" height="250px"/>-->
+							   <img src="{path2champion($vc['thumb_url'])}" width="215px" height="250px"/>
+                               <span class="bgcover"></span>
+                               <em class="playicon"></em>
+                           </a>
+					   </div>
+					   <div class="photoText fl">
+						   <div class="md_hd cf">
+							   <h2 class="fl">{$vc['name']}</h2>
+							   <div class="option fr">
+								   <!--<a href="http://www.tizi.cn/champion/video/{$vc['id']}" id="uyan_count_unit">0条评论</a>-->
+							   </div>
+						   </div>
+						   <div class="md_bd">
+							   <p>{sub_str($vc['short_msg'], 0, 50)}</p>
+							   <p>总分：{$vc['score']}</p>
+							   <p>毕业学校：{$vc['school']}</p>
+							   <p>考入学府：{$vc['university']}</p>
+						   </div>
+						   <div class="md_ft">
+							   <a class="cBtnNormal seeVideo" href="{$site_url}zhuangyuan/video/{$vc['id']}" target="_blank"><span>观看视频</span></a>
+						   </div>
+					   </div>
+				   </li>
+			   {/foreach}
+               <!--循环单例结束-->
+           </ul>
+		  <div class="page cf">
+			  <p class="fr">{$page_str}</p>
+		  </div>
+      </div>
+      <!--学员列表结束-->
+    </div>
+</div>
+<!--内容end-->
+<!--弹窗开始-->
+<div class="tempDialog" id="tempDialog">
+    <!--预约课程开始-->
+    <div id="makeAppoint" class="pop_box">
+        <form class="makeAppointForm_beta" action="{$site_url}zhuangyuan/appoint" method="post">
+            <div class="parentChampions">
+                <div class="pop_main appoint_main">
+                    <h2>预约免费参加状元线上直播“见面会”</h2>
+                    <!--<p>前100名预约成功的同学有机会获得状元开讲系列丛书一本</p>-->
+                    <ul>
+                        <li>
+                            <em class="fl">*</em>
+                            <input class="cInput fl userName" type="text" name='userName' placeholder="姓名"/>
+							<input type="hidden" class="cInput fl championId" type="text" name='championId' placeholder="" value=""/>
+							<span class="Validform_checktip fl"></span>
+                        </li>
+                        <li>
+                            <em class="fl">*</em>
+                            <input class="cInput fl userPhone" type="text" name='userPhone' placeholder="手机号，将用于见面会提醒"/>
+                            <span class="Validform_checktip fl"></span>
+                        </li>
+                        <li>
+                            <em class="fl">*</em>
+                            <input class="cInput fl userEmail" type="text" name='userEmail' placeholder="电子邮箱"/>
+                            <span class="Validform_checktip fl"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <input type="submit" class="undis" />
+        </form>
+    </div>
+    <!--预约课程结束-->
+</div>
+<!--弹窗结束-->
+<script type="text/javascript" src="{$static_url}{$static_version}lib/TiZiplayer/6.7.0/TiZiplayer.js{$version}"></script>
+{include file='file:[lib]common/tizi_flash.html' assign=noflash}
+<script type="text/javascript">
+var noflash = '{$noflash}';
+var playlist = [{
+    "domain": "oss-tizi",
+    "file": "static/zhuangyuan/gonghaiyan.mp4",
+    "image": "http://tizi.oss.aliyuncs.com/static/zhuangyuan/index_video.jpg"
+}];
+</script>
+{/block}

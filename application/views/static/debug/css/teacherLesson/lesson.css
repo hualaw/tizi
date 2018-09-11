@@ -1,0 +1,352 @@
+/*二级导航样式开始*/
+.teacherLesson .subNav{border-bottom:1px solid #d7d7d7;height:30px;position:relative;margin-bottom:15px;}
+.teacherLesson .subNav .subNavBox{position:absolute;height:30px;bottom:-1px;}
+.teacherLesson .subNav .subNavBox{position:absolute;height:30px;bottom:-1px;}
+.teacherLesson .subNav span{margin-right:18px;_margin-right: 16px}
+.teacherLesson .subNav span.mr-r0{margin-right:0;}
+.teacherLesson .subNav span em{display:block;float:left;font-size:12px;line-height:28px;_line-height:30px;padding-right:7px;}
+.teacherLesson .subNav span a{display:block;float:left;padding:0 3px;line-height:30px;font-size:12px;border-bottom:1px solid #d7d7d7;height:29px;}
+.teacherLesson .subNav span a:hover{color:#f90; border-bottom:1px solid #f90;}
+.teacherLesson .subNav span a.active{color:#f90; border-bottom:1px solid #f90;}
+/**/
+.teacherLesson .subMenu{border:1px solid #dddddd;margin-bottom:10px;}
+.teacherLesson .subMenu .menuList{border-bottom:1px solid #dddddd;line-height:29px;}
+.teacherLesson .subMenu .br-btm-0{border-bottom:none}
+.teacherLesson .subMenu .menuList p{text-indent:20px;}
+.teacherLesson .subMenu .menuList span{width:60px;text-align:right;}
+.teacherLesson .subMenu .menuList ul{width:910px;_width:900px;}
+.teacherLesson .subMenu .menuList1 ul{width:auto;margin-right:40px;}
+.teacherLesson .subMenu .menuList li{margin:0 8px;display:inline}
+.teacherLesson .subMenu .menuList li a{display:inline-block;}
+.teacherLesson .subMenu .menuList li a:hover,
+.teacherLesson .subMenu .menuList li a.active{color:#f90;}
+/*二级导航样式结1 束*/
+/*左侧内容开始*/
+/*.teacherLesson .slide .slideBox{overflow:hidden;}*/
+.teacherLesson .slide .slideTop{padding:0 20px 20px 20px;}
+.teacherLesson .slide h2{font-size:16px;line-height:40px;color:#565656;font-weight:normal;padding-left:16px;}
+.teacherLesson .slide .selectBox{margin-bottom:10px;}
+.teacherLesson .slide .selectBox select{width:170px;padding:5px;}
+.teacherLesson .slideContent{overflow:auto;}
+.teacherLesson .slide .slideContent h3 a{display:block;height:30px;font-weight:normal;cursor:pointer;font-size:14px;color:#545656;line-height:30px;background:url(../../image/teacherLesson/line2.png) no-repeat 15px center;text-indent:28px;}
+.teacherLesson .slide .slideContent h3 a.active{background:url(../../image/teacherLesson/line4.png) no-repeat 15px 8px #ddd}
+.teacherLesson .slide .slideContent h3 a:hover{background-color:#e7e6e5;}
+.teacherLesson .slide  .Scroller-Container{background:url(../../image/teacherLesson/line5.png) repeat-y 16px center;}
+.teacherLesson .slide  .tree-list li{line-height:30px;margin:3px 0;}
+.teacherLesson .slide  .tree-list li a{line-height:30px;display:block;height:30px;white-space: nowrap;}
+.teacherLesson .slide  .tree-list li a:hover{background-color:#e7e6e5;color:#333;}
+.teacherLesson .slide  .tree-list li.depth_1 a{background:url(../../image/teacherLesson/line3.png) no-repeat 15px center;}
+.teacherLesson .slide  .tree-list li.depth_1 a:hover{background:url(../../image/teacherLesson/line2.png) no-repeat 15px center #ddd;}
+.teacherLesson .slide  .tree-list li.depth_1{font-weight:normal;cursor:pointer;font-size:14px;color:#545656;line-height:36px;text-indent:28px;}
+.teacherLesson .slide  .tree-list li.depth_2{text-indent:28px;}
+.teacherLesson .slide  .tree-list li.depth_3{text-indent:42px;}
+.teacherLesson .slide  .tree-list li.depth_4{text-indent:56px;}
+.teacherLesson .slide  .tree-list li.depth_5{text-indent:70px;}
+.teacherLesson .slide  .tree-list li.depth_2 a:hover,
+.teacherLesson .slide  .tree-list li.depth_3 a:hover,
+.teacherLesson .slide  .tree-list li.depth_4 a:hover,
+.teacherLesson .slide  .tree-list li.depth_5 a:hover{background:url(../../image/teacherLesson/line5.png) repeat-y 16px center #ddd;}
+.teacherLesson .slide  .tree-list li a.active{background-color:#dddddd;}
+
+
+
+/*左侧内容结束*/
+/*右侧内容开始*/
+/*右侧头部tab选项卡开始*/
+.teacherLesson .lessonTab{height:29px;line-height:30px;margin-bottom:10px;position:relative;}
+.teacherLesson .lessonTab h2{height:30px;line-height:30px;position:absolute;left:0;bottom:1px;_bottom:-2px;}
+.teacherLesson .lessonTab h2 a{display:block;float:left;font-size:14px;color:#565656;padding:0px 10px;font-weight:normal;}
+.teacherLesson .lessonTab h2 a.br_1{}
+.teacherLesson .lessonTab h2 a.active{color: #f90;}
+.teacherLesson .lessonTab span a{padding:0 5px;cursor: pointer;}
+.teacherLesson .lessonTab span a.current{color:#f90;}
+.teacherLesson .lessonTab h2 a:hover{color:#f90;}
+
+.teacherLesson .lessonTxtTab{height:35px;line-height:34px;border-bottom:1px solid #d7d7d7;border-left:1px solid #d7d7d7;margin-bottom:10px;position:relative;}
+.teacherLesson .lessonTxtTab h2{height: 35px;position: absolute;bottom: 0px;_bottom:-3px;left: 0;}
+.teacherLesson .lessonTxtTab a{display:block;width:118px;height:34px;border:1px solid #d7d7d7;border-left:0;background:#f6f6f6;float:left;font-size:14px;color:#565656;text-align:center;font-weight:normal;}
+.teacherLesson .lessonTxtTab a.br_1{border-right:1px solid #d7d7d7;}
+.teacherLesson .lessonTxtTab a.bl_1{border-left:1px solid #d7d7d7;}
+.teacherLesson .lessonTxtTab a.active{border-bottom:1px solid #fff;background-color:#fff;border-top:2px solid #f90;line-height:34px;height:33px;}
+.teacherLesson .lessonTxtTab span a{padding:0 5px;cursor: pointer;}
+.teacherLesson .lessonTxtTab span a.current{color:#f90;}
+/*右侧头部tab选项卡结束*/
+/*右侧搜索样式开始*/
+.teacherLesson .lessonSearch{border:1px solid #d7d7d7;padding:11px 10px;background:#f6f6f6;}
+.teacherLesson .lessonSearch .searchBox {}
+.teacherLesson .lessonSearch .searchBox .searchText{border:1px solid #d7d7d7;border-radius:5px;color:#999999;height:24px;line-height:24px;padding:0 5px;}
+.teacherLesson .lessonSearch .searchBox .searchBtn{line-height: 24px;*+line-height:16px;}
+.teacherLesson .lessonSearch .searchBox span{color:#565656;vertical-align: middle}
+.teacherLesson .lessonSearch span.spanTitle{font-size:14px;line-height:26px;color:#565656;margin-right:10px;}
+.teacherLesson .lessonSearch span.spanTitle em{color: #f90;font-weight: normal;}
+.teacherLesson .lessonSearch .screening{line-height:26px;}
+.teacherLesson .lessonSearch .head-order a{line-height:26px;padding:0 15px 0 10px;margin-right:5px;background:url(../../image/teacherLesson/arrowDownIconGray.png) 40px center no-repeat;}
+.teacherLesson .lessonSearch .head-order a:hover{}
+.teacherLesson .lessonSearch .head-order a.active{background:url(../../image/teacherLesson/arrowDownIcon.png) 40px center no-repeat;}
+.teacherLesson .lessonSearch .head-order a.time,
+.teacherLesson .lessonSearch .head-order a.time.active{background-position: 63px center;padding-right:15px;}
+.teacherLesson .lessonSearch .orther{padding-right:20px;background:url(../../image/teacherLesson/arrowDownIcon.png) 40px center no-repeat;}
+.teacherLesson .lessonSearch .orther:hover{padding-right:20px;background:url(../../image/teacherLesson/arrowDownIcon.png) 40px center no-repeat;}
+.teacherLesson .lessonSearch .head-order .orther.active{padding-right:20px;background:url(../../image/teacherLesson/arrowDownIcon.png) 40px center no-repeat;}
+.teacherLesson .lessonSearch .head-order .up.active{padding-right:20px;background:url(../../image/teacherLesson/arrowUpIcon.png) 40px center no-repeat;}
+.teacherLesson .searchResult .lessonSearch {}
+/*右侧搜索样式结束*/
+/*列表内容样式开始*/
+/*列表内容样式结束*/
+.teacherLesson .listBox {display:none;}
+.teacherLesson .listBox .emptyBox{height:610px;background:url(../../image/teacherLesson/emptyBox.gif) no-repeat center center #f7f7f7;}
+.teacherLesson .listBox .emptyBox p{font-size:14px;color:#939393;line-height:740px;text-align:center;}
+.teacherLesson .lessonList .show{display:block;}
+.teacherLesson .lessonList .listBox li {padding:10px 0;border-bottom:1px solid #d7d7d7;}
+.teacherLesson .lessonList .listBox li .listIcon{width:51px;height:67px;position:relative;background: url(../../image/teacherLesson/bookIcon.gif) no-repeat;)}
+.teacherLesson .lessonList .listBox li .listIcon span{padding:0px 3px;width:45px;position:absolute;background:#54e0be;text-align: center;color: #fff;bottom: 0px;left: 0px;opacity: 0.9;}
+.teacherLesson .lessonList .listBox li .listIcon span.title{top:0;left:0;}
+.teacherLesson .lessonList .listBox li .listIcon span.pages{bottom:0;right:0;}
+.teacherLesson .lessonList .listBox li .listContent{padding-left:15px;}
+.teacherLesson .lessonList .listBox li .listContent h3{line-height:30px;font-size:16px;color:#17a27e;font-weight:normal;}
+.teacherLesson .lessonList .listBox li .listContent h3.word{background:url(../../image/teacherLesson/lessonList_icon1.gif) no-repeat left center;text-indent:25px;}
+.teacherLesson .lessonList .listBox li .listContent h3.ppt{background:url(../../image/teacherLesson/lessonList_icon2.gif) no-repeat left center;text-indent:25px;}
+.teacherLesson .lessonList .listBox li .listContent h3.pdf{background:url(../../image/teacherLesson/lessonList_icon3.gif) no-repeat left center;text-indent:25px;}
+.teacherLesson .lessonList .listBox li .listContent h3 a{color:#17a27e;}
+.teacherLesson .lessonList .listBox li .listContent h3 a:hover{color:#f90;}
+.teacherLesson .lessonList .listBox li .listContent .other{line-height:30px;color: #666}
+.teacherLesson .lessonList .listBox li .listContent .other em{margin-right: 10px;}
+.teacherLesson .lessonList .listBox li .listContent .other em.green{color:#17a27e; }
+.teacherLesson .lessonList .listBox li .listContentSearch{width:720px;}
+.teacherLesson .lessonList .listBox li .praise{padding-left:10px;border-left:1px solid #d7d7d7;width:165px;}
+.teacherLesson .lessonList .listBox li .praise .haveRead{line-height:35px;font-size:12px;color:#565656;display:block;}
+.teacherLesson .lessonList .listBox li .praise .praiseBtn{line-height:30px;color:#f90;display:block;background:url(../../image/teacherLesson/praise.gif) no-repeat left center;text-indent:13px;}
+.teacherLesson .lessonList .listBox li .praise em{margin:0 2px;display:block;width:13px;height:28px;background:url(../../image/teacherLesson/hui_star.png) no-repeat center center;}
+.teacherLesson .lessonList .listBox li .praise em.all{background:url(../../image/teacherLesson/org_star.png) no-repeat center center;}
+.teacherLesson .lessonList .listBox li .praise em.half{margin:0 2px;display:block;width:13px;height:28px;background:url(../../image/teacherLesson/other_star.png) no-repeat center center;}
+.teacherLesson .lessonList .listBox li .praise em.have{color:#999999;width:auto;background-image:none;line-height:30px;}
+.teacherLesson .lessonList .listBox li .listIcon span.fileType{}
+/*右侧内容结束*/
+
+
+/*文档详情样式开始*/
+.teacherLesson .pageRoute{font-size:14px;color:#646565;line-height:30px;}
+.teacherLesson .pageRoute span{padding:0 5px;}
+.teacherLesson .hd{padding-bottom:15px;}
+.teacherLesson .hd h2{font-size:18px;color:#646565;line-height:50px;}
+.teacherLesson .hd p{height:38px;}
+.teacherLesson .hd p span{font-size:14px;color:#939393;line-height:30px;padding-right:25px;display:block;float:left;}
+.teacherLesson .hd p span.star a{margin:0 2px;display:block;width:13px;height:30px;#f90;background:url(../../image/teacherLesson/hui_star.png) no-repeat center center;}
+.teacherLesson .hd p span.star em{margin-left:5px;color:#939393;}
+.teacherLesson .hd p .star a.hover{background:url(../../image/teacherLesson/org_star.png) no-repeat center center;}
+.teacherLesson .hd p span.oStar em{margin:0 2px;display:block;width:13px;height:30px;background:url(../../image/teacherLesson/hui_star.png) no-repeat center center;}
+.teacherLesson .hd p span.oStar em.half{background:url(../../image/teacherLesson/other_star.png) no-repeat center center;}
+.teacherLesson .hd p span.oStar em.all{background:url(../../image/teacherLesson/org_star.png) no-repeat center center;}
+.teacherLesson .hd p span.oStar em.have{width:auto;background-image:none;}
+.teacherLesson .hd p span.star a.current{background:url(../../image/teacherLesson/org_star.png) no-repeat center center;}
+.teacherLesson .contentBox{overflow:hidden;position: relative;}
+.teacherLesson .hd p .cBtnNormal{padding:3px 25px;}
+.teacherLesson .hd p .cBtnNormal:hover{color:#fff;}
+.teacherLesson .fixedBox{overflow:hidden;}
+.teacherLesson .flashBox{width:754px;}
+.teacherLesson .lessonListBox{width:218px;}
+.teacherLesson .lessonListBox .starBox{line-height:36px;background:#fff;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;}
+.teacherLesson .lessonListBox .starBox .star{display:block;overflow: hidden;}
+.teacherLesson .lessonListBox .starBox em{font-size: 14px;color:#999;}
+.teacherLesson .lessonListBox .starBox em.title{color:#333;}
+.teacherLesson .lessonListBox .starBox em.level-text{padding-left:2px;}
+.teacherLesson .lessonListBox .star a{padding:0 2px;display:block;width:17px;height:36px;background:url(../../image/teacherLesson/big_hui_star.png) no-repeat center center;}
+.teacherLesson .lessonListBox .star a.all{background:url(../../image/teacherLesson/big_org_star.png) no-repeat center center;}
+.teacherLesson .lessonListBox .listOutBox{background:#f7f7f7;padding:12px;border: 1px solid #ddd;}
+.teacherLesson .lessonListBox h3{font-weight:normal;font-size:14px;}
+.teacherLesson .lessonListBox h3 a{font-size:14px;color:#646565;}
+.teacherLesson .lessonListBox li{margin-top:10px;}
+.teacherLesson .lessonListBox li h4{font-weight:normal;color:#646565;padding-left:18px;height:20px;}
+.teacherLesson .lessonListBox li h4 a{font-size:14px;display:block;color:#17a27e;}
+.teacherLesson .lessonListBox li h4.ico_doc{background:url(../../image/teacherLesson/lessonType01.gif) no-repeat left 4px;}
+.teacherLesson .lessonListBox li h4.ico_pic{background:url(../../image/teacherLesson/lessonType02.gif) no-repeat left 4px;}
+.teacherLesson .lessonListBox li h4.ico_video{background:url(../../image/teacherLesson/lessonType04.gif) no-repeat left 4px;}
+.teacherLesson .lessonListBox li h4.ico_audio{background:url(../../image/teacherLesson/lessonType03.gif) no-repeat left 4px;}
+.teacherLesson .lessonListBox li h4.ico_other{background:url(../../image/teacherLesson/lessonType05.gif) no-repeat left 4px;}
+.teacherLesson .lessonListBox li span{color:#898989;padding-left:18px;}
+.teacherLesson .lessonListBox li span em{margin-right:10px;}
+.teacherLesson .border01{border: 1px solid #ddd;padding: 25px;}
+.teacherLesson .dontPrev{border: 1px solid #ddd;padding: 120px 0px 20px;color:#999;text-align: center;background:url(../../image/teacherLesson/dontPrev.jpg) center 20px no-repeat;}
+*html,*html body{background-image:url(about:blank);background-attachment:fixed;}
+/*文档详情样式结束*/
+/*弹出框样式开始*/
+/*.teacherLesson .docDownloadBox{border-bottom: 1px solid #ddd;width: 460px;padding-bottom: 10px;margin-bottom: 10px;}*/
+.teacherLesson .docDownloadBox{width: 460px;padding-bottom: 10px;}
+.teacherLesson .docDownloadBox h2 {font-size:16px;font-weight:normal;padding-left:18px;}
+.teacherLesson .docDownloadBox h2.ico_doc{background:url(../../image/teacherLesson/lessonType01.gif) no-repeat left 4px;}
+.teacherLesson .docDownloadBox h2.ico_pic{background:url(../../image/teacherLesson/lessonType02.gif) no-repeat left 4px;}
+.teacherLesson .docDownloadBox h2.ico_video{background:url(../../image/teacherLesson/lessonType04.gif) no-repeat left 4px;}
+.teacherLesson .docDownloadBox h2.ico_audio{background:url(../../image/teacherLesson/lessonType03.gif) no-repeat left 4px;}
+.teacherLesson .docDownloadBox h2.ico_other{background:url(../../image/teacherLesson/lessonType05.gif) no-repeat left 4px;}
+.teacherLesson .docCaptchaWord{margin-top:5px;}
+.teacherLesson .docCaptchaWord .cInput{height:32px;line-height:32px;margin-right:10px;}
+.teacherLesson .docCaptchaWord span{line-height:32px;}
+.teacherLesson .docCaptchaWord span.changeCaptcha{color: #36A989;cursor: pointer;margin-left: 10px;}
+/*弹出框样式结束*/
+/* 备课4.0新增样式 开始 */
+.teacherLesson .lessonTabBox .lessonTabDiv{display: none;}
+.teacherLesson a.dropBoxup{border:0px;cursor: pointer;text-align: center;padding:0 43px;display: inline-block;color:#fff;height:26px;line-height: 26px;border:1px solid #f90;border-radius: 3px;font-size: 14px;margin-right: 10px;
+  background: #ffcb32; 
+  background: linear-gradient(#ffcb32 0%,#ffb51c 50%,#ff9b02 100%);
+  background: -webkit-linear-gradient(#ffcb32 0%,#ffb51c 50%,#ff9b02 100%);
+  background: -moz-linear-gradient(#ffcb32 0%,#ffb51c 50%,#ff9b02 100%);
+  background: -ms-linear-gradient(#ffcb32 0%,#ffb51c 50%,#ff9b02 100%);
+  background: -o-linear-gradient(#ffcb32 0%,#ffb51c 50%,#ff9b02 100%);
+}
+.teacherLesson a.dropBoxup span{padding-left: 20px;background: url(../../image/teacherLesson/lessonShareUpBtn.png) 0px center no-repeat;}
+/*.teacherLesson a.shareUpBtn:hover{
+  background: #ff6b23; 
+  background: linear-gradient(#ff6b23 0%,#de5918 100%);
+  background: -webkit-linear-gradient(#ff6b23 0%,#de5918 100%);
+  background: -moz-linear-gradient(#ff6b23 0%,#de5918 100%);
+  background: -ms-linear-gradient(#ff6b23 0%,#de5918 100%);
+  background: -o-linear-gradient(#ff6b23 0%,#de5918 100%);
+}*/
+.teacherLesson .searchBar{line-height: 30px;margin-bottom: 10px;}
+.teacherLesson .searchBar .searchBox .searchText{width: 235px;height: 28px;line-height: 28px;border: 1px solid #ccc;padding-left: 5px;}
+.teacherLesson .searchBar .searchBox .searchBtn{line-height: 24px;*+line-height:16px;}
+.teacherLesson .myFileList li{float: left;margin-right: 10px;}
+.teacherLesson .myFileList li a{}
+.teacherLesson .myFileTable{width: 100%;}
+.teacherLesson .myFileTable td,
+.teacherLesson .myFileTable th{border-bottom: 1px solid #eee;text-align: left;padding-left: 10px;height: 40px;}
+.teacherLesson .myFileTable th{font-weight: normal;}
+.teacherLesson .myFileTable input{position: relative;top: 2px;margin-right: 10px;}
+.teacherLesson .myFileTable a{color: #17a27e;}
+.teacherLesson .myFileTable a:hover{color: #f90;}
+.teacherLesson .pop_main ul.classGrade{}
+.teacherLesson .pop_main ul.classGrade li{float: left;margin-right: 20px;white-space:nowrap;}
+.teacherLesson .pop_main ul.classGrade li label{}
+.teacherLesson .pop_main ul.classGrade li input{margin-right: 5px;position: relative;top: 1px;}
+.teacherLesson .pop_main .creatClassNow{padding: 0px 25px;}
+.teacherLesson .lessonListBox .dropBoxup{margin-left: 6px;margin-right: 0px;}
+.teacherLesson .downloadDiv{border: 1px solid #ddd;margin: 10px 0px;padding: 10px;}
+.teacherLesson .downloadDiv .downInfo{margin: 10px 0px;}
+.teacherLesson .downloadDiv .downInfo img{margin-right: 10px;}
+.teacherLesson .downloadDiv .downInfo h4{color: #17a27e;font-size: 14px;font-weight: normal;margin-bottom: 5px;}
+.teacherLesson .downloadDiv .downloadLine{margin: 10px 0px;}
+.teacherLesson .downloadDiv .downloadLine a{padding: 0px 26px;height: 39px;line-height: 39px;font-size: 18px;}
+.teacherLesson .downloadDiv .downloadLine .doc-down{margin-right: 10px;}
+.teacherLesson .downloadDiv .downloadLine .storeUp{}
+.teacherLesson .downloadDiv .downloadLine .storeUpOver{background: #f1f1f1;color: #ccc;padding: 0px 18px;cursor: default;}
+.teacherLesson .uploadFile h3{font-size: 18px;margin: 10px 0;font-weight: normal;}
+.teacherLesson .uploadFile .uploadFileBox{width: 978px;border: 1px solid #ddd;}
+.teacherLesson .uploadFile .uploadFileBox .uploadInner{width: 500px;padding: 50px 0 60px;text-align: center;border: 1px dashed #ddd;margin: 30px auto;background: #f6f6f6;}
+.teacherLesson .uploadFile .uploadFileBox .uploadInner p{font-size: 14px;color: #999;}
+.teacherLesson .uploadFile .uploadFileBox .uploadInner .uploadInnerBtn{height: 60px;}
+.teacherLesson .uploadFile .uploadFileBox .uploadInner .uploadify{top: -60px;left: 170px;font-size: 18px;color: #fff;*left: 0px;}
+.teacherLesson .uploadFile .uploadFileBox .chooseMyFile{padding: 0px 25px;height: 39px;line-height: 39px;font-size: 18px;margin-bottom: 20px;}
+.teacherLesson .uploadFile .uploadFileBox .uploadNotice{margin-left: 100px;line-height: 25px;margin-bottom: 20px;}
+.teacherLesson .uploadFile .uploadFileBox .uploadNotice li span{color: #f90;}
+.teacherLesson .uploadFile .uploadAfter{padding: 20px 25px;width: 928px;}
+.teacherLesson .uploadFileBox .moveFile{clear:both; overflow:hidden;}
+.teacherLesson .uploadFileBox .moveFile .textFolder{width:230px;margin-right: 10px;}
+.teacherLesson .uploadFileBox .moveFile .textFolder h2{margin-bottom:10px;font-size:14px;color:#333333;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .ChapterUnit{margin-left: 20px;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .ChapterUnit select{width: 210px;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .textView{line-height: 24px;border: 1px solid #737373;height:260px;overflow:hidden;overflow-y:auto;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .textView a{display: block;color:#333333; text-indent: 5px;line-height: 28px;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .textView a:hover{background-color: #b9d8d6;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .textView a.active{background-color: #b9d8d6;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .textView a.depth_1{text-indent:5px;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .textView a.depth_2{text-indent:20px;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .textView a.depth_3{text-indent:35px;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .textView a.depth_4{text-indent:50px;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .textView a.depth_5{text-indent:65px;}
+.teacherLesson .uploadFileBox .moveFile .textFolder .ChapterUnit p{margin-bottom: 10px;}
+.teacherLesson .uploadFile .upFileTable{width: 928px;margin-bottom:10px;border-top: 1px solid #6dbdab;}
+.teacherLesson .uploadFile .upFileTable li{width: 100%;}
+.teacherLesson .uploadFile .upFileTable span{border-bottom: 1px solid #6dbdab;padding-left: 10px;height: 29px;display: inline-block;float: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.teacherLesson .uploadFile .upFileTable span.col1{width: 548px;}
+.teacherLesson .uploadFile .upFileTable span.col2{width: 120px;}
+.teacherLesson .uploadFile .upFileTable span.col3{width: 90px;}
+.teacherLesson .uploadFile .upFileTable span.col4{width: 80px;}
+.teacherLesson .uploadFile .upFileTable span.col5{width: 40px;}
+.teacherLesson .uploadFile .upFileTable .UFHeader span{background: #eee;border-bottom:none;}
+.teacherLesson .uploadFile .upFileTable .fileList a.complete,
+.teacherLesson .uploadFile .upFileTable .fileList a.upLoading{color: #159c7e;cursor: default;}
+.teacherLesson .uploadFile .upFileTable .fileList a.complete{font-weight: bold;font-size: 14px;}
+.teacherLesson .uploadFile .upFileTable .fileList a.waiting{color: #999;cursor: default;}
+.teacherLesson .uploadFile .upFileTable .fileList a.deleteFile{color: #666;font-size: 14px;}
+.teacherLesson .uploadFile .upFileTable .fileList a.onCancel{color:#666;font-size: 14px;}
+.teacherLesson .uploadFile .upFileTable .loadingBg,
+.teacherLesson .uploadFile .upList .loadingBg{position: relative;line-height: 29px;}
+.teacherLesson .uploadFile .upFileTable .loadingBg strong,
+.teacherLesson .uploadFile .upList .loadingBg strong{display: inline-block;height: 29px;position: absolute;left: 0px;top: 0px;background: #159c7e;opacity: 0.2;filter:alpha(opacity=20);}
+.teacherLesson .uploadFile .upList .loadingBg strong{height: 24px;opacity: 0.5;filter:alpha(opacity=50);top:0px;}
+.teacherLesson .uploadFileBox .sharAllFile{font-size:14px; line-height:20px;color: #333333;_margin-top:5px;margin-left: 20px;}
+.teacherLesson .uploadFileBox .sharAllFile label{display: block;}
+.teacherLesson .uploadFileBox .sharAllFile label input{margin-right:5px;vertical-align: middle; margin-top: -2px;}
+.teacherLesson .uploadFileBox .sharAllFile span{font-size:12px;margin-left:2px; color: #666666;margin-left:3px;}
+.teacherLesson .uploadFileBox .sharAllFile span em{color: #f90;}
+.teacherLesson .uploadFileBox .fileListQueue{margin-bottom:5px;*zoom:1;}
+.teacherLesson .uploadFileBox .uploadOver{color: #f90;font-size: 14px;margin-bottom: 5px;}
+.teacherLesson .uploadFileBox h4{font-weight: bold;color: #555656;font-size: 14px;line-height: 16px;margin-top: 25px;margin-bottom: 8px;}
+.teacherLesson .uploadFileBox h4 span{position: relative;top: -2px;_top:0px;}
+.teacherLesson .uploadFileBox .confirmUploadBox{border-top: 1px solid #ddd;padding-top: 20px;text-align: center;margin-top: 20px;}
+.teacherLesson .uploadFileBox .confirmUploadBox a{line-height: 39px;font-size: 18px;height: 39px;}
+.teacherLesson .uploadFileBox .confirmUploadBox .confirmUpload{padding: 0px 20px;margin-right: 10px;}
+.teacherLesson .uploadFileBox .confirmUploadBox .cancleUpload{padding: 0px 30px;}
+/*分享文件样式开始*/
+.teacherLesson .pop_main .moveFile{clear:both; overflow:hidden;}
+.teacherLesson .pop_main .moveFile .textFolder{width:230px;margin-right: 10px;}
+.teacherLesson .pop_main .moveFile .textFolder h2{margin-bottom:10px;font-size:14px;color:#333333;}
+.teacherLesson .pop_main .moveFile .textFolder .textView{line-height: 24px;border: 1px solid #737373;height:260px;overflow:hidden;overflow-y:auto;}
+.teacherLesson .pop_main .moveFile .textFolder .textView a{display: block;color:#333333; text-indent: 5px;line-height: 28px;}
+.teacherLesson .pop_main .moveFile .textFolder .textView a:hover{background-color: #b9d8d6;}
+.teacherLesson .pop_main .moveFile .textFolder .textView a.active{background-color: #b9d8d6;}
+.teacherLesson .pop_main .moveFile .textFolder .textView a.depth_1{text-indent:5px;}
+.teacherLesson .pop_main .moveFile .textFolder .textView a.depth_2{text-indent:20px;}
+.teacherLesson .pop_main .moveFile .textFolder .textView a.depth_3{text-indent:35px;}
+.teacherLesson .pop_main .moveFile .textFolder .textView a.depth_4{text-indent:50px;}
+.teacherLesson .pop_main .moveFile .textFolder .textView a.depth_5{text-indent:65px;}
+.teacherLesson .pop_main .moveFile .textFolder .ChapterUnit p{margin-bottom: 10px;}
+.teacherLesson .pop_main .upFileTable{width: 560px;}
+.teacherLesson .pop_main .upFileTable th,
+.teacherLesson .pop_main .upFileTable td{border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;padding-left: 10px;height: 29px;}
+.teacherLesson .pop_main .upFileTable th{background: #eee;}
+.teacherLesson .pop_main .upFileTable td a.complete,
+.teacherLesson .pop_main .upFileTable td a.upLoading{color: #159c7e;cursor: default;}
+.teacherLesson .pop_main .upFileTable td a.complete{font-weight: bold;font-size: 14px;}
+.teacherLesson .pop_main .upFileTable td a.waiting{color: #999;cursor: default;}
+.teacherLesson .pop_main .upFileTable td a.deleteFile{color: #666;font-size: 14px;}
+.teacherLesson .pop_main input.new_class_text {width:385px;height: 26px;padding-left: 6px;border: 1px solid #999;}
+.teacherLesson .pop_main .fileDisc{margin-top: 5px;}
+.teacherLesson .pop_main .fileDisc textarea{width: 558px;height: 78px;}
+.teacherLesson .pop_main .upFileTable{width: 560px;margin-bottom:10px;}
+.teacherLesson .pop_main .upFileTable li{width: 100%;}
+.teacherLesson .pop_main .upFileTable span{border-top: 1px solid #6dbdab;border-bottom: 1px solid #6dbdab;padding-left: 10px;height: 29px;display: inline-block;float: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.teacherLesson .pop_main .upFileTable span.col1{width: 220px;}
+.teacherLesson .pop_main .upFileTable span.col2{width: 80px;}
+.teacherLesson .pop_main .upFileTable span.col3{width: 90px;}
+.teacherLesson .pop_main .upFileTable span.col4{width: 80px;}
+.teacherLesson .pop_main .upFileTable span.col5{width: 40px;}
+.teacherLesson .pop_main .upFileTable .UFHeader span{background: #eee;border-bottom:none;}
+.teacherLesson .pop_main .upFileTable .fileList a.complete,
+.teacherLesson .pop_main .upFileTable .fileList a.upLoading{color: #159c7e;cursor: default;}
+.teacherLesson .pop_main .upFileTable .fileList a.complete{font-weight: bold;font-size: 14px;}
+.teacherLesson .pop_main .upFileTable .fileList a.waiting{color: #999;cursor: default;}
+.teacherLesson .pop_main .upFileTable .fileList a.deleteFile{color: #666;font-size: 14px;}
+.teacherLesson .pop_main .upFileTable .fileList a.onCancel{color:#666;font-size: 14px;}
+.teacherLesson .pop_main .upFileTable .loadingBg,
+.teacherLesson .pop_main .upList .loadingBg{position: relative;}
+.teacherLesson .pop_main .upFileTable .loadingBg strong,
+.teacherLesson .pop_main .upList .loadingBg strong{display: inline-block;height: 29px;position: absolute;left: 0px;top: 1px;background: #159c7e;opacity: 0.2;filter:alpha(opacity=20);}
+.teacherLesson .pop_main .upList .loadingBg strong{height: 24px;opacity: 0.5;filter:alpha(opacity=50);top:0px;}
+.teacherLesson .pop_main .sharAllFile{font-size:14px; line-height:24px;color: #333333;margin-top:20px;_margin-top:5px;}
+.teacherLesson .pop_main .sharAllFile label{display: block;}
+.teacherLesson .pop_main .sharAllFile label input{margin-right:5px;vertical-align: middle; margin-top: -2px;}
+.teacherLesson .pop_main .sharAllFile span{font-size:12px;margin-left:2px; color: #666666;margin-left:3px;}
+.teacherLesson .pop_main .fileListQueue{margin-bottom:5px;*zoom:1;}
+.teacherLesson .pop_main .fileListUpload{font-size: 12px;clear:both;overflow: hidden;margin-bottom:10px;}
+.teacherLesson .pop_main .fileListUpload p.fileListTip{font-size: 12px; color: #333;margin-bottom: 5px;}
+.teacherLesson .pop_main .fileListUpload .uploadBtn{position: relative;zoom:1;}
+.teacherLesson .pop_main .fileListUpload .uploadBtn .cBtnNormal{padding: 0px;width: 110px;height:37px;line-height: 37px;text-align: center;position: relative;}
+.teacherLesson .pop_main .fileListUpload .uploadBtn .cBtnNormal em{display: block; width:15px; height:12px;position: absolute;top:13px;_top:9px;left:10px;background: url("../../image/teacherResource/icon_upload.gif") no-repeat center center;}
+.teacherLesson .pop_main .fileListUpload .uploadBtn .cBtnNormal:hover{color:#fff;}
+.teacherLesson .pop_main .fileListUpload .uploadBtn .uploadSwf{position: absolute;top:0px;left:0px;}
+.teacherLesson .pop_main .fileListUpload .uploadBtn .uploadSwf .uploadify .swfupload{left:0px;}
+.teacherLesson .pop_main .fileListUpload .uploadBtn .uploadSwf .uploadify-button{background: none;border:none;}
+.teacherLesson .pop_main .fileListUpload .uploadBtn .uploadSwf .uploadify-queue{display:none;margin-bottom: 0px;}
+/*分享文件样式结束*/
+/* 备课4.0新增样式 结束 */

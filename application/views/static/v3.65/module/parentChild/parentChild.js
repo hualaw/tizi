@@ -1,0 +1,1 @@
+define("module/parentChild/parentChild",[],function(){});

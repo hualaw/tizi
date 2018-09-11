@@ -1,0 +1,13 @@
+<h4>已选题目(<span>{$data.question_total}</span>)<a href="javascript:void(0)" class="green-text empty-btn">全部清空</a></h4>
+<div class="question-table">
+    <table class="data-table">
+      {foreach $data.question_type_list as $question_type_list_id=>$question_type_list}
+      <tr>
+        <td class="first-col" id="left-question-cart-name{$question_type_list_id}">{$question_type_list.name}</td>
+        <td class="second-col">{$question_type_list.count}</td>
+        <td class="third-col"><div class="percent-line"><div class="percent-text"><span>0</span>%</div></div></td>
+        <td class="forth-col"><a href="javascript:void(0)" class="del-btn" title="删除此题型中的所有题目" data-id="{$question_type_list_id}">删除</a></td>
+      </tr>
+      {/foreach}
+    </table>
+</div>

@@ -1,0 +1,98 @@
+{extends file='student/practice/practice_base.html'}
+
+{block name=keywords}{$keywords}{/block}
+{block name=description}{$description}{/block}
+{block name=title}{$title}{/block}
+
+{block name=container}
+<div class="mainContainer" pagename="studentSpecial_index">
+    <!--专项挑战首页开始-->
+    <div class="studentSpecial_index cf">
+        <!--左侧导航条开始-->
+        <div class="side_box fl">
+            <ul>
+				{foreach $grades as $gradeId => $grade_name name=grade_li}
+                <!--循环体li开始-->
+				{if $grade_id == $gradeId}
+                <li class="active">
+                {elseif $smarty.foreach.grade_li.last}
+                <li class="last">
+				{else}
+                <li>
+				{/if}
+				<a href="{$site_url}practice/{$gradeId}">{$grade_name}</a>
+                </li>
+                <!--循环体li结束-->
+				{/foreach}
+            </ul>
+        </div>
+        <!--左侧导航条结束-->
+        <!--主体内容开始-->
+        <div class="content_box fl" id="content_box">
+            <div class="md_hd">
+				{foreach $pra_subjects as $key=>$subject}
+                {if $key == $sub_id}
+                <a href="javascript:void(0);" class="active" sub_id="{$key}">{$subject}</a>
+                {else}
+                <a href="javascript:void(0);" sub_id="{$key}">{$subject}</a>
+                {/if}
+				{/foreach}
+            </div>
+            <div class="md_bd">
+                {foreach $grade_categories as $key=>$categories}
+                    {if $key == $sub_id}
+                    <ul>
+                    {else}
+                    <ul class="undis">
+                    {/if}
+					{foreach $categories as $category}
+                    {if $category}
+                    <!--循环体li开始-->
+                    <li>
+						<h3 title="{$category.p_c_name}"><a href="{$category['url']}{$category['id']}" target="_blank">{sub_str($category.p_c_name)}</a></h3>
+                        <a href="{$category['url']}{$category['id']}" target="_blank"><img src="{$static_url}{$category['icon']}" alt="{$category['p_c_name']}" title="{$category.p_c_name}"/></a>
+						<a href="{$category['url']}{$category['id']}" target="_blank" class="cBtnNormal go_let">挑战</a>
+						<p>{$category.user_num}人参与</p>
+                    </li>
+                    {/if}
+                    <!--循环体li结束-->
+					{/foreach}
+                </ul>
+				{/foreach}
+            </div>
+        </div>
+        <!--主体内容结束-->
+        <!--右侧热门挑战开始-->
+        <div class="hot_box fr">
+            <h2>热门挑战</h2>
+            <ul>
+                <!--循环体li开始-->
+				{foreach $participants_stats as $key=>$stats}
+				{if $key % 2 == 0}
+				{$odd = ''}
+				{else}
+				{$odd = 'odd'}
+				{/if}
+				{if $key < 3}
+				<li class="hot {$odd}">
+				{else}
+				<li class="{$odd}">
+				{/if}
+                    <div class="fl image">
+                        <a href="{$stats['url']}" target="_blank"><em class="icon_hot"></em><img src="{$static_url}{$stats['icon']}" alt="{$stats['p_c_name']}" /></a>
+                    </div>
+                    <div class="fl text">
+						<a href="{$stats['url']}" target="_blank" class="hot_title" {if isset($category.p_c_name)} title="{$category.p_c_name}" {/if}>{$stats['p_c_name']}</a>
+						<p>{$stats.grade}{$stats.subject_name}  {$stats['user_num']}人参与</p>
+                    </div>
+                </li>
+				{/foreach}
+
+            </ul>
+        </div>
+        <!--右侧热门挑战开始-->
+    </div>
+    <!--专项挑战首页结束-->
+</div>
+{/block}
+{block name=script}{/block}

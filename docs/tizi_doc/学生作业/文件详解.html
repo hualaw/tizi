@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Tizi 作业 && 专项</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="Tizi 作业 && 专项">
+        <link rel="icon" href="../img/favicon-navy.png" type="image/x-icon">
+        <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>-->
+
+    <!-- LESS -->
+            <link rel="stylesheet" href="../css/daux-navy.min.css">
+    </head>
+<body>
+            <!-- Docs -->
+        <div class="container-fluid fluid-height wrapper">
+
+            <div class="row columns content">
+                <div class="left-column article-tree col-sm-3 hidden-print">
+                    <!-- For Mobile -->
+                    <div class="responsive-collapse">
+                        <button type="button" class="btn btn-sidebar" id="menu-spinner-button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="sub-nav-collapse" class="sub-nav-collapse">
+                        <!-- Navigation -->
+                        <ul class="nav nav-list"><li><a href=".././专项练习_作业.html">专项练习 作业</a></li><li><a href="#" class="aj-nav folder">专项练习</a><ul class="nav nav-list"><li><a href="../专项练习/./目录文件结构.html">目录文件结构</a></li><li><a href="../专项练习/./文件详解.html">文件详解</a></li></ul></li><li class="open"><a href="#" class="aj-nav folder">学生作业</a><ul class="nav nav-list"><li><a href="../学生作业/./目录文件结构.html">目录文件结构</a></li><li><a href="../学生作业/./文件详解.html">文件详解</a></li></ul></li><li><a href="#" class="aj-nav folder">Oauth Server</a><ul class="nav nav-list"><li><a href="../Oauth_Server/./文件结构.html">文件结构</a></li><li><a href="../Oauth_Server/./文件详解.html">文件详解</a></li></ul></li></ul>                                            </div>
+                </div>
+                <div class="right-column  content-area col-sm-9">
+                    <div class="content-page">
+                        <article>
+                                                            <div class="page-header sub-header clearfix">
+                                    <h1>文件详解                                                                            </h1>
+                                        <span style="float: left; font-size: 10px; color: gray;">
+                                            Thursday, August 21, 2014                                        </span>
+                                        <span style="float: right; font-size: 10px; color: gray;">
+                                            7:04 AM                                        </span>
+                                </div>
+                                                        <div style="color:red">student_paper_base.php</div>
+<p>
+    protected function _getQuestionsByPid($paper_id)<br/>
+    <p>
+    根据paper_id 获取题目 并对题目内容处理 ， 比如 过滤标签，<br/>
+    区分线上作业题目 跟 线下作业题目(线上作业题目的判断依据为: question_type 为 3， 且asw必须为 ['A','B','C','D'] 中其中一项)
+    </p>
+    protected function _get_question_order($random_num, $question_num) 获取题目顺序，教师布置作业如果选中打乱顺序, 会通过此方法获取大乱后的题目顺序.  <br/>
+    protected function _question_restructing($questions, $question_order) 根据提供的题目内容跟新题目顺序，重新组合题目,  返回打乱后的题目内容
+</p>
+<div style="color:red">student_paper_do.php</div>
+<p>
+    public function index($zuoye_id, $paper_index) 写作业首页<br/>
+    public function submit() 作业提交<br/>
+    public function pause() 暂停<br/>
+    public function online_question_save() 线上作业题目提交， 比如点击 A, B, C, D<br/>
+    public function paperwork_question_submit() //报告页面线下作业题目提交<br/>
+    public function get_answer() 获取题目学生作答信息， js 调取此方法进行页面渲染.
+</p>
+<div style="color:red">student_paper_report.php</div>
+<p>
+public function index($zuoye_id='', $paper_index='') 作业报告首页<br/>
+</p>
+<div style="color:red">game.php</div>
+<p>
+public function index($zuoye_id='', $zuoye_game_id='')学生端游戏首页<br/>
+public function preview($category_id = '', $game_id ='')教师端游戏预览<br/>
+public function get_question($zuoye_id = '', $zuoye_game_id = '')获取游戏数据<br/>
+public function get_simulate_question($category_id = '', $game_id = '')教师端游戏预览会调用此接口<br/>
+public function submit()游戏提交<br/>
+</p>                                                    </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- hightlight.js -->
+    <script src="../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Navigation -->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</body>
+</html>

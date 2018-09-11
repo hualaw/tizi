@@ -1,0 +1,52 @@
+{extends file='file:[lib]common/mobile/base.html'}
+
+{block name=title}{$csspath='mobileLogin'}中小学优质教学资源服务平台{/block}
+
+{block name=container}
+<!--登录开始-->
+<section>
+    <div class="loginWrap layout">
+        <div class="loginArea">
+            {if !$user_type}
+            <!-- 登录前开始 -->
+            <div class="loginAreaBefore undis">
+                <div class="hd cf">
+
+                </div>
+                <div class="bd">
+                    {include file='file:[lib]common/tizi_login.html'}
+                </div>
+                <div class="status">
+                    <a href="javascript:void(0);" class="loginInPC" data-url="{$tizi_url}">直接进入&#62;</a>
+                </div>
+            </div>
+            <!-- 登录前结束 -->
+            <!-- 登录后开始 -->
+            <div class="loginAreaAfter undis">
+               <ul>
+                  <li><a href="{$home_teacher}" class="cBtnNormal link_tea">梯子老师</a></li>
+                  <li><a href="{$home_student}" class="cBtnNormal link_stu">梯子学生</a></li>
+                  <li><a href="{$home_parent}" class="cBtnNormal link_par">梯子家长</a></li>
+                  <li><a href="{$tizi_url}yingyong" class="cBtnNormal link_app">应用中心</a></li>
+                  <li><a href="{$bbs_url}" class="cBtnNormal link_bbs" target="_blank">论坛</a></li>
+               </ul>
+            </div>
+            <!-- 登录后结束 -->
+            {else}
+            <!-- 登录后开始 -->
+            <div class="loginAreaAfter">
+               <ul>
+                  <li><a href="{$home_teacher}" class="cBtnNormal link_tea">梯子老师</a></li>
+                  <li><a href="{$home_student}" class="cBtnNormal link_stu">梯子学生</a></li>
+                  <li><a href="{$home_parent}" class="cBtnNormal link_par">梯子家长</a></li>
+                  <li><a href="{$tizi_url}yingyong" class="cBtnNormal link_app">应用中心</a></li>
+                  <li><a href="{$bbs_url}" class="cBtnNormal link_bbs" target="_blank">论坛</a></li>
+               </ul>
+            </div>
+            <!-- 登录后结束 -->
+            {/if}
+        </div>
+    </div>
+</section>
+<!--登录结束-->
+{/block}

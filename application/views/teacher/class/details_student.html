@@ -1,0 +1,366 @@
+{extends file='teacher/class/base.html'}
+{block name=title}学生{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<div class="mainContainer classTableHeight" pagename="class_{$alpha_class_id}">
+<!--
+    *
+    * 内容部分修改 开始
+    *
+  -->
+<div id="right_content" class="classmanage new_classmanage"> 
+ <div class="newContentOverFlow">
+  {if isset($notfound) and $notfound === 1}
+  <div style="margin-top:12px;">
+	您不是该班级的老师，您无法查看该班级详细信息。
+  </div>
+  {else}
+    <div class="classMain cf">
+      <!-- 新版班级 开始 -->
+        <div class="class_manage_con">
+          <!-- 学生管理开始 -->
+          <div class="cont studentManage">
+            <div class="shareFileBox{if intval($students_total+$student_create_total) == 0} undis{/if}" id="clsaddbar">
+              <a id="create_student_menu" class="cBtnNormal addStuBtn" href="javascript:;">创建学生账号</a>
+              <a class="colorGreen stuCountNotice" href="javascript:;" title="">学生账号说明
+                <div class="stuCountNoticeBox">
+                  创建账号后请将学号和登录密码发给学生用于登录，或者直接将班级编号（{$alpha_class_id}）告诉学生，让他们自己注册并加入此班级。
+                </div>
+              </a>
+              {if $totals > 0}
+                  <a class="colorGreen" href="{$site_url}download/slist?class_id={$alpha_class_id}&session_id={$session_id}">下载学生名单</a>
+                  {else}
+                  <a class="colorGreen undis" id="down_student" href="{$site_url}download/slist?class_id={$alpha_class_id}&session_id={$session_id}">下载学生名单</a>
+              {/if}
+              
+            </div>
+            <div id="havestudentdiv" {if intval($students_total+$student_create_total) == 0} class="undis"{/if}>
+              <div class="tableStyle">
+                <table class="myallClass_student">
+                  <thead>
+                    <tr>
+                      <th width="160">学号（<span>登录名</span>）</th>
+                      <th width="160">登录密码</th>
+                      <th width="160">姓名</th>
+                      <!-- <th width="150" class="w30">登录次数</th> -->
+                      <th width="294">上次登录时间</th>
+                      <!-- <th>家长姓名</th> -->
+                      <!-- <th>家长手机号</th> -->
+                      <th width="200">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {foreach $students as $value}
+                    <tr>
+                      <td class="w30">{$value["student_id"]}</td>
+                      <td id="pwd_{alpha_id_num($value['user_id'])}" class="w30">{$value["password"]}</td>
+                      <td><div class="wordWrap">{$value["name"]}</div></td>
+                      <td>{if $value["gen"]}{date("Y-m-d H:i", strtotime($value["gen"]))}{/if}</td>
+                      <td>
+                        <a class="reset_password" title="重置该学生密码" uid="{alpha_id_num($value['user_id'])}" name="{$value['name']}" href="javascript:void(0);">重置密码</a>
+                        <a class="rms" title="将该学生请离本班" csid="{$value['csid']}" name="{$value['name']}" href="javascript:void(0);">请离本班</a>
+                      </td>
+                    </tr>
+                    {/foreach}
+                    {foreach $student_create as $value}
+                    <tr>
+                      <td>{$value["student_id"]}</td>
+                      <td>{$value["password"]}</td>
+                      <td>{$value["student_name"]}</td>
+                      <td>学生还未激活帐号</td>
+                      <td>
+                        <a class="rmcreate" title="删除该学生的帐号" sid="{$value['student_id']}" href="javascript:void(0);">删除帐号</a>
+                      </td>
+                    </tr>
+                    {/foreach}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 没有学生内容开始 -->
+            <div class="emptyNotice{if intval($students_total+$student_create_total) > 0} undis{/if}">
+              <img src="{$static_url}{$static_version}/image/teacherClass/tizi_tree_bg.png" alt="">
+              <ul>
+                <li>为您的学生创建梯子网帐号后他们将可以</li>
+                <li>下载您上传的文件</li>
+                <li>在线作答您布置的试卷或作业</li>
+                <li><a id="create_student_menu" class="cBtnNormal addStuBtn" href="javascript:;">创建学生账号</a></li>
+              </ul>
+            </div>
+            <!-- 没有学生内容结束 -->
+          </div>
+          <!-- 学生管理结束 -->
+        </div>
+      <!-- 新版班级 结束 -->
+    </div>
+  {/if}
+ </div>
+</div>
+<!--
+    *
+    * 内容部分修改 结束
+    *
+  --> 
+
+</div>
+<!-- 弹出框 开始 -->
+
+  <!--
+    *
+    * 修改班级名称
+    -->
+ <!--  <div id="alterClassGradePop" class="pop_box">
+    <form class="alterClassGradePopForm_beta" action="{$site_url}class/update_info/classname" method="post">
+      <div class="teacherClass">
+        <div class="pop_main">
+          <ul>
+              <li class="cf">
+                  <input type="hidden" class="classId" name="class_id">
+                  <input class="newClassGrade" type="text" name="classname" id="update_classname" classid="{$alpha_class_id}"/>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div> -->
+<!-- 加载选择学校html开始 -->
+{include file='file:[lib]addon/teacherSetSchool.html'}
+<!-- 加载选择学校html结束 -->
+    <!--
+    *
+    * 创建学生账号 给我的学生创建账号
+    -->
+  <div id="createStudentBillPop" class="pop_box">
+    <div class="teacherClass">
+      <div class="pop_main">
+        <!-- <p class="font12">给您的学生创建帐号后，学生可以接收您分享的资料或作业，请使用以下三种方式为学生创建帐号：</p> -->
+        <ul class="creatStuNav cf">
+          <li class="active border_none">上传学生名单</li>
+          <li>输入学生名单</li>
+          <li>输入学生人数</li><!--<li>学生已有账号</li>-->
+        </ul>
+        <div class="tabBox">
+          <!-- 上传学生名单 开始 -->
+          <div class="tabBoxChild" id="createStudent_bills">
+            <div class="creatStuNotice">
+                <div class="upList cf">
+                    <div class="demo fr">
+                        <p class="pic"></p>
+                    </div>
+                    <div class="text fl">
+                        <h2>
+                            步骤一：使用Excel编辑学生名单，格式如右图。
+                        </h2>
+                        <p>
+                            <em class="yellow">*</em>提示：学生姓名必填，家长手机号可不填。<br />
+                            <a class="green" href="http://tizi-download.oss.aliyuncs.com/classmanager/学生名单范例.xls">点击下载excel模板</a>
+                        </p>
+                        <h2>
+                            步骤二：上传学生名单，完成添加。
+                        </h2>
+                        <div class="choseFile posr">
+                            <div id="queue"></div>
+                            <input type='text' name='textfield' id='textfield' class='cBtnNormal choseFileTxt fl' disabled />
+                            <input type="file" name="fileField" id="fileField_beta" class="file fl" multiple="false" style="display:none"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="choseFile cf">
+                <!-- <table class="fl">
+                    <tr>
+                        <td class="width_68">学生</td>
+                        <td class="width_114">家长手机号</td>
+                    </tr>
+                    <tr>
+                        <td>张小明</td>
+                        <td>185xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                        <td>王小丽</td>
+                        <td>132xxxxxxxx</td>
+                    </tr>
+                    <tr>
+                        <td>林小华</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>毛小豆</td>
+                        <td>139xxxxxxxx</td>
+                    </tr>
+                </table> -->
+                <!-- <div class="fl">
+                    <div id="queue"></div>
+                    <input type='text' name='textfield' id='textfield' class='choseFileTxt cBtnSilver fl' disabled />
+                    <input type="file" name="fileField" id="fileField_beta" class="file fl" multiple="false" style="display:none"/>
+                </div> -->
+            </div>
+            <p class="colorRed font12 undis">未发现相关数据，请检查excel格式或者内容是否正确</p>
+          </div>
+          <!-- 上传学生名单 结束 -->
+
+          <!-- 输入学生名单 开始 -->
+          <div class="tabBoxChild" id="createStudent_name">
+            <form class="createStudentName" action="#" method="post">
+              <div class="studentText">
+                <div class="posr">
+                  <p>请输入学生姓名，每行一个</p>
+                  <textarea class="studentNames studentNames_new" name="student_names" id="student_names_new"></textarea>
+                  <div class="ValidformInfo">
+                    <span class="Validform_checktip">请输入姓名</span>
+                    <span class="dec">
+                      <s class="dec1">&#9670;</s>
+                      <s class="dec2">&#9670;</s>
+                    </span>
+                  </div>
+                </div>
+                <div class="studentREF">
+                  <p>参考范例</p>
+                  <ul>
+                    <li>张明</li>
+                    <li>李小鹏</li>
+                    <li>蔡信威</li>
+                    <li>范思雨</li>
+                    <li>盖磊</li>
+                    <li>郭建伟</li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- 输入学生名单 结束 -->
+
+          <!-- 输入学生人数 开始 -->
+          <div class="tabBoxChild" id="createStudent_noName">
+            <!-- <div class="creatStuNotice">
+              <p>1、设定添加学生数量，系统会自动生成相应数量的学生帐号。</p>
+              <p>2、将学号和密码发给学生，由学生自己登录后填写姓名。</p>
+            </div> -->
+            <div class="acount">
+              <span class="li_hd">请输入学生数量：</span>  
+              <span class="count_box cf">
+                <!-- <a class="num_oper num_min" href="javascript:;"></a> -->  
+                    <input name="J_Amount" id="J_Amount" class="input_txt" type="text" maxlength="6" onkeyup="jQuery.modify('#J_Amount');" />   <!-- value="1" -->
+                    <!-- <a class="num_oper num_plus" href="javascript:;"></a> -->
+              </span>
+              <span class="li_hd">每个班级最多<span id="icmaxc">{$max_student_number}</span>人，已有<span id="ichas">0</span>人</span>
+                  <p class="caution_tips" id="J_Tip" style="display: none;"></p>
+                  <input id="nAmount" type="hidden" value="60">
+            </div>
+          </div>
+          <!-- 输入学生人数 结束 -->
+
+          <!-- 学生已有账号 开始 -->
+          <div class="tabBoxChild" id="createStudent_account">
+            <form class="createStudentHasCount" action="#" method="post">
+              <div class="stuAccNameBox">学生账户名称：<input type="text" class="stuAccName" placeholder="用户名/邮箱/手机号" />
+                <div class="ValidformInfo">
+                  <span class="Validform_checktip">请输入账号</span>
+                  <span class="dec">
+                    <s class="dec1">&#9670;</s>
+                    <s class="dec2">&#9670;</s>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- 学生已有账号 结束 -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+    <!--
+    *
+    *  踢出老师/学生
+    -->
+  <div id="kickonePop" class="pop_box">
+    <div class="teacherClass">
+      <div class="pop_main">
+        <p>是否确定将%role%：<span class="orangedeep">%name%</span>请离本班？</p>
+      </div>
+    </div>
+  </div>
+
+    <!--
+    *
+    *  重置密码
+    -->
+  <div id="resetPasswordPop" class="pop_box">
+    <div class="teacherClass">
+      <div class="pop_main">
+        <p>是否确定将学生：<span class="orangedeep">%name%</span>的密码进行重置？</p>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  *
+  *  查看作业下载名单
+  -->
+  <div id="downloadNumPop" class="pop_box">
+    <div class="teacherClass">
+        <div class="pop_main">
+            <h3>已下载学生(25)</h3>
+            <ul class="studentList cf">
+                <li>王国明</li>
+                <li>秦时月</li>
+                <li>三千金</li>
+                <li>王建国</li>
+            </ul>
+            <h3 class="m_t_20">未下载学生(20)</h3>
+            <ul class="studentList cf">
+                <li>王国明</li>
+                <li>秦时月</li>
+                <li>三千金</li>
+                <li>王建国</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+    <!--
+    *
+    * 解散班级
+    -->
+  <div id="deleteClassPop" class="pop_box">
+    <form class="deleteClassPopForm_beta" action="{$site_url}class/leave/disband" method="post">
+      <div class="teacherClass">
+        <div class="pop_main">
+          <p>是否确定解散<span class="orangedeep">%classname%</span>？</p>
+          <p>解散班级后，所有班级相关内容将会被删除。</p>
+          <input type="hidden" class="classId" name='class_id' />
+          <ul>
+              <li class="cf">
+                  <input type="password" class="in_vislble_class_text" name="password" id="disband_password" placeholder="请输入梯子网登录密码">
+              </li>
+          </ul>
+        </div>
+        <input type="submit" class="undis" />
+      </div>
+    </form>
+  </div>
+  <!-- 弹出框 结束 -->
+<input type="hidden" id="class_id" value="{$alpha_class_id}" />
+<script type="text/template" id="crtemplate">
+<tr>
+	<td><span class="bold">%student_id%</span></td>
+	<td>%password%</td>
+	<td>%student_name%</td>
+	<td>学生还未激活帐号</td>
+	<td>
+		<a class="rmcreate" sid="%student_id%" href="javascript:void(0);"></a>
+	</td>
+</tr>
+</script>
+{/block}
+{block name=script}
+ 
+{include file='file:[lib]common/tizi_flash.html' assign=noflash}
+{literal}
+<script>
+var noflash = '{/literal}{$noflash}{literal}';
+</script>
+{/literal}
+{/block}

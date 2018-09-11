@@ -1,0 +1,95 @@
+{extends file='teacher/resource/res_base.html'}
+{block name=title}教学网盘{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<!-- 右侧框架开始 -->
+<div class="wrapContent main" id="wrapContent">
+    <!--预览页面开始-->
+    <div class="ResourceView">
+            <div class="undis" id="docnum" data-ext="ppt">GKJ5II</div>
+            <h1>2014年4月5日-1.docx</h1>
+            <p><span class="ViewSize">大小：<em class="size">23.92 KB</em></span><span>创建时间：<em class="time">2014-03-15</em></span></p>
+            <a href="#" class="cBtnNormal download"><span>下载</span></a>
+            <!--添加flash阅览开始-->
+            <div class="flashView">
+                <div id="flashContent"></div>
+                <noscript>
+                    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  id="TiZiPaper" name="TiZiPaper">
+                        <param name="movie" value="{$static_base_url}flash/lessonFlash/TiZiPaper.swf{$version}" />
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="#ffffff" />
+                        <param name="allowScriptAccess" value="sameDomain" />
+                        <param name="allowFullScreen" value="true" />
+                        <param name="wmode" value="transparent">
+                        <param name="wmode" value="Opaque">
+                        <!--[if !IE]>-->
+                        <object type="application/x-shockwave-flash" data="{$static_base_url}flash/lessonFlash/TiZiPaper.swf{$version}" id="TiZiPaper" name="TiZiPaper">
+                            <param name="quality" value="high" />
+                            <param name="bgcolor" value="#ffffff" />
+                            <param name="allowScriptAccess" value="sameDomain" />
+                            <param name="allowFullScreen" value="true" />
+                            <param name="wmode" value="transparent">
+                            <param name="wmode" value="Opaque">
+                        </object>
+                        <!--<![endif]-->
+                    </object>
+                </noscript>
+            </div>
+            <!--添加flash阅览结束-->
+            <!--无法阅览页面开始-->
+            <div class="noflashView undis">
+                <h2>很抱歉，此文件格式暂不支持在线预览。</h2>
+            </div>
+            <!--无法阅览页面结束-->
+    </div>
+    <!--预览页面结束-->
+</div>
+<!-- 右侧框架结束 -->
+{/block}
+{include file='file:[lib]common/tizi_flash.html' assign=noflash}
+{block name=script}
+<script type="text/javascript">
+    //console.log(Teacher.lesson.prepare.flash_init());
+    seajs.use('module/teacherResource/teacherResource',function(main){
+        var swfversion = "{$swfversion}";
+        var jsversion = "{$version}";
+        main.swfObjectInit(swfversion,jsversion);
+    });
+    var Teacher = {};
+    Teacher.lesson={};
+    Teacher.lesson.prepare={
+        swfObjectHeight:"",
+        flash_init:function(){
+            var docnum = document.getElementById("docnum").innerHTML;
+            var arrayInit = new Array();
+            arrayInit[0] = baseUrlName + 'lesson/lesson_document/flash_get_json';
+            arrayInit[1] = staticBaseUrlName+'flash/lessonFlash/';
+            arrayInit[2] = docnum;
+            arrayInit[3] = basePageToken;
+            arrayInit[4] = basePageName;
+            arrayInit[5] = 750;//-134
+            arrayInit[6] = this.swfObjectHeight;
+            arrayInit[7] =['doc','docx'];
+            arrayInit[8] =['ppt','pptx'];
+            return arrayInit;
+        },
+        doc_down_auth:function(this_a, file_id, unlock){
+            seajs.use('module/teacherResource/teacherResource',function(main){
+                main.lessonDown(this_a, file_id, unlock);
+            });
+        }
+
+    }
+</script>
+<!--<script type="text/javascript">-->
+<!--var noflash = '{$noflash}';-->
+<!--{literal}-->
+<!--seajs.use('tizi_validform',function(ex){-->
+    <!--ex.detectFlashSupport(function(){-->
+        <!--$('#flashContent').html(noflash);-->
+    <!--});-->
+<!--});-->
+<!--{/literal}-->
+<!--</script>-->
+{/block}

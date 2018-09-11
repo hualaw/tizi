@@ -1,0 +1,90 @@
+{extends file='teacher/paper/paper_base.html'}
+
+{block name=title}
+{if $data.pagemode eq 'question'}
+知识点选题
+{else if $data.pagemode eq 'course'}
+同步章节选题
+{/if}
+{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="mainContainer" pagename="paper_{$data.pagemode}" status="paper_question">
+    {if $data.pagemode eq 'course'}
+        <div class="screenPaper">
+            {if !empty($data.category_root_id)}
+            <ul class="fn-clear posr">
+                {foreach $data.category_root_id as $c_r_id}
+                <li><a {if $data.category_root_select eq $c_r_id->id}class="active"{/if} href="{$site_url}teacher/paper/{$data.pagemode}/{$data.subject_id}/{$c_r_id->id}">{str_replace($data.subject_name,'',$c_r_id->name)}</a></li>
+                {/foreach}
+            </ul>
+            {/if}
+            {if !empty($data.category_second_root_id)}
+            <ul class="fn-clear">
+                {foreach $data.category_second_root_id as $c_s_r_id}
+                <li><a {if $data.category_select eq $c_s_r_id->id}class="active"{/if} href="{$site_url}teacher/paper/{$data.pagemode}/{$data.subject_id}/{$c_s_r_id->id}">{$c_s_r_id->name}</a></li>
+                {/foreach}
+            </ul>
+            {/if}
+        </div>
+    {/if}
+    <div class="child-content fn-clear">
+        <div class="content">
+            <div class="content-wrap">
+                <div class="filter-box">
+                    <ul class="fn-clear posr fliterBoxSelect">
+                        {foreach $data.question_type as $qtype}
+                         <li {if $qtype@index eq 0}class="firstSelect"{/if}><a href="javascript:void(0)"{if $qtype->id eq $data.qtype} class="active" {/if}data-qtype="{$qtype->id}">{$qtype->name}</a></li>
+                        {/foreach}
+                    </ul>
+                    <ul class="fn-clear">
+                        {foreach $data.question_level as $qlevel}
+                        <li><a href="javascript:void(0)" {if $qlevel->level eq $data.qlevel} class="active" {/if} data-qlevel="{$qlevel->level}">{$qlevel->name}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+                <div class="question-list"></div>
+            </div>
+        </div>
+        <div class="child-menu">
+            <div class="drag-line"><a class="drag-handle"></a></div>
+            <div class="type-box fn-clear">
+                <div class="type-list">
+                    <!-- 不能删除的a开始 -->
+                    <a class="current-type" style="display:none" data-cselect="{$data.category_root_select}" data-sid="{$data.subject_id}"><span>{$data.category_root_name}</span></a>
+                    <!-- 不能删除的a结束 -->
+                    <select name="" id="" onchange="top.location=this.value;" {if count($data.category_root_id) <= 1 or $data.pagemode eq 'course'}class="undis"{/if}>
+                        {foreach $data.category_root_id as $c_r_id}
+                            <option value="{$site_url}teacher/paper/{$data.pagemode}/{$data.subject_id}/{$c_r_id->id}"{if $data.category_root_select eq $c_r_id->id}selected{/if}>
+                                {$c_r_id->name}
+                            </option>
+                        {/foreach}
+                    </select>
+                </div>
+            </div>
+            <div class="tree-list">
+                <ul style="display:block;">
+                    {foreach $data.category as $category}
+                    <li class="fn-clear">
+                        <div class="fn-clear tree-title{$category.depth}">
+                            <a href="javascript:void(0)" class="icon icon_{$category.is_leaf}" data-url_id="{$category.id}"></a>
+                            <a href="javascript:void(0)" title="{$category.category_name}" class="item {if $category.id eq $data.category_select}active{/if}" data-nselect="{$category.id}">{$category.name}</a>
+                        </div>
+                    </li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block name=script}
+<script type="text/javascript">
+$('.tempSubject').hide();
+Teacher.paper.paper_question.init();
+</script>
+{/block}

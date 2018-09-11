@@ -1,0 +1,21 @@
+<!--右侧内容开始-->
+<!--当前位置开始-->
+<div class="path cf">
+    <a href="{$site_url}teacher/paper/exam">试卷选题</a> / {$data.exam->title}
+</div>
+<!--当前位置结束-->
+ <div class="page cf">
+    <p class="fr"></p>
+    <div class="paperExamTit exam-chose fl" eid="{$data.exam->id}">
+        <div class="fl">适用年级：{if isset($data.grade[$data.exam->grade_id])}{$data.grade[$data.exam->grade_id]}{else}未知{/if}</div>
+        <div class="fl">试卷类型：{if isset($data.exam_type[$data.exam->exam_type_id])}{$data.exam_type[$data.exam->exam_type_id]}{else}未知{/if}</div>
+        <div class="fl">适用省份：{if isset($data.area[$data.exam->province_id])}{$data.area[$data.exam->province_id]}{else}未知{/if}</div>
+        <div class="fl">试卷年份：{$data.exam->year}年</div>
+        <div class="fl">更新日期：{$data.exam->date|date_format:"%Y-%m-%d"}</div>
+        <div class="fl">题数：{$data.total}</div>
+    </div>
+ </div>
+<!--试卷详细内容开始-->
+{include file="teacher/paper/paper_question_tpl.html" hide_total=true}
+<!--试卷详细内容结束-->
+<!--右侧内容开始-->

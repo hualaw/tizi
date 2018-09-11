@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{block name=title}{/block}分数明细-梯子网</title>
+<link rel="stylesheet" type="text/css" href="{$static_url}{$static_version}css/teacherHomework/style.css" />
+{block name=stylesheet}{/block}
+</head>
+<body class="">
+
+<!--主要部分开始-->
+<div class="teacherHomework" id="tiziModule" module="teacherHomework">
+	<div class="detailScores">
+		<div class="formHead">
+		    <!-- <a href="#" class="cBtnSilver exportBtn">导出Excel</a> -->
+		</div>
+		<div>
+		<table class="scoresTable">
+			<tr>
+				<th class="rankH"> 名次 </th> <th class="nameH"> 姓名 </th> <th class="w100H"> 学号 </th>
+				<th class="w100H"> 平均成绩 </th> 
+				{if $game_entity}
+				{foreach $game_entity as $key=>$val}
+				<th> {$val['type_name']} </th>
+				 {/foreach}
+				 {/if}
+				<th class="w100H"> 平均用时 </th>
+			</tr>
+
+			{if $stu_info}
+			{foreach $stu_info as $key=>$val}
+			<tr>
+				<td> {$val@iteration} </td>
+				<td>{sub_str($val.stu_name)}</td>
+				<td>{$val.stu_number}</td>
+				<td>{if $val.score}{round($val.score)}{else} -- {/if}</td>
+				{if $game_entity}
+				{foreach $game_entity as $ges=>$ge}
+				{if isset($val.done_game_data.game[$ges])}
+					{foreach $val.done_game_data.game as $index=>$game_situation}
+						{if $ges == $index and isset($game_situation.correct_num) }
+						<td> {round($game_situation.correct_num/$game_situation.question_num*100)} </td>
+						{/if}
+					{/foreach}
+				{else}
+				<td> --  </td>
+				{/if}
+
+				 {/foreach}
+				 {/if}
+				<td>{if $val.person_avg_game_cost}{convertToMinsSecs($val.person_avg_game_cost)}{else}--{/if}</td>
+			</tr>
+ 	{/foreach}
+ 	{/if}
+		</table>
+		</div>
+	</div>
+</div>
+<!--主要部分结束-->
+
+<!--js引入结束-->
+{include file='file:[lib]common/tizi_ga.html'}
+</body>
+</html>

@@ -1,0 +1,32 @@
+{if isset($homepage_default) and $homepage_default}
+	{$stype_id = $default_subject.id}
+	{$area_id = $default_area.id}
+	{$subject_name = $default_subject.name}
+{/if}
+<div class="list fl">
+	<ul>
+		{foreach $exams.data as $key => $value}
+		<li>
+			<span class="fr">
+				<a href="{$site_url}teacher/paper/exam?stype={$stype_id}&atype={$area_id}&gtype={$value.grade_id}" target="_blank" class="grade">{$grade[$value.grade_id]}</a>
+				<a href="{$site_url}teacher/paper/exam?stype={$stype_id}&atype={$area_id}&gtype={$value.grade_id}&etype={$value.exam_type_id}" target="_blank">{$exam_type[1][$value.exam_type_id]}</a>
+			</span>
+			<a href="{$site_url}teacher/paper/exam/0/{$value.id}" title="{$value.title}" class="tit">
+				{sub_str($value.title, 0, 96)}
+			</a>
+		</li>
+		{/foreach}
+	</ul>
+</div>
+<div class="paperType fr">
+	<h3><em id="subjectName" subject_type="{$stype_id}">{$subject_name}</em>试卷类型</h3>
+	<div class="typeBox cf">
+		<ul>
+			{foreach $exam_type[0] as $etype}
+			<li>
+				<a href="{$site_url}teacher/paper/exam?etype={$etype->id}&gttype={$etype->grade_type}&stype={$stype_id}&atype={$area_id}" target="_blank">{$etype->name}</a>
+			</li>
+			{/foreach}
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,48 @@
+{extends file='student/class/share/stu_share_view_base.html'}
+{block name=title}教学网盘-文件预览{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<!--主要部分开始-->
+<div class=" layout share_preview mainContainer" pageName="previewPage">
+    <div class="hd">
+        <h2>{$file.file_name}{if isset($file.file_ext) and $file.file_ext}.{$file.file_ext}{/if}</h2>
+        <p class="inf">
+            <span>观看({$file.hit_count})</span>
+            <span>下载({$file.download_count})</span>
+            <span>文件大小: {byte_format($file.file_size)}</span>
+            <span>分享时间：{date('Y-m-d H:i',$file.create_time)}</span>
+        </p>
+        <p><a class="cBtnNormal download_share" href='javascript:;' share_id="{$file.id}" is_qiniu='{if Constant::CLOUD_FILETYPE_DOC==$file.file_type}0{else}1{/if}' file_name='{$file.file_name}' file_id='{$file.file_id}'><span>下载</span></a></p>
+    </div>
+    <div class="shareImgBox">
+        {if $file.file_type == Constant::CLOUD_FILETYPE_PIC}
+        <img src="{$file.file_path}">
+        {/if}
+        {if (strpos(Constant::CLOUD_VIDEO_TYPES_JWPLAYER, $file['file_ext'])!==false)  or $file.file_type==Constant::CLOUD_FILETYPE_AUDIO}
+            <div class="videoBox">
+            <div class="containerBox cf posr">
+                <div class="containerBox cf posr">      
+                    <div id="container" class="container"><div style="height:425px"></div></div>
+                </div>
+            </div>
+            <div class="tizi_student_ad video_91img cf"></div>
+        </div>
+        {/if}
+        {if $file.file_ext=='swf'}
+        <object id="mutiupload" name="mutiupload" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="560"><param name="movie" value="{$url}" /><param name="wmode" value="transparent" /><param name="allowScriptAccess" value="always" />
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="{$url}" width="1000" height="560" wmode="transparent" allowScriptAccess="always">
+        <!--<![endif]-->
+        <span class="flashNotice"><a href="http://www.adobe.com/go/getflashplayer" target="_blank"><img src="{$static_url}{$static_version}image/common/get_flash_player.gif" alt="下载Flash播放器" /></a><span>您需要安装11.4.0以上的版本的Flash播放器，才能正常访问此页面。</span><!--[if !IE]>--></object>
+        <!--<![endif]-->
+        </object>
+
+        {/if}
+    </div>
+</div>
+<!--主要部分结束-->
+{/block}
+{block name=script}
+{include file='teacher/resource/media_player.html'}
+{/block}

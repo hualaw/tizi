@@ -1,0 +1,70 @@
+<!-- 移动文件时的tree   start -->
+<div class="pop_main">
+    <div class="moveFile" id="moveFileTree">
+        <form action="{$site_url}cloud/cloud/move" method="post" class="moveFileTreeForm">
+            <input type="hidden" value="1" name="is_file"/>
+            <input type="hidden" value="" name="resource_id" class="resource_id"/>
+            <!--文件夹开始-->
+            <div class="fl textFolder">
+                <h2>文件夹</h2>
+                <div class="textView" id="moveFolderList">
+                    {if $resource}
+                    {foreach $resource as $k=>$v}
+                    <a href="javascript:;" title="{$v.dir_name}" data-dir_id="{$v.dir_id}" data-cat_id="{$v.cat_id}">{$v.short_dir_name}</a>
+                    {/foreach}
+                    {/if}
+                    <a href="javascript:;" data-dir_id="xx" data-cat_id='cloud' class='active'>网盘</a>
+                </div>
+                <!-- tizi4.0：原来这俩value是空的，现在默认选了网盘，就有值 -->
+                <input type="hidden" value="xx" name="dir_id" class="dir_id"/>
+                <input type="hidden" value="cloud" name="cat_id" class="cat_id"/>
+            </div>
+            <!--文件夹结束-->
+            <!--目录开始-->
+            <div class="fl textFolder">
+                <h2>目录</h2>
+                <div class="textView tree-list" id="moveCatalogueList">
+                    {if $sub_cat_tree}
+                    {foreach $sub_cat_tree as $k=>$v}
+                    <div {if $v@iteration!=1}class='undis'{/if} data-catelog='{$k}'>
+                        {foreach $v as $val}
+                            <a href="javascript:;" title="{$val.name}" data-to_dir_id="{$val.id}" class="depth_{$val.depth}">{$val.short_name}</a>
+                        {/foreach}
+                    </div>
+                    {/foreach}
+                    {/if}
+                    {if $cloud}
+                    <div class='dis' data-catelog='cloud'>
+                        {foreach $cloud as $cs=>$dir}
+                            <a href="javascript:;" title='{$dir.dir_name}' data-to_dir_id="{$dir.dir_id}" class="depth_{$dir['depth']+1}">{$dir.short_dir_name}</a>
+                        {/foreach}
+                    </div>
+                    {/if}
+                </div>
+                <input type="hidden" value="" name="to_dir_id" class="to_dir_id"/>
+            </div>
+            <!--目录结束-->
+            <!--分类开始-->
+            <div class="fl textFolder">
+                <h2>分类</h2>
+                <div class="textView" id="moveClassList">
+                    {if $resource}
+                    {foreach $resource as $k=>$val}
+                    <div {if $val@iteration!=1}class="undis"{/if} data-type='{$val.cat_id}'>
+                        {foreach $res_type as $t=>$s}
+                        <a href="javascript:void(0);" data-type='{$s}'>{$t}</a>
+                        {/foreach}
+                    </div>
+                    {/foreach}{/if}
+                    <div class="undis" data-type='cloud'>
+                        <a href="javascript:void(0);" data-type="xx"></a>
+                    </div>
+                </div>
+                <!-- tizi4.0：原来这value是空的，现在默认选了网盘，就有值 -->
+                <input type="hidden" value="xx" name="type" class="to_type"/>
+            </div>
+            <!--分类结束-->
+        </form>
+    </div>
+</div>
+ <!-- 移动文件时的tree   end -->

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<swfList>
+<url name="guide_0">
+assets/swf/guide_0.swf
+</url>
+<url name="guide_1">
+assets/swf/guide_1.swf
+</url>
+<url name="guide_2">
+assets/swf/guide_2.swf
+</url>
+  
+<url name="welcomeBox">
+assets/swf/welcomeBox.swf
+</url>
+<url name="answerOptionBox">
+assets/swf/answerOptionBox.swf
+</url>
+<!--
+<url name="helpBox">
+assets/swf/helpBox.swf
+</url>
+-->
+<url name="infoBox">
+assets/swf/infoBox.swf
+</url>
+<url name="gameOverBox">
+assets/swf/gameOverBox.swf
+</url>
+<url name="closeBackGroundSoundButton">
+assets/swf/closeBackGroundSoundButton.swf
+</url>
+</swfList>

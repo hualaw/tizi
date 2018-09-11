@@ -1,0 +1,60 @@
+<p class="doc_num cf">共计<span class="bold" id="q_total">{$data.total}</span>道试题</p>
+<!--添加题库开始-->
+{foreach $data.question as $question}
+<div class="md_paperCard" data-qid="{$question.id}">
+	<div class="md_cardNav cf">
+	  <h2 class="fl">来源：{$question.title}</h2>
+	   <div class="fr">
+			<a class="btn_gray_add btnEditor fl"  href="{$site_url}teacher/user/myquestion/edit/{$question.id}">编辑</a>
+			<a class="btn_gray_add btnDel fl" data-num="{$question.id}-{$question.group_id}" href="javascript:void(0);">删除</a>
+		</div>
+	</div>
+	<ul class="tpl_info">
+		<li>
+			<label>题型：</label><span>{$question.qtype_name}</span>
+		</li>
+		<li>
+			<label>难易度：</label>
+			<span class="star-level star-{$question.level_id}"><em class="fl">（{$data.easy_level[$question.level_id]}）</em></span>
+		</li>
+		<li>
+			<label>知识点：</label><span>{$question.category_info}</span>
+		</li>
+		<li>
+			<label>同步信息：</label><span>{$question.course_info}</span>
+		</li>
+		<li>
+			<label>上传日期：</label><span>{$question.date}</span>
+		</li>
+		<li>
+			<label>【题文】：</label>
+			<div class="tplStyle">
+			{$question.body}
+			</div>
+		</li>
+	</ul>
+	<ul class="tpl_answer">
+		<li>
+			<label>【答案】：</label>
+			<div class="tplStyle">
+			{$question.answer}
+			</div>
+		</li>
+		<li>
+			<label>【解析】：</label>
+			<div class="tplStyle">
+			{$question.analysis}
+			</div>
+		</li>
+	</ul>
+</div>
+<!--添加题库结束-->
+  {/foreach}
+<!--分页开始-->
+<div class="page cf">
+	<p class="fr"></p>
+	<div class="pagination fr">
+		{$pages}
+	</div>
+</div>
+<!--分页结束-->

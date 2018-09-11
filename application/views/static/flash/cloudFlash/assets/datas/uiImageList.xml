@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:44037a77d46cf097dffdc513ba0d674c$ -->
+<TextureAtlas imagePath="uiImageList.png">
+    <SubTexture name="backPaperButton_1" x="2" y="39" width="45" height="12" frameX="-3" frameY="-3" frameWidth="51" frameHeight="18"/>
+    <SubTexture name="backPaperButton_2" x="77" y="30" width="45" height="12" frameX="-3" frameY="-3" frameWidth="51" frameHeight="18"/>
+    <SubTexture name="downLoadButton" x="2" y="2" width="73" height="35"/>
+    <SubTexture name="fullScreenButtonRightUp_1" x="2" y="89" width="16" height="16"/>
+    <SubTexture name="fullScreenButtonRightUp_2" x="20" y="71" width="14" height="14" frameX="-1" frameY="-1" frameWidth="16" frameHeight="16"/>
+    <SubTexture name="fullScreenButton_1" x="2" y="107" width="16" height="16"/>
+    <SubTexture name="fullScreenButton_2" x="20" y="87" width="14" height="14" frameX="-1" frameY="-1" frameWidth="16" frameHeight="16"/>
+    <SubTexture name="nextPaperButton_1" x="77" y="16" width="45" height="12" frameX="-3" frameY="-3" frameWidth="51" frameHeight="18"/>
+    <SubTexture name="nextPaperButton_2" x="77" y="2" width="45" height="12" frameX="-3" frameY="-3" frameWidth="51" frameHeight="18"/>
+    <SubTexture name="rollButtonLine" x="20" y="103" width="12" height="13"/>
+    <SubTexture name="zoomButtonDown_1" x="2" y="71" width="16" height="16"/>
+    <SubTexture name="zoomButtonDown_2" x="20" y="53" width="16" height="16"/>
+    <SubTexture name="zoomButtonUp_1" x="2" y="53" width="16" height="16"/>
+    <SubTexture name="zoomButtonUp_2" x="49" y="39" width="16" height="16"/>
+</TextureAtlas>

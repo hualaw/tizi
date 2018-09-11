@@ -1,0 +1,97 @@
+﻿{extends file='feedback/base.html'}
+
+{block name=title}题目纠错{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="mainContainer" pagename="feedbackQuestion">
+<!-- 用户纠错功能开始 -->
+<div class="feedbackQuestion layout">
+    <form class="haveErrorForm" action="{$site_url}feedback/feedback/correction" method="post">
+      <!-- 纠错模块开始 -->
+      <div class="md_haveError">
+            <h2>题目纠错</h2>
+            <ul>
+                <li>
+                   <div class="lite_title fl">题目编号：</div><span class="haveErrorQIdSpan orange">{$question_id}</span>
+                </li>
+                <li>
+                   <div class="lite_title fl">错误类型：</div>
+                   <div class="checkInput fl">
+                            {$types = Constant::q_wrong_type(null,true)}
+                            {foreach $types as $k=>$v}
+                                  <!-- 题目类型 -->
+                                  <input type="checkbox" id="{$k}" value="{$k}" class="items" name="wrong_type[]"/>
+                                  <label class="labelr" for="{$k}">{$v}</label>
+                            {/foreach}
+                          <!--隐藏域值 -->
+                          <span class="Validform_checktip"></span>
+                    </div>
+                </li>
+                <li>
+                   <div class="lite_title">错误描述:</div>
+                   <textarea name="content" id="lite_textarea" class="lite_textarea"></textarea>
+                </li>
+                <li>
+                   <div class="lite_title">附图(目前暂时只支持.jpg .gif .png 格式的图片上传,大小在2M以内)</div>
+                   <div class="image_upload">
+                        <!-- 上传图片单体开始 -->
+                        <div class="lite_upload">
+                          <span class="upladpic1 upladpic"></span>
+                          <div class="clearpic"></div>
+                          <input type="file" id="upladpic1" name="upladpic1" class="fbupload btn_file btn_green" style="display:none;"/>
+                        </div>
+                        <!-- 上传图片单体结束 -->
+                        <!-- 上传图片单体开始 -->
+                        <div class="lite_upload">
+                          <span class="upladpic2 upladpic"></span>
+                          <div class="clearpic"></div>
+                          <input type="file" id="upladpic2" name="upladpic2" class="fbupload btn_file btn_green" style="display:none;"/>
+                        </div>
+                        <!-- 上传图片单体结束 -->
+                        <!-- 上传图片单体开始 -->
+                        <div class="lite_upload">
+                           <span class="upladpic3 upladpic"></span>
+                           <div class="clearpic"></div>
+                           <input type="file" id="upladpic3" name="upladpic3" class="fbupload btn_file btn_green" style="display:none;"/>
+                        </div>
+                        <!-- 上传图片单体结束 -->
+                        <!-- 上传图片单体开始 -->
+                        <div class="lite_upload">
+                           <span class="upladpic4 upladpic"></span>
+                           <div class="clearpic"></div>
+                           <input type="file" id="upladpic4" name="upladpic4" class="fbupload btn_file btn_green" style="display:none;"/>
+                        </div>
+                        <!-- 上传图片单体结束 -->
+                        <input type="hidden" name="picture_urls" value="" id="picture_urls"/>
+                   </div>
+                </li>
+            </ul>
+            <!-- 验证码 start  -->
+            <ul>
+                <li class="cf">
+                    <label class="label">验证码</label>
+                </li>
+                <li class="cf">
+                    <div class="commonCaptcha cf">
+                      <input type="hidden" name="captcha_name" class="fbquestionBox" value="fbquestionBox" />
+                      <input type="text" name="captcha_word" class="fbquestionBoxWord textCaptcha fl cInput" />
+                      <img class="fl imgCaptcha changeCaptcha" />
+                      <span class="changeCaptcha fl">换一张</span>
+                    </div>
+                </li>
+            </ul>
+            <!-- 验证码 over -->
+           <input type="hidden" class="haveErrorQId" name='question_id' value="{$question_id}" />
+           <input type="submit" class="cBtnNormal BtnSubmit" value="提交"/>
+      </div>
+      <!-- 纠错模块结束 -->
+    </form>
+</div>
+<!-- 用户纠错功能结束 -->
+</div>
+{/block}
+{block name=script}
+{/block}

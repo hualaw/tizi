@@ -1,0 +1,26 @@
+{extends file='student/practice/practice_base.html'}
+
+{block name=title}专项挑战-作答-初高中1{/block}
+
+{block name=container}
+<div class="mainContainer studentSpecialWrap" pagename="studentSpecial_high1">
+    <!--返回按钮开始-->
+    <div class="topline_nav cf">
+		<a href="{$site_url}practice/{$grade_id}" class="goback">返回</a>
+    </div>
+    <!--返回按钮结束-->
+    <!--专项挑战游戏作答开始-->
+    <div class="studentSpecial_game cf">
+        <!--开始挑战开始-->
+        <div class="replay_action fl">
+            <h3><img src="{$static_url}{$static_version}image/studentSpecial/bg_high1.gif"/></h3>
+            <p>连续答对更多的题目</p>
+			<a href="{$site_url}practice/training/entry/{$p_c_id}" class="replay_go">开始挑战</a>
+        </div>
+        <!--开始挑战结束-->
+		{include file="student/practice/practice_ranking_list.html"}
+    </div>
+    <!--专项挑战游戏作答结束-->
+</div>
+{/block}
+{block name=script}{/block}

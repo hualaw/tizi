@@ -1,0 +1,38 @@
+{if $data.total eq 0}
+<div class="no_con"></div>
+{else}
+<p class="total">共计{$data.total}份试卷</p>
+<div class="tabBox">
+    <table>
+        <tr>
+            <th class="paperNum">编号</th>
+            <th class="jurisdiction">类型</th>
+            <th class="paperTitle">试卷属性及标题</th>
+            <th class="jurisdiction">题数</th>
+            <th class="updateTime">更新时间</th>      
+        </tr>
+        {foreach $data.exam as $exam}
+        <tr>
+            <td class="paperNum">{$exam->id}</td>
+            <td class="jurisdiction">{if isset($data.exam_level[$exam->exam_level_id])}{$data.exam_level[$exam->exam_level_id]}{else}未知{/if}</td>
+            <td class="paperTitle">
+                <div class="title">
+                    <a href="{$site_url}teacher/paper/exam/{$data.subject_id}/{$exam->id}" eid="{$exam->id}" class="getExamQuestion">{$exam->title}</a>
+                </div>
+                <div class="attribute">
+                    <em class="first">{if isset($data.grade[$exam->grade_id])}{$data.grade[$exam->grade_id]}{else}未知{/if}</em>|
+                    <em>{if isset($data.exam_type[$exam->exam_type_id])}{$data.exam_type[$exam->exam_type_id]}{else}未知{/if}</em>|
+                    <em>{if isset($data.area[$exam->province_id])}{$data.area[$exam->province_id]}{else}未知{/if}</em>|
+                    <em>{$exam->year}年</em>
+                    <!--|
+                    <em>{count_exam_question($exam->question_ids)}题</em>-->
+                </div>
+            </td>
+            <td class="jurisdiction">{count_exam_question($exam->question_ids)}</td>
+            <td class="updateTime">{$exam->date|date_format:"%Y-%m-%d"}</td>
+        </tr>
+        {/foreach}
+    </table>
+ </div>
+<div class="page">{$pages}</div>
+{/if}

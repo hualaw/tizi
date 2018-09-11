@@ -1,0 +1,38 @@
+{extends file='teacher/dafen/dafen_base.html'}
+
+{block name=keywords}作业批改，试卷批改{/block}
+{block name=description}梯子网为大家提供试卷快速批改打分工具。{/block}
+{block name=title}作业批改，试卷批改{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--内容start-->
+<div class="mainContainer" pagename="index">
+	<h2>3分钟批改1个班</h2>
+	<a href="{$dafen_url}" class="enterDafen cBtnNormal" target="_blank">进入梯子打分</a>
+	<a href="{$dafen_url}" class="imgBg" target="_blank">
+		<img src="{$static_url}{$static_version}image/common/dafenBg.jpg" alt="">
+	</a>
+	<ul>
+		<li>
+			<h3><em>1</em>识别准</h3>
+			<p>99.8%的准确率</p>
+		</li>
+		<li>
+			<h3><em>2</em>识别快</h3>
+			<p>3分钟扫完一个班</p>
+		</li>
+		<li>
+			<h3><em>3</em>离线扫描</h3>
+			<p>无需联网即可扫描</p>
+		</li>
+		<li>
+			<h3><em>4</em>成绩错题全掌控</h3>
+			<p>告诉您全班成绩和错题排行</p>
+		</li>
+	</ul>
+</div>
+<!--内容end-->
+{/block}

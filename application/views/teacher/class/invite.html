@@ -1,0 +1,19 @@
+{extends file='teacher/class/no_left_base.html'}
+{block name=title}申请加入班级{/block}
+{block name=container}
+<div class="commonInviteJoinTizi">
+    <div class="welcome">
+        <p>欢迎来到梯子网！</p>
+        <p class="userInfo">
+            <em>{$creator_name}老师</em>
+            诚挚地邀请您加入梯子网
+            <em>{$school_info}{if isset($arr_grade[$class_info.class_grade])}{$arr_grade[$class_info.class_grade]}{/if}{$class_info.classname}</em>
+            的班级空间
+        </p>
+        <a href="javascript:void(0);" id="accept" class="yh join cBtnNormal">接受邀请并加入此班级</a>
+        <p class="superiority">在梯子网的班级空间中，老师可以向学生轻松分享学习资源或者发送在线作业。</p>
+        <a href="{$tizi_url}" class="goHomePage">进入梯子网首页</a>
+    </div>
+</div>
+<input type="hidden" id="class_id" value="{$class_id}">
+{/block}

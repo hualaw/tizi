@@ -1,0 +1,18 @@
+.wrap .slide{background:#f6f6f6;}
+.wrap .slide .add{width:106px;margin:30px auto;}
+.wrap .slide .add a:hover{color:#fff;}
+.wrap .slide .menu{margin:10px 0px;}
+.wrap .slide .menu a{height: 40px;line-height:40px;padding-left:55px;display: block; font-size: 14px; background: url(../../image/teacherCloud/ico_slide_bg.png) no-repeat left top;_background: url(../../image/teacherCloud/ico_slide_bg_8.png) no-repeat left top;text-align: left;}
+.wrap .slide .menu .all a{background-position:21px 11px}
+.wrap .slide .menu .doc a{background-position:21px -29px}
+.wrap .slide .menu .pic a{background-position:21px -69px}
+.wrap .slide .menu .video a{background-position: 21px -107px}
+.wrap .slide .menu .audio a{background-position: 21px -148px}
+.wrap .slide .menu .other a{background-position: 21px -188px}
+.wrap .slide .menu .all a.active{background-position:21px -224px}
+.wrap .slide .menu .doc a.active{background-position:21px -264px}
+.wrap .slide .menu .pic a.active{background-position:21px -304px}
+.wrap .slide .menu .video a.active{background-position: 21px -343px}
+.wrap .slide .menu .audio a.active{background-position: 21px -383px}
+.wrap .slide .menu .other a.active{background-position: 21px -423px}
+.wrap .slide .menu a.active{background-color:#e6e6e6;}

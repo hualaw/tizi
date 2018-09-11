@@ -1,0 +1,59 @@
+.stuHomePage{}
+/*个人信息样式开始*/
+.stuHomePage .myInfo h2{font-size:18px;line-height:18px;margin-bottom:10px;color:#565656;font-weight:normal;}
+.stuHomePage .myInfo p span{font-size:14px;line-height:30px;color:#565656;padding-right:30px;}
+.stuHomePage .myInfo p span.securityLevel,.stuHomePage .myInfo p span.homeWork,.stuHomePage .myInfo p span.practice{padding-left:20px;}
+.stuHomePage .myInfo p span em{padding-left:10px;}
+.stuHomePage .myInfo p span em a.addNewClass{color:#f90;cursor:pointer;}
+.stuHomePage .myInfo p .securityLevel em{padding:0 7px;color:#f90;}
+.stuHomePage .myInfo p .securityLevel em.lower{color:#e20000;}
+.stuHomePage .myInfo p .securityLevel em.middle{color:#f90;}
+.stuHomePage .myInfo p .securityLevel em.senior{color:#4bbb2a;}
+/*个人信息样式结束*/
+/*推荐练习题样式开始*/
+.stuHomePage .recommend{border:2px solid #d9e2ec;padding:20px 12px;}
+.stuHomePage .recommend h2{font-size:16px;color:#565656;,ine-height;16px;margin-bottom:10px;font-weight:normal;}
+.stuHomePage .recommend li{margin-right:11px;padding:15px 5px 15px 0px;width:255px;background:#f6f6f6;}
+.stuHomePage .recommend li .disciplingIcon{padding:0 10px;}
+.stuHomePage .recommend li .wordsBox{width:183px;}
+.stuHomePage .recommend li.mr-0{margin-right:0px;}
+.stuHomePage .recommend li a:hover{color:#f90;}
+.stuHomePage .recommend li h3{line-height: 14px;margin-bottom:10px;}
+.stuHomePage .recommend li h3 a{font-size:14px;color:#179c7e;line-height: 14px;margin-bottom:10px;font-weight:normal;}
+.stuHomePage .recommend li p.title{line-height: 14px;margin-bottom:10px;}
+.stuHomePage .recommend li p.title a{font-size:14px;color:#179c7e;line-height: 14px;margin-bottom:10px;}
+.stuHomePage .recommend li p.title a:hover{color:#f90;}
+
+.stuHomePage .recommend li p.num{font-size:12px;color:#939393;}
+/*推荐练习题样式结束*/
+.stuHomePage li a:hover,.stuHomePage p a:hover{color:#f90;}
+/*otherBox样式开始*/
+.stuHomePage .stuOtherBox{position:relative;margin-top:50px;}
+.stuHomePage .stuOtherBox h2.otherH2{border-top-left-radius:10px;border-top-right-radius:10px;position:absolute;display;background:#d9e2ec;height:40px;top:-30px;left:0;_left:-10px;line-height:40px;padding:0 20px;}
+.stuHomePage .box{padding: 30px 0px 10px 30px;}
+.stuHomePage .box p{font-size:16px;color:#565656;line-height:16px;margin-bottom:15px;}
+.stuHomePage .box p.shareTitleWord{background:url(../../image/studentHomeWork/shareWordIcon.gif) no-repeat left center;text-indent:25px;}
+.stuHomePage .box p.shareTitlePic{background:url(../../image/studentHomeWork/sharePicIcon.gif) no-repeat left center;text-indent:25px;}
+/*下载按钮样式开始*/
+.stuHomePage .downloadBox{padding:0  0 30px 30px;}
+.stuHomePage .downloadBox a{text-align:center;padding:3px 10px;margin-right:10px;font-size:14px;}
+.stuHomePage .downloadBox a.cBtnNormal{color:#fff;}
+.stuHomePage .downloadBox a{color:#999;}
+.stuHomePage span.teacherComment{font-size:14px;color:#565656;}
+/*下载按钮样式结束*/
+ /*stuBox下方灰条样式开始*/
+.stuHomePage .btmBar{padding:0 10px;font-size:14px;color:#999999;background:#f2f2f2;line-height:30px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.stuHomePage .btmBar .priase{color:#179c7e;background:url(../../image/studentHomeWork/priase.gif) no-repeat right center;padding-right:20px;}
+.stuHomePage .btmBar a:hover{color:#f90;}
+.stuHomePage .btmBar .name em{padding:0 10px;}
+ /*stuBox下方灰条样式结束*/
+ /*右上方下载状态样式开始*/
+.stuHomePage .stuDownload{position:absolute;top:43px;right:65px;padding:0 20px;height:39px;font-size:14px;color:#fff;line-height:39px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.stuHomePage .otherDownload{position:absolute;top:10px;right:65px;padding:0 20px;height:39px;font-size:14px;color:#fff;line-height:39px;border-bottom-left-radius:10px;border-bottom-right-radius:10px;}
+.stuHomePage .haveDown{background:#179c7e;}
+.stuHomePage .noDown{background:#f90;}
+/*右上方下载状态样式结束*/
+.studentCommonBox .stuBox .workIntro{padding: 30px 0px 15px 30px;}
+.studentCommonBox .stuBox .workIntro li{font-size:16px;margin-bottom:10px;color:#565656;}
+.stuHomePage .stuOtherBox .sharePic{padding: 0px 0px 30px 30px;}
+/*otherBox样式结束*/

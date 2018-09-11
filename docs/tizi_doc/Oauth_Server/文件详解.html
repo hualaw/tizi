@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>       <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>          <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>          <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <title>Tizi 作业 && 专项</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="Tizi 作业 && 专项">
+        <link rel="icon" href="../img/favicon-navy.png" type="image/x-icon">
+        <!-- Mobile -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>-->
+
+    <!-- LESS -->
+            <link rel="stylesheet" href="../css/daux-navy.min.css">
+    </head>
+<body>
+            <!-- Docs -->
+        <div class="container-fluid fluid-height wrapper">
+
+            <div class="row columns content">
+                <div class="left-column article-tree col-sm-3 hidden-print">
+                    <!-- For Mobile -->
+                    <div class="responsive-collapse">
+                        <button type="button" class="btn btn-sidebar" id="menu-spinner-button">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="sub-nav-collapse" class="sub-nav-collapse">
+                        <!-- Navigation -->
+                        <ul class="nav nav-list"><li><a href=".././专项练习_作业.html">专项练习 作业</a></li><li><a href="#" class="aj-nav folder">专项练习</a><ul class="nav nav-list"><li><a href="../专项练习/./目录文件结构.html">目录文件结构</a></li><li><a href="../专项练习/./文件详解.html">文件详解</a></li></ul></li><li><a href="#" class="aj-nav folder">学生作业</a><ul class="nav nav-list"><li><a href="../学生作业/./目录文件结构.html">目录文件结构</a></li><li><a href="../学生作业/./文件详解.html">文件详解</a></li></ul></li><li class="open"><a href="#" class="aj-nav folder">Oauth Server</a><ul class="nav nav-list"><li><a href="../Oauth_Server/./文件结构.html">文件结构</a></li><li><a href="../Oauth_Server/./文件详解.html">文件详解</a></li></ul></li></ul>                                            </div>
+                </div>
+                <div class="right-column  content-area col-sm-9">
+                    <div class="content-page">
+                        <article>
+                                                            <div class="page-header sub-header clearfix">
+                                    <h1>文件详解                                                                            </h1>
+                                        <span style="float: left; font-size: 10px; color: gray;">
+                                            Friday, August 22, 2014                                        </span>
+                                        <span style="float: right; font-size: 10px; color: gray;">
+                                            3:04 AM                                        </span>
+                                </div>
+                                                        <p>
+tizi_api/application/libraries/Oauth_Server
+</p>
+<p>League 目录下文件为核心类, 基本没有改动，具体改动内容:<br/>
+DIFF:</p>
+<ul>
+<li>League/OAuth2/Server/Util/KeyAlgorithm/NewAlgorithm.php(新添加的加密类)</li>
+<li>League/OAuth2/Server/Grant/AuthCode.php(newAuthoriseRequest:更改oauth_code 加密方式, completeFlow: 添加uid 验证)</li>
+</ul>
+<div style="color:red">ClassLoader.php</div>
+<p>class AutoLoad</p>
+<div style="color:red">ClientModel.php</div>
+<p>
+public function getClient($clientId, $clientSecret = null, $redirectUri = null, $grantType = null)
+获取客户端
+</p>
+<div style="color:red">OauthDbModel.php</div>
+<p>
+用于oauth数据表的增删改查
+</p>
+<div style="color:red">ScopeModel.php</div>
+<p>
+获取 client scope
+</p>
+<div style="color:red">SessionModel.php</div>
+<p>
+使用最多的一个类
+</p>
+<div style="color:red">oauth.php</div>
+<p>
+public function index() oauth client 主入口, 参数校验(appid,appkey,callback)<br/>
+public function signin() 登录界面<br/>
+public function authorize() 登录成功后跳转至此，并返回oauth code<br/>
+ public function access_token() 根据oauth_code , open_id 获取 access_token
+</p>
+<div style="color:red">oauth_user.php</div>
+<p>
+public function me() 获取openId<br/>
+public function get_user_info() 获取用户信息<br/>
+private function _check_access_token() 校验access_token<br/>
+</p>
+<p>Oauth Server 更多文档 及 核心类 请参考 
+<br/>
+<a href="https://github.com/thephpleague/oauth2-server">https://github.com/thephpleague/oauth2-server</a>, <br/>
+<a href="http://oauth2.thephpleague.com/authorization-server/auth-code-grant/">http://oauth2.thephpleague.com/authorization-server/auth-code-grant/</a></p>                                                    </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- hightlight.js -->
+    <script src="../js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Navigation -->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+{extends file='teacher/class/base_no_nav.html'}
+
+{block name=title}留作业{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="wrap layout homeworkReport">
+	<a href="{$site_url}teacher/class/{$alpha_class_id}/homework" class="backLink">返回作业列表</a>
+	<div class="reportWrap">
+		<div class="reportHead">
+			<h4 class="className">{$class_name} 作业汇总报告</h4>
+			<h2 class="reportName">作业汇总报告</h2>
+		</div>
+		<div class="reportCont">
+			<div class="reportTitle cf">
+				<a href="{$site_url}zuoye/class/report/{$alpha_class_id}?sub_type=3">
+				<span class="fl subjectTab {if $sub_type==3}active{/if}" subject_id="1">英语({$y-1}-{$y}年)</span>
+				</a>
+				<a href="{$site_url}zuoye/class/report/{$alpha_class_id}?sub_type=1">
+				<span class="fl subjectTab {if $sub_type==1}active{/if}">语文({$y-1}-{$y}年)</span>
+			</a>
+			<a href="{$site_url}zuoye/class/report/{$alpha_class_id}?sub_type=2">
+				<span class="fl subjectTab {if $sub_type==2}active{/if}" >数学({$y-1}-{$y}年)</span>
+			</a>
+				<!-- <a class="fr cBtnSilver">下载班级成绩单</a> -->
+			</div>
+			<table class="reportTable active" subject_id="1">
+				<!--报表表头开始-->
+				<tr>
+					<!--表头第一栏用图片背景-->
+					<th class="reportHeadBg"></th>
+					{foreach $monthes as $mons=>$mon}
+					<th>{$mon.m}月<span>({$mon.zuoye.month_zy_sum}次)</span></th>
+					{/foreach}
+					<th>累计<span>({$month_sum}次)</span></th>
+				</tr>
+				<!--报表表头结束-->
+
+				<!--某一学生的分数信息开始-->
+				{if $stu}
+				{foreach $stu as $s_user_id=>$s}
+				<tr>
+					<td title="{$s.stu_name}">{sub_str($s.stu_name)}</td>
+					 
+					 {foreach $monthes as $mons=>$mon}
+					 {if is_array($mon.zuoye.stu) }
+					 <td>{if isset($mon.zuoye.stu[$s['user_id']])}{$mon.zuoye.stu[$s['user_id']]}{else}0{/if}</td>
+					 {else}
+					<td>0</td>
+					{/if}
+					{/foreach}
+					<td>{if isset($s.sum)}{$s.sum}{else}0{/if}</td>
+
+				</tr>
+				{/foreach} 
+				{/if}
+			</table>
+			<table class="reportTable" subject_id="2">
+				<!--报表表头开始-->
+				<tr>
+					<!--表头第一栏用图片背景-->
+					<th class="reportHeadBg"></th>
+					{foreach $monthes as $mons=>$mon}
+					<th>{$mon.m}月<span>({$mon.zuoye.month_zy_sum}次)</span></th>
+					{/foreach}
+					<th>累计<span>({$month_sum}次)</span></th>
+				</tr>
+				<!--报表表头结束-->
+
+				<!--某一学生的分数信息开始-->
+				{if $stu}
+				{foreach $stu as $s_user_id=>$s}
+				<tr>
+					<td title="{$s.stu_name}">{sub_str($s.stu_name)}</td>
+					 
+					 {foreach $monthes as $mons=>$mon}
+					 {if is_array($mon.zuoye.stu) }
+					 <td>{if isset($mon.zuoye.stu[$s['user_id']])}{$mon.zuoye.stu[$s['user_id']]}{else}0{/if}</td>
+					 {else}
+					<td>0</td>
+					{/if}
+					{/foreach}
+					<td>{if isset($s.sum)}{$s.sum}{else}0{/if}</td>
+
+				</tr>
+				{/foreach} 
+				{/if}
+			</table>
+			<table class="reportTable" subject_id="3">
+				<!--报表表头开始-->
+				<tr>
+					<!--表头第一栏用图片背景-->
+					<th class="reportHeadBg"></th>
+					{foreach $monthes as $mons=>$mon}
+					<th>{$mon.m}月<span>({$mon.zuoye.month_zy_sum}次)</span></th>
+					{/foreach}
+					<th>累计<span>({$month_sum}次)</span></th>
+				</tr>
+				<!--报表表头结束-->
+
+				<!--某一学生的分数信息开始-->
+				{if $stu}
+				{foreach $stu as $s_user_id=>$s}
+				<tr>
+					<td title="{$s.stu_name}">{sub_str($s.stu_name)}</td>
+					 
+					 {foreach $monthes as $mons=>$mon}
+					 {if is_array($mon.zuoye.stu) }
+					 <td>{if isset($mon.zuoye.stu[$s['user_id']])}{$mon.zuoye.stu[$s['user_id']]}{else}0{/if}</td>
+					 {else}
+					<td>0</td>
+					{/if}
+					{/foreach}
+					<td>{if isset($s.sum)}{$s.sum}{else}0{/if}</td>
+
+				</tr>
+				{/foreach} 
+				{/if}
+			</table>
+		</div>
+	</div>
+
+</div>
+
+
+{/block}
+{block name=script}
+{/block}

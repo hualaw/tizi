@@ -1,0 +1,57 @@
+{$paper_name='试卷'}
+{$question = $data.question[0]}
+<div data-question_id="{$question.id}" data-category_id="{if isset($question.category_id) and $question.category_id > 0}{$question.category_id}{else}0{/if}" class="question-box">
+    <div class="question-title cf">
+         <!-- 加入试卷按钮开始 -->
+        <div class="fr">
+            <!-- 加入试卷和移出试卷开始 -->
+            <a data-question_id="{$question.id}" data-category_id="{if isset($question.category_id) and $question.category_id > 0}{$question.category_id}{else}0{/if}" class="control-btn add-{if $question.is_add_paper}true{else}false{/if}">
+                <span class="cBtnNormal fl">
+                    <i>加入{$paper_name}</i>
+                </span>
+                <em class="fl">
+                    <b class="cBtnSilver fl"><i>移出{$paper_name}</i></b>
+                </em>
+            </a>
+            <a data-question_id="{$question.id}" data-category_id="{if isset($question.category_id) and $question.category_id > 0}{$question.category_id}{else}0{/if}" data-qtype_id="{$question.qtype}" class="change-btn">
+               <em class="fl">
+                    <b class="cBtnSilver fl"><i>换一题</i></b>
+                </em> 
+            </a>
+            <!-- 加入试卷和移出试卷开始 -->
+            <!-- 加入用户纠错按钮开始 -->
+            <a href="{$site_url}teacher/paper/feedback?question_id={$question.id}" class="paperTip" target="_blank">纠错</a>
+            <!-- 加入用户纠错按钮结束 -->
+            <!-- 收藏按钮开始 -->
+            <!--<a href="javascript:void(0);" class="paperFavorit"></a>-->
+            <!-- 收藏按钮结束 -->
+        </div>
+        <!-- 加入试卷按钮结束 -->
+        <!-- 答题卡标题开始 -->
+        <dl class="fl">
+            <dd class="cf">
+                {if isset($data.question_count[0]) and $data.question_count[0]}
+                {$data.question_count[0] = {$data.question_count[0]} + 20}
+                <div class="fl">组卷次数：<em class="org">{$data.question_count[0]}</em></div>
+                {/if}
+                <div class="fl">编号：{$question.id}</div>
+                <div class="fl">知识点：{$question.category_name}</div>
+                <div class="fl"><span class="fl">难易度：</span><span class="star-level star-{$question.qlevel}">
+                        <em class="fl">{$question.qlevel_name}</em></span>
+                </div>
+                <div class="fl">更新日期：{$question.date}</div>
+            </dd>
+            <dd class="fl">来源：{$question.title}</dd>
+        </dl>
+        <!-- 答题卡标题结束 -->
+    </div>
+    <div class="question-content">
+        <div class="question">
+            <div>{$question.body}</div>
+        </div>
+        <div class="answer">
+            <div>{$question.answer}</div>
+            <div>{$question.analysis}</div>
+        </div>
+    </div>
+</div>    

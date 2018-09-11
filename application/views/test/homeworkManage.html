@@ -1,0 +1,139 @@
+
+
+
+<!-- 布置作业弹出框开始 -->
+<div id="setHomeworkPop" class="pop_box">
+    <form class="setHomeworkForm_beta" action="#" method="post" onsubmit="return false;">
+        <div class="teacherHomework">
+            <div class="pop_main">
+                <h3>选择班级</h3>
+                <ul class="classGrade cf">
+                    <li><label for="9C333I"><input type="checkbox" name="classgrade" class-id="9C333I" id="9C333I">秦祁中学1班</label></li>
+                    <li><label for="31333I"><input type="checkbox" name="classgrade" class-id="31333I" id="31333I">中央工艺美院</label></li>
+                    <li><label for="4I333I"><input type="checkbox" name="classgrade" class-id="4I333I" id="4I333I">永定路中学</label></li>
+                </ul>
+                <h3>选择学生答题形式</h3>
+                <div class="answerStyle">
+                    <label for="1"><input type="radio" name="answerStyle" id="1">在线作答（推荐）</label>
+                    <p>适合选择题数量较多的情况，学生在线提交答案，系统生成全班学生答题统计和错题排行。</p>
+                    <div class="homeworkTime">
+                        <h4>开始时间</h4>
+                        {literal}<input type="text" class="Wdate start_day" onfocus="var myDate = new Date(),y = myDate.getFullYear(),m = myDate.getMonth()+1,d = myDate.getDate(),h = y+'-'+m+'-'+d;WdatePicker({errDealMode:1,minDate:'h'})" style="margin-left:0px;" value="2014-03-04">{/literal}
+                        <select class="selectWidth end_hour">
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option selected="selected">23</option>
+                            <option>00</option>
+                         </select>&nbsp;时
+                         <select style="selectWidth" class="end_min">
+                            <option>00</option>
+                            <option>15</option>
+                            <option>30</option>
+                            <option>45</option>
+                         </select>&nbsp;分
+                        <h4>结束时间（到达结束时间可看到答案和解析，未作答学生将不可作答）</h4>
+                        {literal}<input type="text" class="Wdate end_day" onfocus="var myDate = new Date(),y = myDate.getFullYear(),m = myDate.getMonth()+1,d = myDate.getDate(),h = y+'-'+m+'-'+d;WdatePicker({errDealMode:1,minDate:'h'})" value="2014-03-04">
+                        <select class="selectWidth end_hour">{/literal}
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option selected="selected">23</option>
+                            <option>00</option>
+                         </select>&nbsp;时
+                         <select style="selectWidth" class="end_min">
+                            <option>00</option>
+                            <option>15</option>
+                            <option>30</option>
+                            <option>45</option>
+                         </select>&nbsp;分
+                    </div>
+                </div>
+                <div class="answerStyle">
+                    <label for="2"><input type="radio" name="answerStyle" id="2">现在作答</label>
+                    <p>适合大题数量较多的情况，学生下载题目后在纸上完成，系统不纪录学生对错情况。</p>
+                    <div class="homeworkTime">
+                        <h4>开始时间</h4>
+                        {literal}<input type="text" class="Wdate start_day" onfocus="var myDate = new Date(),y = myDate.getFullYear(),m = myDate.getMonth()+1,d = myDate.getDate(),h = y+'-'+m+'-'+d;WdatePicker({errDealMode:1,minDate:'h'})" style="margin-left:0px;" value="2014-03-04">{/literal}
+                        <select class="selectWidth end_hour">
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option selected="selected">23</option>
+                            <option>00</option>
+                         </select>&nbsp;时
+                         <select style="selectWidth" class="end_min">
+                            <option>00</option>
+                            <option>15</option>
+                            <option>30</option>
+                            <option>45</option>
+                         </select>&nbsp;分
+                    </div>
+                </div>
+                <div class="leaveWords">
+                    <h3>留言</h3>
+                    <textarea id="leaveWordsTxt" placeholder="留言限200字以内"></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- 布置作业弹出框结束 -->                        
+

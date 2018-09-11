@@ -1,0 +1,53 @@
+<!-- 我的文件 开始 -->
+    <input type="hidden" class="cat_id" value="{$cat_id}">
+    <input type="hidden" class="sub_cat_id" value="{$sub_cat_id}">
+    <input type="hidden" class="subject_id" value="{$subject_id}">
+    <div class="lessonSearch cf">
+        <ul class="myFileList">
+            <li><a class="cBtnSilver myFileMove" href="javascript:;" is_file="1" >移动</a></li>
+            {if $tab_name=='mine'}
+            <li><a class="cBtnSilver myFileChange" href="javascript:;" title="">转存</a></li>
+            {/if}
+            <li><a class="cBtnSilver myFileDelete" href="javascript:;" title="">删除</a></li>
+        </ul>
+        <a class="dropBoxup fr loginCheck" href="{$site_url}teacher/lesson/upload/{$subject_id}/{if $sub_cat_id}{$sub_cat_id}{else}{$cat_id}{/if}" target="_blank">
+        <span>上传文件赚积分</span>
+        </a>
+    </div>  
+    <table class="myFileTable">
+        <thead>
+            <tr>
+                <th width="400"><label for="allFile"><input type="checkbox" id="allFile" name="allFile" value="">名称</label></th>
+                <th width="50">格式</th>
+                <th width="60">分类</th>
+                <th width="80">创建日期</th>
+                <th width="50">来源</th>
+                <th width="50">权限</th>
+            </tr>
+        </thead>
+        <tbody>
+            {if $list}
+            {foreach $list as $key=>$val}
+            {if $tab_name=='mine'}
+            {include file="teacher/lesson/less_prep_mine_file_list_tpl.html"}
+            {elseif $tab_name=='fav'}
+            <tr>
+                <td><label for="{$val->id}"><input type="checkbox" id="{$val->id}" name="everyFile" value="checkbox"><a href="{$site_url}teacher/lesson/view/{alpha_id($val->id)}" title="{$val->file_name}">{sub_str($val->file_name,0,72)}</a></label></td>
+                <td>{$val->file_ext}</td>
+                <td>{Constant::resource_type($val->res_type)}</td>
+                <td>{date('Y-m-d',$val->add_time)}</td>
+                <td>收藏</td>
+                <td>公开</td>
+            </tr>
+            {/if}
+            {/foreach}
+            {/if}
+        </tbody>
+    </table>
+<!-- 我的文件 结束 -->
+<!--分页开始-->
+<div class="page cf">
+   {$pages}
+</div>
+<input type='hidden' class='current_page' value="{$cur_page}" />
+<!--分页结束-->

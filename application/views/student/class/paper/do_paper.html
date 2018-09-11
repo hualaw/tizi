@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{block name=title}{/block}-梯子网</title>
+<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="{$static_url}{$static_version}css/studentPaper/style.css" />
+{block name=stylesheet}{/block}
+</head>
+<body class="navClass">
+{include file='file:[lib]common/student/header.html'}
+{include file='file:[lib]common/student/nav.html'}
+<!--主要部分开始-->
+<div class="wrap layout studentPaper" id="tiziModule" module="studentPaper">
+    <!-- 正文代码开始 -->
+    <div class="stuPaperWrap">
+    	<div class="answerBox">
+			<p class="answerTime">作答时间：{$homework_starttime} 至 {$homework_deadline}</p>  
+			<p class="paperInfo">所有选择题必须在线作答，共 {count($questions)} 题，已完成 {$question_done_num} 题</p>
+			<input type="hidden" name="homework_id" value="{$zuoye_id}"/>
+			<input type="hidden" name="paper_id" value="{$paper_index}"/>
+            <p class="answerBtnBox">
+                <a href="javascript:void(0)" class="over">交卷</a>
+                <a href="javascript:void(0)" class="nextDo">下次接着做</a>
+            </p>
+            <div class="cf returnHomeworkList">
+                <a href="{$site_url}student/class/homework" class="fr">返回作业列表</a>
+            </div>
+            <div class="paperContent">
+				{$order = 1}
+				{foreach $questions as $question}
+				{if $question.is_online}
+				<div class="questionList question_{$question.id}">
+					<input type="hidden" class="q_id" value="{$question.id}" />
+					<p class="questionNum">第{$order++}题</p>
+					<p class="questionTitle">{$question.body}</p>
+                    <div class="answerArea">
+                        <p class="title">点击选择你的答案</p>
+						<span class="id">ID：{$question.id}</span>
+                        <div class="answerOption">
+                            <a href="javascript:void(0)">A</a>
+                            <a href="javascript:void(0)">B</a>
+                            <a href="javascript:void(0)">C</a>
+                            <a href="javascript:void(0)">D</a>
+                        </div>
+                    </div>                       
+                </div>
+				{else}
+                <div class="questionList">
+					<p class="questionNum">第{$order++}题</p>
+					<p class="questionTitle">{$question.body}</p>
+                    <div class="answerArea">
+                        <p class="title">本题请在纸上作答</p>
+						<span class="id">ID：{$question.id}</span>                        
+                    </div>                       
+                </div>
+				{/if}
+				{/foreach}
+            </div>
+            <p class="answerBtnBox noMb">
+                <a href="javascript:void(0)" class="over">交卷</a>
+                <a href="javascript:void(0)" class="nextDo">下次接着做</a>
+            </p>
+        </div>
+    </div>
+    <!-- 正文代码结束 -->
+</div>
+<!--主要部分结束-->
+{include file='file:[lib]common/student/footer.html'}
+<!-- js引入开始 -->
+<script type="text/javascript" src="{$static_url}{$static_version}public/sea/2.1.0/sea.js"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}public/config.js"></script>
+<!--js引入结束-->
+{block name=script}{/block}
+{include file='file:[lib]common/tizi_ga.html'}
+</body>
+</html>

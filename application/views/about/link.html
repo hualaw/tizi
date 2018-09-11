@@ -1,0 +1,25 @@
+{extends file='about/about_base.html'}
+
+{block name=title}{$page_name='map'}友情链接{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--内容start-->
+<div class="mainContainer" pagename="secLink">
+    <div class="secLink">
+        <div class="hd">
+        	<h2>友情链接</h2>
+        </div>
+        <div class="bd">
+			{foreach $links['text'] as $link}
+				<a href="{$link.url}" target="_blank">{$link.title}</a>
+			{/foreach}
+        </div>
+    </div>
+</div>
+<!--内容end-->
+{/block}
+{block name=script}
+{/block}

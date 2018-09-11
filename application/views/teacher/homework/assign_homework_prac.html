@@ -1,0 +1,268 @@
+            
+    <!-- 小学英语作业  开始 -->
+        {if $subject_id==21}
+            <span class="leftTitle">练习：</span>
+            <!-- 练习选择列表开始 -->
+            <div class="choiceWrap exerciseList">
+                {foreach $all_unit_info as $unit_id=>$games}
+                <!-- 单元一的table开始 -->
+                <table class="exerciseTable {if $games@iteration==1}active{/if}" unit="{$unit_id}">
+                    <!-- 5个分类的头部 -->
+                    <tr>
+                        <th> 外教视频
+                            <div class="topicalWrap cf">
+                                <div class="fl hoverBox workLink cf full">
+                                    <a  class="topicalLink ">重点词汇</a>
+                                    <!-- 重点词汇hover框开始 -->
+                                    <div class="hoverWrap waijiaoVideo word">
+                                        <iframe src="" class="coverBg" ></iframe>
+                                        <div class="hoverInner">
+                                            {if isset($videos_important[$unit_id]['word'])}
+                                            {foreach $videos_important[$unit_id]['word'] as $viws=>$viw}
+                                            <a >{$viw.body}</a>
+                                            {/foreach}
+                                            {/if}
+                                        </div>
+                                    </div>
+                                    <!-- 重点词汇hover框结束 -->
+                                </div>
+                            </div>
+                        </th>
+                        <th> 词汇练习
+                            <div class="topicalWrap cf">
+                                <div class="fl hoverBox workLink cf full">
+                                    <a  class="topicalLink ">重点词汇</a>
+                                    <!-- 重点词汇hover框开始 -->
+                                    <div class="hoverWrap lExercise word">
+                                        <iframe src="" class="coverBg" ></iframe>
+                                        <div class="hoverInner">
+                        {include file="teacher/homework/important_tpl.html"  ptype=2 itype=1  }
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- 重点词汇hover框结束 -->
+                                </div>
+                            </div>
+                        </th>
+                        <th> 听力练习
+                            <div class="topicalWrap cf">
+                                <div class="fl hoverBox workLink cf">
+                                    <a  class="topicalLink fr">重点词汇</a>
+                                    <!-- 重点词汇hover框开始 -->
+                                    <div class="hoverWrap lExercise word">
+                                        <iframe src="" class="coverBg" ></iframe>
+                                        <div class="hoverInner">
+                        {include file="teacher/homework/important_tpl.html"  ptype=3 itype=1  }
+                                        </div>
+                                    </div>
+                                    <!-- 重点词汇hover框结束 -->
+                                </div>
+
+                                <div class="fr hoverBox sentenceLink cf"> 
+                                    <a  class="topicalLink fl">重点句子</a>
+                                    <!-- 重点句子hover框开始 -->
+                                    <div class="hoverWrap lExercise sentence">
+                                        <iframe src="" class="coverBg" ></iframe>
+                                        <div class="hoverInner">
+                               {include file="teacher/homework/important_tpl.html"  ptype=3 itype=2  }
+                                        </div>
+                                    </div>
+                                    <!-- 重点句子hover框结束 -->
+                                </div>
+                            </div>
+                        </th>
+                        <th> 听说练习
+                            <div class="topicalWrap cf">
+                                <div class="fl hoverBox workLink cf">
+                                    <a  class="topicalLink fr">重点词汇</a>
+                                    <!-- 重点词汇hover框开始 -->
+                                    <div class="hoverWrap lrExercise word">
+                                        <iframe src="" class="coverBg" ></iframe>
+                                        <div class="hoverInner">
+                            {include file="teacher/homework/important_tpl.html"  ptype=4 itype=1  }
+                                        </div>
+                                    </div>
+                                    <!-- 重点词汇hover框结束 -->
+                                </div>
+                                <div class="fr hoverBox sentenceLink cf"> 
+                                    <a  class="topicalLink fl">重点句子</a>
+                                    <!-- 重点句子hover框开始 -->
+                                    <div class="hoverWrap lrExercise sentence">
+                                        <iframe src="" class="coverBg" ></iframe>
+                                        <div class="hoverInner">
+                            {include file="teacher/homework/important_tpl.html"  ptype=4 itype=2  }
+                                        </div>
+                                    </div>
+                                    <!-- 重点句子hover框结束 -->
+                                </div>
+                            </div>
+                        </th>
+                        <th> 语用练习
+                            <div class="topicalWrap cf">
+                                <div class="fl hoverBox workLink cf">
+                                    <a  class="topicalLink fr">重点句子</a>
+                                    <!-- 重点词汇hover框开始 -->
+                                    <div class="hoverWrap pragmaticsExercise word">
+                                        <iframe src="" class="coverBg" ></iframe>
+                                        <div class="hoverInner">
+                                 {include file="teacher/homework/important_tpl.html"  ptype=5 itype=2  }
+                                        </div>
+                                    </div>
+                                    <!-- 重点词汇hover框结束 -->
+                                </div>
+
+                                <div class="fr hoverBox sentenceLink cf"> 
+                                    <a  class="topicalLink fl">重点会话</a>
+                                    <!-- 重点句子hover框开始 -->
+                                    <div class="hoverWrap pragmaticsExercise sentence">
+                                        <iframe src="" class="coverBg" ></iframe>
+                                        <div class="hoverInner">
+                              {include file="teacher/homework/important_tpl.html"  ptype=5 itype=3  }
+                                        </div>
+                                    </div>
+                                    <!-- 重点句子hover框结束 -->
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                    <!-- 5个分类的头部 over -->
+
+                    <!-- 5个分类的实体 -->
+                    <tr>
+                    {foreach $games as $k=>$v}   <!-- 1个td就是一个列,5 columns in total -->
+                        {if $v@iteration == 1 }  <!-- 外教视频练习选项列表开始 -->
+                        <td> 
+                            {if isset($videos.$unit_id)}
+                            {foreach $videos.$unit_id as $vs=>$video}
+                            <div class="choiceItem multi videoChoice "  wj-unit-id="{$video->unit_id}">
+                                <input type="checkbox" id="{$video->id}"  />
+                                {$video->en_title}
+                                <a href="{$waijiao_url}lesson/index/{$video->id}" target="_blank">
+                                <img src="{$video->thumb_uri}" width='140px' height='92px' />
+                                </a>
+                            </div>
+                            {/foreach}
+                            {/if}
+                        </td>  <!-- 外教视频练习选项列表结束 -->
+                        {else}    <!-- 是游戏 -->
+                        
+                        {include file='teacher/homework/prac_type_entity_column.html'}
+
+                        {/if}
+                       
+                    {/foreach}  
+                         
+                    </tr>
+                    <!--  5个分类的实体 over -->
+                </table>
+                <!-- 单元一的table结束 -->
+                {/foreach}
+                <!-- ============================================================================== -->
+            </div>
+            <!-- 练习选择列表结束 -->
+        {/if}
+    <!-- 小学英语作业 结束 -->
+
+    <!--小学 非英语(数学 语文) 同步章节 游戏 开始-->
+        {if $cur_grade == 'pri' and $subject_id!=21}
+            <span class="leftTitle">练习：</span>
+            <div class="choiceWrap exerciseList">
+                {foreach $units as $uts=>$u}
+                <table class="exerciseTable maths {if $u@iteration==1}active{/if}" unit="{$u->id}">
+                    <!-- 某一个 小节  的开始 -->
+                    {if isset($u->chap) and is_array($u->chap) and $u->chap}
+                    {foreach $u->chap as $chaps=>$chapter}
+                    <tr class='tr_chap' chapid="{$chapter->id}">
+                        <td class="mTitle" chapid="{$chapter->id}"> 
+                            <span class="t">{$chapter->name}</span>
+                        </td>
+                        <td class="cf">
+                            <!-- game_type 循环这个div START-->
+                            {if $chapter->games}
+                            {foreach $chapter->games as $gtypes =>$g_type}
+                            <div class="choiceItem multi exerciseChoice ">
+                                <div class="checkWrapBox">
+                                    <input type="checkbox" id="{$g_type.game_type_name}">
+                                    {$g_type.game_type_name}
+                                </div>
+                                <table class="innerTable">
+                                    <tr>
+                                        <td>
+                                            {if $g_type.games}
+                                            {foreach $g_type.games as $gs =>$g}
+                                            {if $g@iteration==1}
+                                            <img src="{$static_url}image/common/game/game_name{$g.id}.png" alt="{$g.game_name}" class="gamePic" game_id="{$g.id}" chapid="{$chapter->id}" game_type="{$g.game_type}"/>
+                                            {/if}
+                                            {/foreach}
+                                            {/if}
+                                        </td>
+                                        <td>
+                                            <select class="exerciseSelect" name="" game_type_id="{$g_type.game_type}" >
+                                                {if $g_type.games}
+                                                {foreach $g_type.games as $gs =>$g}
+                                                <option value="{$g.id}" game_path={$g.game_path} game_data_type={$g.game_data_type} game_type="{$g.game_type}" >{$g.game_name}</option>
+                                               {/foreach}
+                                               {/if}
+                                           </select>
+
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            {/foreach}
+                            {/if}
+                            <!-- 循环这个div END-->
+                        </td>
+                    </tr>
+                    {/foreach}
+                     
+                    {/if}
+                    <!-- 某一个知识点的结束 -->
+                </table>
+                {/foreach}
+            </div>
+        {/if}
+    <!--小学 非英语(数学 语文) 同步章节 练习结束-->
+
+
+    <!--初中高中试卷包  开始-->
+        {if $cur_grade != 'pri'}
+            <span class="leftTitle">练习：</span>
+            <!-- 练习选择列表开始 -->
+            <div class="choiceWrap exerciseList">
+                {foreach $units as $uts=>$u}
+                <table class="exerciseTable maths {if $u@iteration==1}active{/if}" unit="{$u->id}">
+                    <!-- 某一个知识点的开始 -->
+                    {if isset($u->chap) and is_array($u->chap)}
+                    {foreach $u->chap as $chaps=>$chapter}
+                    <tr>
+                        <td class="mTitle" {$chapter->id}>
+                        <span class="t">{$chapter->name}</span>
+                        </td>
+                        <td class="cf">
+                            <!-- LOOP START -->
+                            {if $chapter->papers}
+                            {foreach $chapter->papers as $ps=>$p}
+                            <div class="choiceItem multi  exerciseChoice paperChoice file"  title="{$p.name}">
+                                <div class="node fl paperSelect" value='{$p.id}' {$p.name} >
+                                    <input type="checkbox" id="{$p.id}" class="fl">
+                                    <a href="{$site_url}zuoye/packages/{$p.id}" target="_blank" class="fl file"></a>
+                                </div>
+                                <span class="nodeTitle fl">
+                                    {sub_str($p.name,0,48)}
+                                </span>
+                            </div>
+                            {/foreach}
+                            {/if}
+                            <!-- loop END -->
+                        </td>
+                    </tr>
+                    <!-- 某一个知识点的结束 -->
+                    {/foreach}
+                    {/if}
+                </table>
+                {/foreach}
+            </div>
+        {/if}
+    <!--初高中 试卷包 结束-->

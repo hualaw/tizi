@@ -1,0 +1,146 @@
+<div class="uploadFile">
+	<div class="lessonNav">
+		<a href="javascript:;" title="">备课</a> / <a href="javascript:;" title="">上传文件</a>
+	</div>
+	<h3>上传文件</h3>
+	<!-- 上传前 开始 -->
+	<div class="uploadFileBox uploadBefore">
+		<div class="uploadInner">
+			<div class="uploadInnerBtn">
+				<a class="cBtnNormal chooseMyFile" href="javascript:;">选择我的文件</a>
+				<input type='text' name='shareFileUp' id='shareFileUp' class='choseFileTxt fl' disabled style="display:none" />
+				<input type="file" name="shareUpField" id="shareUpField_beta" class="file fl" multiple="true" style="display:none"/></span></a>
+			</div>
+			<p>每次最多可以选择5个文件同时上传</p>
+		</div>
+		<ul class="uploadNotice">
+			<li>上传须知</li>
+			<li>1、您可以上传日常积累和撰写的备课资料，每次最多上传5个文件，每个文件大小不超过200M；</li>
+			<li>2、上传时可设置文件为私有或共享权限，设置为共享的文件经过梯子网审核通过后，任何人将可以浏览或下载，<span>您将获得3个积分奖励</span>；</li>
+			<li>3、上传涉及侵权或违法内容的文档将会被移除。</li>
+		</ul>
+	</div>
+	<!-- 上传前 结束 -->	
+	<!-- 上传后 开始 -->
+	<div class="uploadFileBox uploadAfter">
+		<p class="uploadOver">3个文件上传完毕</p>
+		<ul class="upFileTable">
+		    <li id="file_num_0" class="fileList loadingBg cf">
+		        <strong style="width: 100%;">&nbsp;</strong>
+		        <span class="col1">语文：第18课《绿色蝈蝈》教案（人教新课标七年级上）.doc</span>
+		        <span class="col2">21.50 KB</span>
+		        <span class="col3"></span>
+		        <span class="col4"><a class="complete" href="javascript:;">100%</a></span>
+		        <span class="col5"><a class="UploadCancel onCancel" href="javascript:void(0);"></a></span>
+		    </li>
+		    <li id="file_num_0" class="fileList loadingBg cf">
+		        <strong style="width: 100%;">&nbsp;</strong>
+		        <span class="col1">语文：第18课《绿色蝈蝈》教案（人教新课标七年级上）.doc</span>
+		        <span class="col2">21.50 KB</span>
+		        <span class="col3"></span>
+		        <span class="col4"><a class="complete" href="javascript:;">100%</a></span>
+		        <span class="col5"><a class="UploadCancel onCancel" href="javascript:void(0);"></a></span>
+		    </li>
+		    <li id="file_num_0" class="fileList loadingBg cf">
+		        <strong style="width: 100%;">&nbsp;</strong>
+		        <span class="col1">语文：第18课《绿色蝈蝈》教案（人教新课标七年级上）.doc</span>
+		        <span class="col2">21.50 KB</span>
+		        <span class="col3"></span>
+		        <span class="col4"><a class="complete" href="javascript:;">100%</a></span>
+		        <span class="col5"><a class="UploadCancel onCancel" href="javascript:void(0);"></a></span>
+		    </li>
+		</ul>
+		<h4><span>①</span> 选择文件的上传位置</h4>
+		<div class="moveFile" id="moveFileTree">
+		    <form action="{$site_url}cloud/cloud/move" method="post" class="moveFileTreeForm">
+		        <!--文件夹开始-->
+		        <div class="fl textFolder">
+		            <h2>章节单元</h2>
+		            <div class="ChapterUnit" id="moveFolderList">
+		                <p>
+		                    <select name="" datatype="*" nullmsg="请选择章节单元" errormsg="请选择章节单元">
+		                        <option value="小学">小学</option>
+		                        <option value="初中">初中</option>
+		                        <option value="高中">高中</option>
+		                    </select>
+		                <span class="Validform_checktip"></span></p>
+		                <p>
+		                    <select name="" datatype="*" nullmsg="请选择章节单元" errormsg="请选择章节单元">
+		                        <option value="语文">语文</option>
+		                        <option value="数学">数学</option>
+		                        <option value="英语">英语</option>
+		                    </select>
+		                <span class="Validform_checktip"></span></p>
+		                <p>
+		                    <select name="" datatype="*" nullmsg="请选择章节单元" errormsg="请选择章节单元">
+		                        <option value="北师大版（2013）">北师大版（2013）</option>
+		                        <option value="人大版（2013）">人大版（2013）</option>
+		                    </select>
+		                <span class="Validform_checktip"></span></p>
+		                <p>
+		                    <select name="" datatype="*" nullmsg="请选择章节单元" errormsg="请选择章节单元">
+		                        <option value="一年级上">一年级上</option>
+		                        <option value="七年级上">七年级上</option>
+		                    </select>
+		                <span class="Validform_checktip"></span></p>
+		            </div>
+		            <!-- <input type="hidden" value="" name="dir_id" class="dir_id" datatype="*" nullmsg="请选择章节单元" errormsg="请选择章节单元"> -->
+		            <input type="hidden" value="" name="cat_id" class="cat_id">
+		        <span class="Validform_checktip"></span></div>
+		        <!--文件夹结束-->
+		        <!--目录开始-->
+		        <div class="fl textFolder">
+		            <h2>目录</h2>
+		            <div class="textView tree-list" id="moveCatalogueList">
+		                <div data-catelog="41106">
+		                    <a href="javascript:;" title="第一单元  我们都是科学家" data-to_dir_id="41107" class="depth_1">第一单元  我们都是科学家</a>
+		                    <a href="javascript:;" title="科学是……" data-to_dir_id="41108" class="depth_2">科学是……</a>
+		                </div>
+		                <div class="undis" data-catelog="cloud">
+		                    <a href="javascript:;" title="大大大大大大大大大大1223" data-to_dir_id="339" class="depth_1">大大大大大大大大大大1223</a>
+		                    <a href="javascript:;" title="语文说说" data-to_dir_id="260" class="depth_1">语文说说</a>
+		                </div>
+		            </div>
+		            <input type="hidden" value="" name="to_dir_id" class="to_dir_id" datatype="*" nullmsg="请选择目录" errormsg="请选择目录">
+		        <span class="Validform_checktip"></span></div>
+		        <!--目录结束-->
+		        <!--分类开始-->
+		        <div class="fl textFolder">
+		            <h2>分类</h2>
+		            <div class="textView" id="moveClassList">
+		                <div data-type="41106">
+		                    <a href="javascript:void(0);" data-type="1">教学设计</a>
+		                    <a href="javascript:void(0);" data-type="2">导学案</a>
+		                    <a href="javascript:void(0);" data-type="4">课件</a>
+		                    <a href="javascript:void(0);" data-type="5">素材</a>
+		                    <a href="javascript:void(0);" data-type="7">作业/习题</a>
+		                    <a href="javascript:void(0);" data-type="3">试卷</a>
+		                    <a href="javascript:void(0);" data-type="6">微课</a>
+		                    <a href="javascript:void(0);" data-type="8">其他</a>
+		                </div>
+		                <div class="undis" data-type="cloud">
+		                    <a href="javascript:void(0);" data-type="xx"></a>
+		                </div>
+		            </div>
+		            <input type="hidden" value="" name="type" class="to_type" datatype="*" nullmsg="请选择分类" errormsg="请选择分类">
+		        <span class="Validform_checktip"></span></div>
+		        <!--分类结束-->
+		    </form>
+		</div>
+		<h4><span>②</span> 设置文件权限</h4>
+		<div class="sharAllFile">
+            <label for="checkshareUp0">
+                <input type="radio" value="1" id="checkshareUp0" name="share" checked="checked">共享<span>（任何人可以阅读并下载，需经过梯子网审核，<em>审核通过即获赠3个积分</em>）</span>
+            </label>
+            <label for="checkshareUp">
+                <input type="radio" value="0" id="checkshareUp" name="share">私有<span>（仅自己可见）</span>
+            </label>
+        </div>
+        <div class="confirmUploadBox">
+        	<a class="cBtnNormal confirmUpload" href="javascript:;" title="">确认上传</a>
+        	<a class="cBtnSilver cancleUpload" href="javascript:;" title="">取消</a>
+        </div>
+		
+	</div>
+	<!-- 上传后 结束 -->
+</div>

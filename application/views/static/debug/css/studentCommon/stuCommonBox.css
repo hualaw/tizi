@@ -1,0 +1,30 @@
+/*workBox共有样式开始*/
+ .studentHederBar{border:5px solid #c2efd8;border-radius:10px;padding:10px 20px;background:url(../../image/studentHome/headerBar_bg.png) no-repeat 600px bottom}
+.studentHederBar h2{line-height:30px;font-size:14px;color:#333333;}
+.studentHederBar p{line-height:22px;font-size:12px;color:#333333;}
+.studentHederBar p em{margin-right:10px;}
+.studentHederBar p em.classNum{line-height:22px;font-size:16px;color:#f90;}
+.stuContentBox .msgBar{height:50px;background: url(../../image/studentHome/headerBar_word_bg.png) no-repeat center bottom;}
+.stuContentBox .allWorkNum{font-size: 14px;color:#333333;line-height: 30px;margin:10px 0 5px 0;}
+.stuCommonBox{margin-bottom:10px;border:1px solid #d7d7d7;border-radius:10px;-webkit-box-shadow: 0px 1px 0px #ccc;  -moz-box-shadow: 0px 1px 01px #ccc;  box-shadow: 0px 1px 0px #ccc;}
+.stuCommonBox h3{height:40px;background-color:#f6f6f6;color:#333333;line-height:40px;font-size:16px;text-indent:20px;
+	border-top-left-radius: 10px;border-top-right-radius: 10px;}
+.stuCommonBox .innerBox{padding:15px 35px ;}
+.stuCommonBox .innerBox .topMsg{border-bottom:1px solid #d7d7d7;padding-bottom:10px;}
+.stuCommonBox .innerBox div.noBorder{border-bottom:none}
+.stuCommonBox .topMsg p{line-height:28px;}
+.stuCommonBox .topMsg p em{margin-right:20px;}
+.stuCommonBox .topMsg p em.grey{color:#999;}
+.stuCommonBox .workMsg li.answer{margin:20px 0;line-height:40px;}
+.stuCommonBox .workMsg li.answer span{font-size:24px;line-height:36px;}
+.stuCommonBox .workMsg li.answer a{padding:4px 25px;margin-left:10px;font-size:14px;}
+.stuCommonBox .workMsg li.answer a:hover{color:#fff;}
+.stuCommonBox .workMsg li.deadline{margin-bottom:10px;}
+.stuCommonBox .workMsg li.deadline span{margin-right:20px;}
+.stuCommonBox .workMsg li.deadline .green{color:#09aa83;}
+.stuCommonBox .workMsg li.deadline .org{color:#f90;}
+.stuCommonBox .workMsg li.deadline .grey{color:#999;}
+.stuCommonBox .teacherRemark p{line-height:20px;}
+.stuCommonBox .teacherRemark p em{color:#09aa83;}
+.noContent{height:400px;background: url(../../image/studentHome/noContent_bg.png) no-repeat center 100px;}
+/*workBox共有样式结束*/

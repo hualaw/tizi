@@ -1,0 +1,42 @@
+.activityGaokaoShuatiBgBody{background:#def3f3;}
+.mobileQuestion{}
+.activityGaokaoShuati .loginBefore{ text-align: right;color:#fff;font-size: 14px;float: right;margin-right: 20px;}
+.activityGaokaoShuati .loginBefore a{color:#fff;}
+.activityGaokaoShuati .loginBefore span{margin: 0px 3px 0;}
+.activityGaokaoShuati .contentBox{background:url(../../image/mobile_question/contentBg.png) no-repeat center center #def3f3;}
+.activityGaokaoShuati .wordBox{width:660px;padding-top:40px;}
+.activityGaokaoShuati .wordBox h2{height:92px;line-height:92px;font-size:30px;padding-left:98px;font-weight:normal;color:#49a39f;background: url(../../image/mobile_question/h2Bg.png) no-repeat left center;}
+.activityGaokaoShuati .wordBox .bannerBox{height:250px; position:relative;}
+.activityGaokaoShuati .wordBox .bannerBox li{height:200px;width:490px;position:absolute;left:0;top:25px;display: none}
+.activityGaokaoShuati .wordBox .bannerBox li.current{display: block}
+.activityGaokaoShuati .wordBox .bannerBox li.li_1{background: url(../../image/mobile_question/p1.png) no-repeat center center;_background: url(../../image/mobile_question/p11-ie.png) no-repeat center center;}
+.activityGaokaoShuati .wordBox .bannerBox li.li_2{background: url(../../image/mobile_question/p2.png) no-repeat center center;_background: url(../../image/mobile_question/p2-ie.png) no-repeat center center;}
+.activityGaokaoShuati .wordBox .bannerBox li.li_3{background: url(../../image/mobile_question/p3.png) no-repeat center center;_background: url(../../image/mobile_question/p3-ie.png) no-repeat center center;}
+.activityGaokaoShuati .wordBox .bannerBox li.li_4{background: url(../../image/mobile_question/p4.png) no-repeat center center;_background: url(../../image/mobile_question/p4-ie.png) no-repeat center center;}
+.activityGaokaoShuati .wordBox .downloadBox a{height:100px;width: 277px;border-radius: 50px;display: inline-block;overflow: hidden}
+.activityGaokaoShuati .wordBox .downloadBox .android{margin-right:35px;background: url(../../image/mobile_question/androidIcon.png) no-repeat 25px center #5ac5c1;_background: url(../../image/mobile_question/androidIcon-ie.png) no-repeat 25px center #5ac5c1;}
+.activityGaokaoShuati .wordBox .downloadBox .iphone{margin-right:35px;background: url(../../image/mobile_question/iphoneIcon.png) no-repeat 25px center #a3c612;_background: url(../../image/mobile_question/iphoneIcon-ie.png) no-repeat 25px center #a3c612;}
+.activityGaokaoShuati .wordBox .downloadBox .android:hover{background-color: #3EA39F}
+.activityGaokaoShuati .wordBox .downloadBox .iphone:hover{background-color: #94B410}
+.activityGaokaoShuati .wordBox .downloadBox a span{width:277px;font-size:30px;color:#fff;text-indent:100px;height:36px;line-height:36px;margin-top:15px;}
+.activityGaokaoShuati .wordBox .downloadBox a em{width:277px;font-size:20px;color:#fff;text-indent:100px;height:26px;line-height:26px}
+.activityGaokaoShuati .wordBox .QRCode{margin:40px 0 0 20px;width:158px;height:158px;background: url(../../image/mobile_question/QRCode.png) no-repeat center center;}
+.activityGaokaoShuati .wordBox .announcement{padding-top:60px;width:419px;height:228px;background: url(../../image/mobile_question/ortherIcon.png) no-repeat center center;}
+.activityGaokaoShuati .wordBox .announcement h3{font-size:66px;text-align:center;font-weight: normal;color:#fff;line-height:90px;}
+.activityGaokaoShuati .wordBox .announcement p{font-size:30px;text-align:center;;color:#fff;line-height:60px;}
+.activityGaokaoShuati .phoneBox{width:300px;padding-top:40px;}
+.activityGaokaoShuati .phone{position:relative;width:297px;height:577px;background: url(../../image/mobile_question/phoneBg.png) no-repeat left center;_background: url(../../image/mobile_question/phoneBg-ie.png) no-repeat left center;}
+.activityGaokaoShuati .phoneBox .pointerBox{width: 297px;text-align:center;margin-top:20px;}
+.activityGaokaoShuati .phoneBox .pointerBox ul{display: inline-block;*+padding-left:70px;}
+.activityGaokaoShuati .phoneBox .pointerBox li{cursor:pointer;margin:0 10px;width:20px;height:30px;line-height:30px;text-indent: -9999px;background: url(../../image/mobile_question/pointerIcon.png) no-repeat -4px center;display: inline-block;}
+.activityGaokaoShuati .phoneBox .pointerBox li.active{background: url(../../image/mobile_question/pointerIcon.png) no-repeat -44px center;}
+.activityGaokaoShuati .phoneBox .moveBox{position:absolute;top:55px;left:16px;width:264px;overflow: hidden;height:469px;}						
+.activityGaokaoShuati .phoneBox .move{position:absolute;top:0px;left:0px;width:1056px;height: 469px;background: url(../../image/mobile_question/move.png) no-repeat center center;}
+
+
+
+
+
+
+
+

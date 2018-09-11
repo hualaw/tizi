@@ -1,0 +1,1 @@
+define("module/common/ajax/unlogin/childBinding",[],function(){return $(".bindChildForm").Validform().resetStatus(),$(".bindChildForm").submit(),!1});

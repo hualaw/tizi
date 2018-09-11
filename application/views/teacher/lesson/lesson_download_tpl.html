@@ -1,0 +1,18 @@
+<div id="confirmDownLoad" class="undis">
+<div class="teacherLesson">
+    <!--<form action="#" method="post" class="paperDownloadsForm_beta">-->
+        <div class='docDownloadBox cf'>
+            <h2 class="{$data.preview->ico_class}">{if isset($data.preview->file_name)}{$data.preview->file_name}{/if}</h2>
+            <p>大小：<span class="size">{if   isset($data.preview->file_size)}{$data.preview->file_size}{/if} </span> 格式：<span class="ext">{if isset($data.preview->extension)}{$data.preview->extension}{/if}</span></p>
+			<div class="commonCaptcha cf docCaptchaWord undis" >
+                <span class="fl">验证码：</span>
+                <input type="hidden" name="captcha_name" class="DocDownBox_tpl" value="DocDownBox_tpl" />
+                <input type="text" name="captcha_word" class="DocDownBoxWord_tpl cInput fl" placeholder='请输入验证码' />
+                <img class="fl imgCaptcha changeCaptcha" />
+				<span class="changeCaptcha">换一张</span>
+            </div>
+        </div>
+        <!-- <p>您本月还可以下载{$data.surplus_download_count}份文件</p> -->
+	</div>
+    <!--</form>-->
+</div>

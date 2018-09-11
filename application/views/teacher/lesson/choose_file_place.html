@@ -1,0 +1,84 @@
+
+                        <!--文件夹开始-->
+                        <div class="fl textFolder">
+                            <h2 style="margin-left: 20px;">章节单元</h2>
+                            <div class="ChapterUnit" id="moveFolderList">
+                                <p>
+									{if isset($data1.grade_id)}
+                                    <select name="grade" class="s_grade" datatype="*" nullmsg="请选择学段" errormsg="请选择学段">
+                                    <option value ="" {if $data1.grade_id eq ''}selected="selected"{/if}>请选择学段</option>
+                                    <option value ="1" {if $data1.grade_id eq '1'}selected="selected"{/if}>小学</option>
+                                    <option value ="2" {if $data1.grade_id eq '2'}selected="selected"{/if}>初中</option>
+                                    <option value ="3" {if $data1.grade_id eq '3'}selected="selected"{/if}>高中</option>
+                                    </select>
+									{else}
+									<select name="grade" class="s_grade" datatype="*" nullmsg="请选择学段" errormsg="请选择学段">
+                                    <option value ="">请选择学段</option>
+                                    <option value ="1">小学</option>
+                                    <option value ="2">初中</option>
+                                    <option value ="3">高中</option>
+                                    </select>
+									{/if}
+                                <span class="Validform_checktip"></span></p>
+                                <p>
+                                    <select name="subject_type" class="s_subject" datatype="*" nullmsg="请选择学科" errormsg="请选择学科">
+                                        <option value ="">请选择学科</option>
+										{if isset($data1.subject_list)}
+                                        {foreach $data1.subject_list as $sub}
+                                        <option value ="{$sub->id}" {if $sub->id eq $data1.subject_id }selected="selected"{/if}>{$sub->name}</option>
+                                        {/foreach}
+										{/if}
+                                    </select>
+                                <span class="Validform_checktip"></span></p>
+                                <p>
+                                    <select name="version" class="s_version" datatype="*" nullmsg="请选择版本" errormsg="请选择版本">
+                                        <option value ="">请选择版本</option>
+										{if isset($data1.version_list)}
+                                        {foreach $data1.version_list as $v}
+                                        <option value ="{$v->id}" {if $v->id eq $data1.version_id }selected="selected"{/if}>{mb_substr($v->name,4)}</option>
+                                        {/foreach}
+										{/if}
+                                    </select>
+                                <span class="Validform_checktip"></span></p>
+                                <p>
+                                    <select name="stage" class="s_stage" datatype="*" nullmsg="请选择年级" errormsg="请选择年级">
+                                        <option value ="">请选择年级</option>
+										{if isset($data1.stage_list)}
+                                        {foreach $data1.stage_list as $stage}
+                                        <option value ="{$stage->id}" {if $stage->id eq $data1.stage_id }selected="selected"{/if}>{$stage->name}</option>
+                                        {/foreach}
+										{/if}
+                                    </select>
+                                <span class="Validform_checktip"></span></p>
+                            </div>
+
+                            </div>
+                        <!--文件夹结束-->
+                        <!--目录开始-->
+                        <div class="fl textFolder">
+                            <h2>目录</h2>
+                            <div class="textView tree-list" id="moveCatalogueList">
+                                <a href="javascript:void(0)" title="全部" data-source="node" class="depth_1 {if isset($data1.stage_id)&&isset($data1.node_id)&& $data1.stage_id eq $data1.node_id}active{/if}" data-nselect="{if isset($data1.stage_id)}{$data1.stage_id}{/if}">全部</a>
+                                {if isset($data1.node_list)}
+								{foreach $data1.node_list as $node_val}
+                                <a href="javascript:void(0)" title="{$node_val['name']}" data-source="node" class="depth_{$node_val['depth']} {if isset($data1.node_id) && $node_val['id'] eq $data1.node_id}active{/if}" data-nselect="{$node_val['id']}">{sub_str($node_val['name'],0,30)}</a>
+                                {/foreach}
+								{/if}
+                            </div>
+                            <input type="hidden" value="{if isset($data1.node_id)}{$data1.node_id}{/if}" name="to_dir_id" class="to_dir_id" datatype="*" nullmsg="请选择目录" errormsg="请选择目录">
+                        <span class="Validform_checktip"></span></div>
+                        <!--目录结束-->
+                        <!--分类开始-->
+                        <div class="fl file-type textFolder" style="{if !isset($data1.node_id)}display:none;{/if}">
+                            <h2>分类</h2>
+                            <div class="textView">
+                                <div>
+                                    {foreach $data1.type_list as $type_key=>$type_val}
+                                        <a href="javascript:void(0);" {if isset($data1.current_file_type) && $data1.current_file_type eq $type_key}class="active"{/if}  data-source="type" data-type="{$type_key}">{$type_val}</a>
+                                    {/foreach}
+                                </div>
+                            </div>
+                            <input type="hidden" value="{if isset($data1.current_file_type)}{$data1.current_file_type}{/if}" name="type" class="to_type" datatype="*" nullmsg="请选择分类" errormsg="请选择分类">
+                        <span class="Validform_checktip"></span></div>
+                        <!--分类结束-->
+                

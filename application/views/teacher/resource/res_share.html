@@ -1,0 +1,184 @@
+<!-- 新建文件夹 -->
+<div id="creatNewFlie" class="pop_box">
+    <form class="creatNewFileForm_beta" action="{$site_url}teacher/cloud/mkdir" method="post">
+        <input type='hidden' name='cur_dir_id' value='' class='create_folder'/>
+        <div class="teacherResource">
+            <div class="pop_main">
+                <ul>
+                    <li class="cf">
+                        <span class="fl">名称：</span><input class="new_class_text fl" type="text" id="create_fileName" name='dir_name'/>
+                        <span class="Validform_checktip fl"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <input type="submit" class="undis" />
+    </form>
+</div>
+<!--分享文件 - 无班级可分享 -->
+<input type='hidden' class='has_class' value='{if empty($classes)}0{else}1{/if}'/>
+{if empty($classes)}
+<div id="shareFliesBox_noClass" class="pop_box">
+    <form class="shareFliesForm_beta" action="{$site_url}class/create" method="post">
+        <div class="teacherResource">
+            <div class="pop_main">
+                <h4>您可以将文件分享给你所在班级的学生，请创建完班级后进行分享。</h4>
+                <ul>
+                    <li class="cf">
+                        <a id="createClassNow" class="cBtnNormal" href="{$site_url}teacher/class/my"><span>立即创建班级</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <input type="submit" class="undis" />
+    </form>
+</div>
+<!--分享文件 - 无班级可分享 over-->
+{else}
+<!--  分享弹出框 - 有班级分享 -->
+<div id="shareFliesBox_hasClass" class="pop_box">
+    <form class="shareFliesHasClassForm_beta" action="{$site_url}teacher/cloud/share" method="post">
+        <input type='hidden' class='get_file_id' name='file_id' value='' />
+        <div class="teacherResource">
+            <div class="pop_main">
+                <h4>分享的班级</h4>
+                <div class="shareClass">
+                    <ul class="classes cf">
+                        {foreach $classes as $key=>$val}
+                        <li><label for="{$val.alpha_id}"><input name="class[]" value={$val.alpha_id} id="{$val.alpha_id}" type="checkbox" />{$val.class_name}</label></li>
+                        {/foreach}
+                    </ul>
+                    <span class="Validform_checktip"></span>
+                </div>
+                <p>文件描述（500字以内）</p>
+                <div class="fileDisc">
+                    <textarea id="shareFileTxtDis" name='desc'></textarea>
+                    <span class="Validform_checktip"></span>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!--  分享弹出框 - 有班级分享 over -->
+{/if}
+ 
+ <!-- 分享文件 start  -->
+<div id="moveFilePop" class="pop_box">
+    <div class="teacherResource new_tree"></div>
+</div>
+<div id="moveDirPop" class="pop_box">
+    <div class="teacherResource new_dir_tree"></div>
+</div>
+<!-- 分享文件夹 over -->
+
+<!-- 重命名文件 -->
+<div id="resetFileNamePop" class="pop_box">
+    <form class="resetFileNameForm_beta" action="{$site_url}teacher/cloud/rename" method="post">
+        <input type='hidden' class='is_file' value='0' name='is_file'/>
+        <input type='hidden' class='rename_id' value='0' name='id'/>
+        <div class="teacherResource">
+            <div class="pop_main">
+                <ul>
+                    <li class="cf">
+                        名称：<input class="new_class_text" type="text" id="resetFileNameTxt" value='' name='name'/>
+                        <span class="Validform_checktip"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <input type="submit" class="undis" />
+    </form>
+</div>
+
+<!-- 共享给梯子网开始 -->
+<div id="sharAllFilePop" class="pop_box">
+    <form class="sharAllFileForm_beta" action="{$site_url}resource/share_to_tizi/add" method="post">
+        <input type="hidden" class="shareAll_fileId" value="" name="file_id">
+        <div class="teacherCloud">
+            <div class="pop_main">
+                <div class="sharAllFile">
+                    <label for="checkshare">
+                        <input type="checkbox" value="" id="checkshare"/>我愿意将此文件共享给梯子网
+                    </label>
+                    <span class="Validform_checktip"></span>
+                    <p>将文件设置为共享，梯子网将可以公开使用您的文档。</p>
+                </div>
+            </div>
+        </div>
+        <input type="submit" class="undis" />
+    </form>
+</div>
+<!-- 共享给梯子网结束 -->
+<!-- 上传文件列表开始 -->
+<div id="fileListUploadPop" class="pop_box">
+    <!--控制上传到哪个文件件下面-->
+    <input type='hidden' class='current_dir_id' data-fname="" value='0' />
+    <form class="fileListUploadForm" action="{$site_url}resource/share_to_tizi/add" method="post">
+        <input type="hidden" class="fileShare" value="" name="fileShare">
+        <input type="hidden" class="fileIdList" value="" name="fileIdList">
+        <div class="teacherResource">
+            <div class="pop_main">
+                <div class="fileListUpload">
+                    <p class="fileListTip">您每次最多可以选择5个文件同时上传</p>
+                    <div class="uploadBtn">
+                        <!--上传组件开始-->
+                        <a id="upDropFile" class="cBtnNormal" href="javascript:void(0);">
+                            <span>上传文件</span><em></em>
+                        </a>
+                        <div class="uploadSwf">
+                            <input type='text' name='shareFileUp' id='shareFileUp' class='choseFileTxt fl' disabled style="display:none" />
+                            <input type="file" name="shareFileUpField" id="shareFileUpField" class="file fl" multiple="true" style="display:none"/>
+                        </div>
+                        <!--上传组件结束-->
+                    </div>
+                </div>
+                <!--提示队列开始-->
+                <div class="fileListQueue">
+
+                </div>
+                <!--提示队列结束-->
+                <!--共享提示开始-->
+                <div class="sharAllFile">
+                    <label for="checkshareUp0">
+                        <input type="radio" value="1" id="checkshareUp0" name="share" checked="checked"/>将此文件共享给梯子网<span>(我们会在文档中注明由谁上传)</span>
+                    </label>
+                    <label for="checkshareUp">
+                        <input type="radio" value="0" id="checkshareUp" name="share"/>此文件仅限我自己使用
+                    </label>
+                </div>
+                <!--共享提示结束-->
+            </div>
+        </div>
+        <input type="submit" class="undis" />
+    </form>
+</div>
+<!-- 上传文件列表结束 -->
+<!-- 弹出框结束 -->
+<input type="hidden" id="class_id" value="" /> <!-- 删了就出js错误 -->
+<script type="text/template" id="upFilePop">
+    <!--上传文件 ing 进度显示框  -->
+    <div class="teacherResource">
+        <div class="pop_main">
+            <ul class="upFileTable">
+                <!--<li class="UFHeader cf">-->
+                    <!--<span class="col1">文件名</span>-->
+                    <!--<span class="col2">大小</span>-->
+                    <!--<span class="col3">上传目录</span>-->
+                    <!--<span class="col4">状态</span>-->
+                    <!--<span class="col5">操作</span>-->
+                <!--</li>-->
+                <%#files%>
+                <li id="file_num_<%queue_id%>" class="fileList loadingBg cf">
+                    <strong>&nbsp;</strong>
+                    <span class="col1"><%file_name%></span>
+                    <span class="col2"><%size%></span>
+                    <span class="col3"><%cdir%></span>
+                    <span class="col4"><a class="complete" href="javascript:;">排队中...</a></span>
+                    <span class="col5"><a class="UploadCancel onCancel" href="javascript:$('#shareFileUp').uploadify('cancel','<%file_id%>');">x</a></span>
+                </li>
+                <%/files%>
+            </ul>
+        </div>
+    </div>
+</script>
+{include file='file:[lib]common/tizi_flash.html' assign=noflash}

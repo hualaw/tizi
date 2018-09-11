@@ -1,0 +1,90 @@
+{extends file='cloud/share_view_base.html'}
+{block name=title}文件预览{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+{$source_url = $static_base_url}
+<!--主要部分开始-->
+<div class="wrap layout teacherClass teacherClassPrev"  id="tiziModule" module="teacherClass">
+<div style="display:none;" id="docnum" data-source="cloud" data-ext="{$file.file_ext}">{$file.file_id}</div>
+<div class="preview">
+	<div class="hd">
+	    <h2>{$file.file_name}</h2>
+         {if !$file_detail}
+         <input type="hidden" class="alpha_class_id" value="{$class_id}">
+	    <p class="inf">
+	        <span>观看({$file.hit_count})</span>
+	        <span>下载({$file.download_count})</span>
+	        <span>分享时间：{date('Y-m-d H:i',$file.create_time)}</span>
+	    </p>
+	    <p><a class="cBtnNormal downloadFile" href='javascript:;' is_qiniu='0' file_name='{$file.file_name}' file_id='{$file.file_id}'><span>下载</span></a></p>
+        {/if}
+	</div>
+	<div class="bd posr fullView" id="flashContent">  
+    </div>
+    </div>
+</div>
+<!--主要部分结束-->
+{/block}
+{block name=script}
+	    <script type="text/javascript">
+            seajs.use('module/teacherCloud/cloud_doc_preview',function(main){
+                var swfversion = "{$swfversion}";
+                var jsversion = "{$version}";
+                main.swfObjectInit(swfversion,jsversion);
+            });
+            var Teacher = {};
+            Teacher.UserCenter={};
+            Teacher.UserCenter.docLib={
+                swfObjectHeight:"",
+                flash_init:function(){
+					var docInfoObj = document.getElementById("docnum");
+                    var docnum = docInfoObj.innerHTML;
+                    var arrayInit = new Array();
+                    arrayInit[0] = baseUrlName + 'cloud/cloud/flash_get_json';
+                    arrayInit[1] = staticBaseUrlName+'flash/cloudFlash/';
+                    arrayInit[2] = docnum;
+                    arrayInit[3] = basePageToken;
+                    arrayInit[4] = basePageName;
+                    arrayInit[5] = 1000;//-134
+                    arrayInit[6] = this.swfObjectHeight;
+					arrayInit[7] =['doc','docx'];
+					arrayInit[8] =['ppt','pptx'];
+                    return arrayInit;
+                },
+				document_download:function(file_id, unlock){
+					seajs.use('module/teacherCloud/cloud_doc_preview',function(main){
+						main.shareDocDown(file_id, unlock);
+					});
+				}
+				
+            }
+		</script>
+		<noscript>
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  id="TiZiPaper" name="TiZiPaper">
+			<param name="movie" value="{$static_base_url}flash/cloudFlash/TiZiPaper.swf{$version}" />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<param name="allowFullScreen" value="true" />
+			<param name="wmode" value="transparent">
+			<param name="wmode" value="Opaque">
+			<!--[if !IE]>-->
+			<object type="application/x-shockwave-flash" data="{$static_base_url}flash/cloudFlash/TiZiPaper.swf{$version}" id="TiZiPaper" name="TiZiPaper">
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="allowScriptAccess" value="sameDomain" />
+				<param name="allowFullScreen" value="true" />
+				<param name="wmode" value="transparent">
+				<param name="wmode" value="Opaque">
+			<!--<![endif]-->
+				{include file='file:[lib]common/tizi_flash.html'}
+			<!--[if !IE]>-->
+			</object>
+			<!--<![endif]-->
+		</object>
+		</noscript>
+	</div>
+</div>
+{include file='file:[lib]common/tizi_flash.html' assign=noflash}
+{/block}

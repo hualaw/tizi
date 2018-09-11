@@ -1,0 +1,10 @@
+<!--添加我的资源库顶部导航开始-->
+<div class="hd_title">
+    <div class="fl">
+        <a class="cgr" href="{$site_url}teacher/cloud">教学网盘</a>&gt;
+        <a class="cgr" {if isset($sub_name) and $sub_name}href="{$site_url}teacher/cloud/res/res_dir/{$dir_cat_id}"{/if}>{$dir_name}</a>
+        {if isset($sub_name) and $sub_name}&gt;<a class="cgr"  >{$sub_name}</a>{/if}
+    </div>
+     <div class="capacity fr">容量&nbsp;<strong><span cap="55" style="width:{$statistics.cloud_storage.percentage};"></span></strong>&nbsp;{$statistics.cloud_storage.use_storage} / {$statistics.cloud_storage.total_storage}</div>
+</div>
+<!--添加我的资源库顶部导航结束-->

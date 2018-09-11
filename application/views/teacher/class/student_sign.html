@@ -1,0 +1,40 @@
+{extends file='login/base.html'}
+
+{block name=title}绑定用户名{/block}
+
+{block name=stylesheet}{/block}
+
+{block name=container}
+<!--主要部分开始-->
+<!-- 学生注册开始 -->
+<div class="layout">
+  <div class="ml20">
+    <!-- 初次使用学号登录开始 -->
+      <div class="firstLogin layout">
+        <h2 class="stuFirstH2">欢迎使用梯子网</h2>
+        <p class="info">初次登录，给自己起一个容易记住的用户名，用于以后登录梯子网。比如：xiaoming、xiaoming123</p>
+        <form class="firstLoginForm cf" action="{$site_url}register/student_sign/submit" method="post">
+          <ul>
+            <li>
+                <input type="text" name="username" class="cInput firstLoginName" placeholder='请输入用户名' />
+            </li>
+            <li>
+                <input type="text" name="urname" value="{$create['student_name']}" class="cInput firstLoginURname" placeholder="{if $create['student_name']}{else}请输入真实姓名{/if}"/>
+            </li>
+          </ul>
+        <input type="submit" class="submit" value="保存" />
+        </form>
+        </div>
+      </div>
+      <!-- 初次使用学号登录结束 -->
+  </div>
+</div>
+<!-- 学生注册结束 -->
+{/block}
+
+{block name=script}
+<script type="text/javascript">
+// 调用第一次登录梯子网验证
+Common.valid.firstLogin();
+</script>
+{/block}

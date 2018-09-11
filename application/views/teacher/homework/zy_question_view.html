@@ -1,0 +1,68 @@
+{extends file='teacher/homework/base.html'}
+
+{block name=title}布置作业{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="wrap layout teacherPaper" id="tiziModule" module="teacherPaper">
+    <!-- 正文代码开始 -->
+    <div class="teacerPaperWrap">
+    	<div class="handIn_answerBox">
+			<p class="answerTime">作业预览</p>  
+			<p class="paperInfo">所有选择题必须在线作答，共 {count($q_list)} 题</p>
+			<input type="hidden" name="assign_id" value=""/>
+
+            {foreach $q_list as $qs=>$q}
+            <div class="paperContent questionList">
+				<input type="hidden" class="q_id" value="" />
+				<p class="questionNum">第{$q@iteration}题</p>
+				<p class="questionTitle">{$q.body}</p>
+				<!-- <div class="options">
+					<p>A、垂线段</p>
+					<p>B、垂线的长</p>
+					<p>C、长度</p>
+					<p>D、垂线段的长</p>
+				</div> -->
+                <div class="answerArea">
+                     
+                    {if $q.qtype_id!=3}
+                    <p class="title">本题请在纸上作答</p>
+                    <div class="analyticalBox">
+                        {if $is_paper}
+                        <p class="title">答案：</p>
+                        {/if}
+                        <p>{$q.answer_text}</p>
+                    </div>
+                    <div class="analyticalBox">
+                        {if $is_paper}
+                        <p class="title">解析：</p>
+                        {/if}
+                        <p>{$q.analysis_text}</p>
+                    </div>
+                    {else}
+                    <!-- <p class="title">正确答案是</p> -->
+					<span class="id">ID：{$q.qid}</span>
+                    <div class="answerOption">
+                        <a class="active">{$q.asw}</a>
+                    </div>
+                    <div class="analyticalBox">
+                        {if $is_paper}
+	                	<p class="title">解析：</p>
+                        {/if}
+	                	<p>{$q.analysis_text}</p>
+	                </div>
+                    {/if}
+                     
+                </div> 
+            </div>
+            {/foreach}
+        </div>
+    </div>
+    <!-- 正文代码结束 -->
+</div>
+
+{/block}
+{block name=script}
+{/block}

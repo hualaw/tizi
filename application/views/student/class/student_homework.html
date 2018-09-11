@@ -1,0 +1,161 @@
+{extends file='student/class/base.html'}
+{block name=title}作业{/block}
+{block name=container}
+<div class="mainContainer" pagename="stuClassHomeWork">
+    <div class="stuClassBox stuTable homeWorkTable">
+        <table>
+            <tr>
+                <th class="sub">学科</th>
+                <th class="time">时间</th>
+                <th class="bookName">教材</th>
+                <th class="unit">包含单元</th>
+                <th class="results">成绩</th>
+                <th class="state">状态</th>
+                <th class="comment">评语</th>
+                <th class="operation">操作</th>
+            </tr>
+            {foreach $student_zuoye as $zuoye}
+             <tr>
+                 <td>
+                     {$zuoye.subject_name}
+                     <input type="hidden" name="homework_id" value="{$zuoye.id}"/>
+                 </td>
+                 <td class="time">{$zuoye.assign_start_date} 至 {$zuoye.assign_end_date}</td>
+                 <td>{if $zuoye.banbens}{$zuoye.banbens}{else}--{/if}</td>
+                 <td>{if $zuoye.units}{$zuoye.units}{else}--{/if}</td>
+                 <td>{if $zuoye.is_complete == 2}{$zuoye.score}{else}--{/if}</td>                 
+                <td>{$zuoye.complete_status}</td>
+                <td class="comment">
+                    {if empty($zuoye.content)}
+                        --
+                    {else}
+                        <span class="undis comment_content">{$zuoye.content}</span><a href="javascript:void(0)">查看</a>
+                    {/if}
+                </td>
+                <td class="operation">
+                    <div class="posr">
+                        {if $zuoye.is_complete != 2}
+                        {if $zuoye.assign_end_time < time()}
+                        <a href="javascript:void(0)" class="starBtn popBtn">补做作业</a>
+                        {else}
+                        <a href="javascript:void(0)" class="starBtn popBtn">开始作业</a>
+                        {/if}
+                        <div class="stuHomeWork">
+                            <h2>任务：{$zuoye.task_num_completed}/{$zuoye.task_num}</h2>
+                                <ul class="cf">
+                                    {foreach $zuoye.videos as $video}
+                                    <li class="fl">
+                                        <a href="javascript:void(0)" class="img fl">
+                                            <img src="{$video.thumb_uri}" alt="">
+                                        </a>
+                                        <span class="name fl">外教视频</span>
+                                        {if $video.is_complete}
+                                        <a href="javascript:void(0)" class="mask"></a>
+                                        <em class='wcIcon'>完成</em>
+                                        {else}
+                                        <a href="{$video.video_link}" class="cBtnNormal starBtn watch_video" videoId={$video.id}>开始作业</a>
+                                        {/if}
+                                    </li>
+                                    {/foreach}
+                                    {foreach $zuoye.games as $game}
+                                    <li class="fl">
+                                        <a href="javascript:void(0)" class="img fl">
+                                            <img src="{$static_url}image/common/game/game_name{$game.id}.png" alt="">
+                                        </a>
+                                        <span class="name fl">{$game.game_name}</span>
+                                        {if $game.is_complete}
+                                        <a href="javascript:void(0)" class="mask"></a>
+                                        <em class='wcIcon'>完成</em>
+                                        {else}
+                                        <a href="{$site_url}student/homework/game/{$zuoye.id}/{$game.game_index}" target="_blank" class="cBtnNormal starBtn">开始作业</a>
+                                        {/if}
+                                    </li>
+                                    {/foreach}
+                                    {foreach $zuoye.papers as $paper}
+                                    <li class="fl">
+                                    <a href="javascript:void(0)" class="img">
+                                        <img src="{$static_url}{$static_version}image/studentClass/homeWImg1.png" alt="">
+                                    </a>
+                                    <span class="name">{$paper.name}</span>
+                                    {if $paper.is_complete}
+                                    <a href="javascript:void(0)" class="mask"></a>
+                                    <em class='wcIcon'>完成</em>
+                                    {else}
+                                    <a href="{$site_url}student/homework/paper/{$zuoye.id}/{$paper.id}" class="cBtnNormal starBtn" >开始作业</a>                                    
+                                    {/if}
+                                    </li>
+                                    {/foreach}
+                                </ul>
+                        </div>
+                        {else}
+                        {if isset($zuoye.papers) && !empty($zuoye.papers)}
+                        <a href="javascript:void(0)" class="starBtn popBtn">查看答案</a>
+                        <div class="stuHomeWork">
+                            <ul class="cf">
+                                {foreach $zuoye.papers as $paper}
+                                <li class="fl">
+                                    <a href="javascript:void(0)" class="img">
+                                        <img src="{$static_url}{$static_version}image/studentClass/homeWImg1.png" alt="">
+                                    </a>
+                                    <span class="name">{$paper.name}</span>
+                                    <a href="{$site_url}student/homework/paper/report/{$zuoye.id}/{$paper.id}" target="_blank" class="cBtnNormal starBtn" >查看答案</a>                                    
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                        {else}
+                        --
+                        {/if}
+                        {/if}
+                    </div>
+                </td>
+            </tr>
+            {/foreach}
+        </table>
+        <div class="page cf">
+            <div class="fr">{$pagination}</div>
+        </div>
+    </div>
+    <div class="lookReviewsPop undis">
+        <div class="lookReviews">
+            <p>--</p>
+        </div>
+    </div>
+    <div class="stuHomeWorkPop undis">
+        <div class="stuHomeWork">
+            <h2>任务：1/4</h2>
+                <ul class="cf">
+                    <li class="fl">
+                        <a href="javascript:void(0)" class="img">
+                            <img src="{$static_url}{$static_version}image/studentClass/img1.png" alt="">
+                        </a>
+                        <span class="name">外教视频</span>
+                        <a href="javascript:void(0)" class="cBtnNormal starBtn">开始作业</a>
+                    </li>
+                    <li class="fl">
+                        <a href="javascript:void(0)" class="img">
+                            <img src="{$static_url}{$static_version}image/studentClass/img2.png" alt="">
+                        </a>
+                        <span class="name">看图选择</span>
+                        <a href="javascript:void(0)" class="cBtnNormal starBtn">开始作业</a>
+                    </li>
+                    <li class="fl">
+                        <a href="javascript:void(0)" class="img">
+                            <img src="{$static_url}{$static_version}image/studentClass/img3.png" alt="">
+                        </a>
+                        <span class="name">单词辨识</span>
+                        <a href="javascript:void(0)" class="cBtnNormal starBtn">开始作业</a>
+                    </li>
+                    <li class="fl">
+                        <a href="javascript:void(0)" class="img">
+                            <img src="{$static_url}{$static_version}image/studentClass/img3.png" alt="">
+                        </a>
+                        <span class="name">单词辨识</span>
+                        <a href="javascript:void(0)" class="mask"></a>
+                        <em class='wcIcon'>完成</em>
+                    </li>                        
+                </ul>
+        </div>
+    </div>
+</div>
+{/block}

@@ -1,0 +1,1 @@
+define("module/teacherUnLogin/init",[],function(){var _unLoginPage=$("body").attr("class");switch(_unLoginPage){case"navClass":seajs.use("module/teacherUnLogin/class");break;case"navLesson":seajs.use("module/teacherUnLogin/lesson");break;case"navPaper":seajs.use("module/teacherUnLogin/paper");break;case"classInvite":seajs.use("module/teacherUnLogin/invite")}});

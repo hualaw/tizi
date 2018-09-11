@@ -1,0 +1,97 @@
+.teacherPaper{}
+/*已存档试卷样式开始*/
+.teacherPaper .paperArchive .total{font-size:18px;color:#565656;margin-bottom:10px;}
+/*表格公共样式开始*/
+.teacherPaper table{width:100%;border:1px solid #d7d7d7;font-size:14px;}
+.teacherPaper table a{color: #17a27e;}
+.teacherPaper table a:hover{color: #f90;}
+.teacherPaper table td,
+.teacherPaper table th{text-align:center;height:40px;border:1px solid #d7d7d7;}
+.teacherPaper table th{background:#f6f6f6;font-size:16px;color:#565656;font-weight:normal;}
+/*表格公共样式结束*/
+.teacherPaper .paperArchive table tr .serialNum,.teacherPaper .paperArchive table tr .questionNum,.teacherPaper .paperArchive table tr .totalScore{width:50px;}
+.teacherPaper .paperArchive table tr .paperName{width:360px;text-align:left;text-indent:10px}
+.teacherPaper .paperArchive table tr td.paperName a{color:#17a27e;}
+.teacherPaper .paperArchive table tr td.paperName a:hover{color:#f90;}
+.teacherPaper .paperArchive table tr .discipline{width:100px;text-align:left;text-indent:10px}
+.teacherPaper .paperArchive table tr .fileTime{width:148px;text-align:left;text-indent:10px}
+.teacherPaper .paperArchive table tr .operation{text-align:left;padding-left:10px}
+.teacherPaper .paperArchive table tr .operation a{padding:0 3px;}
+.teacherPaper .paperArchive table tr .operation a.down-word-btn{padding:0 10px;line-height: 27px;font-size: 12px;color: #333; }
+.teacherPaper .paperArchive table tr .operation a.down-word-btn:hover{color:#333;}
+.teacherPaper .paperArchive table tr .operation a:hover{color:#f90;}
+.teacherPaper .paperArchive table tr .operation a.active{color:#17a27e;}
+/*已存档试卷样式结束*/
+/*下载答题卡 弹框 开始*/
+.teacherPaper .paper-set-win{ padding:10px; height:300px; overflow:auto;}
+.teacherPaper .paper-set-win table{ margin-bottom:10px; width:100%;}
+.teacherPaper .paper-set-win table tr td{ vertical-align:middle;}
+.teacherPaper .paper-set-win table tr td.title-td{ text-align:right; width:120px; font-size:16px; padding-right:5px; background:#eee;}
+.teacherPaper .paper-set-win table tr td.option-td{ text-align:left; padding:0 15px; background:#f7f7f7;}
+.teacherPaper .paper-set-win table.active tr td.title-td{ background:#ffcc00;}
+.teacherPaper .paper-set-win table.active tr td.option-td{ background:#ffffcc;}
+.teacherPaper .paper-set-win table tr td ul { line-height:24px; padding:5px 0;}
+.teacherPaper .paper-set-win table tr td ul li{ padding-bottom:5px;}
+.teacherPaper .paper-set-win table tr td ul li span{ float:left; padding-right:5px;}
+.teacherPaper .paper-set-win table tr td ul li span .text-input,
+.teacherPaper .paper-set-win table tr td ul li span textarea{ padding:5px; border:1px solid #999; width:440px;}
+.teacherPaper .down-word-win{ padding:0 10px;}
+.teacherPaper .down-word-win dl{ padding-bottom:10px;}
+.teacherPaper .down-word-win dl dt{ font-size:16px; line-height:30px;}
+.teacherPaper .down-word-win dl dd{ font-size:14px;}
+.teacherPaper .down-word-win dl dd span{ float:left; padding-right:10px;}
+.teacherPaper .down-word-win dl dd table{ width:100%; border:1px solid #ccc; border-right:none; background:url(../../image/teacherPaper/word_setting.png) no-repeat 6px -5px;}
+.teacherPaper .down-word-win dl dd table tr td{border: none; border-right:1px solid #ccc; line-height:24px; width:120px; text-align:center;}
+.teacherPaper .down-word-win dl dd table tr.word-line td{ height:95px;}
+.teacherPaper .down-card-win{ padding:0 10px;}
+.teacherPaper .down-card-win dl{ padding-bottom:10px;}
+.teacherPaper .down-card-win dl dt{ font-size:16px; line-height:30px;}
+.teacherPaper .down-card-win dl dd{ font-size:14px;}
+.teacherPaper .down-card-win dl dd span{ float:left; padding-right:10px;}
+.teacherPaper .down-card-win dl dd table{ width:100%; border:1px solid #ccc; border-right:none; background:url(../../image/teacherPaper/card_style.png) no-repeat 6px -5px;}
+.teacherPaper .down-card-win dl dd table tr td{ border-right:1px solid #ccc; line-height:24px; width:241px; text-align:center;}
+.teacherPaper .down-card-win dl dd table tr.card-line td{ height:200px;}
+.teacherPaper .teacherTips{line-height:26px;margin:3px 0px 10px 0px;padding:0px 10px 0px 0px;}
+.teacherPaper .paperCaptchaWord{ line-height: 34px;margin-bottom: 10px;}
+.teacherPaper .paperCaptchaWord img{ margin-left: 10px;}
+.teacherPaper .paperCaptchaWord .cInput{ height: 32px;line-height: 32px;}
+.teacherPaper .paperCaptchaWord span.changeCaptcha{ margin-left: 10px;cursor: pointer;color: #36A989}
+
+.teacherPaper .down-word-win dl dd .wordType{border:1px solid #ccc;}
+.teacherPaper .down-word-win dl dd .wordType li{float:left;}
+.teacherPaper .down-word-win dl dd .wordType li p{padding:5px 10px;width:403px;}
+.teacherPaper .down-word-win dl dd .wordType li p label{display: block;}
+.teacherPaper .down-word-win dl dd .wordType li p.active{background-color:#d9eeec;color:#333;}
+.teacherPaper .down-word-win dl dd p.active em.b{font-weight: bold;}
+
+.teacherPaper .down-word-win dl dd .wordType li p.first{border-right:1px solid #ccc;}
+
+.teacherPaper .down-word-win .paperSizes{height:170px;border-top: 1px solid #ccc;border-left: 1px solid #ccc;}
+.teacherPaper .down-word-win .paperSizes li{float: left;width: 120px;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;height:170px;text-align: center}
+.teacherPaper .down-word-win .paperSizes li p{display: block;;background:url(../../image/teacherPaper/word_setting.png) no-repeat;}
+.teacherPaper .down-word-win .paperSizes li p.a4{background-position: 0 10px}
+.teacherPaper .down-word-win .paperSizes li p.a4h{background-position: -118px 10px;}
+.teacherPaper .down-word-win .paperSizes li p.a3{background-position: -238px 10px;}
+.teacherPaper .down-word-win .paperSizes li p.k16{background-position: -360px 10px;}
+.teacherPaper .down-word-win .paperSizes li p.kh8{background-position: -482px 10px;}
+.teacherPaper .down-word-win .paperSizes li p.a3h{background-position: -600px 10px;}
+.teacherPaper .down-word-win .paperSizes li p.b4{background-position: -713px 10px;}
+.teacherPaper .down-word-win .paperSizes li p.active{background-color:#d9eeec;color:#333;}
+.teacherPaper .down-word-win .paperSizes li label{height:50px;display: block;padding-top:120px;}
+.teacherPaper .down-word-win .paperSizes li label input{display: block;margin-left:54px;*margin-left:0px;}
+
+.teacherPaper .down-word-win dl dd .roleType{border-top: 1px solid #ccc;border-left: 1px solid #ccc}
+.teacherPaper .down-word-win dl dd .roleType li p{padding:5px 10px;width:403px;line-height:30px;height:30px;}
+.teacherPaper .down-word-win dl dd .roleType li p.active{background:#d9eeec;color:#333;}
+.teacherPaper .down-word-win dl dd .roleType li p label{display: block;}
+.teacherPaper .down-word-win dl dd .roleType li{border-right:1px solid #ccc;border-bottom:1px solid #ccc;float: left}
+/*下载答题卡 弹框 结束*/
+/* 出卷子存档为空样式开始 */
+.teacherPaper .empty{padding:50px 90px 90px 90px;background: #f7f7f7;margin-bottom:20px;}
+.teacherPaper .intoSubjectCenter{width:580px;height:130px;background: #fff;margin:0 auto;border:1px solid #eee;-webkit-box-shadow: 0px 3px 4px #efefef;  -moz-box-shadow: 0px 3px 4px #efefef;  box-shadow: 0px 3px 4px #efefef;}
+.teacherPaper .intoSubjectCenter a{font-size:18px;margin:0 auto;width:135px;height:35px;line-height:35px;margin:50px 0 0 220px;}
+.teacherPaper .intoSubjectCenter a:hover{color:#fff;}
+.teacherPaper .explain{margin-top:50px;}
+.teacherPaper .explain h3{font-size:14px;font-weight:bold;color:#333;line-height:30px;margin-bottom:0;}
+.teacherPaper .explain p{font-size:14px;color:#333;line-height:30px;}
+/* 出卷子存档为空样式结束 */

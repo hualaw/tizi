@@ -1,0 +1,61 @@
+<div class="lessonSearch cf">
+	<span class="fl spanTitle seachResult">搜索"<em>{$keyword}</em>"的结果：共{$data.total}个文档</span>
+	<!-- <div class="searchBox fr">
+		<span class="posr">
+			<input type="text" class="searchText" value="{$keyword}" placeholder="在当前单元内搜索"/>
+		</span>
+		<span>
+			<input id="search_submit" type="submit" value="搜索" class="searchBtn cBtnSilver"/>
+		</span>
+	</div> -->
+	<div class="fr head-order">
+        <span class="fl screening">排序：</span>
+        <a href="javascript:void(0)" data-order="0" id="odate" class="fl time active">发布时间</a>
+        <!-- <a href="javascript:void(0)" data-order="1" id="opage" class="fl ">页数</a> -->
+        <a href="javascript:void(0)" data-order="2" id="osize" class="fl ">大小</a>
+    </div>
+</div> 
+{if $data.total eq 0}
+<div class="emptyBox">
+	<p>很抱歉，此目录下暂无资源，我们将会尽快补充内容。</p>
+</div>
+{else}                  
+<ul>
+{foreach $data.document as $doc}
+	<li class="cf">
+		 <div class="listIcon fl">
+			 <span class="pages">{$doc.page_count}p</span>
+		 </div>
+		 <div class="listContent fl">
+			 <h3 class="{$doc.file_ext}">
+				 <a href="{$site_url}teacher/lesson/view/{$doc.id}" target="_blank" title="{$doc.file_name}">
+					{sub_str($doc.file_name,0,70)}
+				</a>
+			 </h3>
+			 <span class="other">
+				 更新时间:
+				 <em>{$doc.upload_time}</em>
+				 大小:
+				 <em>{$doc.file_size}</em>
+				 格式:
+				 <em>{$doc.extension}</em>
+				 贡献者：
+				 <em class="green">孙祥困</em>
+			 </span>
+		 </div>
+		 <div class="praise fr">
+			 <span class="haveRead">{$doc.hits}人已经阅读</span>
+			<span class="star oStar cf">
+				{foreach $doc.star_level as $val}
+				<em class="fl {if $val eq 3}all{else if $val eq 2}half{else}{/if}"></em>
+				{/foreach}				
+				<em class="fl have">{$doc.assess_count}人评价</em>
+			</span>
+		 </div>
+	 </li>
+ {/foreach}
+	 </ul>
+{/if}
+<div class="page cf">
+	<p class="fr">{$pages}</p>
+</div>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{block name=title}{/block}-梯子网</title>
+<link rel="stylesheet" type="text/css" href="{$static_url}{$static_version}css/teacherTestLibrary/style.css" />
+{block name=stylesheet}{/block}
+</head>
+
+<body class="navTestLibrary">
+{include file='file:[lib]common/teacher/header.html' page_type="teacher"}
+{include file='file:[lib]common/teacher/nav.html'}
+<!--主要部分开始-->
+<div class="wrap layout teacherTestLibrary" id="tiziModule" module="teacherTestLibrary">
+    <!-- 二级导航开始 -->
+    <div class="subNav" >
+        <div class="subNavBox cf" data-subject="{$data.subject_id}" data-subtext="{$data.subject_name}">
+            <span class="fl">
+				<em>小学:</em>
+                <a href="{$sj_url}/19" {if $data.subject_id eq 19}class="active"{/if}>语文</a>
+				<a href="{$sj_url}/20" {if $data.subject_id eq 20}class="active"{/if}>数学</a>
+				<a href="{$sj_url}/21" {if $data.subject_id eq 21}class="active"{/if}>英语</a>
+				<a href="{$sj_url}/22" {if $data.subject_id eq 22}class="active"{/if}>科学</a>
+				<a href="{$sj_url}/26" {if $data.subject_id eq 26}class="active"{/if}>信息技术</a>
+            </span>
+            <span class="fl">
+                <em>初中:</em>
+                <a href="{$sj_url}/1" {if $data.subject_id eq 1}class="active"{/if}>语文</a>
+				<a href="{$sj_url}/2" {if $data.subject_id eq 2}class="active"{/if}>数学</a>
+				<a href="{$sj_url}/3" {if $data.subject_id eq 3}class="active"{/if}>英语</a>
+				<a href="{$sj_url}/4" {if $data.subject_id eq 4}class="active"{/if}>物理</a>
+				<a href="{$sj_url}/5" {if $data.subject_id eq 5}class="active"{/if}>化学</a>
+				<a href="{$sj_url}/6" {if $data.subject_id eq 6}class="active"{/if}>生物</a>
+				<a href="{$sj_url}/7" {if $data.subject_id eq 7}class="active"{/if}>政治</a>
+				<a href="{$sj_url}/8" {if $data.subject_id eq 8}class="active"{/if}>历史</a>
+				<a href="{$sj_url}/9" {if $data.subject_id eq 9}class="active"{/if}>地理</a>
+				<a href="{$sj_url}/24" {if $data.subject_id eq 24}class="active"{/if}>信息技术</a>
+            </span>
+            <span class="fl mr-r0">
+                <em>高中:</em>
+                <a href="{$sj_url}/10" {if $data.subject_id eq 10}class="active"{/if}>语文</a>
+				<a href="{$sj_url}/11" {if $data.subject_id eq 11}class="active"{/if}>数学</a>
+				<a href="{$sj_url}/12" {if $data.subject_id eq 12}class="active"{/if}>英语</a>
+				<a href="{$sj_url}/13" {if $data.subject_id eq 13}class="active"{/if}>物理</a>
+				<a href="{$sj_url}/14" {if $data.subject_id eq 14}class="active"{/if}>化学</a>
+				<a href="{$sj_url}/15" {if $data.subject_id eq 15}class="active"{/if}>生物</a>
+				<a href="{$sj_url}/16" {if $data.subject_id eq 16}class="active"{/if}>政治</a>
+				<a href="{$sj_url}/17" {if $data.subject_id eq 17}class="active"{/if}>历史</a>
+				<a href="{$sj_url}/18" {if $data.subject_id eq 18}class="active"{/if}>地理</a>
+				<a href="{$sj_url}/25" {if $data.subject_id eq 25}class="active"{/if}>信息技术</a>
+            </span>
+        </div>
+    </div>
+    <!-- 二级导航结束 -->
+    <!-- 右侧框架开始 -->
+    <div class="wrapContent fr" id="wrapContent">
+        {block name=container}{/block}
+    </div> 
+    <!-- 右侧框架结束 -->
+    <!-- 左侧框架开始 -->
+    <div class="slide fl" id="slide">
+        <div class="slideBox">
+            <div class="hd">
+                <a class="upNewPaper cBtnNormal" href="{$site_url}teacher/user/myquestion/new" target="_blank">上传新题</a>
+            </div>
+        </div>   
+    </div>
+    <!-- 左侧框架结束 -->
+</div>
+<!--主要部分结束-->
+{include file='file:[lib]common/teacher/footer.html'}
+<!-- js引入开始 -->
+<script type="text/javascript" src="{$static_url}{$static_version}public/sea/2.1.0/sea.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}public/config.js{$version}"></script>
+<!-- js引入结束 -->
+{block name=script}{/block}
+{include file='file:[lib]common/tizi_ga.html'}
+</body>
+</html>

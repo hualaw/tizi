@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="{block name=keywords}{/block}"/>
+<meta name="description" content="{block name=description}{/block}"/>
+<title>{block name=title}{/block}-梯子网</title>
+<link rel="stylesheet" type="text/css" href="{$static_url}{$static_version}css/appCenter/style.css{$version}" />
+</head>
+<body>
+<!-- 头部开始 -->
+{nocache}{$page_type='app'}{/nocache}
+{include file='file:[lib]common/login/header.html'}
+<!-- 头部结束 -->
+<!-- 主要内容开始 -->
+<div class="wrap layout appCenter" id="tiziModule" module="appCenter">
+    {block name=container}{/block}
+</div>
+<!-- 主要内容结束 -->
+<!-- 底部开始 -->
+{include file='file:[lib]common/login/footer.html'}
+<!-- 底部结束 -->
+<!-- js引入开始 -->
+<script type="text/javascript" src="{$static_url}{$static_version}public/sea/2.1.0/sea.js{$version}"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}public/config.js{$version}"></script>
+<!--js引入结束-->
+{block name=script}{/block}
+{include file='file:[lib]common/tizi_ga.html'}
+</body>
+</html>

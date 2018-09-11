@@ -1,0 +1,36 @@
+{if $share}
+<table>
+                <tr>
+                    <th class="fillName">文件名</th>
+                    <th class="size">大小</th>
+                    <th class="uploader">上传者</th>
+                    <th class="uploadTime">上传时间</th>
+                    <th class="downoadAmount  ">下载次数</th>
+                    <th class="operation">操作</th>
+                </tr>
+                {foreach $share as $k=>$v}
+                <tr>
+                    <td class="fillName">
+                        {if $v.ok_view}
+                            <a href='{$site_url}student/cloud/file/{$v.share_id}' target="_blank" >
+                            {sub_str($v.file_name,0,150)}{if $v.file_ext}.{$v.file_ext}{/if}</a>
+                        {else}
+                            {sub_str($v.file_name,0,150)}{if $v.file_ext}.{$v.file_ext}{/if}
+                        {/if}
+                    </td>
+                    <td>{trans_filesize($v.file_size)}</td>
+                    <td title='{$v.user_name}'> {sub_str($v.user_name,0,12)}</td>
+                    <td>{date('Y-m-d',$v.create_time)}</td>
+                    <td>{$v.download_count}</td>
+                    <td><a file_id='{$v.file_id}' file_name="{$v.file_name}.{$v.file_ext}" href="javascript:;" share_id="{$v.share_id}" class="downloadBtn">下载</a></td>
+                </tr>
+                {/foreach}        
+            </table>
+
+            <input type="hidden" id="current_page" value="{$current_page}"/>
+            <div class="page cf">
+                <div class="fr">{$pages}</div>
+            </div>
+
+            
+{/if}

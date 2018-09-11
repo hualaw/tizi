@@ -1,0 +1,96 @@
+{extends file='teacher/class/base_main.html'}
+{block name=title}错题报告{/block}
+
+{block name=container}
+
+<!-- 错题报告（选择题）开始 -->
+    <div class="wrongReportsTable">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th colspan="8" scope="col">
+                <div class="titles cf">
+                    <div class="tips fr">
+                        <span class="most fl">最多人数</span>
+                        <span class="right fl">正确答案</span>
+                    </div>
+                    <div class="mTitle fr">
+                        <h2 class="fl">错题报告(选择题)</h2>
+                        <p class="fl">
+                            <a href="#" class="cBtnSilver" onclick="window.print();">打印</a>
+                            <!-- <a href="#" class="cBtnSilver">导出报告</a> -->
+                        </p>
+                    </div>
+                    <span class="classname fl">{$class_name}</span>
+                </div>
+            </th>
+          </tr>
+          <tr>
+            <td width="100">
+                <span class="green">题号</span>
+            </td>
+            <td width="100">选A人数</td>
+            <td width="100">选B人数</td>
+            <td width="100">选C人数</td>
+            <td width="100">选D人数</td>
+            <td width="100">答错人数</td>
+            <td width="100">正确率</td>
+            <!-- <td>知识点</td> -->
+          </tr>
+          <input type="hidden" class="homeworkPreCon">
+           {if $wrong_q}
+           {foreach $wrong_q as $wqs=>$wrong}
+           <tr>
+           <td> <span class="green subjectDetial" qid="{$wrong.qid}" >第{$wrong.order_in_paper}题</span> </td>
+            
+           <td {if in_array("A",$wrong.most_people_choice)}class="tBgGreen"{/if}> {if $wrong.correct_answer == "A"}<span class="right"> {$wrong.A} </span>{else}{$wrong.A} {/if}</td> 
+            
+           <td {if in_array("B",$wrong.most_people_choice)}class="tBgGreen"{/if}>{if $wrong.correct_answer == "B"} <span class="right"> {$wrong.B} </span>  {else}  {$wrong.B} {/if}</td>
+            
+           <td {if in_array("C",$wrong.most_people_choice)}class="tBgGreen"{/if}> {if $wrong.correct_answer == "C"}<span class="right"> {$wrong.C} </span>  {else}  {$wrong.C} {/if}</td>
+            
+           <td {if in_array("D",$wrong.most_people_choice)}class="tBgGreen"{/if}> {if $wrong.correct_answer == "D"}<span class="right"> {$wrong.D} </span> {else}  {$wrong.D}  {/if}</td>
+            
+            
+            <td>{$wrong.wrong_total}</td>
+            <td>
+                {if $wrong.A+$wrong.B+$wrong.C+$wrong.D > 0 }
+                {round((1-($wrong.wrong_total/($wrong.A+$wrong.B+$wrong.C+$wrong.D)))*100)}%
+                {else}
+                0
+                {/if}
+            </td>
+
+            <!-- <td>三元五次方程</td> -->
+           </tr>
+           {/foreach}
+           {/if}
+           
+        </table>
+    </div>
+    <!-- 错题报告（选择题）结束 -->
+ 
+
+
+<!-- 题目详情弹出框 start --> 
+{if $hw_q}
+{foreach $hw_q as $key=>$val}
+    <div id="subjectDetialPop{$val.qid}" class="pop_box" >
+    <div class="teacherClass">
+        <div class="pop_main"  >
+            <dl class="click_qs">
+                <dt>{if false!==strpos($val.body,'题文')}{$val.body}{else}【题文】{$val.body}{/if}</dt><dt>
+                </dt>
+                <dd class="answer">
+        {if false!==strpos($val.answer_text,'答案')}{$val.answer_text}{else}【答案】{$val.answer_text}{/if}
+        </dd>
+                <dd class="answer">
+                {if false!==strpos($val.analysis_text,'解析')}{$val.analysis_text}{else}【解析】{$val.analysis_text}{/if}
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+{/foreach}
+{/if}
+<!-- 题目详情弹出框 结束 --> 
+{/block}

@@ -1,0 +1,201 @@
+{extends file='student/champions/base.html'}
+
+{block name=keywords}高考状元,状元笔记,高考状元经验谈,史上最牛高考状元{/block}
+{block name=description}{$video->video_short_desc}{/block}
+{block name=title}高考状元{$user->name}：{$video->video_title}{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--添加logo头部开始-->
+<!-- <div class="header">
+    <div class="bd layout">
+        {if isset($show_channel) and $show_channel}
+        <div class="rightTips fr">
+            <a href="{$home_parent}" target="_blank" class="jiaChannel" title="梯子家长">梯子家长</a>
+        </div>
+        {/if}
+        <div class="logo fl">
+            <a href="{$tizi_url}">梯子网</a>
+        </div>
+        <div class="secLogo fl">
+            <div class="infos fl">
+                <span class="channel"><!-- 教师频道</span>
+                <span class="info">中小学优质教学资源服务平台</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="headerLineGreen"></div> -->
+<!--添加logo头部结束-->
+<!--内容start-->
+<div class="mainContainer" pagename="video">
+    <div class="layout">
+    <!--面包削开始-->
+    <div class="pageRoute">
+        <span><a href="{$site_url}">梯子网首页</a></span>/
+        <span><a href="{$site_url}zhuangyuan">状元开讲</a></span>/
+        <span><a href="javascript:void(0);">{$user->name}：{$video->video_title}</a></span>
+	</div>
+    <!--面包削结束-->
+    <!--视频播放模块开始-->
+    <div class="md_video">
+        <div class="videoPlay fl">
+            <!--视频开始-->
+            <div id="container" class="container"></div>
+            <!--<img src="{$static_url}{$static_version}image/activity/champions/img_video1.jpg" width="749px" height="433px"/>-->
+            <!--视频结束-->
+        </div>
+        <div class="videoList fl">
+            <ul>
+				{foreach from=$all_video item=vav key=a_key}
+					<!--循环单体开始-->
+					<li {if $video->id == $vav['vid']}class="active"{/if}>
+						<a href="{$site_url}zhuangyuan/video/{$vav['uid']}/{$vav['vid']}" title="{$vav['video_title']}"><img src="{path2champion($vav['little_thumb_url'])}" width="65px" height="50px" class="fl image"/></a>
+						<div class="text"><a href="{$site_url}zhuangyuan/video/{$vav['uid']}/{$vav['vid']}" title="{$vav['video_title']}">高考状元{$vav['name']}{$a_key + 1}：{sub_str($vav['video_title'], 0, 54)}</a></div>
+					</li>
+					<!--循环单体结束-->
+                {/foreach}
+				{if $other_video}
+					{foreach from=$other_video item=vov}
+						<!--循环单体开始-->
+						<li>
+							<a href="{$site_url}zhuangyuan/video/{$vav['uid']}/{$vav['vid']}" title="{$vav['video_title']}"><img src="{path2champion($vov['little_thumb_url'])}" width="65px" height="50px" class="fl image"/></a>
+							<div class="text"><a href="{$site_url}zhuangyuan/video/{$vov['uid']}/{$vov['vid']}" title="{$vov['video_title']}">高考状元{$vov['name']}：{sub_str($vov['video_title'], 0, 54)}</a></div>
+						</li>
+					<!--循环单体结束-->
+				{/foreach}
+				{/if}
+            </ul>
+        </div>
+    </div><input type="hidden" id="hidden_video_id" value="{$video->id}" /><div class="video_h1"></div>
+    <!--视频播放模块结束-->
+    <!--分享导航模块开始-->
+    <div class="md_shareNav posr">
+        <div class="fl">
+            <a class="iconN iconTop" href="javascript:void(0)">{if $video}{if $video->praise_nums >= 10000}{round($video->praise_nums / 10000, 1)}万{else}{$video->praise_nums}{/if}{else}0{/if}</a>
+            <a class="iconN iconShare" href="javascript:void(0)">分享</a>
+            <span>QQ交流群：132941317</span>
+        </div>
+        <div class="fr">
+            <span><b>{if $video_play_nums}{if $video_play_nums >= 10000}{round($video_play_nums / 10000, 1)}万{else}{$video_play_nums + 1}{/if}{else}1{/if}</b>次播放</span>
+            <!--<span><b>11.2万</b>次播放</span>-->
+        </div>
+        <!--分享开始-->
+        <div class="share shareBox cf">
+            <div class="bdsharebuttonbox">
+                <a href="#" class="bds_more" data-cmd="more"></a>
+                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            </div>
+        </div>
+        <!--分享结束-->
+    </div>
+    <!--分享导航模块结束-->
+    <!--课程信息模块开始-->
+    <div class="md_ClassInfo">
+        <span class="title fl">{$user->name}直播讲堂<em class="icon_class fl"></em></span>
+        <span class="text fl">状元{$user->name}，将在线实时直播与全国学生、家长交流互动，回答您的问题 </span>
+    </div>
+    <!--课程信息模块结束-->
+    <!--正文页模块开始-->
+    <div class="wrapArtice">
+        <!--主体正文开始-->
+        <div class="md_content fl">
+            <!--正文内容开始-->
+            <div class="md_artice">
+                <h2>状元经验</h2>
+                {$user->exp_desc}
+            </div>
+            <!--正文内容结束-->
+        </div>
+        <!--主体正文结束-->
+        <!--简介内容开始-->
+        <div class="md_brief fl">
+            <!--教师信息模块开始-->
+            <div class="studentBrief fl">
+                <div class="md_hd cf">
+                    <h2 class="fl">{$user->name}</h2>
+                </div>
+                <div class="md_bd">
+                    <p>{$user->short_msg}</p>
+                    <p>总分：{$user->score}</p>
+                    <p>毕业学校：{$user->school}</p>
+                    <p>考入学府：{$user->university}</p>
+                </div>
+                <div class="md_ft">
+                    <p><b>寄语</b>：
+					{$user->note}
+					</p>
+                </div>
+            </div>
+            <!--教师信息模块结束-->
+            <!--声明信息模块开始-->
+            <div class="noticeText fl">
+                <div class="text"><b>声明</b>：本次状元开讲系列讲座所有文字、图片和音视频稿件，版权均属梯子网所有，任何媒体、个人未经本网协议授权不得转载或以其他任何方式复制、发表、商用。违者本网将依法追究法律责任。
+				</div>
+            </div>
+            <!--声明信息模块结束-->
+            <!--二维码开始-->
+            <div class="qrcode fl">
+                <img src="{$static_url}{$static_version}image/activity/champions/img_qrcode.gif" width="142px" height="166px"/>
+            </div>
+            <!--二维码结束-->
+        </div>
+        <!--简介内容结束-->
+    </div>
+    <!--正文页模块结束-->
+    </div>
+</div>
+<!--内容end-->
+<!--弹窗开始-->
+<div class="tempDialog" id="tempDialog">
+    <!--预约课程开始-->
+    <div id="makeAppoint" class="pop_box">
+        <form class="makeAppointForm_beta" action="{$site_url}zhuangyuan/appoint" method="post">
+            <div class="parentChampions">
+                <div class="pop_main appoint_main">
+                    <h2>预约免费参加状元线上直播“见面会”</h2>
+                    <!--<p>前100名预约成功的同学有机会获得状元开讲系列丛书一本</p>-->
+                    <ul>
+                        <li>
+                            <em class="fl">*</em>
+                            <input class="cInput fl userName" type="text" name='userName' placeholder="姓名"/>
+                            <input type="hidden" class="cInput fl championId" type="text" name='championId' placeholder="" value="{$video->champion_user_id}"/>
+                            <span class="Validform_checktip fl"></span>
+                        </li>
+                        <li>
+                            <em class="fl">*</em>
+                            <input class="cInput fl userPhone" type="text" name='userPhone' placeholder="手机号，将用于见面会提醒"/>
+                            <span class="Validform_checktip fl"></span>
+                        </li>
+                        <li>
+                            <em class="fl">*</em>
+                            <input class="cInput fl userEmail" type="text" name='userEmail' placeholder="电子邮箱"/>
+                            <span class="Validform_checktip fl"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <input type="submit" class="undis" />
+        </form>
+    </div>
+    <!--预约课程结束-->
+</div>
+<!--弹窗结束-->
+<script type="text/javascript" src="{$static_url}{$static_version}lib/TiZiplayer/6.7.0/TiZiplayer.js{$version}"></script>
+{include file='file:[lib]common/tizi_flash.html' assign=noflash}
+<script type="text/javascript">
+    var noflash = '{$noflash}';
+    var playlist = [{
+        "domain": "{$video_domain}",
+        "file": "{$video->video_path}",
+		"image":"http://tizi.oss.aliyuncs.com/static/zhuangyuan/video.jpg"
+//		"autostart" : true
+	}];
+</script>
+{/block}

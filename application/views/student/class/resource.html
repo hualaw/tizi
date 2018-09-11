@@ -1,0 +1,16 @@
+{extends file='student/class/base.html'}
+{block name=title}文件{/block}
+{block name=container}
+<div class="mainContainer" pagename="share">
+    {if $share_total}
+    <div class="stuClassBox fillTable">
+        {include file='student/class/share/stu_class_share_pagination.html'}            
+    </div>
+    {else}
+    <div class="nofill">
+        <p>在这里可以看到并下载老师分享给你的文件</p>
+    </div>      
+    {/if}
+    
+</div>
+{/block}

@@ -1,0 +1,32 @@
+.wrap{margin:0 auto;}
+.minContent{width: 100%;}
+.minContent .topBox{background: url(../../../image/mobile/brashQuestion/topBg.jpg) no-repeat center center;background-size: 100% 100%;padding-top: 6.25em;padding-bottom:5em;color: #fff;text-align: center;}
+.minContent .topBox .header{display: inline-block;}
+.minContent .header .title{padding-left: 1.25em;text-align: left;}
+.minContent .header h1{font-size: 2.25em;font-weight: normal;margin-bottom:1.5em;text-shadow: black 0 2px 0;}
+.minContent .header p{font-size: 1.5em;text-shadow: black 0 2px 0;}
+.minContent .download {padding-top: 2em;}
+.minContent .download a{display: inline-block;width: 31%;height: 4em;margin: 0 0.625em;;border-radius: 0.625em;line-height: 4em;font-size: 2em;color: #fff;text-align: center;margin-bottom:0.625em;}
+.minContent .download a img{display: inline;margin:0 0.4em}
+.minContent .download .android{background: #55c5c3;}
+.minContent .download .android:hover{background: #30A1C2;}
+.minContent .download .apple{background: #a2c800;}
+.minContent .download .apple:hover{background: #829E08}
+.minContent .box{text-align: center;padding-top: 2.25em}
+.minContent .box img{display: inline;vertical-align: middle;max-width: 80% }
+.minContent .pink{background-color:#ff7575}
+.minContent .brown{background-color:#ffb675}
+.minContent .yellow{background-color:#ffda75}
+.minContent .blue{background-color:#3fd0d5}
+.minContent .green{background-color:#7fd53f}
+.minContent .box h2{font-size: 2.25em;font-weight: normal;color: #fff;}
+.minContent .box h3{font-size: 1.5em;font-weight: normal;color: #fff;margin-bottom: 1.5em}
+.minContent .footer{font-size: 1.5em; text-align:center;padding:1em 0;}
+
+@media screen and (max-width: 480px) {
+	.minContent .header .logo img{width:57px;height: 57px;}
+	.minContent .download a img{width:19px;height:24px;}
+	.minContent .header h1{margin-bottom:0.2em;}
+	.minContent .download a{font-size: 1.2em;}
+	/*.minContent .box img*/
+}

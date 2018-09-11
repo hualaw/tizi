@@ -1,0 +1,1 @@
+define("module/common/ajax/common/login",[],function(require,exports){exports.indexSubmit=function(data){data.errorcode?"reload"==data.redirect?window.location.reload():data.redirect&&(window.location.href=data.redirect):require.async("tiziDialog",function(){$.tiziDialog({content:data.error})})}});

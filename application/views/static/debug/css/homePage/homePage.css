@@ -1,0 +1,199 @@
+/*头部登录区域样式开始*/
+.homePage .ad1{padding-bottom:15px;}
+.homePage .focus{ width: 980px;height:380px;_height:400px; overflow: hidden;}
+.homePage .focus .w{ width:980px; overflow:hidden;height:380px;}
+.homePage .focus ul{ width: 12600px;}
+.homePage .focus ul li{ float:left; width:980px;height:380px; overflow:hidden;}
+.homePage .focus ul li img{ display:block;}
+.homePage .focus .btn{position:absolute;top:340px;left:30px;z-index:150;}
+.homePage .focus .btn a{display:block; float: left; width:11px;z-index:150; height:11px;background:url(../../image/homePage/focus_ico.png) no-repeat;_background:url(../../image/homePage/focus_ico_8.png) no-repeat;text-align:center; line-height:20px;margin-right:10px; color:#fff; text-indent: -999em; overflow: hidden;}
+.homePage .focus .btn a.active{background-position:-13px 0;}
+.homePage .loginWrap .main{width:580px;}
+.homePage .loginWrap .main a.cloudLink{display: block;width:580px;height:378px;text-indent: -999em;overflow: hidden;}
+.homePage .loginWrap .main i{background:#1da984; opacity: 0.73;filter: alpha(opacity=73);width:430px;height:103px;display:block;position: absolute;top:90px;left:0px; display: none}
+.homePage .loginWrap .main .text{position: absolute;top:97px;left:20px;color:#fff; display: none}
+.homePage .loginWrap .main .text span{color:#f90; vertical-align: middle;font-family: arial;}
+.homePage .loginWrap .main .text h2{font-size:36px;}
+.homePage .loginWrap .main .text h3{font-size:22px;font-weight: normal}
+/*登录前样式开始*/
+.homePage .addClassNumFrom input{height: 32px;line-height: 32px;}
+.homePage .addClassNumFrom input.className{width: 140px;border-radius: 5px;border-color:#c4c5c4;margin-right: 4px;*margin-right: 0;}
+.homePage .addClassNumFrom input.cBtnNormalOrg{font-size: 14px;padding:0 7px;*padding:0 0px;}
+.homePage .loginArea .loginAreaBefore .aRegister{display:none;}
+.homePage .loginArea{width:240px;height:338px;border:1px solid #b9d8d6;box-shadow:0 1px 5px rgba(0, 0, 0, 0.1);background: #f7fcfb;position:absolute;right:20px;top:2px;padding:20px 30px;border-radius: 5px; z-index: 200}
+.homePage .loginArea .loginAreaBefore .hd{padding-bottom:16px;}
+.homePage .loginArea .loginAreaBefore .hd h2{font-size:18px;}
+.homePage .loginArea .loginAreaBefore .hd span{margin-top:5px;}
+.homePage .loginArea .loginAreaBefore .hd a{color:#09aa83;}
+.homePage .loginArea .loginAreaBefore .hd a:hover{color:#f90;}
+.homePage .loginArea .loginAreaBefore .bd li{margin-bottom:10px;position: relative;*zoom:1;*margin-bottom:5px;}
+.homePage .loginArea .loginAreaBefore .bd li input{border-radius: 5px;font-size:14px;line-height: 38px;width:226px;border:1px solid #c4c5c4;box-shadow:1px 1px 1px #dadddc inset;}
+.homePage .loginArea .loginAreaBefore .bottomLogin{padding:10px 0 15px 0px;}
+
+.homePage .loginArea .loginAreaBefore .remerberPass{padding:4px 0px;}
+.homePage .loginArea .loginAreaBefore .remerberPass input{vertical-align: middle;;margin-right:5px;margin-top:2px;}
+/*.homePage .loginArea .loginAreaBefore .remerberPass a.fogetPw{margin-left: 20px;}*/
+
+.homePage .loginArea .loginAreaBefore .submitBtn{cursor: pointer;width:115px;height:37px;line-height:35px;font-size:18px;}
+.homePage .loginArea .loginAreaBefore .aReg{width:95px;text-align: center;height: 35px;line-height:35px;font-size:18px;} 
+.homePage .loginArea .loginAreaBefore .aReg:hover{color: #333;}
+.homePage .loginArea .loginAreaBefore .fogetPw{color:#09aa83;}
+.homePage .loginArea .loginAreaBefore .fogetPw:hover{color: #f90}
+.homePage .loginArea .loginAreaBefore .ft p{line-height:42px;border-top:1px solid #b9d8d6;margin-top:4px;padding-top:10px;font-size: 18px;color:#555656;}
+.homePage .loginArea .loginAreaBefore .ft em{color:#f90;}
+.homePage .loginArea .oauthLogin{padding-bottom:5px;line-height: 20px;}
+.homePage .loginArea .oauthLogin a i{background:url(../../lib/tizi_static/image/common/ico_out_login.png) no-repeat;_background:url(../../lib/tizi_static/image/common/ico_out_login.gif) no-repeat;height:20px;margin-left:10px;margin-right:5px;display:inline-block;width:18px;}
+.homePage .loginArea .oauthLogin a .qq{}
+.homePage .loginArea .oauthLogin a .weibo{width:25px;background-position: -31px 0;}
+/*登录前样式结束*/
+/*登录后样式开始*/
+.homePage .loginArea .loginAreaAfter{line-height: 24px;}
+.homePage .loginArea .loginAreaAfter .hd .pic{background:url(../../image/homePage/headerImg_bottom.gif) no-repeat bottom center #fff;padding-bottom:7px;width:106px;}
+.homePage .loginArea .loginAreaAfter .hd .pic img{border:1px solid #d7d7d7;padding:7px;margin:0 auto;width: 90px;height:90px;display:block;}
+.homePage .loginArea .loginAreaAfter .hd .text{margin-left:14px;width:120px;}
+
+.homePage .loginArea .loginAreaAfter .hd h2{font-size: 18px; font-weight: normal;color:#898989;}
+.homePage .loginArea .loginAreaAfter .hd h2 i{background: url(../../image/common/button/ico_v_home.gif) no-repeat;width: 15px;height:13px;display: inline-block; text-indent: -999em; overflow: hidden;margin-top: 2px;}
+.homePage .loginArea .loginAreaAfter .hd h3{color:#ff9600; font-size: 14px;padding-right:17px;}
+/*.homePage .loginArea .loginAreaAfter .integral{width:120px;margin:0px auto 30px auto;}*/
+.homePage .loginArea .loginAreaAfter .integral .hd{border:1px solid #d7d7d7;height:4px; overflow: hidden; border-radius: 8px;margin:2px 0px;}
+.homePage .loginArea .loginAreaAfter .integral .hd .progress{background:#27bf9b;height:4px; overflow: hidden;}
+.homePage .loginArea .loginAreaAfter .integral .bd{color:#898989;}
+.homePage .loginArea .loginAreaAfter .integral .bd em{color:#ff9600;}
+.homePage .loginArea .loginAreaAfter h4{font-size:14px;}
+.homePage .loginArea .loginAreaAfter h4 a{color:#36a989;}
+.homePage .loginArea .loginAreaAfter h4 a:hover{color:#f90;}
+.homePage .loginArea .loginAreaAfter .bd ul{border-bottom:1px dotted #d7d7d7;margin-top:10px;line-height:28px;}
+.homePage .loginArea .loginAreaAfter .bd li{border-top:1px dotted #d7d7d7;}
+.homePage .loginArea .loginAreaAfter .bd li.s{width:110px;float:left;}
+.homePage .loginArea .loginAreaAfter .bd li.sl{width:130px;float:left;}
+.homePage .loginArea .loginAreaAfter .bd li.borTop{clear: both}
+.homePage .loginArea .loginAreaAfter .bd li em{color:#ff9600;}
+/*登录后样式结束*/
+/*头部登录区域样式结束*/
+/*备课区域样式开始*/
+.homePage .lesson{border:1px solid #dfdfdf;margin-top:15px;padding:15px 0px;width:978px;}
+.homePage .lesson .hd h2{font-size:24px;border-left:5px solid #f90;padding-left:15px;font-weight: normal;}
+.homePage .lesson .hd .subNav{line-height: 25px;height:25px;padding:5px 20px 10px 20px;}
+.homePage .lesson .hd .subNav a{color:#555656;}
+.homePage .lesson .hd .subNav a:hover{color: #f90}
+.homePage .lesson .hd .subNav span{margin-right:40px;}
+.homePage .lesson .hd .subNav span.last{margin-right:0px;}
+.homePage .lesson .bd ul{overflow: hidden;}
+.homePage .lesson .bd li{float:left;_display:inline;margin:0 18px 0 18px;width: 102px;line-height: 20px;}
+.homePage .lesson .bd li a.lessonBg{background: url(../../image/homePage/lessong_bg.gif) no-repeat;width:102px;height:133px;display:block;position: relative;*zoom:1;}
+.homePage .lesson .bd li .tip{position: absolute;top:0px;left:0px;border:1px solid #e5e5e5;padding:2px 6px;background:#fff;}
+.homePage .lesson .bd li em{position: absolute;right:15px;bottom:15px;width:20px;height:20px;text-indent: -9999em;overflow: hidden;}
+.homePage .lesson .bd li em.doc{background: url(../../image/homePage/ico_word.gif) no-repeat;}
+.homePage .lesson .bd li em.ppt{background: url(../../image/homePage/ico_ppt.gif) no-repeat;}
+.homePage .lesson .bd li em.pdf{background: url(../../image/homePage/ico_pdf.gif) no-repeat;}
+.homePage .lesson .bd li p{margin-top:5px;}
+.homePage .lesson .bd li .title{color:#09AA83;display: block;word-wrap:break-word;}
+.homePage .lesson .bd li .title:hover{color:#f90;}
+.homePage .lesson .bd li i{display: inline-block;color:#939393;}
+/*备课区域样式结束*/
+/*试卷部分开始*/
+.homePage .paper{border:1px solid #dfdfdf;margin-top:15px;padding:15px 0px;width:978px;}
+.homePage .paper .hd{padding-bottom:15px;}
+.homePage .paper .hd h2{font-size:24px;border-left:5px solid #f90;padding-left:15px;font-weight: normal;}
+.homePage .paper .hd .area{margin-top:5px;margin-left:20px;}
+.homePage .paper .hd .area h3{font-size:18px;font-weight: normal}
+.homePage .paper .hd .area .change{margin-top:5px;margin-left:6px;}
+.homePage .paper .hd .area .changeCitySpan{color:#09aa83;font-size:12px; cursor: pointer;}
+.homePage .paper .hd .area .change .cityContent{background:#fff;border:1px solid #cbcbcb;padding:10px; position: absolute;top: -130px;left:-160px;width:380px;line-height:20px;border-radius: 3px;box-shadow:0 1px 1px rgba(225, 225, 225, 0.6);}
+.homePage .paper .hd .area .change .cityContent a{margin:2px 5px;display: inline-block;}
+.homePage .paper .hd .area .change .narrowDown{background:url(../../image/homePage/ico_narrow_down.gif) no-repeat;position: absolute;top:-13px;left:17px;width:19px;height:13px;display: block;z-index:2;display: none;}
+.homePage .paper .hd .changeSubject{margin-right:20px;margin-top:5px;font-size:16px;}
+.homePage .paper .hd .changeSubject a{margin-left:20px;border-bottom:4px solid #fff;display: block;float:left;}
+.homePage .paper .hd .changeSubject a.active,
+.homePage .paper .hd .changeSubject a:hover{border-bottom-color:#f90;color:#f90;}
+.homePage .paper .changeSubjectContent .list{line-height:46px;font-size:14px;margin-left:20px;width:620px;}
+.homePage .paper .changeSubjectContent .list li{border-top:1px dashed #cbcbcb;}
+.homePage .paper .changeSubjectContent .list li.last{border-bottom:1px dashed #cbcbcb;}
+.homePage .paper .changeSubjectContent .list span a{color:#9b9b9b;}
+.homePage .paper .changeSubjectContent .list span a.grade{margin-right:20px;}
+.homePage .paper .changeSubjectContent .list a.tit{color:#09aa83;}
+.homePage .paper .changeSubjectContent .list a:hover{color:#f90;}
+.homePage .paper .changeSubjectContent .paperType{width: 300px;}
+.homePage .paper .changeSubjectContent .paperType h3{font-size:16px;padding-bottom:15px;color:#565656;}
+.homePage .paper .changeSubjectContent .paperType li{margin:0px 15px 15px 0px;_display:inline;float:left;font-size:14px;}
+.homePage .paper .changeSubjectContent .paperType li a{border:1px solid #bddad8;padding:7px 12px;text-align: center;display: block;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1)}
+.homePage .paper .changeSubjectContent .paperType li a:hover{background:#d8eeec;color:#333;}
+/*试卷部分结束*/
+/*资讯开始*/
+.homePage .news{margin-top:15px;}
+.homePage .news .hd{padding-bottom:15px;}
+.homePage .news .hd h2{font-size:24px;border-left:5px solid #f90;padding-left:15px;font-weight: normal;}
+.homePage .news .teacher .bd li{float:left;width:296px;margin-left: 15px;_display:inline;background:url(../../image/homePage/ico_dot.gif) no-repeat left;padding-left:10px;line-height: 34px;border-top:1px dashed #cbcbcb;font-size:14px;}
+.homePage .news .bd li a{color:#09aa83;}
+.homePage .news .bd li a:hover{color:#f90;}
+.homePage .news .bd li.last{border-bottom-color:#cbcbcb;}
+.homePage .news .teacher{border:1px solid #dfdfdf;padding:15px 0px;width:658px;}
+.homePage .news .teacher .hd span{margin-right:15px;margin-top:8px;}
+.homePage .news .teacher .hd span a{color:#17a27e;}
+.homePage .news .teacher .hd span a:hover{color:#f90;}
+.homePage .news .tizi{border:1px solid #dfdfdf;padding:15px 0px;width:308px;}
+.homePage .news .tizi .bd li{margin:0 15px;background:url(../../image/homePage/ico_dot.gif) no-repeat left;padding-left:10px;line-height: 34px;border-top:1px dashed #cbcbcb;font-size:14px;}
+.homePage .news .tizi .hd .tip{margin-top:5px;margin-right:20px;}
+.homePage .news .tizi .hd .tip em{margin-top:5px;margin-right:5px;}
+.homePage .news .tizi .hd .tip a.aWeixin{background:url(../../image/homePage/ico_share.gif) no-repeat;width: 30px;height:23px;float:left;display:block;text-indent: -999em; overflow: hidden;}
+.homePage .news .tizi .hd .tip .weixinDivContent{position: absolute;top:-175px;left:-59px;background:#fff;padding:8px;border:1px solid #d9d9d9;box-shadow:0 1px 1px rgba(225, 225, 225, 0.6);border-radius: 3px;}
+.homePage .news .tizi .hd .tip .weixinDivContent p{width:122px;height:144px;overflow: hidden;text-align:center;}
+.homePage .news .tizi .hd .tip .weixinDivContent img{border:1px solid #c2c2c2;padding:7px;margin-bottom:5px;}
+.homePage .news .tizi .hd .tip .narrowDown{background:url(../../image/homePage/ico_narrow_down.gif) no-repeat;position: absolute;top:-20px;left:3px;width:19px;height:13px;display: block;z-index:2;display: none;}
+.homePage .news .tizi .hd .tip a.aWeibo{background-position: -33px 0px;width: 30px;}
+/*资讯结束*/
+/*用户心声开始*/
+.homePage .witness{border:1px solid #dfdfdf;margin-top:15px;padding:15px 0px;width:978px;}
+.homePage .witness .hd{padding-bottom:15px;}
+.homePage .witness .hd a.post{background: url(../../image/common/ico_postWitness.gif) no-repeat left;padding-left:20px;color:#09aa81;margin-right: 20px;font-size:14px;}
+.homePage .witness .hd a.post:hover{color:#f90;}
+.homePage .witness .hd h2{font-size:24px;border-left:5px solid #f90;padding-left:15px;font-weight: normal;}
+.homePage .witness .hd span{margin-top:6px;margin-right:20px;}
+.homePage .witness .hd span a{color:#09aa83;}
+.homePage .witness .hd span a:hover{color:#f90;}
+/*.homePage .witness .bd li{width:218px;float:left;margin-left:20px;_display:inline;border:1px solid #dfdfdf;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1)}*/
+.homePage .witness .bd .box{background:#f7f7f7;padding:20px;}
+.homePage .witness .bd li img{width:80px;height:80px;border:2px solid #fff;border-radius: 5px;box-shadow:0 1px 1px rgba(176, 176, 176, 0.6);}
+.homePage .witness .bd .box h2{width:84px;margin-left:10px;margin-top:6px;}
+.homePage .witness .bd .box h2 a{font-size:18px;font-weight: normal}
+.homePage .witness .bd .box h2 p{font-size:14px;font-weight: normal;margin-top:4px;}
+.homePage .witness .bd .box p.text{padding-top:10px;line-height:20px;height:180px;}
+
+.homePage .windS1{position:relative; height:316px;}
+.homePage .windS1 .w{ width:930px; overflow:hidden; position:absolute; top:0px; left:25px; height:316px;}
+.homePage .windS1 ul{ position:absolute; top:0px; left:0px;width:9999px;}
+.homePage .windS1 ul li{ float:left;margin:0 6px;_display:inline; width:218px; overflow:hidden;font-size:14px;border:1px solid #dfdfdf;}
+.homePage .windS1 a.prev,
+.homePage .windS1 a.next{ position:absolute; top:130px; display:block;background:url(../../image/homePage/ico_witness_btn.gif) no-repeat;width:15px;height:20px;text-indent: -999em;overflow:hidden; display: none}
+.homePage .windS1 a.prev{left:6px;background-position: 0 0}
+.homePage .windS1 a.next{right:6px; background-position: -15px 0}
+
+/*用户心声结束*/
+/*媒体报道和致谢用户开始*/
+.homePage .mediaBox{margin-top:15px;}
+.homePage .mediaBox .hd{padding-bottom:15px;}
+.homePage .mediaBox .hd h2{font-size:24px;border-left:5px solid #f90;padding-left:15px;font-weight: normal;}
+.homePage .mediaBox .media .bd li{background:url(../../image/homePage/ico_dot.gif) no-repeat left;padding-left:10px;line-height: 36px;border-top:1px dashed #cbcbcb;font-size:14px;margin:0 15px;clear: both;overflow: hidden}
+.homePage .mediaBox .bd li a{color:#09aa83;}
+.homePage .mediaBox .bd li a:hover{color:#f90;}
+.homePage .mediaBox .media{height:245px;}
+.homePage .mediaBox .media .bd li.last{border-bottom:1px dashed #cbcbcb;}
+.homePage .mediaBox .media .bd li span{color:#898989;}
+.homePage .mediaBox .media{border:1px solid #dfdfdf;padding:15px 0px;width:658px;}
+.homePage .mediaBox .media .hd span{margin-right:15px;margin-top:8px;}
+.homePage .mediaBox .media .hd span a{color:#17a27e;}
+.homePage .mediaBox .media .hd span a:hover{color:#f90;}
+.homePage .mediaBox .thank{border:1px solid #dfdfdf;padding:15px 0px;width:308px;height:245px; overflow: hidden;}
+.homePage .mediaBox .thank .bd ul{list-style: none;height: 200px;overflow: hidden;}
+.homePage .mediaBox .thank .bd li{line-height:35px;margin:0 15px;*+margin-bottom:-5px;_margin-bottom:-3px;height:35px;}
+.homePage .mediaBox .thank .bd li .name{font-size:14px;margin-right:20px;width:60px;}
+.homePage .mediaBox .thank .bd li .address{color:#9b9b9b;}
+/*媒体报道和致谢用户结束*/
+/*友情链接开始*/
+.homePage .link{margin-top:15px;line-height:24px;}
+.homePage .link span{margin-right:10px;}
+.homePage .link p{width:880px;}
+.homePage .link p a{ word-wrap:break-word;margin-right:10px;display: inline-block;color:#666;}
+.homePage .link p a:hover{color: #f90}
+/*友情链接结束*/

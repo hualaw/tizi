@@ -1,0 +1,49 @@
+<table class="historyTable">
+        <!--作业历史表头开始-->
+        <tr>
+            <th class="subjectName"> 学科 </th>
+            <th> 类型 </th>
+            <th> 作业时间 </th>
+            <th> 教材 </th>
+            <!-- <th> 单元 </th>  -->
+            <th> 作答人数 </th> 
+            <th> 操作 </th>
+        </tr>
+        <!--作业历史表头结束-->
+
+         {foreach $zy as $k=>$val}
+        <tr>
+            <td>{$val.subject_name}</td>
+            <td>{$val.type_video}{$val.type_game}{$val.type_paper}</td>
+            <td>{date('m月d日 H:i',$val.start_time)} 至 {date('m月d日 H:i',$val.end_time)}</td>
+            <td>
+                {if $val.banben}
+                {foreach $val.banben as $us=>$u}
+                    {$u} {if $u@iteration!=count($val.banben)},{/if}
+                {/foreach}
+                {else}
+                自选
+                {/if}
+            </td>
+            <!-- <td> 
+                 foreach $val.units as $us=>$u 
+                  $u->name  if $u@iteration!=count($val.units)  ,  /if   
+                 /foreach 
+            </td> -->
+            <td>{$val.stu.stu_part+$val.stu.stu_comp} </td>
+            <td>
+                {if $val.checkable}
+                <a href="{$site_url}zuoye/check/{$val.id}" class="checkBtn">检查作业</a>
+                {else}
+                <a  class="checkBtn unCheckBtn">检查作业</a>
+                {/if}
+            </td>
+        </tr>
+        {/foreach}
+    </table>
+    <!--作业历史表格结束-->
+    <!--分页开始-->
+    <div class="page cf">
+        <p class="fr">{$pages}</p>
+    </div>
+    <!--分页结束-->

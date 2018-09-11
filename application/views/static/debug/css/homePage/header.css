@@ -1,0 +1,14 @@
+/*首页头部样式开始*/
+.homepageHeader{background:#09aa83;padding: 0px;}
+.homepageHeader .navWrap a.logo{background:url(../../image/homePage/logo.gif) no-repeat; display: block;width:213px;height:70px;text-indent: -999em;overflow:hidden;border-left:1px solid #169171;border-right:1px solid #169171;}
+.topMiniNavBig .topLogin .loginBefore{line-height: 70px;height:70px;}
+.topMiniNavBig .navWrap p.miniNav{margin-left:15px;}
+.homepageHeader .navWrap p.miniNav a{font-size:16px;color: #fff;display: block;float:left;line-height: 70px;height:70px;padding:0px 25px;border-bottom:0px;margin:0px;}
+.homepageHeader .navWrap p.miniNav a:hover{background: #169171;font-weight: normal;color:#fff;}
+.homepageHeader .topLogin{width: 150px;font-size: 12px;}
+.homepageHeader .topLogin a{color: #fff;}
+.homepageHeader .topLogin a:hover{color: #f90}
+.homepageHeader .topLogin .loginOver .userName .icon{line-height: 70px;color: #fff;background: url(../../image/homePage/narrow_down.png) no-repeat right center;_background: url(../../image/homePage/narrow_down_8.png) no-repeat right center;}
+.homepageHeader .topLogin .loginOver .userName ul.info{top:50px;}
+.homepageHeader .topLogin .loginOver .userName ul.info a{color: #333;}
+/*首页头部样式结束*/

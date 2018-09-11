@@ -1,0 +1,144 @@
+{extends file='student/practice/practice_base.html'}
+
+{block name=title}专项挑战-作答-限时比正确数{/block}
+
+{block name=container}
+<div class="mainContainer studentSpecialWrap" pagename="studentSpecial_limit">
+    <!--返回按钮开始-->
+    <div class="topline_nav cf">
+		<a href="{$site_url}practice/{$grade_id}" class="goback">返回</a>
+    </div>
+
+	{$source_url = $static_url}
+	<input type='hidden' id='p_c_id'  value='{$p_c_id}' />
+	<input type='hidden' id='path'  value='{$game_path}' />
+	<input type='hidden' class="game_help" value="{$game_help}" />
+	<input type='hidden' class="option_num" value="{$option_num}" />
+	<input type='hidden' class="subject_id" value="{$subject_id}" />
+	{if !isset($height)}
+	{$height = 500}
+	{/if}
+	<script type="text/javascript" src="{$source_url}flash/practice_flash/{$game_path}/swfobject.js{$version}"></script>
+	<noscript>
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="700" height="500" id="PigsAcrossTheRiver">
+			<param name="movie" value="{$source_url}flash/practice_flash/{$game_path}/{$game_file}.swf{$version}" />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="always" />
+			<param name="allowFullScreen" value="true" />
+			<!--[if !IE]>-->
+			<object type="application/x-shockwave-flash" data="{$source_url}flash/practice_flash/{$game_path}/{$game_file}.swf{$version}" width="700" height="500">
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="allowScriptAccess" value="always" />
+				<param name="allowFullScreen" value="true" />
+			</object>
+			<!--<![endif]-->
+		</object>
+	</noscript>     
+	{include file='file:[lib]common/tizi_flash.html' assign=noflash}
+	{literal}              
+	<script>
+		window.onload = function(){
+			seajs.use(['tizi_ajax'],function(ex){
+				Student = {};
+				Student.practice = {};
+				Student.practice.countdown = {};
+				Student.practice.countdown = {
+					flash_import:function(){
+						var id = $("#p_c_id").val();
+						var path = $("#path").val();
+						var source_url = staticUrlName+'flash/practice_flash/'+path+'/';
+						var data_url =  baseUrlName+'practice/game_question/'+id;
+						var option = ['A','B','C','D'].slice(0,$(".option_num").val());
+						var game_help = $(".game_help").val();
+						var subject_id = $(".subject_id").val();
+						var data = [data_url,source_url,option,game_help,subject_id];
+						return data;
+					},
+					flash_submit : function(id,result,selected_option){
+						var submit_url = baseUrlName+'practice/game/submit';
+						$.tizi_ajax({
+							url:submit_url,
+							data:{
+								"id":id,
+								"result":result,
+								"selected_option":selected_option
+							},
+							type:'POST',
+							success:function(data){
+
+							}
+						})
+					}
+				}
+				Student.practice.challenge =  Student.practice.countdown;
+				Student.practice.game_v3 = {
+
+					flash_import : function(){
+						var id = $("#p_c_id").val();
+						var path = $("#path").val();
+						var token = basePageToken;
+						var pname = basePageName;
+						var source_url = staticUrlName+'flash/practice_flash/'+path+'/';
+						var data_url =  baseUrlName+'practice/game_question/'+id;
+						var submit_url = baseUrlName+'practice/game/submit';
+						var data = [data_url,source_url,token,pname,submit_url,10,5,5];
+
+						return data;
+					}
+
+				}
+				{/literal}
+				var swfVersionStr = "{$flash_base_version}";
+				var xiSwfUrlStr = "{$source_url}flash/practice_flash/{$game_path}/playerProductInstall.swf{$version}"
+				{literal};
+				var flashvars = {};
+				var params = {};
+				var init_data = new Array();
+
+				params.quality = "high";
+				params.bgcolor = "#ffffff";
+				params.allowscriptaccess = "always";
+				params.allowfullscreen = "true";
+                params.wmode="transparent";
+                params.wmode="Opaque";
+                var attributes = {};
+				attributes.align = "middle";
+				{/literal}
+				var swfUrl = "{$source_url}flash/practice_flash/{$game_path}/{$game_file}.swf{$swfversion}";
+				swfobject.embedSWF(
+				swfUrl, "flashContent", 
+				"700", "{$height}", 
+				{literal}
+				swfVersionStr, xiSwfUrlStr, 
+				flashvars, params, attributes);
+				// JavaScript enabled so display the flashContent div in case it is not replaced with a swf object.
+				swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+			});
+			{/literal}
+			var noflash = '{$noflash}';
+			{literal}
+			seajs.use('tizi_validform',function(ex){                                         
+				ex.detectFlashSupport(function(){                                            
+					$('#flashContent').html(noflash);                                        
+				});                                                                          
+			});
+		}
+	</script>                                                      
+	{/literal}
+
+    <!--返回按钮结束-->
+    <!--专项挑战游戏作答开始-->
+    <div class="studentSpecial_game cf">
+        <!--游戏开始-->
+        <div class="start_game fl">
+			<div id="flashContent"></div>
+        </div>
+        <!--游戏结束-->
+		{include file="student/practice/practice_ranking_list.html"}
+    </div>
+    <!--专项挑战游戏作答结束-->
+</div>
+{/block}
+{block name=script}{/block}

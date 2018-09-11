@@ -1,0 +1,100 @@
+<div class="collocationPopbox ">
+	<div class="collocation cf">
+		<div class="fl tips">
+			<p>您可以将作业布置给您的学生在线作答，系统将自动统计每个学生的答题报告以及全班错题分布。</p>
+			<dl>
+				<dt>提示</dt>
+				<dd>1. 在线作答目前仅支持选择题。</dd>
+				<!-- <dd>2. 您可以提前布置好多个不同答题时间的作业，让学生在节假日中练习。</dd> -->
+			</dl>
+		</div>
+		<div class="fl collocationContent">
+			{if $classes}
+			<div class="">
+				<form action="{$site_url}homework/teacher_assign/invoke_assign" mothed="post" onsubmit="return false" class="setHomeworkForm_beta">
+				<input type="hidden" value="" name="ex_name" class="ex_name" >
+		        <input type="hidden" value="" name="subject_id" class="subject_id" >
+		        <input type="hidden" value="" name="paper_id" class="paper_id" >
+		        <input type="hidden" value="" name="save_id" class="save_id" >
+					<ul>
+						<li class="title">① 选择班级</li>
+						<li class="cf classSelect" >
+							<select name="classgrade" id="">
+								{foreach $classes as $key=>$val}
+								<option value="{$val.alpha_id}">{$val.class_name}		                        
+		                         </option> 
+		                         {/foreach}
+	                         </select>
+                         </li>
+						<li class="title">② 答题时间</li>
+						<li class="cf wdate_li">
+							<p>
+								<input type="text" name="start_day" class="start_day starDay Wdate fl" id="starDay" value="{date('Y-m-d',time())}">
+								<select id="start_hour" name="start_hour" class="fl">
+									{for $i=0;$i<=23;$i++}
+									<option value="{$i}" {if $i==date('H',time())}selected{/if}>{$i}</option>
+									{/for}
+								</select>
+								<em class="fl">时</em>
+								<select id="start_min" name="start_min" class="fl">
+									{for $i=0;$i<=59;$i++}
+									<option value="{$i}">{if $i<10}0{/if}{$i}</option>
+									{/for}
+								</select>
+								<em class="fl">分</em>	
+								<em class="fl">至</em>
+								<input type="text" class="endyDay Wdate fl end_day" id="endyDay" value="{date('Y-m-d',time()+86400)}" name="end_day">
+								<select id="end_hour" name="end_hour"  class="fl">
+									{for $i=0;$i<=23;$i++}
+									<option value="{$i}">{$i}</option>
+									{/for}
+								</select>
+								<em class="fl">时</em>
+								<select id="end_min" name="end_min" class="fl">
+									{for $i=0;$i<=59;$i++}
+									<option value="{$i}">{if $i<10}0{/if}{$i}</option>
+									{/for}
+								</select>
+								<em class="fl">分</em>	
+							</p>
+						</li>
+						<li class="title">③ 答题顺序</li>
+						<li  class="cf">
+							<input type="radio" name="answerOrder" id="sequence1" value="1" class="fl raBtn" checked>
+							<label for="sequence1" class="fl">所有学生题目顺序相同</label>
+							<input type="radio" name="answerOrder" id="sequence2" value="2" class="fl raBtn">
+							<label for="sequence2" class="fl">所有学生题目顺序不相同</label>
+						</li>
+						<li class="title">④ 答案公布时间</li>
+						<li class="cf">
+							<input type="radio" name="showTime" id="showTime1" class="fl raBtn" checked value="2">
+							<label for="showTime1" class="fl" value="2">答题时间结束后统一公布</label>
+							<input type="radio" name="showTime" id="showTime2" class="fl raBtn" value="1">
+							<label for="showTime2" class="fl" >每个学生交卷后公布</label>
+						</li>
+					</ul>
+				</form>
+			</div>
+			{else}
+			<div class="noOpen">
+				{if $do_have_class}
+				<ul>
+					<li style="color:black">一天对一个班级只能布置{Constant::ZUOYE_LIMIT_IN_A_DAY}次作业哦</li>	
+					<!-- <li style="color:black">您的班级已布置作业，您可以去班级空间里检查作业</li>	 -->
+					<li>
+						<a href="{$site_url}zuoye" class="cBtnNormal">检查作业</a>
+					</li>
+				</ul>
+				{else}
+				<ul>
+					<li>由于您还没有开通任何班级空间，暂不能布置作业。</li>	
+					<li>
+						<a href="{$site_url}teacher/class/my" class="cBtnNormal">立即开通班级空间</a>
+					</li>
+				</ul>
+				{/if}
+			</div>
+			{/if}
+		</div>
+	</div>
+</div>

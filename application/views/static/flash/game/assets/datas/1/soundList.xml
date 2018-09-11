@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soundList>
+<url name="welcome">
+assets/sound/1/welcome.mp3
+</url>
+<url name="lose">
+assets/sound/1/lose.mp3
+</url>
+<url name="win">
+assets/sound/1/win.mp3
+</url>
+</soundList>

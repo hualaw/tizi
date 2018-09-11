@@ -1,0 +1,59 @@
+{extends file='teacher/paper/paper_base.html'}
+
+{block name=title}我的题库选题{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="main-container mainContainer" pagename="paper_myquestion">
+    <div class="content_myquestion current-type question-list cf" data-sid="{$data.subject_id}" data-gid="">
+        <div class="hd paperManageButton">
+            <a class="cBtnNormal" href="{$tizi_url}teacher/user/myquestion/" target="_blank">题目管理</a>
+        </div>
+        <div class="grop_list">
+            <!--<p class="total">请选择分组</p>-->
+            <table>
+                <tr>
+                    <th class="questionGrop">题目分组</th>
+                    <th class="questionNum">题目数量</th>
+                </tr>
+                {foreach $data.groups as $group}
+                <tr>
+                    <td class="questionGrop">
+                        <a href="javascript:void(0);" class="filter-group" data-gid="{$group->id}">{$group->name}</a>
+                    </td>              
+                    <td class="paperNum">{$group->total}</td>                           
+                </tr>
+                {/foreach}
+            </table>
+        </div>
+        <!--
+        <div class="md_hd">
+                <div class="filter-box">
+                    <ul class="fn-clear posr fliterBoxSelect">
+                    {foreach $data.question_type as $qtype}
+                    <li {if $qtype@index eq 0}class="firstSelect"{/if}><a href="javascript:void(0)" {if $qtype->id eq $data.qtype} class="active" {/if}
+                        data-qtype="{$qtype->id}">{$qtype->name}</a></li>
+                    {/foreach}                                             
+                    </ul>
+
+                    <ul class="fn-clear">
+                    {foreach $data.question_level as $qlevel}
+                    <li><a href="javascript:void(0)" {if $qlevel->level eq $data.qlevel} class="active" {/if}
+                    data-qlevel="{$qlevel->level}">{$qlevel->name}</a></li>
+                    {/foreach}                                            
+                    </ul>
+                </div>
+        </div>
+        -->
+    </div>
+</div>
+{/block}
+
+{block name=script}
+<script type="text/javascript" src="{$static_url}js/teacher/paper_myquestion.js{$version}"></script>
+<script type="text/javascript">
+Teacher.paper.myquestion.init();
+</script>
+{/block}

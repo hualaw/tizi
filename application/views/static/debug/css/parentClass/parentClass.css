@@ -1,0 +1,82 @@
+/*当前位置样式开始*/
+.parentClass .parentPath{font-size:14px;}
+.parentClass .parentPath a{color:#50B49E;}
+.parentClass .parentPath a:hover{color:#f90;}
+/*当前位置样式结束*/
+.parentClass var{ font-style: normal;}
+/*家长端资讯列表开始*/
+.parentClass  .noborder{ border: none!important;}
+.parentClass .parInforList a{ color:#50b49e;padding:0 10px;}
+.parentClass .parInforList a.parnoPadding{ padding:0;}
+.parentClass .parInforListBox .parTime{line-height:22px;color: #999;font-size: 12px;margin-bottom: 5px;}
+.parentClass .parInforListBox .parTime span{margin-left:15px;}
+.parentClass .parInforListBox li{border-bottom:1px solid #ccc;zoom:1;padding:20px 0;}
+.parentClass .parInforListBox li img{width:200px;}
+.parentClass .parInforListBox li:after{content:"";display:table;clear:both;}
+.parentClass .parInforListBox .info_content{width:436px;}
+.parentClass .parInforListBox h4{font-size:18px;font-weight:normal;}
+.parentClass .parTime{ color: #999;font-size: 12px;margin-bottom: 5px;line-height:22px;}
+.parentClass .parInforListBox h4 a{color:#484848;}
+.parentClass .parInforListBox h4 a:hover,.parentClass .parInforList a:hover,.parentClass .articleCont p a:hover,
+.parentClass .hotArticleList a:hover,.parentClass .hotArticleList .hotTags a:hover{color: #f90;}
+.parentClass .parInforListBox .infor_summary{height:auto!important;height:59px;min-height:59px;font-size:14px;line-height: 22px;color:#666;}
+.parentClass .parInforListBox .infor_tab{margin-top:10px;}
+.parentClass .parInforListBox .infor_tab span{color:#848484;padding-right:20px;}
+.parentClass .parInforListBox .infor_tab a{display:inline-block;padding:0 12px;height:25px;line-height:25px;color:#fff;text-align:center;background:#32b3a4;margin:10px 10px 0 0;}
+.parentClass .parInforListBox .infor_tab a:hover,.parentClass .parInforListBox .more_info a:hover{background:#239083;}
+.parentClass .parInforListBox .more_info a{display:block;width:820px;height:25px;margin-top:20px;line-height:25px;color:#fff;text-align:center;background:#179c7e;}
+/*家长端资讯列表结束*/
+/*家长端 家长课堂右侧开始*/
+.parentClass .parAnsQuest{ background: #e3e3e3;}
+.parentClass .parAnsQuest{ padding:12px 0 22px 20px;}
+.parentClass  a.onlineAnsQues{ font-size: 20px;margin: 12px 0 14px;display: block;}
+.parentClass .hotArticle {margin:0px 0 28px;}
+.parentClass .hotArticle h2{ font-weight:normal;height:38px;line-height:38px;background: #28b1a4;padding-left: 14px;}
+.parentClass .hotArticle h2 a{ font-size: 16px;color:#fff;}
+.parentClass .hotArticle ul{ background: #f6f6f6;padding:0 10px;}
+.parentClass .hotArticle li{ padding: 15px 0 20px;}
+.parentClass .hotArticleList .hotTags a{ color:#50b49e;font-size: 12px;margin-right:20px;}
+.parentClass .hotArticleList{ width:172px;}
+.parentClass .hotArticleList p{ line-height: 16px;margin-bottom: 5px;}
+.parentClass .QRCode{ width:160px;height:203px;background: #179c7e;text-align: center;}
+.parentClass .QRCode p{ text-align: center;color: #fff;}
+.parentClass .QRCode p.QRCodeText{ line-height: 30px;height: 30px;}
+/* img 写width  height 是为了占位 ----------*/
+.parentClass .QRCode img{ width:120px;height:120px;margin-bottom: 4px;}
+.parentClass .hotArticle li img{ width:100px;height: 70px;}
+.parentClass .hotArticle .parTime{ display: inline-block;}
+/*家长端 家长课堂右侧结束*/
+
+/*关键词 开始 静态*/
+.parentClass .key_word_title{ font-size: 20px;font-weight: normal;}
+.parentClass .key_word_title span { color:#179c7e;margin:0 5px;}
+.parentClass .searchListBox .infor_container li{border-top:none;border-bottom: 1px solid #ccc;zoom: 1;}
+
+/*关键词 结束*/
+/*资讯展示页 开始*/
+.parentClass .articleCont h1{ font-size: 24px;text-align: center;font-weight: normal;}
+.parentClass .articleCont p{ margin:20px 0;}
+.parentClass .articleCont p a{ color:#09aa83;}
+.parentClass .articleCont p *{ margin-right:16px;}
+.parentClass .praise,.parentClass .praised {display: inline-block;background: url("../../image/parentHomePage/praise.png") left 3px no-repeat;padding-left: 14px;height:16px;}
+.parentClass .articleContHead{padding-top:20px;}
+.parentClass .articleContHead p,.parentClass .articleContHead{ text-align: center;}
+.parentClass .articleContBox{ font-size: 16px;line-height: 24px;margin:25px 0;}
+.parentClass .articleContBox h3{ font-size: 16px;font-weight: normal;}
+.parentClass .articleContBox img{ max-width: 660px;margin: 0 auto;}
+.parentClass .articleContFoot{ background: #f6f6f6;padding:12px 20px;}
+.parentClass .collect{ background:url("../../image/parentHomePage/collect.png") left 3px no-repeat;padding-left: 14px;height:16px; }
+.parentClass .articleContFoot .fl span{ margin-right:34px;cursor: pointer; }
+.parentClass .articleContFoot .fl span.praised{ margin-right:34px;cursor: default; }
+.parentClass .articleContFoot .fl{ margin-top:5px; }
+.parentClass .parShare{ width:172px;}
+.parentClass .parShare *{ float: left;width:22px;height:16px;}
+.parentClass .parShare span{ width:40px;text-align: center;}
+.parentClass .relaArticle .oldH1{ font-size: 18px;margin:40px 0 10px;text-align: left;font-weight: normal;}
+.parentClass .relaArticle li{ height:30px;line-height: 30px;width:100%;font-size:14px; }
+.parentClass .relaArticle .parTime{margin-bottom:0px;line-height:34px;}
+.parentClass .relaArticle ul{ border-top:1px solid #ccc;zoom:1;padding-top:8px;}
+/*资讯展示页 结束*/
+/*上一篇下一篇开始*/
+.parentClass .prevNext{padding:20px 0px;}
+/*上一篇下一篇结束*/

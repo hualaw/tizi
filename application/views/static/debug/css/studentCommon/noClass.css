@@ -1,0 +1,44 @@
+/*没有加入班级样式开始*/
+.studentNoClass .topBox h2{line-height:40px;font-size:16px;color:#33333aa}
+.studentNoClass .topBox p{line-height:30px;font-size:16px;color:#333333;}
+.studentNoClass .addClass{height:185px;padding:30px;border:10px solid #c2efd8;border-radius:10px;background:url(../../image/studentHome/student_home_noClass_bg.png) no-repeat left 15px;margin-top:10px;}
+.studentNoClass .addClass h3{line-height:36px;font-size:24px;color:#333333;margin-bottom:10px;font-weight:normal;}
+.studentNoClass .addClass li{margin-bottom:15px;}
+.studentNoClass .addClass .inputBox .csInput{height:30px;width:230px;}
+.studentNoClass .addClass li .spanBox input{width:90px;height:32px;margin-left:10px;line-height:32px;}
+.studentNoClass .addClass p{line-height:28px;font-size:12px;color:#666666;}
+.studentNoClass .addClass p.last{background:#fff;width:470px;}
+.studentNoClass .addClass p.last a{color:#09aa83;cursor:pointer;}
+.studentNoClass .brmBar{height:40px;margin-top:40px;background:url(../../image/studentHome/extracurricularLearning.png) no-repeat center center;}
+.studentNoClass .otherFn {padding:30px 50px 50px 50px;}
+.studentNoClass .otherFn h3{font-size:14px;color:#333333;font-weight:normal;text-align:center;margin-bottom:20px;}
+.studentNoClass .otherFn li{width:170px;margin-right:100px;}
+.studentNoClass .otherFn li .a_icon{display:block;height:75px;width:75px;margin:0 auto;}
+.studentNoClass .otherFn .fn_1 .a_icon{background:url(../../image/studentHome/otherFn_bg1.png) no-repeat center top;}
+.studentNoClass .otherFn .fn_2 .a_icon{background:url(../../image/studentHome/otherFn_bg2.png) no-repeat center top;}
+.studentNoClass .otherFn .fn_3 .a_icon{background:url(../../image/studentHome/otherFn_bg3.png) no-repeat center top;}
+.studentNoClass .otherFn li.no-mr-0{margin-right:0px;}
+.studentNoClass .otherFn li h4{text-align:center;}
+.studentNoClass .otherFn li h4 a{font-size:18px;color:#09aa83;font-weight:normal;line-height:30px;text-align:center;}
+.studentNoClass .otherFn li h4 a:hover{color:#f90;}
+.studentNoClass .otherFn li p{font-size:12px;color:#333;text-align:center;line-height:22px;}
+/* 学生 tab title开始*/
+
+/* 学生 tab title结束*/
+/* 自主练习 右侧内容开始*/
+.studentNoClass .stuCommonBox{margin-top:20px;}
+.studentNoClass .practice .innerBox{padding:0;}
+.studentNoClass .courseNav {border-bottom: 1px solid #d9e2ec;height: 46px;line-height:46px;margin-top:5px;}
+.studentNoClass .courseNav li {cursor: pointer;font-size: 16px;padding: 0 15px;text-align: center;}
+.studentNoClass .stuOn {color: #09AA83;}
+.studentNoClass .practiceBox {margin: 18px 0;padding-left:10px;display: none}
+.studentNoClass div.dis {display: block;}
+.studentNoClass .practiceBox .pieceTitle {height: 28px;line-height: 28px;font-size: 18px;margin-left: 5px;}
+.studentNoClass .practiceBox .pieceCon {overflow: hidden;}
+.studentNoClass .practiceBox .pieceCon li {margin: 8px;width: 180px;height: 50px;border: 2px solid #d9e2ec;padding: 13px 0;}
+.studentNoClass .practiceBox .pieceCon li a {overflow: hidden;}
+.studentNoClass .practiceBox .pieceCon li a img {margin: 0 10px;width: 50px;height: 50px;}
+.studentNoClass .practiceBox .pieceCon li a span {font-size: 14px;margin-top: 13px;}
+.studentNoClass .practiceBox .pieceCon li a p span {width:100px;}
+.studentNoClass .pieceCon p.fl{width: 100px;line-height: 14px;}
+/* 自主练习 右侧内容结束*/

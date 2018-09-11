@@ -1,0 +1,102 @@
+{extends file='teacher/resource/res_base.html'}
+{block name=title}教学网盘{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<!--添加我的资源库顶部导航开始-->
+{include file='teacher/resource/breadcrumbs_capacity.html'}
+<!--添加我的资源库顶部导航结束-->
+<!--左侧目录结构开始-->
+<div class="slide fl w220" id="slide">
+    <input type='hidden' class='dir_cat_id' value='{$dir_cat_id}' />
+    <input type='hidden' class='sub_cat_id' value='{$sub_cat_id}' />
+    <input type='hidden' class='dir_id' value='{$dir_id}' />
+    <input type='hidden' class='share_to_tizi_ids' value='' />
+
+    <div class="slideBox">
+        <h2 class="slideBox_title">目录</h2>
+        <!-- 添加滚动条开始-->
+        <div class="scrollPanel">
+            <div id="scrollTreeContent1" class="scrollTreeContent">
+                <div class="Scroller-Container">
+                    <div class="slideContent tree-list">
+                        <ul>
+                            {if $category_tree}
+                            {foreach $category_tree as $val}
+                            <li class="depth_{$val['depth']} {if $sub_cat_id == $val.id}active{/if}">
+                                <a href="{$site_url}teacher/cloud/res/res_dir/{$dir_cat_id}/{$val.id}" title='{$val['name']}' data-nselect="{$val['id']}">{sub_str($val['name'],0,33)}({if isset($sta[$val.id]['total'])}{$sta[$val.id]['total']}{else}0{/if})</a>
+                                <em class="arrow"></em>
+                            </li>
+                            {/foreach}
+                            {/if}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="scrollTreePanel1" class="scrollTreePanel">
+                <div class="Scrollbar-Track">
+                    <div class="Scrollbar-Handle"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 添加滚动条结束-->
+    </div>
+</div>
+<!--左侧目录结构结束-->
+<!-- 右侧框架开始 -->
+<div class="wrapContent fr main" id="wrapContent">
+    <!--同步知识点目录开始-->
+    <div class="sysDirect">
+        <!--右侧目录上传开始-->
+        <div class="fileDirectList">
+            <!--类型遍历开始-->
+            {foreach $res_type as $key=>$val}
+            <div class="fileDirectText">
+                <div class="md_hd">
+                    <span class="mh_title">{$val}<b>({if isset($sta.$sub_cat_id.$key)}{$sta.$sub_cat_id.$key}{else}0{/if})</b></span>
+                    <span class="mh_option">
+                        <a class="cBtnNormal dropBoxup" href="javascript:void(0);" title="" data-res_type="{$key}">文件上传<em></em></a>
+                    </span>
+                </div>
+                <div class="md_bd">
+                    <ul>
+                        {if isset($list.$key)}{foreach $list.$key as $k=>$v}
+                        {include file='teacher/resource/file_list_tpl.html'}
+                        {/foreach}{/if}
+                        
+                    </ul>
+                    {if isset($sta.$sub_cat_id.$key) && $sta[$sub_cat_id][$key]>count($list.$key)}
+                    <div class="option_more">
+                        <a href="{$site_url}teacher/cloud/res/res_list/{$sub_cat_id}/{$key}" class="cgr fr">更多内容 >></a>
+                    </div>
+                    {/if}
+                </div>
+            </div>
+            {/foreach}
+            <!--类型遍历结束-->
+             
+        </div>
+        <!--右侧目录上传结束-->
+    </div>
+    <!--同步知识点目录结束-->
+</div>
+<!-- 右侧框架结束 -->
+<!-- 分享弹出框开始-->
+{include file='teacher/resource/res_share.html'}
+<!-- 分享弹出框结束-->
+
+<!--  移动文件新开始  -->
+<div id="moveFilePop" class="pop_box">
+    <div class="teacherCloud new_tree"></div>
+</div>
+<!--  移动文件新结束  -->
+<!--  移动文件夹新开始  -->
+<div id="moveDirPop" class="pop_box">
+    <div class="teacherCloud new_dir_tree"></div>
+</div>
+<!--  移动文件夹新结束  -->
+
+{/block}
+
+{block name=script}
+{/block}

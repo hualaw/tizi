@@ -1,0 +1,98 @@
+/*首页样式开始*/
+.parentChampions{}
+.parentChampions .navImage{margin-bottom:10px;background-color:#fff9df;}
+/*视频播放模块开始*/
+.parentChampions .wrapVideo{border: 1px solid #dfdfdf; padding:10px 20px; margin-bottom:20px;}
+.parentChampions .wrapVideo .videoPlay{width:455px;margin-right:20px;display: block;}
+.parentChampions .wrapVideo .videoText{width:450px;line-height:24px;font-size: 14px; color: #555656;}
+.parentChampions .wrapVideo .videoText p.textp{margin-bottom:20px;text-indent: 10px;}
+/*视频播放模块结束*/
+/*评论模块样式开始*/
+.parentChampions .md_talk .hd{margin-bottom:10px; border: 1px solid #b9d8d6; background-color:#e6fbf6;line-height:40px;clear: both; overflow: hidden; padding:0 10px;}
+.parentChampions .md_talk .hd h2{font-size:18px;margin-right:10px; font-weight: normal;}
+.parentChampions .md_talk .hd span{font-size:14px;}
+/*评论模块样式结束*/
+/*学员列表模块开始*/
+.parentChampions .wrapStudent{margin-bottom:30px;}
+.parentChampions .wrapStudent ul{clear: both; overflow: hidden;}
+.parentChampions .wrapStudent li{float:left;width:490px; height:260px;margin-bottom:20px;}
+.parentChampions .wrapStudent li .photoImage{margin-right: 10px;cursor: pointer;}
+.parentChampions .wrapStudent li .photoImage a{display: block;position: relative;}
+.parentChampions .wrapStudent li .photoImage span.bgcover{display:none;width:215px; height:250px;background-color:#000;opacity:0.3;filter:alpha(opacity=30);-moz-opacity:0.3;-khtml-opacity: 0.3;position: absolute;left: 0px; top: 0px;}
+.parentChampions .wrapStudent li .photoImage em.playicon{display:none; width:74px; height:74px;position: absolute;left:80px; top:80px; background: url("../../image/activity/champions/icon_play.png") no-repeat left top;_background: url("../../image/activity/champions/icon_play.gif") no-repeat left top;}
+.parentChampions .wrapStudent li .hoverActive span.bgcover,.parentChampions .wrapStudent li .hoverActive em.playicon{display: block;}
+.parentChampions .wrapStudent li .photoText{width:253px;}
+.parentChampions .wrapStudent li .photoText .md_hd{height:35px;line-height: 24px;border-bottom: 1px solid #dfdfdf;}
+.parentChampions .wrapStudent li .photoText .md_hd h2{font-size: 16px; color: #555656;}
+.parentChampions .wrapStudent li .photoText .md_hd div.option{color: #17a27e;font-size: 12px;}
+.parentChampions .wrapStudent li .photoText .md_bd{line-height:36px;border-bottom: 1px solid #dfdfdf;padding:10px 0px;}
+.parentChampions .wrapStudent li .photoText .md_bd p{font-size: 14px; color:#555656;}
+.parentChampions .wrapStudent li .photoText .md_ft{margin-top:15px;}
+.parentChampions .wrapStudent li .photoText .md_ft .seeVideo{width:90px;margin-right: 20px;}
+.parentChampions .wrapStudent li .photoText .md_ft .seeActive{width:95px;}
+.parentChampions .wrapStudent li .photoText .md_ft .goNahao{width:95px;color:#fff;}
+.parentChampions .wrapStudent li .photoText .md_ft .overActive{width:95px;color:#cccccc;}
+/*学员列表模块结束*/
+/*首页样式结束*/
+/*视频播放页面样式开始*/
+.parentChampions .pageRoute{margin-top:10px;}
+/*视频模块开始*/
+.parentChampions .md_video{clear: both; overflow: hidden;margin-top:10px; margin-bottom:10px;}
+.parentChampions .md_video .videoPlay{width:749px; height:433px;}
+.parentChampions .md_video .videoList{border: 1px solid #dfdfdf;padding:10px;width:205px; height:410px; overflow:auto;}
+.parentChampions .md_video .videoList li{clear: both; overflow: hidden; height:70px;padding-top:12px;border-bottom:1px solid #f0f0f0;cursor: pointer;}
+.parentChampions .md_video .videoList li .image{margin-right:10px;}
+.parentChampions .md_video .videoList li .text{font-size: 12px; color:#555656;line-height:18px;padding-top:5px;height:39px;overflow: hidden;}
+.parentChampions .md_video .videoList li.active{background: #f0f0f0}
+.parentChampions .md_video .videoList li.last{padding-bottom:0px;border-bottom:0px;}
+/*视频模块结束*/
+/*分享导航开始*/
+.parentChampions .md_shareNav{margin-bottom:10px;border: 1px solid #dfdfdf; height:55px; line-height:55px;clear: both;padding:0 20px;z-index:1000;}
+.parentChampions .md_shareNav a.iconN{display:block;float:left;width:70px;color:#333333; font-size: 14px;background: url("../../image/activity/champions/icon_01.gif") no-repeat left top;text-align:left;}
+.parentChampions .md_shareNav a.iconTop{background-position:0px 8px;padding-left:30px;}
+.parentChampions .md_shareNav a.iconShare{background-position:-90px 8px;padding-left:0px;}
+.parentChampions .md_shareNav .fl span{margin-left:50px;}
+.parentChampions .md_shareNav span{color:#333333; font-size: 14px;}
+.parentChampions .md_shareNav span b{margin-right:10px;}
+.parentChampions .md_shareNav .shareBox{display:none; width:240px;position: absolute; left:-1px;top:45px;padding:10px 20px;z-index:999;background-color:#fff;border: 1px solid #dfdfdf;_zoom:1;}
+/*分享导航结束*/
+/*课程信息模块开始*/
+.parentChampions .md_ClassInfo{margin-bottom:10px; border: 1px solid #b9d8d6; background-color:#e6fbf6;height:55px;line-height:55px;clear: both; overflow: hidden; padding:0 20px;}
+.parentChampions .md_ClassInfo .title{display:block;width:180px;font-size: 18px;font-weight: normal; color:#333333;position: relative;}
+.parentChampions .md_ClassInfo .title em.icon_class{display: block;width:36px; height: 24px; position:absolute;right:10px;top:10px;background: url("../../image/activity/champions/icon_free.gif") no-repeat left top;}
+.parentChampions .md_ClassInfo .text{font-size: 14px; color:#333333;margin-left:20px;margin-right:20px;}
+.parentChampions .md_ClassInfo .seeActive{_margin-top:10px;}
+.parentChampions .md_ClassInfo .goNahao{_margin-top:10px;color:#fff;}
+/*课程信息模块结束*/
+.parentChampions .wrapArtice{clear: both; overflow: hidden;}
+/*正文模块开始*/
+.parentChampions .wrapArtice .md_content{width:680px;margin-right:10px;}
+.parentChampions .wrapArtice .md_artice{border: 1px solid #dfdfdf;padding:20px;margin-bottom:10px;}
+.parentChampions .wrapArtice .md_artice h2{font-size:24px;color:#333; text-align: center;margin-bottom:20px;}
+.parentChampions .wrapArtice .md_artice p{margin-bottom:10px;text-indent: 10px;font-size: 14px;line-height: 26px;color:#333;}
+/*正文模块结束*/
+/*简介模块开始*/
+.parentChampions .wrapArtice .md_brief{width:280px;}
+.parentChampions .wrapArtice .studentBrief{padding:15px;border: 1px solid #dfdfdf;width:255px;margin-bottom:10px;}
+.parentChampions .wrapArtice .studentBrief .md_hd{height:35px;line-height: 24px;border-bottom: 1px solid #dfdfdf;}
+.parentChampions .wrapArtice .studentBrief .md_hd h2{font-size: 16px; color: #555656;}
+.parentChampions .wrapArtice .studentBrief .md_bd{line-height:36px;border-bottom: 1px solid #dfdfdf;padding:10px 0px;}
+.parentChampions .wrapArtice .studentBrief .md_bd p{font-size: 14px; color:#555656;}
+.parentChampions .wrapArtice .studentBrief .md_ft{margin-top:10px;}
+.parentChampions .wrapArtice .studentBrief .md_ft p{font-size: 14px; color:#555656; line-height:26px;}
+.parentChampions .wrapArtice .studentBrief .md_ft p b{font-size: 16px;}
+.parentChampions .wrapArtice .noticeText{width:255px;margin-bottom:10px;padding:15px;border: 1px solid #b9d8d6;box-shadow: 0px 0px 1px 0px #b9d8d6;}
+.parentChampions .wrapArtice .noticeText .text{font-size: 12px; color:#555656; line-height:24px;}
+.parentChampions .wrapArtice .noticeText .text b{font-size: 12px; color:#555656;}
+/*简介模块结束*/
+/*视频播放页面样式结束*/
+/*弹出框样式开始*/
+.parentChampions .appoint_main{clear: both;}
+.parentChampions .appoint_main h2{font-size:24px; line-height: 36px; color:#565656;font-weight: normal;}
+.parentChampions .appoint_main p{font-size:12px; line-height: 40px; color:#565656;}
+.parentChampions .appoint_main ul{margin-top:10px;}
+.parentChampions .appoint_main li{height:50px;clear: both; overflow: hidden;}
+.parentChampions .appoint_main li em{font-size: 16px; color:#ff3030;margin-right:10px;line-height: 38px;}
+.parentChampions .appoint_main li .cInput{width: 230px;}
+.parentChampions .appoint_main li .Validform_checktip{line-height:40px;}
+/*弹出框样式结束*/

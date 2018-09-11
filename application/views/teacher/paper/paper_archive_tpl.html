@@ -1,0 +1,37 @@
+{foreach $data.save_log as $sl}
+<div class="paperListBox">
+    <div class="paperList cf">
+        <div class="paperInfo fl">
+             <a class="word" href="{$site_url}teacher/paper/recover/{$sl->id}">{sub_str($sl->logname,0,60)}</a>
+            <p>
+                <span>存档时间：{$sl->save_time} </span>
+                <span>学科：{$sl->subject_name}</span>
+                <span>题目数：{if isset($sl->question_count) && $sl->question_count}{$sl->question_count}{else}-{/if}</span>
+                {if $user_type==Constant::USER_TYPE_TEACHER}<span>布置次数：{$sl->assign_count}</span>{/if}
+            </p>         
+        </div>
+        <div class="operation fr">
+            <div  class="operationBtn downLoadBtn fl">
+                <span class="icon1 fl"></span>
+                <span class="fl text">下载</span>
+                <span class="icon2 fl"></span>
+                <ul class="undis">
+                    <li>
+                        <a href="javascript:void(0)" class=" down-word-btn" slid="{$sl->id}">下载试卷</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="down-card-btn" slid="{$sl->id}">下载答题卡</a>
+                    </li>
+                </ul>
+            </div >
+            {if $user_type eq $constant.user_type_teacher}
+            <a href="JavaScript:void(0)" class="operationBtn arrangement fl" paper_id='{$sl->testpaper_id}' logname="{$sl->logname}" save_id="{$sl->id}">留作业</a>
+            {/if}
+            <a href="javascript:void(0);" class=" operationBtn delBtn del-log-btn" slid="{$sl->id}">删除</a>
+        </div>
+    </div>
+</div>
+{/foreach}
+<div class="page cf">
+    <div class="fr">{$pages}</div>
+</div>

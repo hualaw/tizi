@@ -1,0 +1,29 @@
+/*纠错页面样式开始*/
+.feedback .feedbackQuestion{clear:both; overflow:hidden;}
+.feedback .feedbackQuestion .md_haveError{width: 830px; margin-left:100px;}
+.feedback .feedbackQuestion .md_haveError h2{font-size:20px; color:#565656; line-height:36px; margin-bottom:10px;border-bottom: 1px solid #dddddd;}
+.feedback .feedbackQuestion .md_haveError ul{list-style:none;}
+.feedback .feedbackQuestion .md_haveError ul li{clear:both; overflow:hidden;line-height: 36px;}
+.feedback .feedbackQuestion .md_haveError ul li .lite_title{font-size:14px; color:#000000;}
+.feedback .feedbackQuestion .md_haveError ul li span{font-size:14px;}
+.feedback .feedbackQuestion .md_haveError ul li span.Validform_checktip{font-size:12px; background-color:#fff;}
+.feedback .feedbackQuestion .md_haveError ul li .lite_textarea{width:720px; height:100px; border:1px solid #ddd;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067); padding-left:10px;font-size:12px;padding-top:5px;}
+.feedback .feedbackQuestion .md_haveError ul li .checkInput{float:left;font-size:14px; color:#000000;_margin-top: 10px;}
+.feedback .feedbackQuestion .md_haveError ul li .checkInput .labelr{margin-right:20px;}
+.feedback .feedbackQuestion .md_haveError ul li .checkInput .items{vertical-align: middle;margin-top: -3px;}
+.feedback .feedbackQuestion .md_haveError ul li .fbquestionBoxWord{margin-right:10px;}
+.feedback .feedbackQuestion .md_haveError .BtnSubmit{margin-top:20px;margin-left:5px;width: 90px; height: 30px;clear: both; overflow: hidden;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload{clear:both;overflow:hidden; margin-top:10px;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload{float:left; width:110px;position:relative;margin-right:20px;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload span.upladpic {display: block; background:url(../../image/feedback/feedbackQuestion/upload_img.gif) no-repeat; width:102px; height:81px; margin-bottom:15px; text-align:center; vertical-align:middle;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload span.upladpicSpan {display: block;border: 5px solid #FCFAE6;border-radius: 5px;box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; width: 92px;height: 71px; margin-bottom:15px; text-align:center; vertical-align:middle;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload span.upladpic img.picture_urls,
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload span.upladpicSpan img.picture_urls{ display:inline;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload .imgloading{padding:25px 30px;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload .uploadify-button{background:0 none; border:0 none; box-shadow:none;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload .choseFileBtn{background-color:#52cb8c;-moz-border-radius:10px;-webkit-border-radius: 10px;border-radius: 10px; border:1px solid #179c7e;-webkit-box-shadow:0px 4px 0px #e5e5e5;-moz-box-shadow:0px 4px 0px #e5e5e5;box-shadow:0px 4px 0px #e5e5e5; cursor:pointer; text-align:center;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload .choseFileBtn.active{background-color:#77dba2;-webkit-box-shadow:0px 4px 0px #fff;-moz-box-shadow:0px 4px 0px #fff;box-shadow:0px 4px 0px #fff;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload .choseFileBtn span{color:#fff;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload .uploadify-queue{ display: none;}
+.feedback .feedbackQuestion .md_haveError ul li .image_upload .lite_upload div.clearpic {display: none;background:url(../../image/feedback/feedbackQuestion/aq_closeBtn.gif) no-repeat;width: 16px;height: 15px;position: absolute;right: 13px;top:5px;cursor: pointer;}
+/*纠错页面样式结束*/

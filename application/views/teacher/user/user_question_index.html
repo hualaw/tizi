@@ -1,0 +1,70 @@
+{extends file='teacher/user/user_question_base.html'}
+{block name=title}我的题库{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<div class="main-container mainContainer" pagename="myQuestionLibrary">
+    <div class="myQuestion" id="ajax_content">
+        <div class="newGrop">
+            <a href="javascript:void(0)"  class="cBtnSilver newGroup">新建分组</a>
+        </div>
+        <div class="grop_list">
+            <table>
+                <tr>
+                    <th class="questionGrop">题目分组</th>
+                    <th class="questionNum">题目数量</th>
+                    <th class="operation">操作</th>                   
+                </tr>
+				{foreach $data.groups as $group}
+                <tr>
+                    <td class="questionGrop group-name">
+                        <a href="{$site_url}teacher/user/myquestion/g{if $group->id eq 0}{else}/{$group->id}{/if}" title="{$group->name}" data-gid="{$group->id}">{$group->name}</a>
+                    </td>              
+                    <td class="paperNum">{$group->total} 道</td>                           
+                    <td class="operation">
+						{if $group->id !=0}
+                        <a href="javascript:void(0)" data-gid="{$group->id}" class="edit_doc">重命名</a>
+                        <a href="javascript:void(0)" data-gid="{$group->id}" class="del_doc">删除</a>
+						{/if}
+                    </td>
+                </tr> 
+				{/foreach}
+            </table>
+        </div>
+        
+    </div>
+
+</div>
+<!--添加我的题库弹出开始-->
+<div id="ucDoc_nav" class="pop_box undis">
+	 <form class="addDocForm_beta" action="{$site_url}user/user_question/new_group" method="post">
+		<div class="teacherTestLibrary">
+			<div class="myGroupInput">
+				<h2>请输入分组名称</h2>
+				<input type="text" name="group_name" maxlength="20" value="" class="group_name"/>
+				<input type="hidden" name="sid" value="{$data.subject_id}" class="group_sid"/>
+			</div>
+			<input type="submit" class="undis"/>
+		</div>
+	</form>
+</div>
+<!--添加我的题库弹出结束-->
+<!--编辑我的题库弹出开始-->
+<div id="ucDoc_Editor" class="pop_box undis">
+	 <form class="editDocForm_beta" action="{$site_url}user/user_question/update_group" method="post">
+		 <div class="teacherTestLibrary">
+			   <div class="myGroupInput">
+					<h2>请输入分组名称</h2>
+					<input type="text" name="new_name" maxlength="20" value="" class="group_name"/>
+					<input type="hidden" name="sid" value="{$data.subject_id}" class="group_sid"/>
+					<input type="hidden" name="gid" value="" class="group_gid"/>
+					<input type="hidden" name="op_type" value="update" class="op_type"/>
+			   </div>
+			   <input type="submit" class="undis"/>
+		 </div>
+	</form>
+</div>
+<!--编辑我的题库弹出结束-->
+{/block}
+{block name=script}
+{/block}

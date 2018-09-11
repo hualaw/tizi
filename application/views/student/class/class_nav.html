@@ -1,0 +1,13 @@
+<h2 class="className">{if isset($arr_grade[$class_info.class_grade])}{$arr_grade[$class_info.class_grade]}{/if}{$class_info.classname}<span>{if $school_name}（{$school_name}）{/if}</span></h2>
+<div class="stuClassSubNav cf">
+	<span class="classNum fl">班级编号：{$alpha_class_id}</span>
+	<p class="navBox fr">
+        <!-- <a href="{$site_url}student/class/paper"{if $part=='paper'} class="active"{/if}>试卷({$paper_num})</a> -->
+
+        <a href="{$site_url}student/class/homework"  {if $part=='homework'}class="active"{/if}>作业({$homework_num})</a>
+		<a href="{$site_url}student/class/resource"{if $part=='resource'} class="active"{/if}>文件({$share_total})</a>
+
+		<a href="{$site_url}student/class/mate"{if $part=='mate'} class="active"{/if}>同学({$stu_total})</a>
+		<a href="{$site_url}student/class/teacher"{if $part=='teacher'} class="active"{/if}>老师({$class_info.tch_count})</a>
+	</p>
+</div>

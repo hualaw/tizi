@@ -1,0 +1,49 @@
+/*.studentOral .mainDetial_nav{border-bottom:2px solid #d9e2ec;margin-top:20px;}
+.studentOral .mainDetial_nav li{float:left;margin-right: 15px;font-size:14px;}
+.studentOral .mainDetial_nav li a{margin-right: 10px;font-size:14px;color:#565656;line-height:30px;}
+.studentOral .mainDetial_nav li a:hover{color:#f90;}*/
+.studentOral .mainDetial_nav li.active{color:#f90;}
+/*课外练习内容列表样式开始*/
+.studentOral .prBox{padding-top:20px;}
+.studentOral .prBox p.date{line-height:50px;font-size:24px;padding-bottom:5px;}
+/*.studentOral .prBox .listBox ul{margin-right: -70px;}*/
+
+.studentOral .prBox .listBox li{width:242px;float:left;margin-right:30px;_display:inline;}
+.studentOral .prBox .listBox li.noVideo{width:244px;height:164px;background:url(../../image/stuOral/novideo.gif) no-repeat center center #eee;}
+.studentOral .prBox .listBox li .picBox a{border:2px solid #898989;overflow:hidden;display:block;width:240px;height:160px; display: table-cell;
+ text-align:center;*font-size:120px; zoom:1; vertical-align:middle;}
+.studentOral .prBox .listBox li .picBox a img{vertical-align:middle;margin:auto;width:240px;height:160px;}
+.studentOral .prBox .listBox li .picBox a:hover{border:2px solid #09aa83;}
+.studentOral .prBox .listBox li .picBox a.active{border:2px solid #09aa83;}
+.studentOral .prBox .listBox li .title{line-height:22px;text-align:left;padding: 5px 9px;font-size:14px;height:44px;}
+
+/*课外练习内容列表样式结束*/
+/*每日口语样式开始*/
+.studentOral .returnVideoPage{padding-top:15px;}
+.studentOral .returnVideoPage a {
+display: inline-block;font-size: 14px;color: #179c7e;background: url(../../image/studentCommon/icon_back.gif) no-repeat;
+height: 19px;padding-left: 25px;line-height: 20px;}
+.studentOral .video_hd {font-size: 12px;color: #333;line-height: 20px;background: #fff;padding-top: 10px;}         
+.studentOral .video_hd h2{font-size: 14px;color: #333;line-height: 20px;font-size:14px;font-weight:normal;}         
+.studentOral .containerBox{position:relative;padding-top:10px;}
+.studentOral .containerBox .seaMoreBox{position:absolute;bottom:0;right:0px;overflow:hidden;}
+.studentOral .containerBox .seaMore{width:200px;height:57px;display:block;background: black;opacity: 0.6;filter:Alpha(opacity=60);}
+/*@-moz-document url-prefix(){.studentOral .containerBox .seaMore{width:175px;height:57px;display:block;background: black;opacity: 0.6;filter:Alpha(opacity=60);}}*/
+.studentOral .containerBox .seaMoreBox a{overflow:hidden;padding:0px 20px;position: absolute;right: 55px;bottom:10px;}
+
+.studentOral .languageTab{padding:10px;background:#f6f6f6;margin-top:10px;}
+.studentOral .languageTab .languageBox{line-height:40px;}
+.studentOral .languageTab .languageBox input{margin-right: 5px;margin-top: 12px;}
+.studentOral .languageTab .inputBox{line-height:40px; }
+.studentOral .languageTab label{margin-right:35px;}
+.studentOral .languageTab .dl_audio{color:#fff;}
+.studentOral .languageTab .dl_audio:hover{color:#fff;}
+.studentOral .video_91img {height: 100px;margin-top: 20px;margin-right:-17px;_margin-right:-15px;}
+.studentOral .video_91img a{display:block;float:left;overflow:hidden;border:2px solid #cdcdcd;margin-right:17px;_margin-right:15px;cursor:pointer;}
+.studentOral .video_91img a.mr_r0{margin-right:0px;}
+/*2.0样式*/
+#mainDetial_nav {overflow: hidden;  padding: 15px 0 10px 0 ;}
+#mainDetial_nav ul {display:block;  margin-left: -32px;_width:100%;}
+#mainDetial_nav li {border-left: 1px solid #CCCCCC; cursor: pointer; float: left; margin-left: 15px; padding-left: 15px;}
+/*2.0样式 end*/
+/*每日口语样式结束*/

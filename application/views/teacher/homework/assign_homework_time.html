@@ -1,0 +1,48 @@
+<!-- 时间开始 -->
+        <div class="timeWrap cf baseItem">
+            <span class="leftTitle">答题时间：</span>
+            <!-- 时间选择框开始 -->
+            <div class="choiceWrap timeValWrap cf">
+            
+                <input name="start_day" class="datenInput startDay">
+                <!-- 开始的小时段 -->
+                <div class="selectWrap">
+                    <select class="selectWidth end_hour" id="start_hour" name="start_hour" > 
+                        {for $i=0;$i<=23;$i++}
+                            <option value="{$i}" {if $i==date('H',time())}selected{/if}>{$i}</option>
+                        {/for}
+                     </select>
+                 </div>
+                 <span class="splitPanel">时</span>
+                 <!-- 开始的分钟段 -->
+                 <div class="selectWrap">
+                 <select class="selectWidth end_min"  id="start_min" name="start_min">
+                    {for $i=0 to 45   step=15}
+                    <option value="{$i}">{if $i<10}0{/if}{$i}</option>
+                    {/for}
+                 </select>
+                </div>
+                <span class="splitPanel">分</span><span class="splitPanel">至</span>
+                <input name="end_day"  class="datenInput endDay">
+                <!-- 结束的小时段 -->
+                <div class="selectWrap">
+                <select class="selectWidth end_hour" id="end_hour" name="end_hour" >
+                    {for $i=0;$i<=23;$i++}
+                    <option value="{$i}">{$i}</option>
+                    {/for}
+                 </select>
+                 </div>
+                 <span class="splitPanel">时</span>
+                 <!-- 结束的分钟段 -->
+                 <div class="selectWrap">
+                 <select class="selectWidth end_min" id="end_min" name="end_min" >
+                    {for $i=0 to 45   step=15}
+                    <option value="{$i}">{if $i<10}0{/if}{$i}</option>
+                    {/for}
+                 </select>
+                 </div>
+                 <span class="splitPanel">分</span>
+            </div>
+            <!-- 时间选择框结束 -->
+        </div>
+        <!-- 时间结束 -->

@@ -1,0 +1,23 @@
+{$pqid=$data.paper_question_id}
+{$q=$data.question.id}
+{$qo=0}
+<div class="control-box fn-clear">
+    <a href="javascript:void(0)"><span class="del-icon" data-qid="{$q}" data-qorigin="{$qo}" opt="inner">删除</span></a>
+    {if $qo eq 0}
+    <a href="javascript:void(0)"><span class="change-icon" data-qid="{$q}" data-qorigin="{$qo}" data-cid="{$data.question.category_id}" data-qtype_id="{$data.question.qtype_id}" data-level="{$data.question.level_id}" opt="inner">换一题</span></a>
+    {/if}
+    <a href="javascript:void(0)"><span class="up-icon" data-qid="{$q}" data-pqid="{$pqid}" opt="inner">上移</span></a>
+    <a href="javascript:void(0)"><span class="down-icon" data-qid="{$q}" data-pqid="{$pqid}" opt="inner">下移</span></a>
+</div>
+<div class="question{if $qo} noimg tplStyle{/if} ">
+    <span class="question-index">{$data.qindex}</span>
+    {if isset($data.question)}
+        {$data.question.body}
+        <div class="answer undis">
+        {$data.question.answer}
+        {$data.question.analysis}
+        </div>
+    {else}
+        <div style="margin-top:8px;margin-left:6px;">对不起，此题目已从题库中删除</div>
+    {/if}
+</div>

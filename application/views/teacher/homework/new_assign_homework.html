@@ -1,0 +1,179 @@
+{extends file='teacher/homework/base.html'}
+
+{block name=title}布置作业{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<div class="wrap layout assignHomework">
+   
+    <span class="assignHomeworkH">留作业/布置作业</span>
+    <div class="assignWrap">
+        <form action="{$site_url}homework/teacher_assign/do_assign" method='POST' onsubmit='false' class="assginHomeWorkForm">
+        <div class="topWrap">
+            <input type="hidden" name="alpha_class_id" value="{$alpha_class_id}">
+            <input type="hidden" name="subject_id" value="{$subject_id}">
+            <!-- 班级开始 -->
+            <div class="className cf baseItem">
+                <span class="leftTitle">班级：</span>{$class_name}
+            </div>
+            <!-- 班级结束 -->
+            <!-- 学段开始 -->
+
+            <!-- 学段结束 -->
+            <div class="subjectName cf baseItem">
+                <span class="leftTitle">学段：</span>
+                <!-- 学科选择列表开始 -->
+                <div class="choiceWrap subjectList">
+                    <a  class="choiceItem subjectVal {if $cur_grade=='pri'}selected{/if}" href="{$site_url}zuoye/assign/{$alpha_class_id}?g=1&st={$subject_type_id}&21">小学</a>
+                    <a  class="choiceItem subjectVal {if $cur_grade=='mid'}selected{/if}"  href="{$site_url}zuoye/assign/{$alpha_class_id}?g=2&st={$subject_type_id}&3">初中</a>
+                    <a  class="choiceItem subjectVal {if $cur_grade=='high'}selected{/if}"  href="{$site_url}zuoye/assign/{$alpha_class_id}?g=3&st={$subject_type_id}&12">高中</a>
+                </div>
+                <!-- 学科选择列表结束 -->
+            </div>
+            <!-- 学科开始 -->
+            <div class="subjectName cf baseItem">
+                <span class="leftTitle">学科：</span>
+                <!-- 学科选择列表开始 -->
+                <div class="choiceWrap subjectList">
+                    {if $cur_grade=='mid'}
+                    <a class="choiceItem subjectVal {if $subject_id==3}selected{/if}"  {if $subject_id!=3}href="{$site_url}zuoye/assign/{$alpha_class_id}/3"{/if}>英语</a>
+                    <a class="choiceItem subjectVal {if $subject_id==2}selected{/if}"  {if $subject_id!=2}href="{$site_url}zuoye/assign/{$alpha_class_id}/2"{/if}>数学</a>
+                    <a class="choiceItem subjectVal {if $subject_id==1}selected{/if}"  {if $subject_id!=1}href="{$site_url}zuoye/assign/{$alpha_class_id}/1"{/if}>语文</a>
+                    {elseif $cur_grade=='pri'}
+                    <a class="choiceItem subjectVal {if $subject_id==21}selected{/if}"  {if $subject_id!=21}href="{$site_url}zuoye/assign/{$alpha_class_id}/21"{/if}>英语</a>
+                    <a class="choiceItem subjectVal {if $subject_id==20}selected{/if}"  {if $subject_id!=20}href="{$site_url}zuoye/assign/{$alpha_class_id}/20"{/if}>数学</a>
+                    <!-- 小学语文是19 -->
+                    <a class="choiceItem subjectVal {if $subject_id==19}selected{/if}"  {if $subject_id!=19}href="{$site_url}zuoye/assign/{$alpha_class_id}/19"{/if}>语文</a>
+                    {else}
+                    <a class="choiceItem subjectVal {if $subject_id==12}selected{/if}"  {if $subject_id!=12}href="{$site_url}zuoye/assign/{$alpha_class_id}/12"{/if}>英语</a>
+                    <a class="choiceItem subjectVal {if $subject_id==11}selected{/if}"  {if $subject_id!=11}href="{$site_url}zuoye/assign/{$alpha_class_id}/11"{/if}>数学</a>
+                    <a class="choiceItem subjectVal {if $subject_id==10}selected{/if}" {if $subject_id!=10} href="{$site_url}zuoye/assign/{$alpha_class_id}/10"{/if}>语文</a>
+                    {/if}
+                 </div>
+            </div>
+            <!-- 学科开始 -->
+
+              <!-- 版本开始 -->
+            <div class="materialName cf baseItem">
+                <span class="leftTitle">版本：</span>
+                <div class="choiceWrap materialList">
+                {if $editions}
+                {foreach $editions as $key=>$val}
+                    <a href="{$site_url}zuoye/assign/{$alpha_class_id}/{$subject_id}/{$val.category_id}">
+                <div class="choiceItem materialval green {if $banben_select==$val.category_id}selected{/if} " >
+                    <span class="versions yh {$val.category_id} {$banben_select}">
+                        {$val.name} 
+                    </span>
+                </div>
+                    </a>
+                {/foreach}
+                {/if}
+                </div>
+            </div>
+            <!-- 版本结束 -->
+
+            <!-- 小年级开始 -->
+            <div class="gradeName cf baseItem">
+                <span class="leftTitle">年级：</span> 
+                <!-- 年级选择列表开始 -->
+                <div class="choiceWrap gradeList ">
+                    {if $spec_grade}
+                    {foreach $spec_grade as $k=>$val}
+                    {if isset($val->name)}
+                    <a spec_g="{$val->id}" {$spec_grade_id} {$val->name} class="choiceItem specGrade {if $val->id==$spec_grade_id}selected{/if} ">{$val->name}</a>
+                    {/if}
+                    {/foreach}
+                    {/if}
+                </div>
+                <!-- 年级选择列表结束 -->
+            </div>
+            <!-- 小年级结束 -->
+
+            <!-- 单元开始 -->
+            <div class="untilName cf baseItem">
+            {include file='teacher/homework/new_assign_homework_unit.html'}
+            </div>
+            <!-- 单元结束 -->
+
+            <!-- 练习开始 -->
+            <div class="exerciseWrap cf baseItem">
+            {include file='teacher/homework/assign_homework_prac.html'}
+            </div>
+            <!-- 练习结束 -->
+        </div>
+        
+        <div class="bottomWrap">
+            <!-- 时间开始 -->
+            {include file='teacher/homework/assign_homework_time.html'}
+            <!-- 时间结束 -->
+            {if $cur_grade != 'pri'}
+            <!-- 答案顺序开始 -->
+            <div class="orderWrap cf baseItem">
+                <span class="leftTitle">答案顺序：</span>
+                <label for="order_same" class="labelWrap">
+                <input name="answerOrder" type="radio" value="1" id="order_same" checked="checked"/>所有学生题目顺序相同</label>
+                <label for="order_diff" class="labelWrap">
+                <input name="answerOrder" type="radio" value="2" id="order_diff"/>所有学生题目顺序不相同</label>
+            </div>
+            <!-- 答案顺序结束 -->
+            <!-- 答案公布时间开始 -->
+            <div class="anserOpen cf baseItem">
+                <span class="leftTitle">答案公布时间：</span>
+                <label for="anser_all" class="labelWrap"><input name="showTime" type="radio" id="anser_all" checked="checked" value="2" />答题时间结束后统一公布</label>
+                <label for="anser_one" class="labelWrap"><input name="showTime" value="1" type="radio" id="anser_one"/>每个学生交卷后公布</label>
+            </div>
+            <!-- 答案公布时间结束 -->
+            {/if}
+        </div>
+
+        
+        <div class="submitWrap">
+            <input type="submit" value="确认布置" class="cBtnNormal submitBtn yh" id="submitBtn"/>
+            <!-- 表单的隐藏input开始 -->
+            <!-- 班级名称 -->
+            <!-- <input type="hidden" name="cName" id="inpClassName" value="数学44"/> -->
+            <!-- 科目 -->
+            <!-- <input type="hidden" name="subjectName" id="inpSubjectName" value="英语"/> -->
+            <!-- 年级 -->
+            <!-- <input type="hidden" name="gradeName" id="inpGradeName" value="三年级"/> -->
+            <!-- 教材版本 -->
+            <!-- <input type="hidden" name="materialName" id="banbenId" value="人教PEP版"/> -->
+            <!-- 外教视频 -->
+            <input type="hidden" name="videos" id="inpVideos" />
+            <!-- 游戏 -->
+            <input type="hidden" name="games" id="inpGames" />
+            <!-- 试卷包 -->
+            <input type="hidden" name="papers" id="inpPapers" />
+            <!-- 表单的隐藏input结束 -->
+        </div>
+        </form>
+    </div>
+</div>
+
+<!-- 提示外框开始-->
+<div class="dialogWrap" id="tipDialog">
+    <div class="teacherHomework">
+        <div class="tipContWrap">
+            作业布置成功！
+        </div>
+    </div>
+</div>
+<!-- 提示外框结束 -->
+
+
+<!-- 体验作业flash弹出框的内容开始 -->
+<div  id="homeworkDialog" class="dialogWrap">
+    <div class="teacherHomework">
+        <div class="flash">
+            <div class="dialogWrapOpen">
+                体验作业flash动画
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 体验作业flash弹出框的内容结束 -->
+{/block}
+{block name=script}
+{/block}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<swfList>
+<url name="answerOptionBox">
+assets/swf/answerOptionBox.swf
+</url>
+<url name="questionOptionBox">
+assets/swf/questionOptionBox.swf
+</url>
+<url name="pigBox">
+assets/swf/pigBox.swf
+</url>
+</swfList>

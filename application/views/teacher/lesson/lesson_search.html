@@ -1,0 +1,86 @@
+{extends file='teacher/lesson/lesson_base.html'}
+{block name=title}课件搜索{/block}
+{block name=stylesheet}
+{/block}
+{block name=container}
+<div class="wrap layout">
+	 <!-- 搜索开始 -->
+    <div class="searchBar cf">
+        <span class="fl">搜索资料：</span>
+        <div class="searchBox fl">
+		<form action="{$site_url}teacher/lesson/search" method="get">
+            <span class="posr">
+                <input type="text" value="{$data.keyword}" name="keyword" class="searchText" placeholder="">
+            </span>
+            <span>
+                <input type="submit" value="搜索" class="cBtnSilver searchBtn">
+            </span>
+			</form>
+        </div>
+    </div>
+    <!-- 搜索结束 -->
+	<div class="lessonSearch cf">
+		<span class="fl spanTitle seachResult">搜索"<em>{$data.keyword}</em>"的结果：共{$data.total}个文档</span>
+		<div class="fr head-order">
+			<span class="fl screening">排序：</span>
+			
+			{if $data.order eq 'upload_time'}
+			<a href="{$search_url|cat:'?keyword='|cat:$data.keyword|cat:'&order=upload_time'|cat:'&type='|cat:$data.tab_order|cat:'&page='|cat:$data.page}" 
+			class="fl time {if $data.order_type eq 'desc'} active{else} active up{/if}">发布时间</a>
+			<a href="{$search_url|cat:'?keyword='|cat:$data.keyword|cat:'&order=file_size'|cat:'&type=desc'|cat:'&page='|cat:$data.page}" class="fl">大小</a>
+			{else if $data.order eq 'file_size'}
+			<a href="{$search_url|cat:'?keyword='|cat:$data.keyword|cat:'&order=upload_time'|cat:'&type=desc'|cat:'&page='|cat:$data.page}" class="fl time">发布时间</a>
+			<a href="{$search_url|cat:'?keyword='|cat:$data.keyword|cat:'&order=file_size'|cat:'&type='|cat:$data.tab_order|cat:'&page='|cat:$data.page}" 
+			class="fl {if $data.order_type eq 'desc'} active{else} active up{/if}">大小</a>
+			{/if}
+		</div>
+	</div> 
+	<div class="lessonList">            
+	 <div class="listBox show doc-list">   
+	{if $data.total eq 0}
+	<div class="emptyBox">
+		<p>很抱歉，没有找到任何内容，请尝试更换关键词重新搜索！</p>
+	</div>
+	{else}                  
+	<ul>
+	{foreach $data.document as $doc}
+		<li class="cf">
+			 <div class="listIcon fl">
+				 <span class="fileType">{$doc.file_ext}</span>
+			 </div>
+			 <div class="listContent fl listContentSearch">
+				 <h3>
+					 <a href="{$site_url}teacher/lesson/view/{$doc.id}" data-id="{$doc.file_id}" target="_blank" title="{$doc.file_name}">
+						{sub_str($doc.file_name,0,70)}
+					</a>
+				 </h3>
+				 <span class="other">
+					<em>{$doc.category_text}</em>
+					 大小:
+					 <em>{$doc.file_size}</em>
+					 格式:
+					 <em>{$doc.extension}</em>
+				 </span>
+			 </div>
+			 <div class="praise fr">
+				 <span class="haveRead">{$doc.hits}人已经阅读</span>
+				<span class="star oStar cf">
+					{foreach $doc.star_level as $val}
+					<em class="fl {if $val eq 3}all{else if $val eq 2}half{else}{/if}"></em>
+					{/foreach}				
+					<em class="fl have">{$doc.assess_count}人评价</em>
+				</span>
+			 </div>
+		 </li>
+	 {/foreach}
+		 </ul>
+	{/if}
+	<div class="page cf">
+		<p class="fr">{$pages}</p>
+	</div>
+
+</div>
+	</div>
+
+</div>
+{/block}

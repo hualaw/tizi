@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<swfList>
+<url name="welcomeBox_0">
+assets/swf/welcomeBox_0.swf
+</url>
+<url name="welcomeBox_1">
+assets/swf/welcomeBox_1.swf
+</url>
+<url name="welcomeBox_2">
+assets/swf/welcomeBox_2.swf
+</url>
+<url name="answerOptionBox_1">
+assets/swf/answerOptionBox_1.swf
+</url>
+<url name="infoBox">
+assets/swf/infoBox.swf
+</url>
+<url name="winMc">
+assets/swf/winMc.swf
+</url>
+<url name="loseMc">
+assets/swf/loseMc.swf
+</url>
+<url name="demoPass2">
+assets/swf/demoPass2.swf
+</url>
+<url name="answerOptionBox_2">
+assets/swf/answerOptionBox_2.swf
+</url>
+<url name="welcomeBox_3">
+assets/swf/welcomeBox_3.swf
+</url>
+<url name="answerOptionBox_3">
+assets/swf/answerOptionBox_3.swf
+</url>
+<url name="gameOverBox">
+assets/swf/gameOverBox.swf
+</url>
+</swfList>

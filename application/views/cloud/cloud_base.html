@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{block name=title}{/block}-梯子网</title>
+<link rel="stylesheet" type="text/css" href="{$static_url}{$static_version}css/teacherCloud/style.css" />
+{block name=stylesheet}
+{/block}
+</head>
+
+<body class="navMyCloud">
+{include file='file:[lib]common/teacher/header.html'}
+{include file='file:[lib]common/teacher/nav.html'}
+<!--主要部分开始-->
+<div class="wrap layout teacherCloud" id="tiziModule" module="teacherCloud">
+    <!--添加我的资源库顶部导航开始-->
+    <div class="hd_title">
+        {include file='cloud/old_cloud_breadcrumbs.html'}
+        <div class="capacity fr">容量&nbsp;<strong><span cap=55 style="width:{$storage_info.percentage};"></span></strong>&nbsp;{$storage_info.use_storage}/{$storage_info.total_storage}</div>
+    </div>
+    <!--添加我的资源库顶部导航结束-->
+    <!-- 右侧框架开始 -->
+    <div class="wrapContent fr" id="wrapContent">
+        {block name=container}{/block}
+    </div> 
+    <!-- 右侧框架结束 -->
+    <!-- 左侧框架开始 -->
+    <div class="slide fl" id="slide">
+        <div class="slideBox">
+            <div class="menu">
+                <ul id="file_type_list">
+                    <li name="homework_center" class="all">
+                        <a class="{if !in_array($chosen_type,array_keys($filetypes))}active{/if}" data-ctype="0" href="{$site_url}teacher/cloud/other"   data-tourl="{$site_url}teacher/cloud/other">全部文件</a>
+                    </li>
+                    {foreach $filetypes as $key=>$ft}
+                    <li name="homework_exercise" class="{if $key==Constant::CLOUD_FILETYPE_DOC}doc{elseif $key==Constant::CLOUD_FILETYPE_PIC}pic{elseif $key==Constant::CLOUD_FILETYPE_VIDEO}video{elseif $key==Constant::CLOUD_FILETYPE_AUDIO}audio{elseif $key==Constant::CLOUD_FILETYPE_OTHER}other{/if}">
+                        <a class="{if $key==$chosen_type}active{/if}
+" data-ctype="{$key}" href="{$site_url}teacher/cloud/index/{$key}">{$ft}</a>
+                    </li>
+                    {/foreach}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 左侧框架结束 -->
+</div>
+<!--主要部分结束-->
+{include file='file:[lib]common/teacher/footer.html'}
+<!-- js引入开始 -->
+<script type="text/javascript" src="{$static_url}{$static_version}public/sea/2.1.0/sea.js"></script>
+<script type="text/javascript" src="{$static_url}{$static_version}public/config.js"></script>
+<!-- 老版本 mustache 模板引擎 -->
+
+<!--js引入结束-->
+{block name=script}{/block}
+{include file='file:[lib]common/tizi_ga.html'}
+</body>
+</html>

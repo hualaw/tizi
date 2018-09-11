@@ -1,0 +1,154 @@
+{extends file='teacher/paper/paper_base.html'}
+
+{block name=title}智能选题{/block}
+
+{block name=stylesheet}
+{/block}
+
+{block name=container}
+<!--主要部分开始-->
+<div class="mainContainer fl questionList100" pagename="paper_intelligent">
+    <div class="mainContain cf question-list current-type" data-sid="{$data.subject_id}">
+        <form action="" class="intelligentBoxForm" method="GET">
+        <div class="intelligentBox">
+            <!-- 选择题型数量开始 -->
+            <div class="questionTypeNumber paperType">
+                <h2>选择题型数量</h2>
+                <div class="bd cf">
+                    {foreach $data.question_type as $qtype}
+                    <div class="typelist fl">
+                        <h3 class="">{$qtype->name}</h3>
+                        <input class="paperValSum" type="hidden" value="0"/>
+                        <select id="{$qtype->id}">
+                            <!-- <option selected="selected" value="0">{$qtype->name}</option> -->
+                            {if $qtype->id eq 3}{$max=50}{else}{$max=20}{/if}
+                            {for $i=0 to $max}
+                            <option value="{$i}" {if $i==0}selected="selected"{/if}>{$i}</option>
+                            {/for}
+                        </select>
+                    </div>
+                    {/foreach}
+                </div>
+            </div>
+            <!-- 选择题型数量结束 -->
+            <div class="knowledge">
+                <!-- 选择难度开始 -->
+                <div class="selectDif cf">
+                    <h2 class="noPaddingBottom">选择难度</h2>
+                    <div id="selectDifNum" class="fl selectDifNum">0.50</div>
+                    <div class="box fl">
+                        <span class="fl">简单</span>
+                        <div id="diy_div" class="diy_div fl">
+                            <div class="diy_scroll cf">
+                                <div id="diy_left" class="diy_left"></div>
+                                <div id="diy_right" class="diy_right"></div>
+                                <div id="diy_dot" class="diy_dot"></div>
+                            </div>
+                        </div>
+                        <span class="fl">困难</span>
+                    </div>
+                    <span class="fl">(建议为0.20-0.80之间)</span>
+                </div>
+                <!-- 选择难度结束 -->
+                <div class="mdGet_hd cf">
+                    <h2 class="fl">选择知识点或同步章节</h2>
+                    <!--选择教材版本开始-->
+                    <div class="hd paperType category_root fl">
+                        <input type="hidden" value="{$data.category_root_name}" data-id="{$data.category_select}" />
+                        <select onchange="top.location=this.value;">
+                            {foreach $data.category_root_id as $c_r_id}
+                                <option value="{$site_url}teacher/paper/intelligent/{$data.subject_id}/{$c_r_id->id}"{if $data.category_select eq $c_r_id->id}selected{/if}>
+                                    {$c_r_id->name}
+                                </option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <!--选择教材版本结束-->
+                </div>
+                <!--详细开始-->
+                {if isset($data.category_node)}
+                <div class="bd">
+                    {foreach $data.category_node as $cat_node}
+                    <dl class="box checkBoxDL">
+                        <dt>
+                            <label>
+                                <input type="checkbox" name="categorylist" value="{$cat_node[2]->id}"/>
+                                {$cat_node@iteration}、{$cat_node[2]->name}
+                            </label>
+                        </dt>
+                        {if empty($cat_node[3]) eq false}
+                        <dd class="cf">
+                            <ul>
+                                {foreach $cat_node[3] as $node}
+                                <li>
+                                    <label>
+                                        <input type="checkbox" name="categorylist" value="{$node->id}"/>
+                                        {$cat_node@iteration}.{$node@iteration} {$node->name}
+                                    </label>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </dd>
+                        {/if}
+                    </dl>
+                    {/foreach}
+                    <div class="submitDiv subIntelligent">
+                        <span class="cBtnNormal" id="intelligent_submit">
+                            <input type="submit" value="" />
+                            <i>确定</i>
+                        </span>
+                    </div>
+                </div>
+                {/if}
+                <!--详细结束-->
+            </div>
+        </div>
+        </form>
+    </div>
+</div>   
+<!-- include file="feedback/feedback_question.html" -->
+{/block}
+
+{block name=script}
+<!--js引入开始-->
+<script type="text/javascript" src="{$static_url}js/teacher/paper_intelligent.js{$version}"></script>
+<script type="text/javascript">
+$('.tempSubject').hide();
+//调用左侧高度
+Common.getLeftBar({
+    id:"#leftBar"   
+});
+//调用头部右侧下拉菜单
+Common.headerNav({
+    id:"#navSlidown",
+    ul:"ul",
+    dis:"dis"   
+});
+//调用左侧顶部选择学科
+TeacherCommon.leftSlidown({
+    id:'.leftSlidown',
+    active:'active',
+    con:'.leftSlidownCon',
+    dis:'dis'   
+})
+//智能选题点击dt的chechBox选择dd的checkBox
+Teacher.checkBoxDL(".checkBoxDL");
+{literal}
+//智能答题右侧高度判断
+$('.knowledge .bd').css('height',$(window).height() - $('.selectDif').height() - $('.knowledge .hd').height() - 190);
+if ($.browser.msie){
+    if($.browser.version == "7.0"||$.browser.version == "8.0"){
+         $('.knowledge .bd').css('height',$(window).height() - 280);
+         $('.mainContainer').css({'height':$(window).height() -83,"overflow-y":"hidden"});
+    }
+    if($.browser.version == "6.0"){
+        $('.knowledge .bd').css('height',$(window).height() - 290);
+        $('.mainContainer').css({'height':$(window).height() - 80,"overflow-y":"hidden"});
+    }
+}
+{/literal}
+//页面初始化
+Teacher.paper.intelligent.init();
+</script>
+<!--js引入结束-->
+{/block}

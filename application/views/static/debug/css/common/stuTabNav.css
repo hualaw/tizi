@@ -1,0 +1,7 @@
+/*学生端右侧头部导航样式开始*/
+.stuTabNav{border-bottom:2px solid #D9E2EC;border-left:2px solid #D9E2EC;position:relative;height:30px;}
+.stuTabNav .tabBox{height:30px;line-height:30px;position:absolute;left:0;bottom:0px;_bottom:-2px;}
+.stuTabNav a{display:block;height:28px;line-height:28px;border:2px solid #D9E2EC;float:left;text-align:center;background:#f6f6f6;border-left:0;padding:0px 20px;font-size:14px;}
+.stuTabNav a:hover{text-decoration: none;}
+.stuTabNav a.active{border-bottom-color:#fff;background:#fff;}
+/*学生端右侧头部导航样式结束*/

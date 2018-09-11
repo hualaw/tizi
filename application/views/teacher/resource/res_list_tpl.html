@@ -1,0 +1,13 @@
+<!-- 列表内容主体 start -->
+                        <ul>
+                            {if $list}{foreach $list as $key=>$v}
+                            {include file='teacher/resource/file_list_tpl.html'}
+                            {/foreach}{/if}
+                        </ul>
+                        <!--分页开始-->
+                        <div class="page cf">
+                            <p class="fr">{$pages}</p>  
+                        </div>
+                        <!--分页结束-->
+                    <!-- 列表内容主体 over -->
+                    

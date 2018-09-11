@@ -1,0 +1,9 @@
+.teacherDafen .mainContainer{border: 1px solid #e0e0e0;overflow: hidden;text-align: center;padding-bottom: 25px;}
+.teacherDafen .mainContainer h2{font-size: 36px;line-height: 72px;text-align: center;margin-bottom: 10px;font-weight: normal;}
+.teacherDafen .mainContainer .enterDafen{width: 218px;font-size: 24px;height: 60px;line-height: 60px;margin-bottom: 45px;}
+.teacherDafen .mainContainer .imgBg{display: inline-block;width: 978px;height: 320px;overflow: hidden;margin-bottom: 34px;}
+.teacherDafen .mainContainer li{display: inline-block;margin: 0 25px;_flaot:left;}
+.teacherDafen .mainContainer li{*+display: inline;width: auto;}
+.teacherDafen .mainContainer li h3{height: 31px;line-height: 31px;font-size: 24px;font-weight: normal;margin-bottom: 11px;_display: inline;}
+.teacherDafen .mainContainer li h3 em{margin-top: -3px;font-size: 16px;display: inline-block;width: 31px;height: 31px;background: url(../../image/common/dafenNum.jpg) no-repeat center center; color: #fff;}
+.teacherDafen .mainContainer li p{font-size: 20px;}

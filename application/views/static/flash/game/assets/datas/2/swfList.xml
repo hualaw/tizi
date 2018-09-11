@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<swfList>
+<url name="mainBackGround">
+assets/swf/2/mainBackGround.swf
+</url>
+<url name="petMc">
+assets/swf/2/petMc.swf
+</url>
+</swfList>

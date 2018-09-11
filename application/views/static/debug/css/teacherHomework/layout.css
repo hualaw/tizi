@@ -1,0 +1,7 @@
+.wrap{margin:15px auto 60px auto;}
+.wrap .slide{background: #f6f6f6;}
+.wrap .slide .hd{ text-align: center;}
+.wrap .slide a.chooseHomewok{margin:20px auto 10px;width: 90px;height:35px;line-height:35px;}
+.wrap .slide a.chooseHomewok:hover{color: #fff;}
+.wrap .slide a.checkHomewok{width: 90px;height:35px;line-height:35px;}
+.wrap .slide a.checkHomewok:hover{color: #333;}
